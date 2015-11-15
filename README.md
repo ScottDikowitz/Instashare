@@ -15,11 +15,11 @@ including:
 -authorization
 -posting photos
 -viewing other user's photos
--'following' other users
+-following other users
 -photo feed for followed users
 -adding comments to photos
--direct messaging
--premium styling
+-liking photos
+-user/tag search
 
 FresherNote is a web application inspired by Evernote built using Ruby on Rails
 and React.js. FresherNote allows users to:
@@ -33,26 +33,27 @@ and React.js. FresherNote allows users to:
 
 ## Implementation Timeline
 
-### Phase 1: user auth, routes, models and api
+### Phase 1: user auth, routes, models and api (2 days)
 I will design landing page, the user signup/signin, models and api for the site, and make
 make sensible routes. Then I will design an api for pulling information
-from the database
+from the database.
 
 [Details][phase-one]
 
-## Phase 2: Comments, follow list, UI
-In this phase I will create the comment system, add a follow list and
-complete the fancy UI stuff using a flux architecture.  ## details of specifics
-in regard to UI stuff here ##. ## more specifics about comments and follow list##.
-Addintionally, I will add minimal styling in CSS here and use proper semantic tags
-and group things in classes.
+## Phase 2: Comments, follows, likes (3 days)
+In this phase I will make ability for the user to create a new post, and have
+the ability for users to comment on posts. Then I will let a user to follow
+another user. When the user follows the other user, the other user's
+recent posts will show up in their index feed. Additionally, I will add
+minimal styling in CSS here and proper semantic tags and group things in classes.
 
-## Phase 3: Location tagging
+## Phase 3: Location tagging (2 days)
 When users have the ability to make new posts, they should also have the ability
 to add a location for where the photo was taken. When a user types in some
 location, it should have autocomplete suggestions for locations already
 in the system. Afterwards, the location show page should populate with posts
-that have been tagged at that location.
+that have been tagged at that location, and the post show page should have a
+link to the location index page.
 
 ## Phase 5? Styling, bug fixing and refactoring
 This is a phase where i will make it look really good and optimize it a little
@@ -71,6 +72,8 @@ bit, and fix some bugs that have been bothering me.
 - [ ] Prettify transitions
 - [ ] Tagging people in photos
 - [ ] Direct messaging
+- [ ] Edit password
+- [ ] Load more (infinite scrolling)
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
