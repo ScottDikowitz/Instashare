@@ -70,6 +70,7 @@ bit, and fix some bugs that have been bothering me.
 ### Bonus Features (TBD)
 - [ ] Prettify transitions
 - [ ] Tagging people in photos
+- [ ] Direct messaging
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
