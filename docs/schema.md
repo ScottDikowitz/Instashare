@@ -7,6 +7,13 @@ id          | integer   | not null, primary key
 photo       | string    | not null
 comment     | text      | not null
 
+## likes
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+user_id     | integer   | not null
+post_id     | integer   | not null
+
 ## comments
 column name | data type | details
 ------------|-----------|-----------------------
