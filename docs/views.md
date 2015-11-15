@@ -1,16 +1,16 @@
 # View Wireframes
 
-## NewUser
+## New User
 ![signup]
 
 ## New Session
 ![Login]
 
-## LocationIndex / UserIndex / TagIndex
-![show_index]
-
 ## IndexPage
 ![index_page]
+
+## LocationIndex/UserIndex/TagIndex
+![show_index]
 
 ## Edit
 ![edit]
