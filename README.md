@@ -40,6 +40,20 @@ from the database
 
 [Details][phase-one]
 
+## Phase 2: Comments, follow list, UI
+In this phase I will create the comment system, add a follow list and
+complete the fancy UI stuff using a flux architecture.  ## details of specifics
+in regard to UI stuff here ##. ## more specifics about comments and follow list##.
+Addintionally, I will add minimal styling in CSS here and use proper semantic tags
+and group things in classes.
+
+## Phase 5? Styling, bug fixing and refactoring
+This is a phase where i will make it look really good and optimize it a little
+bit, and fix some bugs that have been bothering me.
+
+## Phase 6: deploy
+put it out on the internets 
+
 ### Phase 2: Flux Architecture and Note CRUD (2.5 days)
 
 Phase 2 is focused on setting up Flux, the React Router, and the React view
