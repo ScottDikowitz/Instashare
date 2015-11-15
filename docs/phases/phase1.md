@@ -27,3 +27,5 @@
 
 ## Gems/Libraries
 * BCrypt
+* better errors
+* byebug
