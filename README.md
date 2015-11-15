@@ -6,19 +6,23 @@
 
 ## Minimum Viable Product
 
+< THIS INSTAGRAM CLONE > is a clone of Instagram written in Ruby on Rails
+utilizing React/flux architecture that mimics key aspects of the site,
+including:
+
+-signing up
+-signing in
+-authorization
+-posting photos
+-viewing other user's photos
+-'following' other users
+-photo feed for followed users
+-adding comments to photos
+-direct messaging
+-premium styling
+
 FresherNote is a web application inspired by Evernote built using Ruby on Rails
 and React.js. FresherNote allows users to:
-
-<!-- This is a Markdown checklist. Use it to keep track of your progress! -->
-
-- [ ] Create an account
-- [ ] Log in / Log out
-- [ ] Create, read, edit, and delete notes
-- [ ] Organize notes within Notebooks
-- [ ] Tag notes with multiple tags and search notes by tag
-- [ ] Search through notes for blocks of text
-- [ ] Apply complex styling to notes while editing
-- [ ] Set reminders on notes
 
 ## Design Docs
 * [View Wireframes][view]
@@ -29,12 +33,10 @@ and React.js. FresherNote allows users to:
 
 ## Implementation Timeline
 
-### Phase 1: User Authentication, Note Model and JSON API (1.5 days)
-
-In Phase 1, I will begin by implementing user signup and authentication (using
-BCrypt). There will be a basic landing page after signup that will contain the
-container for the application's root React component. Before building out the
-front end, I will begin by setting up a full JSON API for Notes.
+### Phase 1: user auth, routes, models and api
+I will design landing page, the user signup/signin, models and api for the site, and make
+make sensible routes. Then I will design an api for pulling information
+from the database
 
 [Details][phase-one]
 
@@ -64,7 +66,7 @@ extend this to a fuzzy search through every Note's content.
 
 ### Phase 4: Allow Complex Styling in Notes (1 day)
 
-Using quill.js, allow for complex styling of notes. 
+Using quill.js, allow for complex styling of notes.
 
 [Details][phase-four]
 
