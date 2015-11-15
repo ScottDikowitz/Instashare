@@ -1,5 +1,19 @@
 # Schema Information
 
+## posts
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+photo       | string    | not null
+comment     | text      | not null
+
+## comments
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+user_id     | integer   | not null
+content     | text      | not null
+
 ## notes
 column name | data type | details
 ------------|-----------|-----------------------
@@ -16,7 +30,7 @@ column name | data type | details
 id          | integer   | not null, primary key
 author_id   | integer   | not null, foreign key (references users), indexed
 title       | string    | not null
-description | string    | 
+description | string    |
 
 ## reminders
 column name | data type | details
