@@ -14,6 +14,12 @@ id          | integer   | not null, primary key
 user_id     | integer   | not null
 post_id     | integer   | not null
 
+## tags
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+post_id     | integer   | not null
+
 ## comments
 column name | data type | details
 ------------|-----------|-----------------------
