@@ -1,6 +1,8 @@
-## Phase 4: Search
+## Phase 4: Search (1 day)
 
 ## Flux
 ### Views (React Components)
-header
 User/SearchComponent
+
+### Controllers
+Api::UsersController

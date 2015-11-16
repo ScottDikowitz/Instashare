@@ -1,4 +1,4 @@
-## Phase 2: Comments, follows, likes (3 days)
+## Phase 2: Comments, follows, likes (2 days)
 
 ## Rails
 ### Models
@@ -13,18 +13,19 @@ like
 * userShow
 * index
 
+## Flux
+### Views (React Components)
+comment index
+comment list item
+
 ### Stores
-* Post
 * Comment
 
 ### Actions
-* ApiActions.receiveAllPosts
 * ApiActions.receiveSinglePost
-* ApiActions.deleteNote
 
 ### ApiUtil
-* ApiUtil.fetchAllPosts
-* ApiUtil.fetchAllComments
+* ApiUtil.fetchComments
 * ApiUtil.fetchSinglePost
 * ApiUtil.createPost
 

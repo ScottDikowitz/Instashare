@@ -1,4 +1,4 @@
-## Phase 3: tagging and location (3 days)
+## Phase 3: tagging and location (2 days)
 
 ## Rails
 ### Models
@@ -10,12 +10,13 @@
 TagsController (create)
 
 ### Views
-* locationShow
-* tagsShow
+* locationIndex
+* tagIndex
 
 ### Actions
 * ApiActions.receiveAllTaggedPosts
+* ApiActions.receiveAllLocationPosts
 
 ### ApiUtil
 * ApiUtil.fetchAllTaggedPosts
-* ApiUtil.createTag
+* ApiUtil.fetchAllLocationPosts
