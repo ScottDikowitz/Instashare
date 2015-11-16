@@ -1,4 +1,4 @@
-# SnapShare
+# Instashare
 
 [Heroku link][heroku] **NB:** This should be a link to your production site
 
@@ -6,7 +6,7 @@
 
 ## Minimum Viable Product
 
-SnapShare is a clone of Instagram written in Ruby on Rails
+Instashare is a clone of Instagram written in Ruby on Rails
 utilizing React/flux architecture that mimics key aspects of the site and
 also adds some extras, including:
 
