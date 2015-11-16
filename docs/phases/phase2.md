@@ -1,33 +1,32 @@
-# Phase 2: Flux Architecture and Note CRUD (2 days)
+## Phase 2: Comments, follows, likes (3 days)
 
 ## Rails
 ### Models
+comment
+follow
+like
 
 ### Controllers
+* CommentsController (create, destroy, new, index)
 
 ### Views
-
-## Flux
-### Views (React Components)
-* NotesIndex
-  - NotesIndexItem
-* NoteForm
+* userShow
+* index
 
 ### Stores
-* Note
+* Post
+* Comment
 
 ### Actions
-* ApiActions.receiveAllNotes
-* ApiActions.receiveSingleNote
+* ApiActions.receiveAllPosts
+* ApiActions.receiveSinglePost
 * ApiActions.deleteNote
 
 ### ApiUtil
-* ApiUtil.fetchAllNotes
-* ApiUtil.fetchSingleNote
-* ApiUtil.createNote
-* ApiUtil.editNote
-* ApiUtil.destroyNote
+* ApiUtil.fetchAllPosts
+* ApiUtil.fetchAllComments
+* ApiUtil.fetchSinglePost
+* ApiUtil.createPost
 
 ## Gems/Libraries
 * Flux Dispatcher
-* Twitter Bootstrap

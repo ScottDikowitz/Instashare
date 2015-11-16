@@ -8,24 +8,16 @@
 ### Controllers
 * UsersController (create, new)
 * SessionsController (create, new, destroy)
-* Api::PostsController (create, destroy, index, show, update)
+* Api::PostsController (index, show)
+* PostsController (create, destroy, edit, update, new)
 
 ### Views
 * users/new.html.erb
 * session/new.html.erb
-* posts/index.json.jbuilder
-* posts/show.json.jbuilder
-
-## Flux
-### Views (React Components)
-
-### Stores
-
-### Actions
-
-### ApiUtil
+* users/show.html.erb
 
 ## Gems/Libraries
 * BCrypt
 * better errors
 * byebug
+* binding_of_caller

@@ -6,7 +6,7 @@
 
 ## Minimum Viable Product
 
-< THIS INSTAGRAM CLONE > is a clone of Instagram written in Ruby on Rails
+Snapr clone of Instagram written in Ruby on Rails
 utilizing React/flux architecture that mimics key aspects of the site,
 including:
 
@@ -46,31 +46,32 @@ the ability for users to comment on posts. Then I will let a user to follow
 another user. When the user follows the other user, the other user's
 recent posts will show up in their index feed. Additionally, I will add
 minimal styling in CSS here and proper semantic tags and group things in classes.
+[Details][phase-two]
 
-## Phase 3: Location tagging (2 days)
+## Phase 3: tagging and location (3 days)
 When users have the ability to make new posts, they should also have the ability
-to add a location for where the photo was taken. When a user types in some
+to add a tag, and a location for where the photo was taken. When a user types in some
 location, it should have autocomplete suggestions for locations already
 in the system. Afterwards, the location show page should populate with posts
 that have been tagged at that location, and the post show page should have a
 link to the location index page.
-
-## Phase 5? Styling, bug fixing and refactoring
-This is a phase where i will make it look really good and optimize it a little
-bit, and fix some bugs that have been bothering me.
-
-[Details][phase-two]
-
-
 [Details][phase-three]
 
+## Phase 4: Search
+Here I will implement search. A user can search for another user or search
+for a tag.
 [Details][phase-four]
 
-[Details][phase-five]
+##Phase 5: Styling and refactoring
+I will make it look really good and fix some bugs that have been
+bothering me.
+
+
 
 ### Bonus Features (TBD)
 - [ ] Prettify transitions
 - [ ] Tagging people in photos
+- [ ] Tagging people in comments
 - [ ] Direct messaging
 - [ ] Edit password
 - [ ] Load more (infinite scrolling)
@@ -79,4 +80,3 @@ bit, and fix some bugs that have been bothering me.
 [phase-two]: ./docs/phases/phase2.md
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
-[phase-five]: ./docs/phases/phase5.md
