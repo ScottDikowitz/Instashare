@@ -1,4 +1,4 @@
-# FresherNote
+# SnapShare
 
 [Heroku link][heroku] **NB:** This should be a link to your production site
 
@@ -6,23 +6,22 @@
 
 ## Minimum Viable Product
 
-Snapr clone of Instagram written in Ruby on Rails
-utilizing React/flux architecture that mimics key aspects of the site,
-including:
+SnapShare is a clone of Instagram written in Ruby on Rails
+utilizing React/flux architecture that mimics key aspects of the site and
+also adds some extras, including:
 
 - [ ] signing up
 - [ ] signing in
 - [ ] authorization
 - [ ] posting photos
 - [ ] viewing other user's photos
+- [ ] viewing tag page
+- [ ] viewing location page
 - [ ] following other users
 - [ ] photo feed for followed users
 - [ ] adding comments to photos
 - [ ] liking photos
 - [ ] user/tag search
-
-FresherNote is a web application inspired by Evernote built using Ruby on Rails
-and React.js. FresherNote allows users to:
 
 ## Design Docs
 * [View Wireframes][view]
