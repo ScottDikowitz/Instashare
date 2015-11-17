@@ -21,6 +21,18 @@ var ApiUtil = window.ApiUtil = {
         ApiActions.receiveAll(data);
       }
     });
+  },
+
+  fetchSingleUser: function(userId){
+    $.ajax ({
+      url: 'api/users/' + userId,
+      type: 'GET',
+      dataType: 'json',
+      data: {userId: userId},
+      success: function(data) {
+        ApiActions.receiveAll(data);
+      }
+    });
   }
 
 };

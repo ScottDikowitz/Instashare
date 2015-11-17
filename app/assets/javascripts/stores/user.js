@@ -21,7 +21,6 @@
 
   UserStore.dispatcherID = AppDispatcher.register(function(payload){
       if(payload.actionType === UserConstants.USER_RECEIVED){
-        debugger;
         UserStore.resetUsers(payload.users);
         UserStore.emit(CHANGE_EVENT);
       }

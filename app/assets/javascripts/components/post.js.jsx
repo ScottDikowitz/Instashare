@@ -1,7 +1,7 @@
 var Post = React.createClass ({
 
   componentDidMount: function(){
-
+    // ApiUtil.getSingleUser(this.props.post.user_id);
 
   },
 

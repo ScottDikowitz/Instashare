@@ -12,6 +12,13 @@ var ApiActions = window.ApiActions = {
       actionType: UserConstants.USER_RECEIVED,
       user: user
     });
+  },
+
+  receiveUser: function(user){
+    AppDispatcher.dispatch({
+      actionType: UserConstants.USER_RECEIVED,
+      user: user
+    });
   }
 
 };
