@@ -1,14 +1,22 @@
-Sign Up
-<form class="sign-up" action="<%= users_url %>" method="POST">
+<h1>Sign Up</h1>
+<form class="sign-in" action="<%= users_url %>" method="POST">
   <%= auth_token %>
-<label>Username
-  <input type="text" name="user[username]"/>
-</label>
-<label>Password
-  <input type="password" name="user[password]"/>
-</label>
-<label>Bio
-  <textarea name="user[body]"></textarea>
-</label>
-  <input type="submit" value="Sign Up"/>
+  <ul>
+    <li>
+      <label>Username
+        <input type="text" name="user[username]"/>
+      </label>
+    </li>
+    <li>
+      <label>Password
+        <input type="password" name="user[password]"/>
+      </label>
+    </li>
+    <li>
+    <label>Bio
+      <textarea name="user[body]"></textarea>
+    </label>
+  </li>
+  <input class="submit-button" type="submit" value="Sign Up"/>
+</ul>
 </form>

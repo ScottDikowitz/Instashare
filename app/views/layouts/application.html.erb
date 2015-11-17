@@ -7,7 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= current_user.username if signed_in? %>
+<% unless flash[:errors].nil? %>
+<%= flash[:errors] %>
+<% end %>
+  <% if signed_in? %>
+<%= current_user.username%>
+<form action="<%= session_url %>" method="POST">
+  <%= auth_token %>
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Sign Out">
+<% else %>
+  <a href="<%= new_session_url %>">Sign In</a>
+  <a href="<%= new_user_url %>">Sign Up</a>
+<% end %>
 <%= yield %>
 
 </body>

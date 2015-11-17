@@ -13459,3 +13459,2708 @@ Started GET "/api/posts" for ::1 at 2015-11-17 13:46:39 -0500
 Processing by Api::PostsController#index as JSON
   [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
 Completed 200 OK in 42ms (Views: 0.1ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 13:47:31 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "Tnph9gQ8CNmNQAH6bFbOrw"]]
+Completed 200 OK in 311ms (Views: 309.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.self-329a550b3fcd5cc622f2a1ff49f7b12751d526f0fb19e15b8927fb37ad7cffa5.css?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/application.self-26388e1a2124b2043ae0db8107baca26a95a1d9a4528c6f82db57374ca48f254.css?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/components/create_comment.self-04ee18042d349122746e56189760b0403352dfaf4c4d373438b2c2cd1474ca02.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/components/index.self-f7d20a4f3717f8548e73485f2e2a580b966f434631cfb9ec925f3747f430c073.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/components/post.self-6135de975c801fb15a5c78cfe98bbf08dceb3653aa9efb34ff871f70d97f6806.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/components/user.self-c3ca17a40e57c40af6e39643e92dda0905485c15563af55c39d0fc5c221ba56a.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/actions/api_actions.self-35379c01045fb28b197bc569813101912c7b1e1478b18183154f0015c64387da.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/constants/post_constants.self-2713f67a34c6a9ba3ed5f1acc4e9dac56b813708231ffffff833adb24a3783f7.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/instashare.self-37b1d2617c8e2192ac4d09590fcc90e6ac6cb8f84a6e0204f8294981476a493c.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/stores/post.self-f1e6288087553106de53b2d39b271c312d732fcc90b4f1d042b697ae5db49040.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/util/api_util.self-5b4c6387c0aeabba1054a9d9540a0373bcae949e361ffe9d1771d13bb04ed2e0.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-17 13:47:32 -0500
+
+
+Started GET "/api/posts" for ::1 at 2015-11-17 13:47:32 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 13:48:44 -0500
+
+SyntaxError - unterminated string meets end of file
+/Users/appacademy/Desktop/Instashare/app/controllers/sessions_controller.rb:10: syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/sessions_controller.rb:10:in `'
+  activesupport (4.2.3) lib/active_support/dependencies.rb:457:in `block in load_file'
+  activesupport (4.2.3) lib/active_support/dependencies.rb:647:in `new_constants_in'
+  activesupport (4.2.3) lib/active_support/dependencies.rb:456:in `load_file'
+  activesupport (4.2.3) lib/active_support/dependencies.rb:354:in `require_or_load'
+  activesupport (4.2.3) lib/active_support/dependencies.rb:494:in `load_missing_constant'
+  activesupport (4.2.3) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.2.3) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.3) lib/active_support/inflector/methods.rb:259:in `constantize'
+  activesupport (4.2.3) lib/active_support/dependencies.rb:566:in `get'
+  activesupport (4.2.3) lib/active_support/dependencies.rb:597:in `constantize'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:72:in `controller_reference'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:62:in `controller'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:41:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/068aaac2f84e8f58/variables" for ::1 at 2015-11-17 13:48:44 -0500
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 13:48:59 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (16.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "Tnph9gQ8CNmNQAH6bFbOrw"]]
+Completed 200 OK in 546ms (Views: 541.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/sessions.self-329a550b3fcd5cc622f2a1ff49f7b12751d526f0fb19e15b8927fb37ad7cffa5.css?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/application.self-26388e1a2124b2043ae0db8107baca26a95a1d9a4528c6f82db57374ca48f254.css?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/components/create_comment.self-04ee18042d349122746e56189760b0403352dfaf4c4d373438b2c2cd1474ca02.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/components/index.self-f7d20a4f3717f8548e73485f2e2a580b966f434631cfb9ec925f3747f430c073.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/components/post.self-6135de975c801fb15a5c78cfe98bbf08dceb3653aa9efb34ff871f70d97f6806.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/actions/api_actions.self-35379c01045fb28b197bc569813101912c7b1e1478b18183154f0015c64387da.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/components/user.self-c3ca17a40e57c40af6e39643e92dda0905485c15563af55c39d0fc5c221ba56a.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/instashare.self-37b1d2617c8e2192ac4d09590fcc90e6ac6cb8f84a6e0204f8294981476a493c.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/constants/post_constants.self-2713f67a34c6a9ba3ed5f1acc4e9dac56b813708231ffffff833adb24a3783f7.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/stores/post.self-f1e6288087553106de53b2d39b271c312d732fcc90b4f1d042b697ae5db49040.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/util/api_util.self-5b4c6387c0aeabba1054a9d9540a0373bcae949e361ffe9d1771d13bb04ed2e0.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-17 13:49:00 -0500
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:49:08 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"9Kru0g5eti22Fjb2LIJoi9o7IQgVFna/Hhvj16BBK4bE5GTwYByDHM0QtcvzemwzQzm2ul0qKsk8sTtG7DaaAw==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (14.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Scott"]]
+  [1m[35m (29.1ms)[0m  BEGIN
+  [1m[36mSQL (51.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "7Jwn8h3kP8l16AL1jlMtzw"], ["id", 3]]
+  [1m[35m (52.2ms)[0m  COMMIT
+Redirected to http://localhost:3000root_url
+Completed 302 Found in 342ms (ActiveRecord: 147.3ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:49:09 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"9Kru0g5eti22Fjb2LIJoi9o7IQgVFna/Hhvj16BBK4bE5GTwYByDHM0QtcvzemwzQzm2ul0qKsk8sTtG7DaaAw==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Scott"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "Svq9bcUbudAg5Aom4z8xEg"], ["id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000root_url
+Completed 302 Found in 82ms (ActiveRecord: 1.4ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:49:09 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"9Kru0g5eti22Fjb2LIJoi9o7IQgVFna/Hhvj16BBK4bE5GTwYByDHM0QtcvzemwzQzm2ul0qKsk8sTtG7DaaAw==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Scott"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "V9yLeQGJuQnVp1pYQ_MBLg"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000root_url
+Completed 302 Found in 80ms (ActiveRecord: 1.4ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:49:09 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"9Kru0g5eti22Fjb2LIJoi9o7IQgVFna/Hhvj16BBK4bE5GTwYByDHM0QtcvzemwzQzm2ul0qKsk8sTtG7DaaAw==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Scott"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "nFCihTAyDFxO4cPWPfKFag"], ["id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000root_url
+Completed 302 Found in 84ms (ActiveRecord: 1.5ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:49:09 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"9Kru0g5eti22Fjb2LIJoi9o7IQgVFna/Hhvj16BBK4bE5GTwYByDHM0QtcvzemwzQzm2ul0qKsk8sTtG7DaaAw==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Scott"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "o8RqSjzdHlgGLYaJ3DK3tw"], ["id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000root_url
+Completed 302 Found in 80ms (ActiveRecord: 1.3ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:49:09 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"9Kru0g5eti22Fjb2LIJoi9o7IQgVFna/Hhvj16BBK4bE5GTwYByDHM0QtcvzemwzQzm2ul0qKsk8sTtG7DaaAw==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Scott"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "PnzUWTtDGr4DxqNZ0UDVPQ"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000root_url
+Completed 302 Found in 85ms (ActiveRecord: 1.5ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:49:09 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"9Kru0g5eti22Fjb2LIJoi9o7IQgVFna/Hhvj16BBK4bE5GTwYByDHM0QtcvzemwzQzm2ul0qKsk8sTtG7DaaAw==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Scott"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "a6Oi1TV65uhka6TDgEiIaw"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000root_url
+Completed 302 Found in 80ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 13:49:50 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "Tnph9gQ8CNmNQAH6bFbOrw"]]
+Completed 200 OK in 317ms (Views: 314.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/sessions.self-329a550b3fcd5cc622f2a1ff49f7b12751d526f0fb19e15b8927fb37ad7cffa5.css?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/application.self-26388e1a2124b2043ae0db8107baca26a95a1d9a4528c6f82db57374ca48f254.css?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/components/create_comment.self-04ee18042d349122746e56189760b0403352dfaf4c4d373438b2c2cd1474ca02.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/components/index.self-f7d20a4f3717f8548e73485f2e2a580b966f434631cfb9ec925f3747f430c073.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/components/post.self-6135de975c801fb15a5c78cfe98bbf08dceb3653aa9efb34ff871f70d97f6806.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/components/user.self-c3ca17a40e57c40af6e39643e92dda0905485c15563af55c39d0fc5c221ba56a.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/actions/api_actions.self-35379c01045fb28b197bc569813101912c7b1e1478b18183154f0015c64387da.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/constants/post_constants.self-2713f67a34c6a9ba3ed5f1acc4e9dac56b813708231ffffff833adb24a3783f7.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/instashare.self-37b1d2617c8e2192ac4d09590fcc90e6ac6cb8f84a6e0204f8294981476a493c.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/stores/post.self-f1e6288087553106de53b2d39b271c312d732fcc90b4f1d042b697ae5db49040.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/util/api_util.self-5b4c6387c0aeabba1054a9d9540a0373bcae949e361ffe9d1771d13bb04ed2e0.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-17 13:49:50 -0500
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:49:53 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Y2+RNA+n/5L6RGfpAH8Pc3Om9L8/TbIl3CzpMexDTXxTIRsWYeXKo4FC5NTfhwvL6qRjDXdx7lP+hjGgoDT8+Q==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Scott"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "w00dTtSzivxgOdVrdQlbSQ"], ["id", 3]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 84ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 13:49:53 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w00dTtSzivxgOdVrdQlbSQ"]]
+Completed 200 OK in 108ms (Views: 107.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-17 13:49:53 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 13:50:01 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "w00dTtSzivxgOdVrdQlbSQ"]]
+Completed 200 OK in 117ms (Views: 115.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.self-329a550b3fcd5cc622f2a1ff49f7b12751d526f0fb19e15b8927fb37ad7cffa5.css?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/application.self-26388e1a2124b2043ae0db8107baca26a95a1d9a4528c6f82db57374ca48f254.css?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/components/create_comment.self-04ee18042d349122746e56189760b0403352dfaf4c4d373438b2c2cd1474ca02.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/components/index.self-f7d20a4f3717f8548e73485f2e2a580b966f434631cfb9ec925f3747f430c073.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/components/post.self-6135de975c801fb15a5c78cfe98bbf08dceb3653aa9efb34ff871f70d97f6806.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/actions/api_actions.self-35379c01045fb28b197bc569813101912c7b1e1478b18183154f0015c64387da.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/constants/post_constants.self-2713f67a34c6a9ba3ed5f1acc4e9dac56b813708231ffffff833adb24a3783f7.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/components/user.self-c3ca17a40e57c40af6e39643e92dda0905485c15563af55c39d0fc5c221ba56a.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/instashare.self-37b1d2617c8e2192ac4d09590fcc90e6ac6cb8f84a6e0204f8294981476a493c.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/stores/post.self-f1e6288087553106de53b2d39b271c312d732fcc90b4f1d042b697ae5db49040.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/util/api_util.self-5b4c6387c0aeabba1054a9d9540a0373bcae949e361ffe9d1771d13bb04ed2e0.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-17 13:50:01 -0500
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:50:04 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"HqylGJ8v/GGPORQhhC4lOk/bA7wrqMNo+Fs3afoO4BYu4i868W3JUPQ/lxxb1iGC1tmUDmOUnx7a8e/4tnlRkw==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Scott"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "I96G8slO7PdhpCL7-skKRw"], ["id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 83ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 13:50:04 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "I96G8slO7PdhpCL7-skKRw"]]
+Completed 200 OK in 108ms (Views: 106.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-17 13:50:04 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:50:08 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"HqylGJ8v/GGPORQhhC4lOk/bA7wrqMNo+Fs3afoO4BYu4i868W3JUPQ/lxxb1iGC1tmUDmOUnx7a8e/4tnlRkw==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Scott"]]
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "I96G8slO7PdhpCL7-skKRw"]]
+Completed 200 OK in 194ms (Views: 119.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:50:09 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"3eajEeV/MtILefDKy+roxtGkUMJYr3EHn9havpjKASHtqCkziz0H43B/c/cUEux+SKbHcBCTLXG9coIv1L2wpA==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", ""]]
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "I96G8slO7PdhpCL7-skKRw"]]
+Completed 200 OK in 244ms (Views: 242.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:50:56 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"3eajEeV/MtILefDKy+roxtGkUMJYr3EHn9havpjKASHtqCkziz0H43B/c/cUEux+SKbHcBCTLXG9coIv1L2wpA==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", ""]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "I96G8slO7PdhpCL7-skKRw"]]
+Completed 200 OK in 139ms (Views: 137.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/sessions.self-329a550b3fcd5cc622f2a1ff49f7b12751d526f0fb19e15b8927fb37ad7cffa5.css?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/application.self-26388e1a2124b2043ae0db8107baca26a95a1d9a4528c6f82db57374ca48f254.css?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/components/create_comment.self-04ee18042d349122746e56189760b0403352dfaf4c4d373438b2c2cd1474ca02.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/components/index.self-f7d20a4f3717f8548e73485f2e2a580b966f434631cfb9ec925f3747f430c073.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/components/post.self-6135de975c801fb15a5c78cfe98bbf08dceb3653aa9efb34ff871f70d97f6806.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/components/user.self-c3ca17a40e57c40af6e39643e92dda0905485c15563af55c39d0fc5c221ba56a.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/actions/api_actions.self-35379c01045fb28b197bc569813101912c7b1e1478b18183154f0015c64387da.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/constants/post_constants.self-2713f67a34c6a9ba3ed5f1acc4e9dac56b813708231ffffff833adb24a3783f7.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/instashare.self-37b1d2617c8e2192ac4d09590fcc90e6ac6cb8f84a6e0204f8294981476a493c.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/stores/post.self-f1e6288087553106de53b2d39b271c312d732fcc90b4f1d042b697ae5db49040.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/util/api_util.self-5b4c6387c0aeabba1054a9d9540a0373bcae949e361ffe9d1771d13bb04ed2e0.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-17 13:50:56 -0500
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:52:35 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"3eajEeV/MtILefDKy+roxtGkUMJYr3EHn9havpjKASHtqCkziz0H43B/c/cUEux+SKbHcBCTLXG9coIv1L2wpA==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", ""]]
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "I96G8slO7PdhpCL7-skKRw"]]
+Completed 200 OK in 137ms (Views: 135.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/sessions.self-329a550b3fcd5cc622f2a1ff49f7b12751d526f0fb19e15b8927fb37ad7cffa5.css?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/application.self-26388e1a2124b2043ae0db8107baca26a95a1d9a4528c6f82db57374ca48f254.css?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/components/create_comment.self-04ee18042d349122746e56189760b0403352dfaf4c4d373438b2c2cd1474ca02.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/components/index.self-f7d20a4f3717f8548e73485f2e2a580b966f434631cfb9ec925f3747f430c073.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/components/post.self-6135de975c801fb15a5c78cfe98bbf08dceb3653aa9efb34ff871f70d97f6806.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/components/user.self-c3ca17a40e57c40af6e39643e92dda0905485c15563af55c39d0fc5c221ba56a.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/actions/api_actions.self-35379c01045fb28b197bc569813101912c7b1e1478b18183154f0015c64387da.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/constants/post_constants.self-2713f67a34c6a9ba3ed5f1acc4e9dac56b813708231ffffff833adb24a3783f7.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/instashare.self-37b1d2617c8e2192ac4d09590fcc90e6ac6cb8f84a6e0204f8294981476a493c.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/stores/post.self-f1e6288087553106de53b2d39b271c312d732fcc90b4f1d042b697ae5db49040.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/util/api_util.self-5b4c6387c0aeabba1054a9d9540a0373bcae949e361ffe9d1771d13bb04ed2e0.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-17 13:52:36 -0500
+
+
+Started DELETE "/users" for ::1 at 2015-11-17 13:52:37 -0500
+
+ActionController::RoutingError (No route matches [DELETE] "/users"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (103.8ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 13:52:50 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "I96G8slO7PdhpCL7-skKRw"]]
+Completed 200 OK in 338ms (Views: 336.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/session" for ::1 at 2015-11-17 13:52:52 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9U3BOqDFRytV783kS+4uRoQki4e4vmIK3soUh5IICV3FA0sYzodyGi7pTtmUFir+HSYcNfCCPnz8YMwW3n+42A==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ArgumentError - wrong number of arguments (1 for 0):
+  app/controllers/sessions_controller.rb:18:in `destroy'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/a52c5aab14c25bea/variables" for ::1 at 2015-11-17 13:52:52 -0500
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 13:53:08 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "I96G8slO7PdhpCL7-skKRw"]]
+Completed 200 OK in 291ms (Views: 287.5ms | ActiveRecord: 3.4ms)
+
+
+Started DELETE "/session" for ::1 at 2015-11-17 13:53:09 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"K0dzKFkiUuTvQ4vRClg3yr6FztK0WXKDjkUu/02vdjobCfkKN2Bn1ZRFCOzVoDNyJ4dZYPxlLvWs7/ZuAdjHvw==", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "I96G8slO7PdhpCL7-skKRw"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "uHRV6Ef-0kVx19lo8tz2-A"], ["id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.1ms)
+
+ActionView::MissingTemplate - Missing template sessions/destroy, application/destroy with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/appacademy/Desktop/Instashare/app/views"
+:
+  actionview (4.2.3) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.3) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/d2de2ffdb38dea7b/variables" for ::1 at 2015-11-17 13:53:09 -0500
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 13:53:39 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "I96G8slO7PdhpCL7-skKRw"]]
+Completed 200 OK in 111ms (Views: 109.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/sessions.self-329a550b3fcd5cc622f2a1ff49f7b12751d526f0fb19e15b8927fb37ad7cffa5.css?body=1" for ::1 at 2015-11-17 13:53:39 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 13:53:39 -0500
+
+
+Started GET "/assets/application.self-26388e1a2124b2043ae0db8107baca26a95a1d9a4528c6f82db57374ca48f254.css?body=1" for ::1 at 2015-11-17 13:53:39 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:53:39 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:53:39 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 13:53:39 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 13:53:39 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-17 13:53:39 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-17 13:53:39 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-17 13:53:39 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-17 13:53:39 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-17 13:53:39 -0500
+
+
+Started GET "/assets/components/create_comment.self-04ee18042d349122746e56189760b0403352dfaf4c4d373438b2c2cd1474ca02.js?body=1" for ::1 at 2015-11-17 13:53:40 -0500
+
+
+Started GET "/assets/components/index.self-f7d20a4f3717f8548e73485f2e2a580b966f434631cfb9ec925f3747f430c073.js?body=1" for ::1 at 2015-11-17 13:53:40 -0500
+
+
+Started GET "/assets/components/post.self-6135de975c801fb15a5c78cfe98bbf08dceb3653aa9efb34ff871f70d97f6806.js?body=1" for ::1 at 2015-11-17 13:53:40 -0500
+
+
+Started GET "/assets/components/user.self-c3ca17a40e57c40af6e39643e92dda0905485c15563af55c39d0fc5c221ba56a.js?body=1" for ::1 at 2015-11-17 13:53:40 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-17 13:53:40 -0500
+
+
+Started GET "/assets/actions/api_actions.self-35379c01045fb28b197bc569813101912c7b1e1478b18183154f0015c64387da.js?body=1" for ::1 at 2015-11-17 13:53:40 -0500
+
+
+Started GET "/assets/constants/post_constants.self-2713f67a34c6a9ba3ed5f1acc4e9dac56b813708231ffffff833adb24a3783f7.js?body=1" for ::1 at 2015-11-17 13:53:40 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-17 13:53:40 -0500
+
+
+Started GET "/assets/instashare.self-37b1d2617c8e2192ac4d09590fcc90e6ac6cb8f84a6e0204f8294981476a493c.js?body=1" for ::1 at 2015-11-17 13:53:40 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:53:40 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:53:40 -0500
+
+
+Started GET "/assets/stores/post.self-f1e6288087553106de53b2d39b271c312d732fcc90b4f1d042b697ae5db49040.js?body=1" for ::1 at 2015-11-17 13:53:40 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:53:40 -0500
+
+
+Started GET "/assets/util/api_util.self-5b4c6387c0aeabba1054a9d9540a0373bcae949e361ffe9d1771d13bb04ed2e0.js?body=1" for ::1 at 2015-11-17 13:53:40 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-17 13:53:40 -0500
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:53:44 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"VqfaZCtspMJDItUJzqnCEyjQ1jp6Nm5j/xkToEcFUl5m6VBGRS6R8zgkVjQRUcarsdJBiDIKMhXds8sxC3Lj2w==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Scott"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "YNWXUneB5nLJQZHjtG9tag"], ["id", 3]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 87ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 13:53:44 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "YNWXUneB5nLJQZHjtG9tag"]]
+Completed 200 OK in 115ms (Views: 113.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-17 13:53:44 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/session" for ::1 at 2015-11-17 13:53:46 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GFUQQ3W0KfrOSLhc4OZ8fnEg9b0wJAq//IdmZWZVOYooG5phG/Ycy7VOO2E/HnjG6CJiD3gYVsneLb70KiKIDw=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "YNWXUneB5nLJQZHjtG9tag"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "VQNMME8gladGuvG6wlz9fA"], ["id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 13:53:46 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 159ms (Views: 158.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:53:59 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"VRSodK0MANN2oCkFLRflIi3Bf2c7+xKyq1aHT2uXizZlWiJWw0414g2mqjjy7+GatMPo1XPHTsSJ/F/eJ+A6sw==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Scott"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "pqmJ-Asb-jflaOTQqYIX2Q"], ["id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 77ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 13:53:59 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "pqmJ-Asb-jflaOTQqYIX2Q"]]
+Completed 200 OK in 119ms (Views: 118.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-17 13:54:00 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/session" for ::1 at 2015-11-17 13:54:03 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WjM/MfqQcd/Nklt1p7BrT/mPWMgrAutvBevDInAqf6hqfbUTlNJE7raU2Eh4SG/3YI3PemM+txknQRuzPF3OLQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "pqmJ-Asb-jflaOTQqYIX2Q"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "gpyUewKPFp_NnISauyhAHg"], ["id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 13:54:03 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 118ms (Views: 116.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:54:15 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"vTZcRK9yVpQPTQ9XaNv5bwHcthmXnLDSzhObXTHHA0+NeNZmwTBjpXRLjGq3I/3XmN4hq9+g7KTsuUPMfbCyyg==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Scott"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "V0yFg1osS2e5_L9ZrKv9lQ"], ["id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 82ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 13:54:15 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "V0yFg1osS2e5_L9ZrKv9lQ"]]
+Completed 200 OK in 136ms (Views: 135.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-17 13:54:15 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/session" for ::1 at 2015-11-17 13:54:18 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5H1X/4L5rxuwQx4qX6vddRPJfRgQU9mG6sfWXQ6R6ofUM93d7LuaKstFnReAU9nNisvqqlhvhfDIbQ7MQuZbAg=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "V0yFg1osS2e5_L9ZrKv9lQ"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "5HSflQ2nscwUGlOx2UWeEA"], ["id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 13:54:18 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 134ms (Views: 132.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/user/" for ::1 at 2015-11-17 13:54:43 -0500
+
+ActionController::RoutingError (No route matches [GET] "/user"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (83.2ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (73.9ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (189.9ms)
+
+
+Started GET "/users/new" for ::1 at 2015-11-17 13:54:45 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 115ms (Views: 114.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/new" for ::1 at 2015-11-17 13:54:46 -0500
+
+ActionController::RoutingError (No route matches [GET] "/user/new"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.1ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.0ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (31.2ms)
+
+
+Started GET "/users/new" for ::1 at 2015-11-17 13:54:49 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 117ms (Views: 116.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for ::1 at 2015-11-17 13:56:49 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 111ms (Views: 109.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/sessions.self-329a550b3fcd5cc622f2a1ff49f7b12751d526f0fb19e15b8927fb37ad7cffa5.css?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/application.self-26388e1a2124b2043ae0db8107baca26a95a1d9a4528c6f82db57374ca48f254.css?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/components/create_comment.self-04ee18042d349122746e56189760b0403352dfaf4c4d373438b2c2cd1474ca02.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/components/index.self-f7d20a4f3717f8548e73485f2e2a580b966f434631cfb9ec925f3747f430c073.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/components/post.self-6135de975c801fb15a5c78cfe98bbf08dceb3653aa9efb34ff871f70d97f6806.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/components/user.self-c3ca17a40e57c40af6e39643e92dda0905485c15563af55c39d0fc5c221ba56a.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/actions/api_actions.self-35379c01045fb28b197bc569813101912c7b1e1478b18183154f0015c64387da.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/constants/post_constants.self-2713f67a34c6a9ba3ed5f1acc4e9dac56b813708231ffffff833adb24a3783f7.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/instashare.self-37b1d2617c8e2192ac4d09590fcc90e6ac6cb8f84a6e0204f8294981476a493c.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/stores/post.self-f1e6288087553106de53b2d39b271c312d732fcc90b4f1d042b697ae5db49040.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/util/api_util.self-5b4c6387c0aeabba1054a9d9540a0373bcae949e361ffe9d1771d13bb04ed2e0.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-17 13:56:49 -0500
+
+
+Started GET "/users/new" for ::1 at 2015-11-17 13:57:06 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 122ms (Views: 121.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/application.self-26388e1a2124b2043ae0db8107baca26a95a1d9a4528c6f82db57374ca48f254.css?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/sessions.self-329a550b3fcd5cc622f2a1ff49f7b12751d526f0fb19e15b8927fb37ad7cffa5.css?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/components/create_comment.self-04ee18042d349122746e56189760b0403352dfaf4c4d373438b2c2cd1474ca02.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/components/index.self-f7d20a4f3717f8548e73485f2e2a580b966f434631cfb9ec925f3747f430c073.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/components/post.self-6135de975c801fb15a5c78cfe98bbf08dceb3653aa9efb34ff871f70d97f6806.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/components/user.self-c3ca17a40e57c40af6e39643e92dda0905485c15563af55c39d0fc5c221ba56a.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/actions/api_actions.self-35379c01045fb28b197bc569813101912c7b1e1478b18183154f0015c64387da.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/constants/post_constants.self-2713f67a34c6a9ba3ed5f1acc4e9dac56b813708231ffffff833adb24a3783f7.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/instashare.self-37b1d2617c8e2192ac4d09590fcc90e6ac6cb8f84a6e0204f8294981476a493c.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/stores/post.self-f1e6288087553106de53b2d39b271c312d732fcc90b4f1d042b697ae5db49040.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/util/api_util.self-5b4c6387c0aeabba1054a9d9540a0373bcae949e361ffe9d1771d13bb04ed2e0.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-17 13:57:06 -0500
+
+
+Started GET "/users/new" for ::1 at 2015-11-17 13:57:45 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 130ms (Views: 129.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/sessions.self-329a550b3fcd5cc622f2a1ff49f7b12751d526f0fb19e15b8927fb37ad7cffa5.css?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/application.self-26388e1a2124b2043ae0db8107baca26a95a1d9a4528c6f82db57374ca48f254.css?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/components/create_comment.self-04ee18042d349122746e56189760b0403352dfaf4c4d373438b2c2cd1474ca02.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/components/index.self-f7d20a4f3717f8548e73485f2e2a580b966f434631cfb9ec925f3747f430c073.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/components/post.self-6135de975c801fb15a5c78cfe98bbf08dceb3653aa9efb34ff871f70d97f6806.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/components/user.self-c3ca17a40e57c40af6e39643e92dda0905485c15563af55c39d0fc5c221ba56a.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/actions/api_actions.self-35379c01045fb28b197bc569813101912c7b1e1478b18183154f0015c64387da.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/instashare.self-37b1d2617c8e2192ac4d09590fcc90e6ac6cb8f84a6e0204f8294981476a493c.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/constants/post_constants.self-2713f67a34c6a9ba3ed5f1acc4e9dac56b813708231ffffff833adb24a3783f7.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/stores/post.self-f1e6288087553106de53b2d39b271c312d732fcc90b4f1d042b697ae5db49040.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/util/api_util.self-5b4c6387c0aeabba1054a9d9540a0373bcae949e361ffe9d1771d13bb04ed2e0.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-17 13:57:45 -0500
+
+
+Started GET "/users/new" for ::1 at 2015-11-17 13:57:59 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 127ms (Views: 126.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/sessions.self-329a550b3fcd5cc622f2a1ff49f7b12751d526f0fb19e15b8927fb37ad7cffa5.css?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/application.self-26388e1a2124b2043ae0db8107baca26a95a1d9a4528c6f82db57374ca48f254.css?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/components/create_comment.self-04ee18042d349122746e56189760b0403352dfaf4c4d373438b2c2cd1474ca02.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/components/index.self-f7d20a4f3717f8548e73485f2e2a580b966f434631cfb9ec925f3747f430c073.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/components/user.self-c3ca17a40e57c40af6e39643e92dda0905485c15563af55c39d0fc5c221ba56a.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/components/post.self-6135de975c801fb15a5c78cfe98bbf08dceb3653aa9efb34ff871f70d97f6806.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/actions/api_actions.self-35379c01045fb28b197bc569813101912c7b1e1478b18183154f0015c64387da.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/constants/post_constants.self-2713f67a34c6a9ba3ed5f1acc4e9dac56b813708231ffffff833adb24a3783f7.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/instashare.self-37b1d2617c8e2192ac4d09590fcc90e6ac6cb8f84a6e0204f8294981476a493c.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/stores/post.self-f1e6288087553106de53b2d39b271c312d732fcc90b4f1d042b697ae5db49040.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/util/api_util.self-5b4c6387c0aeabba1054a9d9540a0373bcae949e361ffe9d1771d13bb04ed2e0.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-17 13:57:59 -0500
+
+
+Started POST "/users" for ::1 at 2015-11-17 13:58:25 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"RwhSS7j6iDbY8PGl95ULIB/nVQDmxEkO06zvstAVh+V3Rthp1ri9B6P2cpgobQ+YhuXCsq74FXjxBjcjnGI2YA==", "user"=>{"username"=>"Scott2", "password"=>"[FILTERED]", "body"=>"I like dogs."}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (29.8ms)[0m  INSERT INTO "users" ("username", "password_digest", "body", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Scott2"], ["password_digest", "$2a$10$G8/SEZxkHINsriltFXwm4.THh6vqq/W29e2f7kPKyFz.1tI0KNlXW"], ["body", "I like dogs."], ["session_token", "tq4wfWMz1etyL-f6naoVQQ"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "FB0y9qkhwTWQvqNXzw6KaQ"], ["id", 4]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 148ms (ActiveRecord: 31.8ms)
+
+
+Started GET "/users/4" for ::1 at 2015-11-17 13:58:25 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "FB0y9qkhwTWQvqNXzw6KaQ"]]
+Completed 200 OK in 135ms (Views: 134.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2015-11-17 13:59:11 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"RwhSS7j6iDbY8PGl95ULIB/nVQDmxEkO06zvstAVh+V3Rthp1ri9B6P2cpgobQ+YhuXCsq74FXjxBjcjnGI2YA==", "user"=>{"username"=>"Scott3", "password"=>"[FILTERED]", "body"=>"I like turtles."}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "body", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Scott3"], ["password_digest", "$2a$10$OhvK21M55qOtVawHACRlL.nWMCl.wIYeR60nLMvYgxDE7hD2OTpPu"], ["body", "I like turtles."], ["session_token", "u5YpaOWtLKoTSHa--TGD1g"]]
+  [1m[35m (37.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "TMsADzrsOwDWJ4cuPK7jCQ"], ["id", 5]]
+  [1m[36m (9.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 142ms (ActiveRecord: 51.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 13:59:12 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "TMsADzrsOwDWJ4cuPK7jCQ"]]
+Completed 200 OK in 115ms (Views: 114.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-17 13:59:12 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 2.9ms)
+
+
+Started DELETE "/session" for ::1 at 2015-11-17 13:59:22 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZB7WkpRi5yVyY3V+ZRD5Awe/6gnD1nPrO46XMLEJi6xUUFyw+iDSFAll9kO66P27nr19u4vqL50ZJE+h/X46KQ=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "TMsADzrsOwDWJ4cuPK7jCQ"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "oc7ULA9cLhxSpgPk4z_Xhw"], ["id", 5]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 13:59:22 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 120ms (Views: 119.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:59:26 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"QiP3JVac/tw92XDHepLZcfYx1khgkln/LzCzZ05zHs1ybX0HON7L7Ubf8/qlat3JbzNB+iiuBYkNmmv2AgSvSA==", "user"=>{"username"=>"Scott3", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Scott3"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "IYfj_8yv6zkeTCePpk_-Sg"], ["id", 5]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 83ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 13:59:26 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "IYfj_8yv6zkeTCePpk_-Sg"]]
+Completed 200 OK in 120ms (Views: 119.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-17 13:59:27 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/session" for ::1 at 2015-11-17 13:59:31 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"N/3CJzP3XSwsIwr+DgIGnidb9JYZof792sKklJGebIgHs0gFXbVoHVclicPR+gImvlljJFGdoov4aHwF3endDQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "IYfj_8yv6zkeTCePpk_-Sg"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "B5kZBifI6_3CTWYKkLcJZw"], ["id", 5]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 13:59:31 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 108ms (Views: 107.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 13:59:51 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"EzWZFI/S1U3NAwyHef+YjlpwLypezj4ThFmn91zWjHcjexM24ZDgfLYFj7qmB5w2w3K4mBbyYmWm839mEKE98g==", "user"=>{"username"=>"Scott1", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Scott1"]]
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 171ms (Views: 168.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 14:00:55 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"EzWZFI/S1U3NAwyHef+YjlpwLypezj4ThFmn91zWjHcjexM24ZDgfLYFj7qmB5w2w3K4mBbyYmWm839mEKE98g==", "user"=>{"username"=>"Scott1", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Scott1"]]
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 146ms (Views: 143.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/sessions.self-329a550b3fcd5cc622f2a1ff49f7b12751d526f0fb19e15b8927fb37ad7cffa5.css?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/application.self-26388e1a2124b2043ae0db8107baca26a95a1d9a4528c6f82db57374ca48f254.css?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/components/create_comment.self-04ee18042d349122746e56189760b0403352dfaf4c4d373438b2c2cd1474ca02.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/components/index.self-f7d20a4f3717f8548e73485f2e2a580b966f434631cfb9ec925f3747f430c073.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/components/post.self-6135de975c801fb15a5c78cfe98bbf08dceb3653aa9efb34ff871f70d97f6806.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/components/user.self-c3ca17a40e57c40af6e39643e92dda0905485c15563af55c39d0fc5c221ba56a.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/actions/api_actions.self-35379c01045fb28b197bc569813101912c7b1e1478b18183154f0015c64387da.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/constants/post_constants.self-2713f67a34c6a9ba3ed5f1acc4e9dac56b813708231ffffff833adb24a3783f7.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/instashare.self-37b1d2617c8e2192ac4d09590fcc90e6ac6cb8f84a6e0204f8294981476a493c.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/stores/post.self-f1e6288087553106de53b2d39b271c312d732fcc90b4f1d042b697ae5db49040.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/util/api_util.self-5b4c6387c0aeabba1054a9d9540a0373bcae949e361ffe9d1771d13bb04ed2e0.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-17 14:00:55 -0500
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:01:28 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 163ms (Views: 161.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:01:28 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 170ms (Views: 169.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 14:01:42 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"42Y3QTGiSAMVbQTatr9gIMLjcN1CUfsuDepMsB95Bf3TKL1jX+B9Mm5rh+dpR2SYW+Hnbwptp1gvQJQhUw60eA==", "user"=>{"username"=>"Scott1", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Scott1"]]
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 130ms (Views: 128.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for ::1 at 2015-11-17 14:01:48 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 134ms (Views: 133.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2015-11-17 14:01:50 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"ZcOskeW2lf+SNE1WoG92ecvEi4jCGo5FA5z+uw56GKNVjSazi/Sgzukyzmt/l3LBUsYcOoom0jMhNiYqQg2pJg==", "user"=>{"username"=>"", "password"=>"[FILTERED]", "body"=>""}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (17.2ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 336ms (Views: 106.8ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:02:02 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 112ms (Views: 110.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 14:02:08 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"4jquBHOFvSi8T0K7x4Ad8svn01U1SCiabMPA+0qxT2rSdCQmHceIGcdJwYYYeBlKUuVE5310dOxOaRhqBsb+7w==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Scott"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "x7ACZ0jwgN_tcZe7Vgukmg"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 82ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 14:02:08 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "x7ACZ0jwgN_tcZe7Vgukmg"]]
+Completed 200 OK in 107ms (Views: 106.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-17 14:02:09 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 14:12:19 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "x7ACZ0jwgN_tcZe7Vgukmg"]]
+Completed 200 OK in 336ms (Views: 335.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/sessions.self-329a550b3fcd5cc622f2a1ff49f7b12751d526f0fb19e15b8927fb37ad7cffa5.css?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/application.self-26388e1a2124b2043ae0db8107baca26a95a1d9a4528c6f82db57374ca48f254.css?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/components/create_comment.self-04ee18042d349122746e56189760b0403352dfaf4c4d373438b2c2cd1474ca02.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/components/index.self-f7d20a4f3717f8548e73485f2e2a580b966f434631cfb9ec925f3747f430c073.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/components/post.self-6135de975c801fb15a5c78cfe98bbf08dceb3653aa9efb34ff871f70d97f6806.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/components/user.self-c3ca17a40e57c40af6e39643e92dda0905485c15563af55c39d0fc5c221ba56a.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/actions/api_actions.self-35379c01045fb28b197bc569813101912c7b1e1478b18183154f0015c64387da.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/constants/post_constants.self-2713f67a34c6a9ba3ed5f1acc4e9dac56b813708231ffffff833adb24a3783f7.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/instashare.self-37b1d2617c8e2192ac4d09590fcc90e6ac6cb8f84a6e0204f8294981476a493c.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/stores/post.self-f1e6288087553106de53b2d39b271c312d732fcc90b4f1d042b697ae5db49040.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/util/api_util.self-5b4c6387c0aeabba1054a9d9540a0373bcae949e361ffe9d1771d13bb04ed2e0.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-17 14:12:20 -0500
+
+
+Started GET "/api/posts" for ::1 at 2015-11-17 14:12:20 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[35mPost Load (2.6ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/session" for ::1 at 2015-11-17 14:12:21 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"titKR6J6+9sTmUKLZpIxPFJ6Wu1KieF82O0q5167apKGZcBlzDjO6mifwba5ajWEy3jNXwK1vQr6R/J2EszbFw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "x7ACZ0jwgN_tcZe7Vgukmg"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "L8m7fkSlI4GSr7eG8ujgcg"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:12:21 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 138ms (Views: 136.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:12:24 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 129ms (Views: 127.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:12:25 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 124ms (Views: 123.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:12:26 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 152ms (Views: 151.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:12:26 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 149ms (Views: 148.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 14:12:36 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 130ms (Views: 128.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-17 14:12:36 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[36mPost Load (2.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:12:38 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 116ms (Views: 115.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:13:07 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 104ms (Views: 103.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/sessions.self-329a550b3fcd5cc622f2a1ff49f7b12751d526f0fb19e15b8927fb37ad7cffa5.css?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/application.self-26388e1a2124b2043ae0db8107baca26a95a1d9a4528c6f82db57374ca48f254.css?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/components/create_comment.self-04ee18042d349122746e56189760b0403352dfaf4c4d373438b2c2cd1474ca02.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/components/index.self-f7d20a4f3717f8548e73485f2e2a580b966f434631cfb9ec925f3747f430c073.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/components/post.self-6135de975c801fb15a5c78cfe98bbf08dceb3653aa9efb34ff871f70d97f6806.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/components/user.self-c3ca17a40e57c40af6e39643e92dda0905485c15563af55c39d0fc5c221ba56a.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/actions/api_actions.self-35379c01045fb28b197bc569813101912c7b1e1478b18183154f0015c64387da.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/constants/post_constants.self-2713f67a34c6a9ba3ed5f1acc4e9dac56b813708231ffffff833adb24a3783f7.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/instashare.self-37b1d2617c8e2192ac4d09590fcc90e6ac6cb8f84a6e0204f8294981476a493c.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/stores/post.self-f1e6288087553106de53b2d39b271c312d732fcc90b4f1d042b697ae5db49040.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/util/api_util.self-5b4c6387c0aeabba1054a9d9540a0373bcae949e361ffe9d1771d13bb04ed2e0.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-17 14:13:07 -0500
+
+
+Started GET "/users/new" for ::1 at 2015-11-17 14:13:08 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 167ms (Views: 166.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:13:09 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 153ms (Views: 152.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2015-11-17 14:13:10 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 145ms (Views: 143.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:13:11 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 149ms (Views: 148.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 14:13:16 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"FJP4VOjZtPI8P5qwygBynzua25MNmc/Pwvg+/Yioxe4k3XJ2hpuBw0c5GY0V+HYnophMIUWlk7ngUuZsxN90aw==/", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+  actionpack (4.2.3) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.3) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.3) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:430:in `block in make_lambda'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:162:in `block in halting'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/010bfe92208fabd7/variables" for ::1 at 2015-11-17 14:13:16 -0500
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:13:26 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 189ms (Views: 188.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/sessions.self-329a550b3fcd5cc622f2a1ff49f7b12751d526f0fb19e15b8927fb37ad7cffa5.css?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/application.self-26388e1a2124b2043ae0db8107baca26a95a1d9a4528c6f82db57374ca48f254.css?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/components/create_comment.self-04ee18042d349122746e56189760b0403352dfaf4c4d373438b2c2cd1474ca02.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/components/index.self-f7d20a4f3717f8548e73485f2e2a580b966f434631cfb9ec925f3747f430c073.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/components/post.self-6135de975c801fb15a5c78cfe98bbf08dceb3653aa9efb34ff871f70d97f6806.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/components/user.self-c3ca17a40e57c40af6e39643e92dda0905485c15563af55c39d0fc5c221ba56a.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/actions/api_actions.self-35379c01045fb28b197bc569813101912c7b1e1478b18183154f0015c64387da.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/constants/post_constants.self-2713f67a34c6a9ba3ed5f1acc4e9dac56b813708231ffffff833adb24a3783f7.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/instashare.self-37b1d2617c8e2192ac4d09590fcc90e6ac6cb8f84a6e0204f8294981476a493c.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/stores/post.self-f1e6288087553106de53b2d39b271c312d732fcc90b4f1d042b697ae5db49040.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/util/api_util.self-5b4c6387c0aeabba1054a9d9540a0373bcae949e361ffe9d1771d13bb04ed2e0.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-17 14:13:27 -0500
+
+
+Started POST "/session" for ::1 at 2015-11-17 14:13:30 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"OvXtwfl6LV8GGp91ywbauKvFYx9DvbTuNiwLxxg4COgKu2fjlzgYbn0cHEgU/t4AMsf0rQuB6JgUhtNWVE+5bQ==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Scott"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "OfkWIIDAh4Nwegx3j-kTlg"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 77ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 14:13:30 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OfkWIIDAh4Nwegx3j-kTlg"]]
+Completed 200 OK in 120ms (Views: 118.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-17 14:13:30 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/session" for ::1 at 2015-11-17 14:13:37 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XNLYt/mkFdDllx1tTuAzbTryohgIDvNWqe53UQtor2RsnFKVl+Yg4Z6RnlCRGDfVo/A1qkAyryCLRK/ARx8e4Q=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OfkWIIDAh4Nwegx3j-kTlg"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "pb6FrswrpzFBOUOM33K4mw"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:13:37 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 129ms (Views: 127.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 14:13:42 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"uhtCiFhKPd/thmFjJTEhHTAsTgP2sBWp75JYZvuCb+2KVciqNggI7paA4l76ySWlqS7Zsb6MSd/NOID3t/XeaA==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Scott"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "2z0Hh7sPe53-Xkvb6H4uBw"], ["id", 3]]
+  [1m[36m (62.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 142ms (ActiveRecord: 63.5ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 14:13:42 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "2z0Hh7sPe53-Xkvb6H4uBw"]]
+Completed 200 OK in 92ms (Views: 90.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-17 14:13:42 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/session" for ::1 at 2015-11-17 14:13:51 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"poH9YXmBdxmYemNx+YJzbCruE1H7Km8RHybAggPlaqaWz3dDF8NCKON84EwmenfUs+yE47MWM2c9jBgTT5LbIw=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "2z0Hh7sPe53-Xkvb6H4uBw"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "LShtk8wi5mfQ5ZGfy5-Eyw"], ["id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:13:51 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 111ms (Views: 109.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:13:52 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 178ms (Views: 177.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for ::1 at 2015-11-17 14:13:53 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 145ms (Views: 143.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:13:54 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 145ms (Views: 144.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2015-11-17 14:13:55 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 153ms (Views: 152.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:13:55 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 145ms (Views: 143.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 14:13:59 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"iFEg+QEc0J1sQ0Ob4+QPUaMqrEqrAD1a8oWEtZr4Z3q4H6rbb17lrBdFwKY8HAvpOig7+OM8YSzQL1wk1o/W/w==/", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+  actionpack (4.2.3) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.3) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.3) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:430:in `block in make_lambda'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:162:in `block in halting'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/90e6e482d4e26f5d/variables" for ::1 at 2015-11-17 14:13:59 -0500
+
+
+Started POST "/session" for ::1 at 2015-11-17 14:14:09 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"XIMVZx1qmxrYhBBWoN+trGu+yKYcYrNMnSKK4jEssdlszZ9FcyiuK6OCk2t/J6kU8rxfFFRe7zq/iFJzfVsAXA==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Scott"]]
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "tqvuVlwLJ3JET2XQDcje-w"], ["id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 80ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 14:14:09 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "tqvuVlwLJ3JET2XQDcje-w"]]
+Completed 200 OK in 127ms (Views: 125.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-17 14:14:09 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[36mPost Load (1.8ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/session" for ::1 at 2015-11-17 14:14:11 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"T9pe9xbDqlD9DfpRQTvdIQn/bSsv0kdHQqsKKSckOqd/lNTVeIGfYYYLeWyew9mZkP36mWfuGzFgAdK4a1OLIg=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "tqvuVlwLJ3JET2XQDcje-w"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "A-ipkJQIy6THXkectWGJKA"], ["id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:14:11 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 124ms (Views: 123.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 14:14:15 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"/5pnbVnNhTSEcv5A2qi8OGw+qAZ3irR4+RZffQejBC7P1O1PN4+wBf90fX0FULiA9Tw/tD+26A7bvIfsS9S1qw==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Scott"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "rbN98hCRDlAvgNIAvg_k6A"], ["id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 82ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 14:14:15 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "rbN98hCRDlAvgNIAvg_k6A"]]
+Completed 200 OK in 136ms (Views: 134.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-17 14:14:15 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/session" for ::1 at 2015-11-17 14:14:17 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RKV7xRS8zG35JUH9yvFzI/8qP8BRkErhA8GDWy9epat06/Hnev75XIIjwsAVCXebZiiochmsFpcha1vKYykULg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "rbN98hCRDlAvgNIAvg_k6A"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "8xG7HIGUatwXRCzbQm865A"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-17 14:14:17 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 119ms (Views: 117.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/session" for ::1 at 2015-11-17 14:14:20 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"JkWkkz8S4/r5CDPluqFUS0cCYF9xE9GEKujFg5bGWpwWCy6xUVDWy4IOsNhlWVDz3gD37TkvjfIIQh0S2rHrGQ==", "user"=>{"username"=>"Scott", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Scott"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "qfitjAe3adV2ua0ozJpDGA"], ["id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 14:14:20 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "qfitjAe3adV2ua0ozJpDGA"]]
+Completed 200 OK in 110ms (Views: 108.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-17 14:14:21 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 2.0ms)
