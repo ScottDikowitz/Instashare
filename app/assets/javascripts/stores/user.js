@@ -1,10 +1,10 @@
 (function(){
 
-  var _users = [];
+  var _user = {};
   var CHANGE_EVENT = 'CHANGE';
   var UserStore = window.UserStore = $.extend( {},  EventEmitter.prototype);
   UserStore.all = function(){
-    return _users.slice(0);
+    return _user.username;
   };
 
   UserStore.addChangeListener = function(callback){
@@ -15,13 +15,13 @@
     this.removeListener(CHANGE_EVENT, callback);
   };
 
-  UserStore.resetUsers = function(users){
-      _users = users;
+  UserStore.resetUser = function(user){
+      _user = user;
   };
 
   UserStore.dispatcherID = AppDispatcher.register(function(payload){
       if(payload.actionType === UserConstants.USER_RECEIVED){
-        UserStore.resetUsers(payload.users);
+        UserStore.resetUser(payload.user);
         UserStore.emit(CHANGE_EVENT);
       }
     });

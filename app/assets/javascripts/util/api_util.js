@@ -25,12 +25,12 @@ var ApiUtil = window.ApiUtil = {
 
   fetchSingleUser: function(userId){
     $.ajax ({
-      url: 'api/users/' + userId,
+      url: 'api/posts_users/' + userId,
       type: 'GET',
       dataType: 'json',
-      data: {userId: userId},
+      data: {userId: parseInt(userId)},
       success: function(data) {
-        ApiActions.receiveAll(data);
+        ApiActions.receiveUser(data);
       }
     });
   }

@@ -6,6 +6,7 @@ class Api::UsersController < ApplicationController
   end
 
   def show
+    # byebug
     user = User.find_by(username: params[:username])
     @posts = user.posts.reverse
     render json: @posts
