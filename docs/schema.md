@@ -6,6 +6,7 @@ column name | data type | details
 id          | integer   | not null, primary key
 image       | string    | not null
 comment     | text      | not null
+user_id     | integer   | not null
 
 ## likes
 column name | data type | details
@@ -20,6 +21,11 @@ column name | data type | details
 id          | integer   | not null, primary key
 post_id     | integer   | not null, indexed
 name        | string    | not null, indexed
+
+<!-- ## taggings
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key -->
 
 ## comments
 column name | data type | details
