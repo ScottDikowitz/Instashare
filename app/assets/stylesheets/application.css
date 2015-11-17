@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background: #FAFAFA;
+}
+ .post-header {
+   height: 50px;
+ }
+
+.post-image-container {
+  display: block;
+  height: 500px;
+  background: lightblue;
+  color: white;
+}
+
+.post {
+  width: 600px;
+  margin: 10px auto 25px;
+  background: #fff;
+  border: 1px solid #edeeee;
+  border-radius: 3px;
+}
+
+.comments {
+  background: white;
+  min-height: 50px;
+}
+
+.create-comment {
+  display: block;
+  height: 30px;
+  border-top: 1px solid #edeeee;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+h1{
+  text-align: center;
+}
