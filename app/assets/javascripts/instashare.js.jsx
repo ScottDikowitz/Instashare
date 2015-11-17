@@ -17,7 +17,7 @@
 
   var routes = (
       <Route path="/" component={App}>
-        <route path="/users/:userId" component={UserShow}/>
+        <route path="/users/:username" component={UserShow}/>
         <IndexRoute component={Index}/>
       </Route>
   );

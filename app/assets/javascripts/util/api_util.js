@@ -9,6 +9,18 @@ var ApiUtil = window.ApiUtil = {
         ApiActions.receiveAll(data);
       }
     });
+  },
+
+  fetchSingleUserPosts: function(username){
+    $.ajax ({
+      url: 'api/users/' + username,
+      type: 'GET',
+      dataType: 'json',
+      data: {username: username},
+      success: function(data) {
+        ApiActions.receiveAll(data);
+      }
+    });
   }
 
 };

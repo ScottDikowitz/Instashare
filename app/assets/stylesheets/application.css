@@ -51,3 +51,24 @@ body {
 h1{
   text-align: center;
 }
+
+.post-grid-square{
+  width: 294px;
+  height: 294px;
+  background: lightgrey;
+  float: left;
+  margin: 15px;
+
+}
+
+.group:after{
+  clear: both;
+  display: block;
+  content: "";
+}
+
+.post-grid{
+background: #edeeee;
+width: 972px;
+margin: auto;
+}
