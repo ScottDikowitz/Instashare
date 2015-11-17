@@ -1,0 +1,14 @@
+Sign Up
+<form class="sign-up" action="<%= users_url %>" method="POST">
+  <%= auth_token %>
+<label>Username
+  <input type="text" name="user[username]"/>
+</label>
+<label>Password
+  <input type="password" name="user[password]"/>
+</label>
+<label>Bio
+  <textarea name="user[body]"></textarea>
+</label>
+  <input type="submit" value="Sign Up"/>
+</form>
