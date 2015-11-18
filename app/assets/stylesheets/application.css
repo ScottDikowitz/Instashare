@@ -37,6 +37,11 @@ body {
    position: relative;
  }
 
+ a{
+   color: #125688;
+   font-size: 15px;
+ }
+
 .post-image-container {
   display: block;
   height: 500px;
@@ -60,10 +65,8 @@ body {
 
 }
 
-.post-header span{
-
+.post a{
   margin-left: 10px;
-
 }
 
 .post-header li{
@@ -92,6 +95,10 @@ body {
 
 h1{
   text-align: center;
+}
+
+.comments{
+  margin-top: 10px;
 }
 
 .post-grid-square{

@@ -16,6 +16,10 @@ var Post = React.createClass ({
                 </section>
                 <section className="post-image-container">{this.props.post.image}</section>
                 <section className="comments">
+
+                <ReactRouter.Link to={"/users/" + this.props.post.user.username}>
+                  <span>{this.props.post.user.username}: </span>
+                </ReactRouter.Link>
                   <span>{this.props.post.caption}</span>
                 </section>
                 <section>
