@@ -2,7 +2,7 @@
 
 [Heroku link][heroku] **NB:** This should be a link to your production site
 
-[heroku]: http://www.herokuapp.com
+[heroku]: http://instashareapp.herokuapp.com/
 
 ## Minimum Viable Product
 
@@ -77,6 +77,7 @@ posts for the month or so.
 - [ ] Edit password
 - [ ] Load more (infinite scrolling)
 - [ ] Followers, following lists for users.
+- [ ] Photo Filters
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
