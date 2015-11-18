@@ -2,7 +2,8 @@ class Api::PostsController < ApplicationController
 
   def index
     @posts = Post.all.reverse
-    render json: @posts.to_json
+    # render json: @posts.to_json
+    render json: @posts.as_json(include: [:user])
   end
 
   def show
