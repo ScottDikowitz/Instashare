@@ -16,10 +16,7 @@ var UserShow = React.createClass ({
     var userPosts;
     var userHeader;
     if (this.state){
-      // userPosts = this.state.posts.map(function(post){
-        // return <Post key={post.id} post={post}/>;
         userHeader = <UserHeader curUser={this.state.posts.pop()}/>;
-
         userPosts = <PostGrid posts={this.state.posts}/>;
     }
     return <div>

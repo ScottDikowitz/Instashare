@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   validates :caption, :user_id, presence: true
   belongs_to :user
-  has_attached_file :image, default_url: "missing.png"
+  has_attached_file :image, default_url: "cat.jpg"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 end
