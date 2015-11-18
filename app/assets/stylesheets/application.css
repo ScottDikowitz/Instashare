@@ -13,6 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+ body, header, li, ul, span, a {
+   background: transparent;
+   font: inherit;
+   font-family: sans-serif;
+   text-decoration: none;
+   margin: 0px;
+   padding: 0px;
+ }
+
+
+ ul{
+   list-style: none;
+ }
 body {
   background: #FAFAFA;
 }
@@ -33,6 +47,12 @@ body {
   background: #fff;
   border: 1px solid #edeeee;
   border-radius: 3px;
+  position: relative;
+}
+
+.post small{
+  position: absolute;
+  right: 5px;
 }
 
 .comments {

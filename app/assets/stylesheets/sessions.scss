@@ -1,17 +1,7 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body, header, li, ul, span{
-  background: transparent;
-  font: inherit;
-  font-family: sans-serif;
-  text-decoration: none;
-  margin: 0px;
-  padding: 0px;
-}
-ul{
-  list-style: none;
-}
+
 .sign-in{
   background: lightgrey;
   margin: 300px auto;
@@ -19,6 +9,7 @@ ul{
   // height: 200px;
   border: 1px solid black;
   border-radius: 5px;
+
 }
 
 .sign-in > ul{

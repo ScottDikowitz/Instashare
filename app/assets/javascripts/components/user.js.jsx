@@ -4,6 +4,10 @@ var UserShow = React.createClass ({
     ApiUtil.fetchSingleUserPosts(this.props.params.username);
   },
 
+  componentWillUnmount: function(){
+    PostStore.removeChangeListener(this._changed);
+  },
+
   _changed: function(){
     this.setState({posts: PostStore.all()});
   },

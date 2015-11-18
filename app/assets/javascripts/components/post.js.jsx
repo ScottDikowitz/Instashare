@@ -6,9 +6,12 @@ var Post = React.createClass ({
 
   render: function(){
     return <div className="post">
+                <section className="post-header">
                 <ReactRouter.Link to={"/users/" + this.props.post.user.username}>
                 <span>{this.props.post.user.username}</span>
                 </ReactRouter.Link>
+                <small>{this.props.post.created_at}</small>
+                </section>
                 <section className="post-image-container">{this.props.post.image}</section>
                 <section className="comments">
                 <span>{this.props.post.caption}</span>
