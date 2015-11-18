@@ -1,1 +1,2 @@
-json.extract! post, :id, :image, :caption
+json.extract! post, :id, :caption
+json.image asset_path(post.image.url)

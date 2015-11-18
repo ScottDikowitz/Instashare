@@ -14,7 +14,8 @@ var Post = React.createClass ({
                   <small>{this.props.post.minutes_ago}</small>
                   </li>
                 </section>
-                <section className="post-image-container">{this.props.post.image}</section>
+                <section className="post-image-container">
+                  <img src={this.props.post.image}/></section>
                 <section className="comments">
 
                 <ReactRouter.Link to={"/users/" + this.props.post.user.username}>
