@@ -21,6 +21,7 @@
    text-decoration: none;
    margin: 0px;
    padding: 0px;
+   list-style: none;
  }
 
 
@@ -31,7 +32,9 @@ body {
   background: #FAFAFA;
 }
  .post-header {
-   height: 50px;
+   height: 66px;
+   display: block;
+   position: relative;
  }
 
 .post-image-container {
@@ -47,12 +50,31 @@ body {
   background: #fff;
   border: 1px solid #edeeee;
   border-radius: 3px;
+}
+
+.post-header small{
+
+  right: 10px;
+  color: #a5a7aa;
+  position: absolute;
+
+}
+
+.post-header span{
+
+  margin-left: 10px;
+
+}
+
+.post-header li{
+  top: 25px;
+  display: block;
   position: relative;
 }
 
-.post small{
-  position: absolute;
-  right: 5px;
+
+.post small:after{
+  content: "m";
 }
 
 .comments {

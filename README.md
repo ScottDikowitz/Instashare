@@ -36,7 +36,7 @@ also adds some extras, including:
 I will design landing page, the user signup/signin, models and api for the site,
  and make sensible routes. Then I will design an api for pulling post
  information from the database. I suspect that I will need to use AWS for
- storing images.
+ storing images. Also, header?
 
 [Details][phase-one]
 

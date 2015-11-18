@@ -8,7 +8,7 @@
     render: function(){
       return (
           <div>
-            <header><h1>Instashare</h1></header>
+            <Header/>
             {this.props.children}
           </div>
       );
