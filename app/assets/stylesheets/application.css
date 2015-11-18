@@ -14,7 +14,7 @@
  *= require_self
  */
 
- body, header, li, ul, span, a {
+ body, header, li, span, a, figure, div {
    background: transparent;
    font: inherit;
    font-family: sans-serif;
@@ -73,11 +73,6 @@ body {
   top: 25px;
   display: block;
   position: relative;
-}
-
-
-.post small:after{
-  content: "m";
 }
 
 .comments {

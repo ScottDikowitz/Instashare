@@ -33,10 +33,11 @@ also adds some extras, including:
 ## Implementation Timeline
 
 ### Phase 1: user auth, routes, models and api (2 days)
-I will design landing page, the user signup/signin, models and api for the site,
- and make sensible routes. Then I will design an api for pulling post
- information from the database. I suspect that I will need to use AWS for
- storing images. Also, header.
+ I will design landing page, the user signup/signin, models and api for the site,
+ and make routes for posts api and user pages. I will have the posts index and
+ the user show page nested in a react router. Then I will design an api for
+ pulling post information from the database. I will also create a basic header,
+ and links for navigation.
 
 [Details][phase-one]
 
@@ -46,6 +47,7 @@ the ability for users to comment on posts. Then I will let a user to follow
 another user. When the user follows the other user, the other user's
 recent posts will show up in their index feed. Additionally, I will add
 minimal styling in CSS here and proper semantic tags and group things in classes.
+Make logo.
 [Details][phase-two]
 
 ## Phase 3: tagging and location (2 days)

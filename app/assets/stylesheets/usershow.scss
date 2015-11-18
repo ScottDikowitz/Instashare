@@ -1,0 +1,32 @@
+.user-container{
+  width: 973px;
+  margin: auto;
+}
+
+.user-header{
+  background: lightgrey;
+  height: 200px;
+}
+
+.user-header > div{
+}
+
+.user-header > figure{
+  color: red;
+  width: 100px;
+  height: 100px;
+  background: lightblue;
+  padding: 50px;
+  float: left;
+}
+
+.account-info{
+  width: 400px;
+  height: 200px;
+  background: white;
+  margin: auto;
+}
+
+.account-info > li {
+  font-size: 26px;
+}

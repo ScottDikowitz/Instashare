@@ -14,12 +14,20 @@ var UserShow = React.createClass ({
 
   render: function(){
     var userPosts;
+    var userHeader;
     if (this.state){
       // userPosts = this.state.posts.map(function(post){
         // return <Post key={post.id} post={post}/>;
+        userHeader = <UserHeader curUser={this.state.posts.pop()}/>;
+
         userPosts = <PostGrid posts={this.state.posts}/>;
     }
-    return <div>{userPosts}</div>;
+    return <div>
+            <div className = "user-container">
+              {userHeader}
+              {userPosts}
+            </div>
+          </div>;
   }
 
 });

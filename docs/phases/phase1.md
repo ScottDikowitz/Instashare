@@ -7,10 +7,11 @@
 
 ### Controllers
 * UsersController (create, new)
-* SessionsController (create, new, destroy)
-* Api::PostsController (index, show)
 * Api::UsersController (index, show)
-* PostsController (create, destroy, edit, update, new)
+* Api::PostsController (index, show)
+* static_pages_controller
+* SessionsController (create, new, destroy)
+<!-- * PostsController (create, destroy, edit, update, new) -->
 
 ## Flux
 ### Views (React Components)
