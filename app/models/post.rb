@@ -3,4 +3,13 @@ class Post < ActiveRecord::Base
   belongs_to :user
   has_attached_file :image, default_url: "cat.jpg"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
+  has_many :comments
+
+def getStuff
+    self.comments.map do |comment|
+      {username: comment.user.username,
+      content: comment.content}
+    end
+end
 end

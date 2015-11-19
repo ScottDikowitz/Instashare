@@ -18,6 +18,7 @@ var Post = React.createClass ({
                   <span>{this.props.post.user.username}: </span>
                 </ReactRouter.Link>
                   <span>{this.props.post.caption}</span>
+                <CommentsBox comments={this.props.post.comments}/>
                 </section>
                 <section>
                   <CreateComment/>
