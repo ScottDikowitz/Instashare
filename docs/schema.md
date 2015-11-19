@@ -32,6 +32,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 post_id     | integer   | not null, indexed
+user_id     | integer   | not null, indexed
 content     | text      | not null
 
 ## follows

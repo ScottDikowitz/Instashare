@@ -41,7 +41,7 @@ also adds some extras, including:
 
 [Details][phase-one]
 
-## Phase 2: Comments, follows, likes (2 days)
+## Phase 2: Posts, Comments, likes (2 days)
 In this phase I will make ability for the user to create a new post, and have
 the ability for users to comment on posts. Then I will let a user to follow
 another user. When the user follows the other user, the other user's
@@ -59,9 +59,9 @@ that have been tagged at that location, and the post show page should have a
 link to the location index page.
 [Details][phase-three]
 
-## Phase 4: Search(1 day)
-Here I will implement search. A user can search for another user or search
-for a tag.
+## Phase 4: Search and liking(1 day)
+First I will allow a user to like a post. Then I will implement search. A user
+can search for another user or search for a tag.
 [Details][phase-four]
 
 ##Phase 5: Styling and refactoring, explore page(2)

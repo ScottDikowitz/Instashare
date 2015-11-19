@@ -15,7 +15,6 @@ var PostForm = React.createClass ({
             <div className="post-form">
               <button className="add-photo">Upload a photo.</button>
             <form  onSubmit={this.handleSubmit} action="#" method="POST">
-
               <label>Enter a caption.
               <input type="text" name="caption"/>
               </label>
