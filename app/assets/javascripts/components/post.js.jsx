@@ -21,7 +21,7 @@ var Post = React.createClass ({
                 <CommentsBox comments={this.props.post.comments}/>
                 </section>
                 <section>
-                  <CreateComment/>
+                  <CreateComment post_id={this.props.post.id}/>
                 </section>
           </div>;
   }

@@ -4,8 +4,13 @@ var CommentsBox = React.createClass ({
     // debugger;
     var comments;
       if (this.props.comments.length !== 0){
-        comments = <ul>{this.props.comments.map(function(comment){
-          return <li key={comment.id}>{comment}</li>;
+        comments = <ul className="comment-box">{this.props.comments.map(function(comment){
+          return <li key={comment.id}>
+                  <ReactRouter.Link to={"/users/" + comment.username}>
+                    {comment.username}
+                  </ReactRouter.Link>
+                  : {comment.content}
+                  </li>;
 
         })}</ul>;
       }

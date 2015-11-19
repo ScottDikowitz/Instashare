@@ -7,11 +7,15 @@
   border: 0px;
   margin-right: 10px;
   background: white;
-  outline: none; 
+  outline: none;
 }
 .create-comment input:nth-child(1) {
   border: 0px;
   width: 90%;
   font-size: 16px;
   outline: none;
+}
+
+.comment-box {
+  margin-bottom: 10px;
 }

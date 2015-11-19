@@ -1,11 +1,12 @@
-class Api::PostsController < ApplicationController
+class Api::CommentsController < ApplicationController
 
   def index
 
   end
 
   def create
-    @comment = Post.new(comment_params)
+    @comment = Comment.new(comment_params)
+    # byebug
     # byebug
     if @comment.save
       render json: @comment.to_json

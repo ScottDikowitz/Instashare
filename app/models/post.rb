@@ -8,8 +8,11 @@ class Post < ActiveRecord::Base
 
 def getStuff
     self.comments.map do |comment|
-      {username: comment.user.username,
-      content: comment.content}
+      {
+        username: comment.user.username,
+        content: comment.content,
+        id: comment.id
+      }
     end
 end
 end
