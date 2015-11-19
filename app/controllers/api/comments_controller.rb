@@ -8,6 +8,7 @@ class Api::CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     # byebug
     # byebug
+    @comment.user_id = current_user.id
     if @comment.save
       render json: @comment.to_json
     end

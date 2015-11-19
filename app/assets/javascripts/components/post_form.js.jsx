@@ -3,7 +3,7 @@ var PostForm = React.createClass ({
   handleSubmit: function(e){
     e.preventDefault();
     // debugger;
-    var post = {caption: e.currentTarget[0].value, user_id: e.currentTarget[1].value };
+    var post = {caption: e.currentTarget[0].value};
     ApiUtil.createPost(post);
     this.props.history.pushState(null, "/");
   },

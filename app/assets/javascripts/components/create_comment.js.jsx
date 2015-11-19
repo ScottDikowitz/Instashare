@@ -3,7 +3,7 @@ var CreateComment = React.createClass ({
   handleSubmit: function(e){
     e.preventDefault();
     // debugger;
-    var comment = {content: e.currentTarget[0].value, user_id: 2, post_id: this.props.post_id };
+    var comment = {content: e.currentTarget[0].value, post_id: this.props.post_id };
     ApiUtil.createComment(comment);
 
 
