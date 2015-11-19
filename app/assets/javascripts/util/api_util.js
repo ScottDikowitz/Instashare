@@ -23,16 +23,18 @@ var ApiUtil = window.ApiUtil = {
     });
   },
 
-  fetchSingleUser: function(userId){
+  createPost: function(post){
     $.ajax ({
-      url: 'api/posts_users/' + userId,
-      type: 'GET',
+      url: 'api/posts',
+      type: 'POST',
       dataType: 'json',
-      data: {userId: parseInt(userId)},
+      data: {post: post},
       success: function(data) {
-        ApiActions.receiveUser(data);
+        // debugger;
+        // ApiActions.receivePost(data);
       }
     });
+
   }
 
 };

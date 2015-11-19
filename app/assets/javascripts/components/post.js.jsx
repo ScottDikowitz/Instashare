@@ -1,9 +1,5 @@
 var Post = React.createClass ({
 
-  componentDidMount: function(){
-
-  },
-
   render: function(){
     return <div className="post">
                 <section className="post-header">

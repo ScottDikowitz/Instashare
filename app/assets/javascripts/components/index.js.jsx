@@ -22,6 +22,9 @@ var Index = React.createClass ({
 
   render: function(){
     return <div>
+              <ReactRouter.Link className="new-post" to={"/posts/new"}>
+                <span >+</span>
+              </ReactRouter.Link>
             {this.state.posts.map(function(post){
 
               return <Post key={post.id} post={post}/>;

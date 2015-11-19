@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :users
+  resources :posts
   resource :session, only: [:create, :new, :destroy]
 
   namespace :api, defaults: { format: :json } do

@@ -17,6 +17,7 @@
 
   var routes = (
       <Route path="/" component={App}>
+        <route path="/posts/new" component={PostForm}/>
         <route path="/users/:username" component={UserShow}/>
         <IndexRoute component={Index}/>
       </Route>
