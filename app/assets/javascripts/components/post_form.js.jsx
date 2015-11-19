@@ -2,14 +2,20 @@ var PostForm = React.createClass ({
 
   handleSubmit: function(e){
     e.preventDefault();
-    // debugger;
-    var post = {caption: e.currentTarget[0].value};
-    ApiUtil.createPost(post);
+
+    var caption = e.currentTarget[0].value;
+    var file = e.currentTarget[2].files[0];
+
+    var formData = new FormData();
+    formData.append("post[caption]", caption);
+    formData.append("post[image]", file);
+
+
+    ApiUtil.createPost(formData);
     this.props.history.pushState(null, "/");
   },
 
   changeFile: function(e){
-
   },
 
   render: function(){

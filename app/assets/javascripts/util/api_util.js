@@ -35,13 +35,16 @@ var ApiUtil = window.ApiUtil = {
     });
   },
 
-  createPost: function(post){
+  createPost: function(formData){
+    // debugger;
     $.ajax ({
       url: 'api/posts',
       type: 'POST',
-      dataType: 'json',
-      data: {post: post},
-      success: function(data) {
+      processData: false,
+      contentType: false,
+      dataType: formData,
+      data: formData,
+      success: function(formData) {
         // debugger;
         // ApiActions.receivePost(data);
       }
