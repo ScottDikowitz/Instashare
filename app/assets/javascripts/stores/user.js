@@ -4,7 +4,7 @@
   var CHANGE_EVENT = 'CHANGE';
   var UserStore = window.UserStore = $.extend( {},  EventEmitter.prototype);
   UserStore.all = function(){
-    return _user.username;
+    return _user;
   };
 
   UserStore.addChangeListener = function(callback){
@@ -21,6 +21,10 @@
 
   UserStore.dispatcherID = AppDispatcher.register(function(payload){
       if(payload.actionType === UserConstants.USER_RECEIVED){
+        UserStore.resetUser(payload.user);
+        UserStore.emit(CHANGE_EVENT);
+      }
+      if(payload.actionType === UserConstants.USER_POSTS_RECEIVED){
         UserStore.resetUser(payload.user);
         UserStore.emit(CHANGE_EVENT);
       }

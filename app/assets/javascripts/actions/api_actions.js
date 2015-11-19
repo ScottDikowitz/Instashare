@@ -19,6 +19,13 @@ var ApiActions = window.ApiActions = {
       actionType: UserConstants.USER_RECEIVED,
       user: user
     });
+  },
+
+  receiveUserPosts: function(user){
+    AppDispatcher.dispatch({
+      actionType: UserConstants.USER_POSTS_RECEIVED,
+      user: user
+    });
   }
 
 };

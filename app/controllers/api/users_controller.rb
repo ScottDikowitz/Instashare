@@ -7,8 +7,8 @@ class Api::UsersController < ApplicationController
 
   def show
 
-    @user = User.find_by(username: params[:username])
-    @posts = @user.posts.reverse
+    @user = User.find_by(username: params[:id])
+    @posts = @user.posts
     render :show
   end
 
