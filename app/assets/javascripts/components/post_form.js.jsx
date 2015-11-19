@@ -8,6 +8,10 @@ var PostForm = React.createClass ({
     this.props.history.pushState(null, "/");
   },
 
+  changeFile: function(e){
+
+  },
+
   render: function(){
 
     return <div >
@@ -19,6 +23,7 @@ var PostForm = React.createClass ({
               <input type="text" name="caption"/>
               </label>
               <input type="hidden" name="user_id" value='1'/>
+              <input type="file" onChange={this.changeFile} />
               <input type="submit" value="make post"/>
             </form>
             </div>
