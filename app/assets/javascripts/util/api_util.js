@@ -36,7 +36,7 @@ var ApiUtil = window.ApiUtil = {
   },
 
   createPost: function(formData){
-    // debugger;
+
     $.ajax ({
       url: 'api/posts',
       type: 'POST',
@@ -45,8 +45,12 @@ var ApiUtil = window.ApiUtil = {
       dataType: formData,
       data: formData,
       success: function(formData) {
-        // debugger;
-        // ApiActions.receivePost(data);
+
+        ApiActions.receivePost(formData);
+      },
+      error: function(formData){
+
+        ApiActions.receivePost(formData);
       }
     });
   },

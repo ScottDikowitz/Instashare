@@ -19,9 +19,17 @@
       _posts = posts;
   };
 
+  PostStore.appendPosts = function(posts){
+      _posts.push(post);
+  };
+
   PostStore.dispatcherID = AppDispatcher.register(function(payload){
       if(payload.actionType === PostConstants.POSTS_RECEIVED){
         PostStore.resetPosts(payload.posts);
+        PostStore.emit(CHANGE_EVENT);
+      }
+      else if(payload.actionType === PostConstants.APPEND_POSTS){
+        PostStore.appendPosts(payload.post);
         PostStore.emit(CHANGE_EVENT);
       }
     });

@@ -13,7 +13,6 @@ var PostForm = React.createClass ({
       formData.append("post[image]", file);
     }
 
-
     ApiUtil.createPost(formData);
     this.props.history.pushState(null, "/");
   },

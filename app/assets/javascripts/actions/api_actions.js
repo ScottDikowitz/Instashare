@@ -26,6 +26,14 @@ var ApiActions = window.ApiActions = {
       actionType: UserConstants.USER_POSTS_RECEIVED,
       user: user
     });
+  },
+
+  receivePost: function(post){
+    AppDispatcher.dispatch({
+      actionType: PostConstants.APPEND_POSTS,
+      post: post
+    });
+
   }
 
 };
