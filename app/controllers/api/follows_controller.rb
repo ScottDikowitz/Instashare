@@ -5,12 +5,12 @@ class Api::FollowsController < ApplicationController
   end
 
   def create
-    @follows = Follows.new(follows_params)
-    # byebug
-    # byebug
+    @follows = Follow.new(follow_params)
     @follows.user_id = current_user.id
     if @follows.save
       render json: @follows.to_json
+    else
+      render json: {}
     end
 
   end
@@ -21,7 +21,7 @@ class Api::FollowsController < ApplicationController
   end
 
   private
-  def comment_params
+  def follow_params
     self.params.require(:follow).permit(:follower_id)
   end
 

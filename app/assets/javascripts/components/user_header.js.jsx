@@ -1,5 +1,10 @@
 var UserHeader = React.createClass ({
-
+  clickHandler: function(e){
+    e.preventDefault();
+    debugger;
+    var follow = {follower_id: this.props.curUser.id};
+    ApiUtil.followUser(follow);
+  },
 
   render: function(){
     // debugger;
@@ -9,6 +14,7 @@ var UserHeader = React.createClass ({
                 <ul className="account-info">
                   <li>{this.props.curUser.username}</li>
                   <li>{this.props.curUser.body}</li>
+                  <button onClick={this.clickHandler}>Follow</button>
                 </ul>
               </div>
            </div>;

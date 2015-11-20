@@ -55,6 +55,20 @@ var ApiUtil = window.ApiUtil = {
     });
   },
 
+  followUser: function(follow){
+    $.ajax ({
+      url: 'api/follows',
+      type: 'POST',
+      dataType: 'json',
+      data: {follow: follow},
+      success: function(data) {
+        // debugger;
+        // ApiActions.receivePost(data);
+      }
+    });
+
+  },
+
   createComment: function(comment){
     $.ajax ({
       url: 'api/comments',
