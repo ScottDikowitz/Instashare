@@ -8,7 +8,7 @@ class Api::FollowsController < ApplicationController
     @follows = Follow.new(follow_params)
     @follows.user_id = current_user.id
     if @follows.save
-      render json: @follows.to_json
+      render json: {follow: "unfollow"}
     else
       render json: {}
     end
@@ -30,8 +30,12 @@ class Api::FollowsController < ApplicationController
 
     @user = Follow.where(["user_id = ? and follower_id = ?", current_user.id, this_user ])[0]
     # byebug
-    @user.destroy
-      render json: @user.to_json
+    if @user
+      @user.destroy
+      render json: {follow: "follow"}
+    else
+      render json: {}
+    end
   end
 
   private

@@ -62,8 +62,7 @@ var ApiUtil = window.ApiUtil = {
       dataType: 'json',
       data: {follow: follow},
       success: function(data) {
-        // debugger;
-        // ApiActions.receivePost(data);
+        ApiActions.receiveFollow(data);
       }
     });
 
@@ -76,8 +75,7 @@ unfollowUser: function(follow){
     dataType: 'json',
     data: {follow: follow},
     success: function(data) {
-      // debugger;
-      // ApiActions.receivePost(data);
+      ApiActions.receiveFollow(data);
     }
   });
 
