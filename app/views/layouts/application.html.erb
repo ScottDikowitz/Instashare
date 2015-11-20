@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% unless flash[:errors].nil? %>
+<!-- <% unless flash[:errors].nil? %>
 <%= flash[:errors] %>
 <% end %>
   <% if signed_in? %>
@@ -20,7 +20,7 @@
 <% else %>
   <a href="<%= new_session_url %>">Sign In</a>
   <a href="<%= new_user_url %>">Sign Up</a>
-<% end %>
+<% end %> -->
 <%= yield %>
 
 </body>

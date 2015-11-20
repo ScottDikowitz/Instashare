@@ -97,6 +97,25 @@ unfollowUser: function(follow){
 
   },
 
+  createUser: function (attrs, callback) {
+    $.ajax({
+      url: 'api/users',
+      type: 'POST',
+      dataType: 'json',
+      data: {user: attrs},
+      success: function (user) {
+        CurrentUserActions.receiveCurrentUser(user);
+        debugger;
+        callback && callback();
+      },
+      error: function(user){
+        debugger;
+        CurrentUserActions.receiveCurrentUser(user);
+        callback && callback();
+      }
+    });
+  },
+
   fetchFollowStatus: function(curUser){
     $.ajax ({
       url: 'api/follows/' + curUser.username,

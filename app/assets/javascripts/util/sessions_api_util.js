@@ -6,7 +6,6 @@ var SessionsApiUtil = {
       dataType: 'json',
       data: credentials,
       success: function (currentUser) {
-        debugger;
         console.log("logged in!");
         CurrentUserActions.receiveCurrentUser(currentUser);
         success && success();
@@ -14,13 +13,13 @@ var SessionsApiUtil = {
     });
   },
 
-  logout: function (  ) {
+  signOut: function (  ) {
     $.ajax({
       url: '/api/session',
       type: 'DELETE',
       dataType: 'json',
       success: function () {
-        console.log("logged out!");
+        console.log("signed out!");
         CurrentUserActions.receiveCurrentUser({});
       }
     });
