@@ -30,13 +30,19 @@ var UserHeader = React.createClass ({
 
   render: function(){
     // debugger;
+    var button;
+    if (CurrentUserStore.currentUser().username !== this.props.curUser.username){
+      button = <button onClick={this.clickHandler}>{this.state.buttonText}</button>;
+    }
+
+
     return <div className="user-header">
               <figure>{this.props.curUser.user_pic}</figure>
               <div>
                 <ul className="account-info">
                   <li>{this.props.curUser.username}</li>
                   <li>{this.props.curUser.body}</li>
-                  <button onClick={this.clickHandler}>{this.state.buttonText}</button>
+                  {button}
                 </ul>
               </div>
            </div>;

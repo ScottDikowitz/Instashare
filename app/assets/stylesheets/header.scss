@@ -5,6 +5,12 @@
   background: white;
 }
 
+.current-user {
+  right: 0px;
+  top: 15px;
+  position: absolute;
+}
+
 .group{
   clear: both;
   content: "";
@@ -14,6 +20,7 @@
 .header-nav{
   margin: auto;
   width: 600px;
+  position: relative;
 }
 
 .logo{

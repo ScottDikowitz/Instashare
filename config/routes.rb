@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :create, :show]
     resources :comments, only: [:index, :create, :show]
     resources :follows, only: [:index, :create, :show, :destroy]
+    resource :session, only: [:show, :create, :destroy]
   end
   root to: 'static_pages#root'
   # The priority is based upon order of creation: first created -> highest priority.

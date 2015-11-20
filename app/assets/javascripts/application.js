@@ -17,5 +17,6 @@
 //= require flux
 //= require eventemitter
 //= require ReactRouter
+//= require jquery.serializejson
 //= require components
 //= require_tree .

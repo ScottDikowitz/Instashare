@@ -3,10 +3,13 @@ class Api::PostsController < ApplicationController
   def index
     # @posts = (current_user.followed_users_posts + current_user.posts).sort_by!{
     #   |post| post.created_at}.reverse!
-
-    @posts = (current_user.followed_users_posts.includes(:user).includes(:comments) + current_user
-    .posts.includes(:user).includes(:comments)).sort_by!{
-      |post| post.created_at}.reverse!
+    if current_user
+      @posts = (current_user.followed_users_posts.includes(:user).includes(:comments) + current_user
+      .posts.includes(:user).includes(:comments)).sort_by!{
+        |post| post.created_at}.reverse!
+    else
+      @posts = []
+    end
 
     render :index
   end
