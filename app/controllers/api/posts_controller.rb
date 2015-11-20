@@ -1,10 +1,8 @@
 class Api::PostsController < ApplicationController
 
   def index
-    # byebug
     @posts = (current_user.followed_users_posts + current_user.posts).sort_by!{
       |post| post.created_at}.reverse!
-    # @posts = Post.includes(:user).all.reverse
     render :index
   end
 

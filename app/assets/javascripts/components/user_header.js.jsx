@@ -1,7 +1,6 @@
 var UserHeader = React.createClass ({
   clickHandler: function(e){
     e.preventDefault();
-    debugger;
     var follow = {follower_id: this.props.curUser.id};
     ApiUtil.followUser(follow);
   },
