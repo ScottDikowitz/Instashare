@@ -4,18 +4,30 @@
 }
 
 .user-header{
-  background: lightgrey;
+  // background: lightgrey;
   height: 200px;
 }
 
 .user-header > div{
+}
+.account-info button{
+  height: 25px;
+  width: 100px;
+  background: green;
+  color: white;
+}
+
+.account-info {
+  color: #4b4f54;
+  font-weight: 300;
+  font-size: 36px;
 }
 
 .user-header > figure{
   color: white;
   width: 100px;
   height: 100px;
-  background: lightblue;
+  background: lightgrey;
   padding: 50px;
   float: left;
 }
