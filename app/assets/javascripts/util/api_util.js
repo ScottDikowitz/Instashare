@@ -35,7 +35,7 @@ var ApiUtil = window.ApiUtil = {
     });
   },
 
-  createPost: function(formData){
+  createPost: function(formData, callback){
 
     $.ajax ({
       url: 'api/posts',
@@ -46,11 +46,13 @@ var ApiUtil = window.ApiUtil = {
       data: formData,
       success: function(formData) {
 
-        ApiActions.receivePost(formData);
+        // ApiActions.receivePost(formData);
+        ApiUtil.fetchPosts();
       },
       error: function(formData){
-
-        ApiActions.receivePost(formData);
+        // ApiActions.receivePost(formData);
+        // callback && callback();
+        ApiUtil.fetchPosts();
       }
     });
   },
