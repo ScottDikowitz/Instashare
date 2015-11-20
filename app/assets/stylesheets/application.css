@@ -45,7 +45,7 @@ body {
 
 .post-image-container {
 
-  height: 500px;
+  height: auto;
   background: lightblue;
   color: white;
 }
@@ -56,6 +56,14 @@ body {
   background: #fff;
   border: 1px solid #edeeee;
   border-radius: 3px;
+  overflow: hidden;
+}
+
+.post img {
+  /*height: 100%;*/
+  width: 100%;
+  display: block;
+  margin: auto;
 }
 
 .post-header small{
