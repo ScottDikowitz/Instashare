@@ -8,7 +8,10 @@ var PostForm = React.createClass ({
 
     var formData = new FormData();
     formData.append("post[caption]", caption);
-    formData.append("post[image]", file);
+
+    if (typeof file !== "undefined") {
+      formData.append("post[image]", file);
+    }
 
 
     ApiUtil.createPost(formData);
