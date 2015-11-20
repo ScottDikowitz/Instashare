@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 
   has_many :posts
   has_many :comments
+  has_many :follows
 
   def ensure_session_token
     self.session_token = User.generate_session_token

@@ -111,7 +111,13 @@ h1{
   background: lightgrey;
   float: left;
   margin: 15px;
+  overflow: hidden;
+}
 
+.post-grid-square img{
+  height: 100%;
+  display: block;
+  margin: auto;
 }
 
 .group:after{
