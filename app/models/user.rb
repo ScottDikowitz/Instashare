@@ -11,6 +11,16 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :comments
   has_many :follows
+  has_many( :followed_users,
+  through: :follows,
+  source: :author
+  )
+
+  has_many(
+    :followed_users_posts,
+    through: :followed_users,
+    source: :posts
+  )
 
   def ensure_session_token
     self.session_token = User.generate_session_token
