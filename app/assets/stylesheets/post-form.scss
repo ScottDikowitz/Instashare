@@ -3,6 +3,7 @@
   width: 700px;
   margin: auto;
   background: lightblue;
+  position: relative;
 }
 
 .add-photo {
@@ -10,4 +11,21 @@
   height: 100%;
   width: 60%;
   background: grey;
+}
+
+.post-form-right {
+  width: 40%;
+  right: 0px;
+  position: absolute;
+  height: 100%;
+}
+
+.post-form-right form {
+  padding: 20px;
+}
+
+.post-form img {
+  width: 100%;
+  height: auto;
+  display: block;
 }

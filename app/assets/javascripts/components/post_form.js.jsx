@@ -1,5 +1,9 @@
 var PostForm = React.createClass ({
 
+  getInitialState: function() {
+      return {  imageUrl: "" };
+    },
+
   handleSubmit: function(e){
     e.preventDefault();
 
@@ -17,23 +21,41 @@ var PostForm = React.createClass ({
     this.props.history.pushState(null, "/");
   },
 
-  changeFile: function(e){
-  },
+  changeFile: function(e) {
+      var reader = new FileReader();
+      var that = this;
+      var file = e.currentTarget.files[0];
+
+      reader.onloadend = function() {
+        that.setState({ imageUrl: reader.result });
+        // debugger;
+      };
+
+      if (file) {
+        reader.readAsDataURL(file);
+      } else {
+        this.setState({ imageUrl: "" });
+      }
+    },
 
   render: function(){
 
     return <div >
             <h1>Create Post</h1>
             <div className="post-form">
-              <div className="add-photo">Upload a photo.</div>
-            <form  onSubmit={this.handleSubmit} action="#" method="POST">
-              <label>Enter a caption.
-              <input type="text" name="caption"/>
-              </label>
-              <input type="hidden" name="user_id" value='1'/>
-              <input type="file" onChange={this.changeFile} />
-              <input type="submit" value="make post"/>
-            </form>
+              <div className="add-photo">
+                <img src={this.state.imageUrl} />
+              </div>
+              <div className="post-form-right">
+                <form  onSubmit={this.handleSubmit} action="#" method="POST">
+                <label>Enter a caption.
+                  <input type="text" name="caption"/>
+                </label>
+                  <input type="hidden" name="user_id" value='1'/>
+                  <input type="file" onChange={this.changeFile} />
+                  <input type="submit" value="make post"/>
+              </form>
+            </div>
             </div>
           </div>;
   }
