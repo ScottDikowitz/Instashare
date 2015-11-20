@@ -16,8 +16,22 @@ class Api::FollowsController < ApplicationController
   end
 
   def show
-    # @comment = Comment.find(params[:id])
-    # render json: @comment
+    # byebug
+    author = User.find_by(username: params[:id])
+    if current_user.is_following?(author)
+      render json: {follow: "unfollow"}
+    else
+      render json: {follow: "follow"}
+    end
+  end
+
+  def destroy
+    this_user = params[:follow]["follower_id"]
+
+    @user = Follow.where(["user_id = ? and follower_id = ?", current_user.id, this_user ])[0]
+    # byebug
+    @user.destroy
+      render json: @user.to_json
   end
 
   private

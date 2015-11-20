@@ -1,8 +1,31 @@
 var UserHeader = React.createClass ({
+  getInitialState: function(){
+    return {buttonText: this.props.curUser.follow_status };
+  },
+
+  componentDidMount: function(){
+    FollowStore.addChangeListener(this._changed);
+    ApiUtil.fetchFollowStatus(this.props.curUser);
+  },
+
+  componentWillUnmount: function(){
+    FollowStore.removeChangeListener(this._changed);
+  },
+
+  _changed: function(){
+    this.setState({buttonText: FollowStore.getFollow()});
+  },
+
   clickHandler: function(e){
     e.preventDefault();
     var follow = {follower_id: this.props.curUser.id};
-    ApiUtil.followUser(follow);
+    if (this.state.buttonText === "follow"){
+      ApiUtil.followUser(follow);
+    }
+    else if(this.state.buttonText === "unfollow") {
+      // debugger;
+      ApiUtil.unfollowUser(follow);
+    }
   },
 
   render: function(){
@@ -13,7 +36,7 @@ var UserHeader = React.createClass ({
                 <ul className="account-info">
                   <li>{this.props.curUser.username}</li>
                   <li>{this.props.curUser.body}</li>
-                  <button onClick={this.clickHandler}>Follow</button>
+                  <button onClick={this.clickHandler}>{this.state.buttonText}</button>
                 </ul>
               </div>
            </div>;

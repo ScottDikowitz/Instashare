@@ -1,8 +1,11 @@
 class Api::PostsController < ApplicationController
 
   def index
-    @posts = (current_user.followed_users_posts + current_user.posts).sort_by!{
-      |post| post.created_at}.reverse!
+    # @posts = (current_user.followed_users_posts + current_user.posts).sort_by!{
+    #   |post| post.created_at}.reverse!
+
+    @posts = current_user.followed_users_posts.includes(:user).includes(:comments) + current_user
+    .posts.includes(:user).order(created_at: :desc)
     render :index
   end
 

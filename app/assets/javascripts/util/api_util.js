@@ -69,6 +69,20 @@ var ApiUtil = window.ApiUtil = {
 
   },
 
+unfollowUser: function(follow){
+  $.ajax ({
+    url: 'api/follows/' + follow.follower_id,
+    type: 'DELETE',
+    dataType: 'json',
+    data: {follow: follow},
+    success: function(data) {
+      // debugger;
+      // ApiActions.receivePost(data);
+    }
+  });
+
+},
+
   createComment: function(comment){
     $.ajax ({
       url: 'api/comments',
@@ -78,6 +92,19 @@ var ApiUtil = window.ApiUtil = {
       success: function(data) {
         // debugger;
         // ApiActions.receivePost(data);
+      }
+    });
+
+  },
+
+  fetchFollowStatus: function(curUser){
+    $.ajax ({
+      url: 'api/follows/' + curUser.username,
+      type: 'GET',
+      dataType: 'json',
+      success: function(data) {
+        // debugger;
+        ApiActions.receiveFollow(data);
       }
     });
 

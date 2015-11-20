@@ -34,6 +34,13 @@ var ApiActions = window.ApiActions = {
       post: post
     });
 
+  },
+
+  receiveFollow: function(follow){
+    AppDispatcher.dispatch({
+      actionType: UserConstants.RECEIVE_FOLLOW,
+      follow: follow.follow
+    });
   }
 
 };

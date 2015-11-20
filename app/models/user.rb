@@ -26,6 +26,10 @@ class User < ActiveRecord::Base
     self.session_token = User.generate_session_token
   end
 
+  def is_following?(user)
+    self.followed_users.include?(user)
+  end
+
   def reset_session_token!
     self.session_token = User.generate_session_token
     self.save
