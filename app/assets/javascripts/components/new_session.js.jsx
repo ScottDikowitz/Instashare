@@ -15,22 +15,30 @@
     render: function() {
 
       return (
-        <form onSubmit={ this.submit }>
+        <form className="sign-in" onSubmit={ this.submit }>
 
-          <h1>Logn In!</h1>
+          <h1>Sign In</h1>
 
+        <ul>
+          <li>
           <label>
             Username
             <input type="text" name="username" />
           </label>
-
+          </li>
+          <li>
           <label>
             Password
             <input type="password" name="password" />
           </label>
-
+          </li>
+          <li>
           <button>Log In!</button>
-          <a href="/#signup">signup</a>
+          </li>
+          <li>
+            <a href="/#signup">signup</a>
+          </li>
+        </ul>
         </form>
       );
     },
