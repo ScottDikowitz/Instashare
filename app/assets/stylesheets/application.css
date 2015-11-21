@@ -132,3 +132,15 @@ background: #edeeee;
 width: 972px;
 margin: auto;
 }
+
+.user-list {
+  background: #edeeee;
+  margin: auto;
+  width: 200px;
+  border: 1px solid lightgrey;
+  padding: 20px;
+}
+
+.user-list li:nth-child(2n) {
+  background: lightgrey;
+}

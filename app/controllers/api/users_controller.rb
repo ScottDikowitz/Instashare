@@ -13,7 +13,7 @@ class Api::UsersController < ApplicationController
 
   def index
     @users = User.all
-    render json: @users.to_json
+    render json: @users.as_json(only: [:id, :username])
   end
 
   def show

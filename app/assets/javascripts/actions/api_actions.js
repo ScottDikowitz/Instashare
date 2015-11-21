@@ -21,6 +21,13 @@ var ApiActions = window.ApiActions = {
     });
   },
 
+  receiveUsers: function(users){
+    AppDispatcher.dispatch({
+      actionType: UserConstants.USERS_RECEIVED,
+      users: users
+    });
+  },
+
   receiveUserPosts: function(user){
     AppDispatcher.dispatch({
       actionType: UserConstants.USER_POSTS_RECEIVED,

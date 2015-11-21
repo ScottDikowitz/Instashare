@@ -9,6 +9,7 @@
       <Route path="/" component={App}>
         <route path="/posts/new" component={PostForm}/>
         <route path="/signin" component={SessionForm}/>
+        <route path="/users" component={Users}/>
         <route path="/signup" component={SignUp}/>
         <route path="/users/:username" component={UserShow}/>
         <IndexRoute component={Index}/>

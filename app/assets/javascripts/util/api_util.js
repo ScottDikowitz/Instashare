@@ -68,6 +68,20 @@ var ApiUtil = window.ApiUtil = {
 
   },
 
+  fetchUserList: function(){
+
+    $.ajax ({
+      url: 'api/users/',
+      type: 'GET',
+      dataType: 'json',
+      success: function(users) {
+        ApiActions.receiveUsers(users);
+      }
+    });
+
+
+  },
+
   updateProfilePic: function(formData, username){
     $.ajax ({
       url: 'api/users/' + username,

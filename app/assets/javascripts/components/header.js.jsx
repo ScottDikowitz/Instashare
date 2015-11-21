@@ -20,8 +20,10 @@ var Header = React.createClass ({
 
   render: function(){
     var button;
+    var users;
     if (CurrentUserStore.isLoggedIn()){
       button = <button className="sign-out-button" onClick={this.signOut}>Sign out</button>;
+      users = <a className="users" href="#/users/">Users</a>;
     }
     return <div>
             <div className="header">
@@ -34,7 +36,7 @@ var Header = React.createClass ({
                 <span className="current-user">{this.state.currentUser.username}</span>
               </ReactRouter.Link>
               {button}
-
+              {users}
               </div>
             </div>
           </div>;
