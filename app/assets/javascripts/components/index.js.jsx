@@ -3,14 +3,20 @@ var Index = React.createClass ({
     return {posts: []};
   },
 
+  componentWillMount: function(){
+    SessionsApiUtil.fetchCurrentUser();
+  },
+
   componentDidMount: function(){
     ApiUtil.fetchPosts();
+
     PostStore.addChangeListener(this._changed);
   },
 
   componentWillUnmount: function(){
 
     PostStore.removeChangeListener(this._changed);
+
   },
 
   _changed: function(){
@@ -18,6 +24,7 @@ var Index = React.createClass ({
     this.setState({posts: PostStore.all()});
 
   },
+
 
   render: function(){
     return <div>
