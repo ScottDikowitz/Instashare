@@ -9,7 +9,7 @@ var CommentsBox = React.createClass ({
     // debugger;
     var comments;
       if (this.props.comments.length !== 0){
-        comments = <ul className="comment-box">{this.props.comments.map(function(comment){
+        comments = <div>{this.props.comments.map(function(comment){
           return <li key={comment.id}>
                   <ReactRouter.Link to={"/users/" + comment.username}>
                     {comment.username}
@@ -17,12 +17,14 @@ var CommentsBox = React.createClass ({
                   : {comment.content}
                   </li>;
 
-        })}</ul>;
+        })}</div>;
       }
 
 
     return <div>
-            {comments}
+            <ul className="comment-box">
+              {comments}
+            </ul>
             <CreateComment callback={this._changed} post_id={this.props.postId}/>
             </div>;
 

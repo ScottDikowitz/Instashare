@@ -21,23 +21,28 @@
           <li>
           <label>
             Username
-            <input type="text" name="username" />
+            <input className="fields" type="text" name="username" />
           </label>
           </li>
           <li>
           <label>
             Password
-            <input type="password" name="password" />
+            <input className="fields" type="password" name="password" />
           </label>
           </li>
           <li>
           <label>
             Bio
-            <textarea name="body"></textarea>
+            <textarea className="fields" name="body"></textarea>
           </label>
           </li>
+          <li>
+            <button className="submit-button">Join!</button>
+          </li>
+          <li>
+            <a href="/#signin">signin</a>
+          </li>
 
-          <button>Join!</button>
           </ul>
         </form>
       );

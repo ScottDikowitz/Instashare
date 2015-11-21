@@ -23,17 +23,17 @@
           <li>
           <label>
             Username
-            <input type="text" name="username" />
+            <input className="fields" type="text" name="username" />
           </label>
           </li>
           <li>
           <label>
             Password
-            <input type="password" name="password" />
+            <input className="fields" type="password" name="password" />
           </label>
           </li>
           <li>
-          <button>Log In!</button>
+          <button className="submit-button">Log In!</button>
           </li>
           <li>
             <a href="/#signup">signup</a>

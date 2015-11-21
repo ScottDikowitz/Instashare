@@ -12,8 +12,9 @@ class Api::CommentsController < ApplicationController
     # byebug
     @comment.user_id = current_user.id
     if @comment.save
-      @comments = @comment.post.comments
-      render json: @comments.as_json(only: [:content])
+      render json: @comment
+    else
+      render json: {}
     end
 
   end

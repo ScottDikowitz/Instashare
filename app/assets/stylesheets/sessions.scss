@@ -7,7 +7,7 @@
   margin: 300px auto;
   width: 300px;
   // height: 200px;
-  border: 1px solid black;
+  border: 1px solid #edeeee;
   border-radius: 5px;
 
 }
@@ -18,7 +18,12 @@
 }
 
 .submit-button{
-
+  background: #0c0;
+  color: #fff;
   margin: auto;
   display: block;
+}
+
+.fields {
+  border: 2px solid grey;
 }
