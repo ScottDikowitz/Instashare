@@ -1,16 +1,44 @@
 .post-form {
-  height: 500px;
+  min-height: 300px;
   width: 700px;
   margin: auto;
-  background: lightblue;
+  background: #fff;
   position: relative;
+  font-size: 30px;
+}
+
+.post-form form {
+  height: 100%;
+  text-align: center;
+}
+
+.caption {
+  border: 0px;
+  width: 90%;
+  font-size: 16px;
+  outline: none;
+}
+
+.file-select {
+
+}
+
+.create-post-button {
+  bottom: 40px;
+  right: 125px;
+  -webkit-appearance: none;
+  display: block;
+  height: 50px;
+  width: 50px;
+  border-radius: 90px;
+  position: absolute;
+  background: #0c0;
+  color: #fff;
 }
 
 .add-photo {
   float: left;
-  height: 100%;
   width: 60%;
-  background: grey;
 }
 
 .post-form-right {

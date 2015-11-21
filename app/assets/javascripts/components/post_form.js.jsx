@@ -42,18 +42,18 @@ var PostForm = React.createClass ({
 
     return <div >
             <h1>Create Post</h1>
-            <div className="post-form">
+            <div className="post-form group">
               <div className="add-photo">
                 <img src={this.state.imageUrl} />
               </div>
               <div className="post-form-right">
                 <form  onSubmit={this.handleSubmit} action="#" method="POST">
                 <label>Enter a caption.
-                  <input type="text" name="caption"/>
+                  <input className="caption" placeholder="add caption..." type="text" name="caption"/>
                 </label>
                   <input type="hidden" name="user_id" value='1'/>
-                  <input type="file" onChange={this.changeFile} />
-                  <input type="submit" value="make post"/>
+                  <input className="file-select" type="file" onChange={this.changeFile} />
+                  <input className="create-post-button" type="submit" value="Post"/>
               </form>
             </div>
             </div>

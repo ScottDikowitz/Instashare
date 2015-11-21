@@ -10,8 +10,6 @@
       }.bind(this));
     },
 
-
-
     render: function() {
 
       return (
