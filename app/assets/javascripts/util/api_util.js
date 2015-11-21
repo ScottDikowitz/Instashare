@@ -83,15 +83,14 @@ unfollowUser: function(follow){
 
 },
 
-  createComment: function(comment){
+  createComment: function(comment, callback){
     $.ajax ({
       url: 'api/comments',
       type: 'POST',
       dataType: 'json',
       data: {comment: comment},
       success: function(data) {
-        // debugger;
-        // ApiActions.receivePost(data);
+        callback && callback(data);
       }
     });
 

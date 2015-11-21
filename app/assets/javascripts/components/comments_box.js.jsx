@@ -1,5 +1,10 @@
 var CommentsBox = React.createClass ({
 
+  _changed: function(data){
+    // this.setProps({comments: data});
+    ApiUtil.fetchPosts();
+  },
+
   render: function(){
     // debugger;
     var comments;
@@ -14,8 +19,11 @@ var CommentsBox = React.createClass ({
 
         })}</ul>;
       }
+
+
     return <div>
             {comments}
+            <CreateComment callback={this._changed} post_id={this.props.postId}/>
             </div>;
 
   }

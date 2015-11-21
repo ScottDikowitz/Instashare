@@ -1,7 +1,9 @@
 class Api::CommentsController < ApplicationController
 
   def index
-
+    # post = Post.find(params[:postId])
+    # @comments = post.comments
+    # render @comments.to_json
   end
 
   def create
@@ -10,7 +12,8 @@ class Api::CommentsController < ApplicationController
     # byebug
     @comment.user_id = current_user.id
     if @comment.save
-      render json: @comment.to_json
+      @comments = @comment.post.comments
+      render json: @comments.as_json(only: [:content])
     end
 
   end

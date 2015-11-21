@@ -6,7 +6,6 @@ var Index = React.createClass ({
   componentDidMount: function(){
     ApiUtil.fetchPosts();
     PostStore.addChangeListener(this._changed);
-
   },
 
   componentWillUnmount: function(){
