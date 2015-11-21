@@ -46,12 +46,10 @@ var ApiUtil = window.ApiUtil = {
       data: formData,
       success: function(formData) {
 
-        // ApiActions.receivePost(formData);
         ApiUtil.fetchPosts();
       },
       error: function(formData){
-        // ApiActions.receivePost(formData);
-        // callback && callback();
+
         ApiUtil.fetchPosts();
       }
     });
@@ -65,6 +63,26 @@ var ApiUtil = window.ApiUtil = {
       data: {follow: follow},
       success: function(data) {
         ApiActions.receiveFollow(data);
+      }
+    });
+
+  },
+
+  updateProfilePic: function(formData, username){
+    $.ajax ({
+      url: 'api/users/' + username,
+      type: 'PATCH',
+      processData: false,
+      contentType: false,
+      dataType: formData,
+      data: formData,
+      success: function(formData) {
+        // callback(username);
+
+      },
+      error: function(formData){
+        // callback(username);
+
       }
     });
 
@@ -104,11 +122,9 @@ unfollowUser: function(follow){
       data: {user: attrs},
       success: function (user) {
         CurrentUserActions.receiveCurrentUser(user);
-        debugger;
         callback && callback();
       },
       error: function(user){
-        debugger;
         CurrentUserActions.receiveCurrentUser(user);
         callback && callback();
       }
@@ -121,7 +137,6 @@ unfollowUser: function(follow){
       type: 'GET',
       dataType: 'json',
       success: function(data) {
-        // debugger;
         ApiActions.receiveFollow(data);
       }
     });

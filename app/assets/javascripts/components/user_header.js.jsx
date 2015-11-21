@@ -28,6 +28,20 @@ var UserHeader = React.createClass ({
     }
   },
 
+  changeFile: function(e){
+    e.preventDefault();
+    var file = e.currentTarget.files[0];
+
+    var formData = new FormData();
+
+    if (typeof file !== "undefined") {
+      formData.append("user[user_pic]", file);
+    }
+
+    ApiUtil.updateProfilePic(formData, this.props.curUser.username);
+    debugger;
+  },
+
   render: function(){
     // debugger;
     var button;
@@ -37,7 +51,10 @@ var UserHeader = React.createClass ({
 
 
     return <div className="user-header">
-              <figure>{this.props.curUser.user_pic}</figure>
+              <div className="user-pic">
+                <img className="user-pic" src={this.props.curUser.profile_picture}/>
+              </div>
+              <input className="file-select" type="file" onChange={this.changeFile} />
               <div>
                 <ul className="account-info">
                   <li>{this.props.curUser.username}</li>

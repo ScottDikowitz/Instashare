@@ -23,6 +23,14 @@ class Api::UsersController < ApplicationController
     render :show
   end
 
+  def update
+    @user = current_user
+    if @user.update_attribute(:user_pic, params[:user][:user_pic])
+      render json: @user
+    end
+
+  end
+
   private
   def user_params
     self.params.require(:user).permit(:username, :password, :body)
