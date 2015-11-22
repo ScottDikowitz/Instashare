@@ -11,9 +11,9 @@ class User < ActiveRecord::Base
     SecureRandom.urlsafe_base64(16)
   end
 
-  has_many :posts
-  has_many :comments
-  has_many :follows
+  has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :follows, dependent: :destroy
   has_many( :followed_users,
   through: :follows,
   source: :author
