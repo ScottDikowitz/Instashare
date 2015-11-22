@@ -25,7 +25,7 @@ class Api::PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    render json: @post
+    render "api/posts/show"
   end
 
   private

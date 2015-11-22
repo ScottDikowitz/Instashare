@@ -7,6 +7,13 @@ var ApiActions = window.ApiActions = {
     });
   },
 
+  receivePost: function(post){
+    AppDispatcher.dispatch({
+      actionType: PostConstants.POST_RECEIVED,
+      post: post
+    });
+  },
+
   receiveSingleUser: function(user){
     AppDispatcher.dispatch({
       actionType: UserConstants.USER_RECEIVED,
@@ -33,14 +40,6 @@ var ApiActions = window.ApiActions = {
       actionType: UserConstants.USER_POSTS_RECEIVED,
       user: user
     });
-  },
-
-  receivePost: function(post){
-    AppDispatcher.dispatch({
-      actionType: PostConstants.APPEND_POSTS,
-      post: post
-    });
-
   },
 
   receiveFollow: function(follow){

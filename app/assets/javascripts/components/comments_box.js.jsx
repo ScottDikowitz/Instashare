@@ -7,6 +7,13 @@ var CommentsBox = React.createClass ({
 
   render: function(){
     // debugger;
+    var createComment;
+    if (this.props.callback){
+      createComment = <CreateComment callback={this.props.callback} post_id={this.props.postId}/>;
+    }
+    else{
+      createComment = <CreateComment callback={this._changed} post_id={this.props.postId}/>;
+    }
     var comments;
       if (this.props.comments.length !== 0){
         comments = <div>{this.props.comments.map(function(comment){
@@ -25,7 +32,7 @@ var CommentsBox = React.createClass ({
             <ul className="comment-box">
               {comments}
             </ul>
-            <CreateComment callback={this._changed} post_id={this.props.postId}/>
+              {createComment}
             </div>;
 
   }

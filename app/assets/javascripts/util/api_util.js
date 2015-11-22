@@ -11,6 +11,17 @@ var ApiUtil = window.ApiUtil = {
     });
   },
 
+  fetchPost: function(postId){
+    $.ajax ({
+      url: 'api/posts/' + postId,
+      type: 'GET',
+      dataType: 'json',
+      success: function(post) {
+        ApiActions.receivePost(post);
+      }
+    });
+  },
+
   fetchSingleUserPosts: function(username){
     $.ajax ({
       url: 'api/users/' + username,

@@ -11,6 +11,7 @@
         <route path="/signin" component={SessionForm}/>
         <route path="/users" component={Users}/>
         <route path="/signup" component={SignUp}/>
+        <route path="/posts/:postId" component={PostShow}/>
         <route path="/users/:username" component={UserShow}/>
         <IndexRoute component={Index}/>
       </Route>
