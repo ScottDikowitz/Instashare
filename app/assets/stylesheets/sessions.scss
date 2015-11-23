@@ -3,17 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .sign-in{
-  background: lightgrey;
+  background: #fff;
   margin: 200px auto;
-  width: 300px;
+  width: 400px;
   border: 1px solid #edeeee;
   border-radius: 5px;
   font-weight: bold;
+  color: #055;
 
 }
 
 .sign-in > ul{
-  width: 150px;
+  width: 280px;
   margin: 30px auto;
 }
 
@@ -21,25 +22,32 @@
   margin-bottom: 10px;
 }
 
+.sign-in textarea {
+  height: 60px;
+}
+
 .sign-in label {
   font-size: 20px;
 }
 
 .submit-button{
-  background: #0c0;
+  background: #4090db;
   color: #fff;
   font-weight: bold;
   margin: auto;
   display: block;
-  padding: 10px 20px;
+  padding: 10px 40px;
   font-size: 16px;
   border-radius: 15px;
+  width: auto;
 }
 
 .fields {
   margin-top: 10px;
-  border: 1px solid black;
+  border: 1px solid #edeeee;
   width: 100%;
-  padding: 5px;
+  padding: 6px;
   border-radius: 10px;
+  background: #fdfdfd;
+  font-size: 16px;
 }
