@@ -8,6 +8,7 @@
   var routes = (
       <Route path="/" component={App}>
         <route path="/posts/new" component={PostForm}/>
+        <route path="/location/:locationId" component={LocationShow}/>
         <route path="/signin" component={SessionForm}/>
         <route path="/users" component={Users}/>
         <route path="/tags/:tagName" component={TagShow}/>
