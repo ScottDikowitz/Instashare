@@ -31,7 +31,7 @@
           </label>
           </li>
           <li>
-          <button className="submit-button">Log In!</button>
+          <button className="submit-button">Sign In!</button>
           </li>
           <li>
             <a href="/#signup">signup</a>

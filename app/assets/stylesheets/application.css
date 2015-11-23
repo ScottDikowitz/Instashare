@@ -45,9 +45,10 @@ body {
  }
 
 .post-image-container {
-
+  border-top: 1px solid #edeeee;
+  border-bottom: 1px solid #edeeee;
   height: auto;
-  background: lightblue;
+  background: #fff;
   color: white;
 }
 
@@ -109,7 +110,7 @@ h1{
 .post-grid-square{
   width: 294px;
   height: 294px;
-  background: lightgrey;
+  background: #fff;
   float: left;
   margin: 15px;
   overflow: hidden;
