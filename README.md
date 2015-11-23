@@ -47,16 +47,17 @@ the ability for users to comment on posts. Then I will let a user to follow
 another user. When the user follows the other user, the other user's
 recent posts will show up in their index feed. Additionally, I will add
 minimal styling in CSS here and proper semantic tags and group things in classes.
-Make logo.
+
 [Details][phase-two]
 
 ## Phase 3: tagging and location (2 days)
-When users have the ability to make new posts, they should also have the ability
-to add a tag, and a location for where the photo was taken. When a user types in some
-location, it should have autocomplete suggestions for locations already
-in the system. Afterwards, the location show page should populate with posts
-that have been tagged at that location, and the post show page should have a
-link to the location index page.
+When users make a new post, they should have the ability to add a tag, and a
+location for where the photo was taken. When a user types in some location,
+it should have autocomplete suggestions for locations already in the system.
+Afterwards, the location show page should populate with posts that have been
+tagged at that location, and the post show page should have a link to the
+location index page.
+
 [Details][phase-three]
 
 ## Phase 4: Search and liking(1 day)

@@ -1,8 +1,6 @@
 class Api::PostsController < ApplicationController
 
   def index
-    # @posts = (current_user.followed_users_posts + current_user.posts).sort_by!{
-    #   |post| post.created_at}.reverse!
     if current_user
       @posts = (current_user.followed_users_posts.includes(:user).includes(:comments) + current_user
       .posts.includes(:user).includes(:comments)).sort_by!{
@@ -18,6 +16,7 @@ class Api::PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.save
+      @post.parse_tags
       render json: @post.to_json
     end
 

@@ -19,13 +19,14 @@ post_id     | integer   | not null, indexed
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-post_id     | integer   | not null, indexed
-name        | string    | not null, indexed
+name        | string    | not null, unique, indexed
 
-<!-- ## taggings
+## taggings
 column name | data type | details
 ------------|-----------|-----------------------
-id          | integer   | not null, primary key -->
+id          | integer   | not null, primary key
+post_id     | integer   | not null
+tag_id      | integer   | not null
 
 ## comments
 column name | data type | details

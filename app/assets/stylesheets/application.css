@@ -121,7 +121,7 @@ h1{
 .post-grid-square img{
   height: 100%;
   display: block;
-  margin: auto;
+  margin-right: 100px;
 }
 
 .group:after{

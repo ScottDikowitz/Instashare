@@ -1,15 +1,11 @@
 class Api::CommentsController < ApplicationController
 
   def index
-    # post = Post.find(params[:postId])
-    # @comments = post.comments
-    # render @comments.to_json
+
   end
 
   def create
     @comment = Comment.new(comment_params)
-    # byebug
-    # byebug
     @comment.user_id = current_user.id
     if @comment.save
       render json: @comment
@@ -20,8 +16,7 @@ class Api::CommentsController < ApplicationController
   end
 
   def show
-    # @comment = Comment.find(params[:id])
-    # render json: @comment
+
   end
 
   private

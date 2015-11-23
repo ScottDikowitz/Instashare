@@ -6,13 +6,25 @@ class Post < ActiveRecord::Base
 
   has_many :comments, dependent: :destroy
 
-def getStuff
-    self.comments.map do |comment|
-      {
-        username: comment.user.username,
-        content: comment.content,
-        id: comment.id
-      }
+  def parse_tags
+    tags = []
+    self.caption.split.each do |word|
+      if word[0] == '#'
+        tags << word
+      end
+      byebug
     end
-end
+
+    tags
+  end
+
+  def getStuff
+      self.comments.map do |comment|
+        {
+          username: comment.user.username,
+          content: comment.content,
+          id: comment.id
+        }
+      end
+  end
 end
