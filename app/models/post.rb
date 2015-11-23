@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   has_many :comments, dependent: :destroy
-  has_many :taggings
+  has_many :taggings, dependent: :destroy
   has_many(
     :tags,
     through: :taggings,
@@ -19,14 +19,14 @@ class Post < ActiveRecord::Base
         tags << word
       end
     end
-    byebug
+
     tags.each do |tag|
       # check if exists?
-      Tag.create(tag_name: tag[1..-1])
-      # Tagging.create(post_id: ....)
+      this_tag = Tag.create(tag_name: tag[1..-1])
+      Tagging.create(post_id: self.id, tag_id: Tag.find_by(tag_name: tag[1..-1]).id)
     end
 
-    tags
+
   end
 
   def getStuff

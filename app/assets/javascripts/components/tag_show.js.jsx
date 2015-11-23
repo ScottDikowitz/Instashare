@@ -12,7 +12,7 @@ var TagShow = React.createClass ({
   },
 
   _changed: function(){
-    this.setState({Tags: TagStore.all()});
+    this.setState({tags: TagStore.all()});
   },
 
   render: function(){

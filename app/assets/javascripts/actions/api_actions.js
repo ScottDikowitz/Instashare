@@ -45,7 +45,7 @@ var ApiActions = window.ApiActions = {
   receiveTagPosts: function(tag){
     AppDispatcher.dispatch({
       actionType: TagConstants.TAG_POSTS_RECEIVED,
-      user: user
+      tag: tag
     });
   },
 

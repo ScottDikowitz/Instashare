@@ -24,7 +24,7 @@
         TagStore.resetTag(payload.tag);
         TagStore.emit(CHANGE_EVENT);
       }
-      else if(payload.actionType === TagConstants.TAG__POSTS_RECEIVED){
+      else if(payload.actionType === TagConstants.TAG_POSTS_RECEIVED){
         TagStore.resetTag(payload.tag);
         TagStore.emit(CHANGE_EVENT);
       }

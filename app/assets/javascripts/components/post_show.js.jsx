@@ -30,9 +30,7 @@ var PostShow = React.createClass ({
       userLink = <a href={"/#users/" + this.state.post.user.username}>{this.state.post.user.username}</a>;
       minutesAgo = this.state.post.minutes_ago;
       image = this.state.post.image;
-      commentBox = <CommentsBox postId={this.props.params.postId} comments={this.state.post.comments} callback={this.callback}/>;
-      captionUser = <span>{this.state.post.user.username}: </span>;
-      caption = this.state.post.caption;
+      commentBox = <CommentsBox caption={this.state.post.caption} username={this.state.post.user.username} postId={this.props.params.postId} comments={this.state.post.comments} callback={this.callback}/>;
     }
     return <div className="post">
                 <section className="post-header">
@@ -45,11 +43,6 @@ var PostShow = React.createClass ({
                   <img src={image}/>
                   </section>
                 <section className="comments">
-
-                <ReactRouter.Link to={"/users/"}>
-                  {captionUser}
-                </ReactRouter.Link>
-                  <span>{caption}</span>
                   {commentBox}
                 </section>
 
