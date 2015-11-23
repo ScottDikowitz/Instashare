@@ -1,0 +1,25 @@
+.user-list {
+  background: #edeeee;
+  margin: auto;
+  width: 300px;
+  border: 1px solid lightgrey;
+  padding: 20px;
+  max-height: 1000px;
+  overflow-y: scroll;
+}
+
+// .user-list li:nth-child(2n) {
+//   background: lightgrey;
+// }
+
+.user-list li:first-child a{
+  border-top: 1px solid black;
+}
+
+.user-list a {
+  border-bottom: 1px solid black;
+  background: #fff;
+  padding: 20px;
+  display: block;
+  font-size: 20px;
+}
