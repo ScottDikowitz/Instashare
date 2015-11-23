@@ -59,7 +59,6 @@ var ApiUtil = window.ApiUtil = {
   },
 
   createPost: function(formData, callback){
-
     $.ajax ({
       url: 'api/posts',
       type: 'POST',
@@ -72,10 +71,36 @@ var ApiUtil = window.ApiUtil = {
         ApiUtil.fetchPosts();
       },
       error: function(formData){
-
+        ApiUtil.queryLocation(formData.responseText);
         ApiUtil.fetchPosts();
       }
     });
+  },
+
+  queryLocation: function(location){
+    $.ajax ({
+      url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + location + "&key=AIzaSyAJGTQhnNdiql8vG1pvjQpxLouPkIrZJns",
+      type: 'GET',
+      dataType: 'json',
+      success: function(location) {
+        ApiUtil.createLocation(location.results[0].address_components[0].long_name);
+
+      }
+    });
+
+  },
+
+  createLocation: function(location){
+    $.ajax ({
+      url: 'api/locations',
+      type: 'POST',
+      dataType: 'json',
+      data: {location: location},
+      success: function(data) {
+        // callback && callback(data);
+      }
+    });
+
   },
 
   followUser: function(follow){

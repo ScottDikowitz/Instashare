@@ -13,11 +13,12 @@ class Api::PostsController < ApplicationController
   end
 
   def create
+    location = params[:location]
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.save
       @post.parse_tags
-      render json: @post.to_json
+      render json: location
     end
 
   end

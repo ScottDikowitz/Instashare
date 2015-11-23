@@ -21,7 +21,6 @@ var LocationShow = React.createClass ({
   render: function(){
     var map;
     if (this.state){
-      debugger;
       map = <Map location={this.state.location.geometry.location}/>;
     }
     return <div>{map}</div>;

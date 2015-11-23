@@ -9,12 +9,17 @@ var PostForm = React.createClass ({
 
     var caption = e.currentTarget[0].value;
     var file = e.currentTarget[2].files[0];
+    var location = e.currentTarget[3].value;
 
     var formData = new FormData();
     formData.append("post[caption]", caption);
 
     if (typeof file !== "undefined") {
       formData.append("post[image]", file);
+    }
+
+    if (typeof location !== "undefined") {
+      formData.append("location", location);
     }
 
     ApiUtil.createPost(formData);
@@ -53,6 +58,9 @@ var PostForm = React.createClass ({
                 </label>
                   <input type="hidden" name="user_id" value='1'/>
                   <input className="file-select" type="file" onChange={this.changeFile} />
+                <label>location.
+                  <input className="caption" placeholder="add location..." type="text" name="location"/>
+                </label>
                   <input className="create-post-button" type="submit" value="Post"/>
               </form>
             </div>
