@@ -24,7 +24,7 @@
         UserStore.resetUser(payload.user);
         UserStore.emit(CHANGE_EVENT);
       }
-      if(payload.actionType === UserConstants.USER_POSTS_RECEIVED){
+      else if(payload.actionType === UserConstants.USER_POSTS_RECEIVED){
         UserStore.resetUser(payload.user);
         UserStore.emit(CHANGE_EVENT);
       }

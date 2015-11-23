@@ -46,6 +46,18 @@ var ApiUtil = window.ApiUtil = {
     });
   },
 
+  fetchTag: function(tagName){
+    $.ajax ({
+      url: 'api/tags/' + tagName,
+      type: 'GET',
+      dataType: 'json',
+      data: {tagName: tagName},
+      success: function(data) {
+        ApiActions.receiveTagPosts(data);
+      }
+    });
+  },
+
   createPost: function(formData, callback){
 
     $.ajax ({

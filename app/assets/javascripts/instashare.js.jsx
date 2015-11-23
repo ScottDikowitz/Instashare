@@ -10,6 +10,7 @@
         <route path="/posts/new" component={PostForm}/>
         <route path="/signin" component={SessionForm}/>
         <route path="/users" component={Users}/>
+        <route path="/tags/:tagName" component={TagShow}/>
         <route path="/signup" component={SignUp}/>
         <route path="/posts/:postId" component={PostShow}/>
         <route path="/users/:username" component={UserShow}/>

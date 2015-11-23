@@ -42,6 +42,13 @@ var ApiActions = window.ApiActions = {
     });
   },
 
+  receiveTagPosts: function(tag){
+    AppDispatcher.dispatch({
+      actionType: TagConstants.TAG_POSTS_RECEIVED,
+      user: user
+    });
+  },
+
   receiveFollow: function(follow){
     AppDispatcher.dispatch({
       actionType: UserConstants.RECEIVE_FOLLOW,
