@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     resources :follows, only: [:index, :create, :show, :destroy]
     resource :session, only: [:show, :create, :destroy]
     resources :tags, only: [:index, :show]
+    resources :locations, only: [:index, :show]
+
   end
   root to: 'static_pages#root'
   # The priority is based upon order of creation: first created -> highest priority.

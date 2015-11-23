@@ -15,7 +15,7 @@ var CommentsBox = React.createClass ({
       createComment = <CreateComment callback={this._changed} post_id={this.props.postId}/>;
     }
     var comments;
-    var usernameLink = <a href={"/users/" + this.props.username}><span>{this.props.username}: </span></a>;
+    var usernameLink = <a href={"#/users/" + this.props.username}><span>{this.props.username}: </span></a>;
 
     var caption = <span>{this.props.caption.split(" ").map(function(word, index){
         if (word[0] === "#")

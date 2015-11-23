@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151123163645) do
+ActiveRecord::Schema.define(version: 20151123210452) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,14 @@ ActiveRecord::Schema.define(version: 20151123163645) do
   add_index "follows", ["follower_id"], name: "index_follows_on_follower_id", using: :btree
   add_index "follows", ["user_id"], name: "index_follows_on_user_id", using: :btree
 
+  create_table "locations", force: :cascade do |t|
+    t.string   "place",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "locations", ["place"], name: "index_locations_on_place", unique: true, using: :btree
+
   create_table "posts", force: :cascade do |t|
     t.string   "caption",            null: false
     t.integer  "user_id",            null: false
@@ -46,8 +54,10 @@ ActiveRecord::Schema.define(version: 20151123163645) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "location_id"
   end
 
+  add_index "posts", ["location_id"], name: "index_posts_on_location_id", using: :btree
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "taggings", force: :cascade do |t|

@@ -11,6 +11,7 @@ class Post < ActiveRecord::Base
     through: :taggings,
     source: :tag
     )
+  belongs_to :location
 
   def parse_tags
     tags = []

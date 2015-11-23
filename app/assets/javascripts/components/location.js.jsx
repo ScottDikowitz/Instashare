@@ -5,14 +5,14 @@ var LocationShow = React.createClass ({
 
     // this needs to be in  api util on a callback after above finishes.
     that = this;
-    var location = "gainesville";
+    var location = "Gainesville, FL, USA";
     $.ajax ({
       url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + location + "&key=AIzaSyAJGTQhnNdiql8vG1pvjQpxLouPkIrZJns",
       type: 'GET',
       dataType: 'json',
-      success: function(post) {
+      success: function(location) {
 
-        that.setState({location: post.results[0].geometry.location});
+        that.setState({location: location.results[0]});
       }
     });
   },
@@ -21,7 +21,8 @@ var LocationShow = React.createClass ({
   render: function(){
     var map;
     if (this.state){
-      map = <Map location={this.state.location}/>;
+      debugger;
+      map = <Map location={this.state.location.geometry.location}/>;
     }
     return <div>{map}</div>;
   }
