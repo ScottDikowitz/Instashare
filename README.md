@@ -10,18 +10,19 @@ Instashare is a clone of Instagram written in Ruby on Rails
 utilizing React/flux architecture. You will be able to make posts with
 images and a caption, comment on posts, follow other users, see
 recent posts in your feed, add tags in your caption, include a location
-in your post, and like posts. Here area  list of itemized features:
+in your post, and like posts. Here's an itemized checklist of my progress:
 
 - [✓] signing up
 - [✓] signing in
 - [✓] authorization
 - [✓] photo feed for followed users
 - [✓] posting photos
-- [✓] viewing other user's photos
-- [✓] viewing tag page
-- [✓] viewing location page
+- [✓] user page for each user
 - [✓] following other users
 - [✓] adding comments to photos
+- [✓] include tags in your caption
+- [✓] create tag page
+- [✓] create location page
 - [ ] liking photos
 - [ ] user/tag search
 
