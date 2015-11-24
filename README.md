@@ -18,6 +18,7 @@ in your post, and like posts. Here's an itemized checklist of my progress:
 - [✓] photo feed for followed users
 - [✓] posting photos
 - [✓] user page for each user
+- [✓] change profile pic
 - [✓] following other users
 - [✓] adding comments to photos
 - [✓] include tags in your caption
