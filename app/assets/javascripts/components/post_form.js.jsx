@@ -10,6 +10,9 @@ var PostForm = React.createClass ({
     var caption = e.currentTarget[0].value;
     var file = e.currentTarget[2].files[0];
     var location = e.currentTarget[3].value;
+    if (caption === ""){
+      return;
+    }
 
     var formData = new FormData();
     formData.append("post[caption]", caption);
