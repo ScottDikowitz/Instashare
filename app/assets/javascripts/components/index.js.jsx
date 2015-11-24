@@ -4,7 +4,7 @@ var Index = React.createClass ({
   },
 
   componentWillMount: function(){
-    // SessionsApiUtil.fetchCurrentUser();
+    SessionsApiUtil.fetchCurrentUser();
   },
 
   componentDidMount: function(){

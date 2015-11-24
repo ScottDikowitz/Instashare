@@ -16,7 +16,7 @@ var Post = React.createClass ({
                 <section className="comments">
 
 
-                <CommentsBox caption={this.props.post.caption} username={this.props.post.user.username} postId={this.props.post.id} comments={this.props.post.comments}/>
+                <CommentsBox liked={this.props.post.liked} caption={this.props.post.caption} username={this.props.post.user.username} postId={this.props.post.id} comments={this.props.post.comments}/>
                 </section>
 
           </div>;

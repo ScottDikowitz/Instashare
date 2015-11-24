@@ -9,10 +9,19 @@ var CreateComment = React.createClass ({
 
   },
 
+  handleLike: function(e){
+  e.preventDefault();
+  ApiUtil.createLike(this.props.post_id);
+
+},
+
   render: function(){
+    if (this.props.liked === "liked"){
+
+    }
     return <div>
             <div className="create-comment">
-              <button className="like-button">O</button>
+              <button className="like-button" onClick={this.handleLike}>O</button>
               <form onSubmit={this.handleSubmit}>
                 <input type="text" className="create-comment-text" name="content" placeholder="add comment..."/>
                 <input type="submit" value="add"/>

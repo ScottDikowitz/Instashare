@@ -7,12 +7,13 @@ var CommentsBox = React.createClass ({
 
   render: function(){
     // debugger;
+
     var createComment;
     if (this.props.callback){
-      createComment = <CreateComment callback={this.props.callback} post_id={this.props.postId}/>;
+      createComment = <CreateComment liked={this.props.liked} callback={this.props.callback} post_id={this.props.postId}/>;
     }
     else{
-      createComment = <CreateComment callback={this._changed} post_id={this.props.postId}/>;
+      createComment = <CreateComment liked={this.props.liked} callback={this._changed} post_id={this.props.postId}/>;
     }
     var comments;
     var usernameLink = <a href={"#/users/" + this.props.username}><span>{this.props.username}: </span></a>;

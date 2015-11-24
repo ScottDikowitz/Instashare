@@ -22,6 +22,19 @@ var ApiUtil = window.ApiUtil = {
     });
   },
 
+  createLike: function(post_id){
+  $.ajax ({
+    url: 'api/likes',
+    type: 'POST',
+    dataType: 'json',
+    data: {like: {post_id: post_id}},
+    success: function(data) {
+      // ApiUtil.fetchPosts();
+    }
+  });
+
+},
+
   fetchLocation: function(locationId){
     $.ajax ({
       url: 'api/locations/' + locationId,

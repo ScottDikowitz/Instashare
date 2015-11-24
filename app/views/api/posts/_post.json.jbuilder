@@ -1,5 +1,11 @@
 json.extract! post, :id, :caption
 
+if current_user.likes_post?(post.id)
+  json.liked "liked"
+else
+  json.liked "unliked"
+end
+
 if post.location
   json.location post.location.place
   json.locationId post.location.id

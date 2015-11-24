@@ -27,6 +27,11 @@ class User < ActiveRecord::Base
 
   has_many :likes, dependent: :destroy
 
+  def likes_post?(post_id)
+    post = Post.find(post_id)
+    post.user_likes.where("user_id = ?", self.id).length == 1
+  end
+
   def ensure_session_token
     self.session_token ||= User.generate_session_token
   end
