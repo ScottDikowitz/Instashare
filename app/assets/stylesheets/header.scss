@@ -1,26 +1,31 @@
 .header{
   border-bottom: 1px solid #edeeee;
-  margin-bottom: 20px;
-  padding: 20px;
+  margin-bottom: 0px;
+  height: 60px;
+  padding-top: 10px;
+  // padding: 20px;
   background: white;
 }
 
 .current-user {
-  right: 0px;
-  top: 15px;
-  position: absolute;
+  // right: 0px;
+  // top: 15px;
+  // position: absolute;
 }
 
 .sign-out-button {
-  right: 0px;
-  top: 40px;
-  position: absolute;
+  // right: 0px;
+  // top: 40px;
+  // position: absolute;
+  border: none;
+  background: transparent;
+  color: #125688;
 }
 
 .users {
-  right: 80px;
-  top: 40px;
-  position: absolute;
+  // right: 80px;
+  // top: 40px;
+  // position: absolute;
 }
 
 .group{
@@ -39,4 +44,17 @@
   font-family: cursive;
   font-size: 26px;
   font-weight: 700;
+  float: left;
+}
+
+.nav-links {
+  float: right;
+}
+
+.header a {
+  padding: 10px;
+}
+
+.nav-links > li {
+  float: left;
 }

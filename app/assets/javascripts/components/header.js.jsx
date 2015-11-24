@@ -22,22 +22,30 @@ var Header = React.createClass ({
     var button;
     var users;
     if (CurrentUserStore.isLoggedIn()){
-      button = <button className="sign-out-button" onClick={this.signOut}>Sign out</button>;
-      users = <a className="users" href="#/users/">Users</a>;
+      button = <li><button className="sign-out-button" onClick={this.signOut}>Sign out</button></li>;
+      users = <li><a className="users" href="#/users/">Users</a></li>;
     }
     return <div>
-            <div className="header">
-              <div className="header-nav">
+            <div className="header group">
+              <div className="header-nav group">
+                <ul>
+                <li>
               <ReactRouter.Link to={"/"}>
                 <span className="logo">Instashare</span>
               </ReactRouter.Link>
-
-              <ReactRouter.Link to={"/users/" + this.state.currentUser.username}>
-                <span className="current-user">{this.state.currentUser.username}</span>
-              </ReactRouter.Link>
+                </li>
+                <div className="nav-links">
+                <li>
+                  <ReactRouter.Link to={"/users/" + this.state.currentUser.username}>
+                    <span className="current-user">{this.state.currentUser.username}</span>
+                  </ReactRouter.Link>
+                </li>
               {button}
               {users}
               </div>
+                </ul>
+              </div>
+
             </div>
           </div>;
   }

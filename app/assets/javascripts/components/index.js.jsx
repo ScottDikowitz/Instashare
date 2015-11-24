@@ -27,7 +27,7 @@ var Index = React.createClass ({
 
 
   render: function(){
-    return <div>
+    return <div className="posts-content-area">
               <ReactRouter.Link className="new-post" to={"/posts/new"}>
                 <span >+</span>
               </ReactRouter.Link>
