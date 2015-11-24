@@ -110,7 +110,6 @@ var ApiUtil = window.ApiUtil = {
       },
       error: function(formData){
         ApiUtil.queryLocation(formData.responseText);
-        ApiUtil.fetchPosts();
       }
     });
   },
