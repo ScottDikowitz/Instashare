@@ -23,6 +23,7 @@
       if(payload.actionType === LocationConstants.LOCATION_RECEIVED){
         LocationStore.resetLocation(payload.location);
         LocationStore.emit(CHANGE_EVENT);
+        
       }
     });
 

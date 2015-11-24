@@ -43,7 +43,7 @@ var UserHeader = React.createClass ({
 
   render: function(){
     var button;
-    if (!(this.props.curUser.tag_name) && CurrentUserStore.currentUser().username !== this.props.curUser.username){
+    if (!(this.props.curUser.tag_name) && !(this.props.curUser.place) && CurrentUserStore.currentUser().username !== this.props.curUser.username){
       button = <button onClick={this.clickHandler}>{this.state.buttonText}</button>;
     }
 
@@ -56,6 +56,7 @@ var UserHeader = React.createClass ({
               <div>
                 <ul className="account-info">
                   <li>{this.props.curUser.username}</li>
+                  <li>{this.props.curUser.place}</li>
                   <li>{this.props.curUser.tag_name}</li>
                   <li>{this.props.curUser.body}</li>
                   {button}

@@ -33,6 +33,20 @@ var ApiUtil = window.ApiUtil = {
     });
   },
 
+  fetchLocationPosts: function(locationId){
+    $.ajax ({
+      url: 'api/location_posts/' + locationId,
+      type: 'GET',
+      dataType: 'json',
+      success: function(data) {
+        // ApiUtil.getMapLocation(location.place);
+        ApiActions.receiveTagPosts(data);
+      }
+    });
+  },
+
+
+
   getMapLocation: function(location){
 
     $.ajax ({

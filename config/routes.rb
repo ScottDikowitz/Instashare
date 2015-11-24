@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resource :session, only: [:show, :create, :destroy]
     resources :tags, only: [:index, :show]
     resources :locations, only: [:index, :show, :create]
+    resources :location_posts, only: [:show]
 
   end
   root to: 'static_pages#root'
