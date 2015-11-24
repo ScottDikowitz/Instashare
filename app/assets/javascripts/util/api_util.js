@@ -135,7 +135,7 @@ var ApiUtil = window.ApiUtil = {
       dataType: 'json',
       data: {location: location},
       success: function(data) {
-        // callback && callback(data);
+        ApiUtil.fetchPosts();
       }
     });
 
