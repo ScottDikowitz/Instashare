@@ -24,6 +24,12 @@
 
 .comment-box {
   // margin-bottom: 10px;
+  padding: 10px 0 10px 0;
+  min-height: 10px;
+}
+
+.comment-box li {
+  padding: 2px 0 2px 0;
 }
 
 .like-button {
@@ -36,4 +42,18 @@
 }
 
 .create-comment-text {
+}
+
+.comments {
+  background: white;
+
+
+}
+
+.create-comment {
+  display: block;
+  height: 30px;
+  border-top: 1px solid #edeeee;
+  padding-top: 10px;
+  padding-left: 10px;
 }

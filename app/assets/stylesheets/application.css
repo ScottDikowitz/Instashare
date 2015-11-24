@@ -90,26 +90,12 @@ body {
   position: relative;
 }
 
-.comments {
-  background: white;
-  min-height: 50px;
-}
 
-.create-comment {
-  display: block;
-  height: 30px;
-  border-top: 1px solid #edeeee;
-  padding-top: 10px;
-  padding-left: 10px;
-}
 
 h1{
   text-align: center;
 }
 
-.comments{
-  margin-top: 10px;
-}
 
 .post-grid-square{
   width: 294px;
