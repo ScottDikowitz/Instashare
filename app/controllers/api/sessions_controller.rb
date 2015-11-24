@@ -20,7 +20,6 @@ class Api::SessionsController < ApplicationController
     if @user.nil?
       render json: {errors: ["Wrong!"]}, status: 401
     else
-      # byebug
       sign_in(@user)
       render "api/user/show"
     end

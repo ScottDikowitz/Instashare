@@ -32,22 +32,8 @@
   padding: 2px 0 2px 0;
 }
 
-.like-button {
-  float: left;
-  display: block;
-  padding: 7px 10px;
-  background: red;
-  border: 0px;
-  margin-right: 5px;
-}
-
-.create-comment-text {
-}
-
 .comments {
   background: white;
-
-
 }
 
 .create-comment {
@@ -56,4 +42,24 @@
   border-top: 1px solid #edeeee;
   padding-top: 10px;
   padding-left: 10px;
+}
+.like-button {
+  float: left;
+  display: block;
+  width: 25px;
+  height: 25px;
+  padding: 7px 10px;
+  background: red;
+  border: 0px;
+  margin-right: 5px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.liked {
+  background: #f00;
+}
+
+.unliked {
+  background: #ccc;
 }

@@ -16,7 +16,6 @@ class Api::FollowsController < ApplicationController
   end
 
   def show
-    # byebug
     author = User.find_by(username: params[:id])
     if current_user.is_following?(author)
       render json: {follow: "unfollow"}
@@ -29,7 +28,6 @@ class Api::FollowsController < ApplicationController
     this_user = params[:follow]["follower_id"]
 
     @user = Follow.where(["user_id = ? and follower_id = ?", current_user.id, this_user ])[0]
-    # byebug
     if @user
       @user.destroy
       render json: {follow: "follow"}

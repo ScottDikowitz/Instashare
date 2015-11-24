@@ -17,7 +17,6 @@ class Api::TagsController < ApplicationController
   end
 
   def show
-    # byebug
     @tag = Tag.find_by(tag_name: params[:id])
     @posts = @tag.posts
     render :show

@@ -13,16 +13,10 @@ class Api::LikesController < ApplicationController
 
   end
 
-  def index
-
-  end
-
-  def show
-    # render json: Location.find(params[:id]).as_json(only: [:id, :place])
-
-  end
-
-  def update
+  def destroy
+    like = Like.find_by(user_id: current_user.id, post_id: params[:like][:post_id])
+    like.destroy
+    render json: {}
   end
 
   private

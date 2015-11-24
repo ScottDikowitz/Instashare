@@ -22,16 +22,29 @@ var ApiUtil = window.ApiUtil = {
     });
   },
 
-  createLike: function(post_id){
+  createLike: function(post_id, callback){
   $.ajax ({
     url: 'api/likes',
     type: 'POST',
     dataType: 'json',
     data: {like: {post_id: post_id}},
     success: function(data) {
-      // ApiUtil.fetchPosts();
+      callback && callback();
     }
   });
+
+},
+
+removeLike: function(post_id, callback){
+$.ajax ({
+  url: 'api/likes/' + 1,
+  type: 'DELETE',
+  dataType: 'json',
+  data: {like: {post_id: post_id}},
+  success: function(data) {
+    callback && callback();
+  }
+});
 
 },
 

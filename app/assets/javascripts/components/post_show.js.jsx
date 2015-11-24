@@ -27,13 +27,14 @@ var PostShow = React.createClass ({
     var captionUser;
     var caption;
     var theLocation;
+    var liked;
     if (this.state){
       theLocation =<li><a className="location-link" href={"/#location/" + this.state.post.locationId}>{this.state.post.location}</a></li>;
 
       userLink = <a href={"/#users/" + this.state.post.user.username}>{this.state.post.user.username}</a>;
       minutesAgo = this.state.post.minutes_ago;
       image = this.state.post.image;
-      commentBox = <CommentsBox caption={this.state.post.caption} username={this.state.post.user.username} postId={this.props.params.postId} comments={this.state.post.comments} callback={this.callback}/>;
+      commentBox = <CommentsBox liked={this.state.post.liked} caption={this.state.post.caption} username={this.state.post.user.username} postId={this.props.params.postId} comments={this.state.post.comments} callback={this.callback}/>;
     }
     return <div className="post">
                 <section className="post-header">
