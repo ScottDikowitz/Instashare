@@ -9,12 +9,13 @@ var Post = React.createClass ({
                   </ReactRouter.Link>
                   <small>{this.props.post.minutes_ago}</small>
                   </li>
+                  <li className="location-link"><a href={"/#location/" + this.props.post.locationId}>{this.props.post.location}</a></li>
                 </section>
                 <section className="post-image-container">
                   <img src={this.props.post.image}/></section>
                 <section className="comments">
 
-              
+
                 <CommentsBox caption={this.props.post.caption} username={this.props.post.user.username} postId={this.props.post.id} comments={this.props.post.comments}/>
                 </section>
 

@@ -1,4 +1,10 @@
 json.extract! post, :id, :caption
+
+if post.location
+  json.location post.location.place
+  json.locationId post.location.id
+end
+
 json.image asset_path(post.image.url)
 # json.created_at do
 elapsed = ((Time.now - post.created_at.time) / 60).to_i

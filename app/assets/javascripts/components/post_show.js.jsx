@@ -26,7 +26,10 @@ var PostShow = React.createClass ({
     var commentBox;
     var captionUser;
     var caption;
+    var theLocation;
     if (this.state){
+      theLocation =<li><a className="location-link" href={"/#location/" + this.state.post.locationId}>{this.state.post.location}</a></li>;
+
       userLink = <a href={"/#users/" + this.state.post.user.username}>{this.state.post.user.username}</a>;
       minutesAgo = this.state.post.minutes_ago;
       image = this.state.post.image;
@@ -36,8 +39,11 @@ var PostShow = React.createClass ({
                 <section className="post-header">
                   <li>
                     {userLink}
+
                   <small>{minutesAgo}</small>
+
                   </li>
+                  {theLocation}
                 </section>
                 <section className="post-image-container">
                   <img src={image}/>

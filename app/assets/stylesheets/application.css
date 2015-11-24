@@ -137,3 +137,7 @@ background: #edeeee;
 width: 972px;
 margin: auto;
 }
+
+.location-link a {
+  color: #4090db;
+}
