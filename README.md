@@ -23,6 +23,7 @@ in your post, and like posts. Here's an itemized checklist of my progress:
 - [✓] include tags in your caption
 - [✓] create tag page
 - [✓] create location page
+- [✓] guest login
 - [ ] liking photos
 - [ ] user/tag search
 

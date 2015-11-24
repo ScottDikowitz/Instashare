@@ -10,6 +10,15 @@
       }.bind(this));
     },
 
+    guestLogin: function(){
+      var uname = React.findDOMNode(this.refs.uname);
+      uname.value = "guest";
+      var pwrd = React.findDOMNode(this.refs.pwrd);
+      pwrd.value = "hello1";
+      this.submit();
+
+    },
+
     render: function() {
 
       return (
@@ -21,17 +30,20 @@
           <li>
           <label>
             Username
-            <input className="fields" type="text" name="username" />
+            <input className="fields" type="text" name="username" ref="uname" />
           </label>
           </li>
           <li>
           <label>
             Password
-            <input className="fields" type="password" name="password" />
+            <input className="fields" type="password" name="password" ref="pwrd" />
           </label>
           </li>
           <li>
           <button className="submit-button">Sign In!</button>
+          </li>
+          <li>
+            <button onClick={this.guestLogin}>Guest Account signin</button>
           </li>
           <li>
             <a href="/#signup">signup</a>
