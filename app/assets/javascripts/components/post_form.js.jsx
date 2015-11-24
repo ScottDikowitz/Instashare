@@ -50,10 +50,10 @@ var PostForm = React.createClass ({
 
     return <div >
             <h1>Create Post</h1>
-            <div className="post-form group">
-              <div className="add-photo">
+            <ul className="post-form group">
+              <li className="add-photo group">
                 <img src={this.state.imageUrl} />
-              </div>
+              </li>
               <div className="post-form-right">
                 <form  onSubmit={this.handleSubmit} action="#" method="POST">
                   <input className="file-select" type="file" onChange={this.changeFile} />
@@ -66,7 +66,7 @@ var PostForm = React.createClass ({
 
               </form>
             </div>
-            </div>
+            </ul>
           </div>;
   }
 
