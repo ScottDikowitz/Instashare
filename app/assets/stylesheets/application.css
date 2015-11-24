@@ -14,7 +14,7 @@
  *= require_self
  */
 
- body, header, li, span, a, figure, div, ul, button {
+ body, header, li, span, a, figure, div, ul {
    background: transparent;
    font: inherit;
    text-decoration: none;
