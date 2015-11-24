@@ -1,10 +1,11 @@
 .post-form {
   min-height: 300px;
-  width: 700px;
+  width: 600px;
   margin: auto;
   background: #fff;
   position: relative;
   font-size: 30px;
+  border: 1px solid #edeeee;
 }
 
 .post-form form {
@@ -12,6 +13,14 @@
   text-align: center;
 }
 
+.post-form input {
+}
+
+.post-form .caption {
+  border: 1px solid #edeeee;
+  padding: 5px;
+
+}
 .caption {
   border: 0px;
   width: 90%;
@@ -38,11 +47,11 @@
 
 .add-photo {
   float: left;
-  width: 60%;
+  width: 55%;
 }
 
 .post-form-right {
-  width: 40%;
+  width: 45%;
   right: 0px;
   position: absolute;
   height: 100%;
