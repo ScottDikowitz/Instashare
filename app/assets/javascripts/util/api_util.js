@@ -22,6 +22,30 @@ var ApiUtil = window.ApiUtil = {
     });
   },
 
+  fetchLocation: function(locationId){
+    $.ajax ({
+      url: 'api/locations/' + locationId,
+      type: 'GET',
+      dataType: 'json',
+      success: function(location) {
+        ApiUtil.getMapLocation(location.place);
+      }
+    });
+  },
+
+  getMapLocation: function(location){
+
+    $.ajax ({
+      url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + location + "&key=AIzaSyAJGTQhnNdiql8vG1pvjQpxLouPkIrZJns",
+      type: 'GET',
+      dataType: 'json',
+      success: function(location) {
+        // that.setState({location: location.results[0]});
+        ApiActions.receiveLocation(location.results[0]);
+      }
+    });
+  },
+
   fetchSingleUserPosts: function(username){
     $.ajax ({
       url: 'api/users/' + username,

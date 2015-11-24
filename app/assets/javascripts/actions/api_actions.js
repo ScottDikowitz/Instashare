@@ -14,6 +14,14 @@ var ApiActions = window.ApiActions = {
     });
   },
 
+  receiveLocation: function(location){
+    AppDispatcher.dispatch({
+      actionType: LocationConstants.LOCATION_RECEIVED,
+      location: location
+    });
+
+  },
+
   receiveSingleUser: function(user){
     AppDispatcher.dispatch({
       actionType: UserConstants.USER_RECEIVED,

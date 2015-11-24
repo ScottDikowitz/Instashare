@@ -26,6 +26,7 @@ class Api::LocationsController < ApplicationController
   end
 
   def show
+    render json: Location.find(params[:id]).as_json(only: [:id, :place])
     # byebug
     # @tag = Tag.find_by(tag_name: params[:id])
     # @posts = @tag.posts
