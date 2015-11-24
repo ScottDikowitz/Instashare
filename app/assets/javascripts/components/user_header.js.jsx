@@ -29,7 +29,7 @@ var UserHeader = React.createClass ({
   },
 
   changeFile: function(e){
-    e.preventDefault();
+    // e.preventDefault();
     var file = e.currentTarget.files[0];
 
     var formData = new FormData();

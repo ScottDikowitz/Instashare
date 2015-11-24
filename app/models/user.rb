@@ -25,8 +25,10 @@ class User < ActiveRecord::Base
     source: :posts
   )
 
+  has_many :likes, dependent: :destroy
+
   def ensure_session_token
-    self.session_token = User.generate_session_token
+    self.session_token ||= User.generate_session_token
   end
 
   def is_following?(user)

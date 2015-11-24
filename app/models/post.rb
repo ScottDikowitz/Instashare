@@ -13,6 +13,8 @@ class Post < ActiveRecord::Base
     )
   belongs_to :location
 
+  has_many :likes, dependent: :destroy
+
   def parse_tags
     tags = []
     self.caption.split.each do |word|

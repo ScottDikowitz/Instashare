@@ -7,13 +7,15 @@
 
   mixins: [ReactRouter.History],
 
-  componentWillMount: function () {
+  componentDidMount: function () {
     CurrentUserStore.addChangeHandler(this._ensureLoggedIn);
     SessionsApiUtil.fetchCurrentUser();
   },
 
   _ensureLoggedIn: function () {
+
     if (!CurrentUserStore.isLoggedIn()) {
+      debugger;
       this.history.pushState(null, "/signin");
     }
 
