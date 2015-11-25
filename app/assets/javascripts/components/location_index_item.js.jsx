@@ -3,7 +3,7 @@
     render: function() {
       return (
         <li>
-          <a href={ "#/location/" + this.props.location.location.id }>
+          <a onClick={this.props.callback} href={ "#/location/" + this.props.location.location.id }>
             { this.props.location.location.place }
           </a>
         </li>

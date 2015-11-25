@@ -29,22 +29,29 @@
       }
     },
 
+    resetForm: function(){
+      var search = React.findDOMNode(this.refs.search);
+      search.value= "";
+      SearchResultActions.receiveResults({results: []});
+    },
+
     render: function() {
+      var that = this;
       var results = SearchResultsStore.results().map(function (result) {
         if (result._type === "User") {
-          return <UserIndexItem key={result.user.id} user={ result } />;
+          return <UserIndexItem callback={that.resetForm} key={result.user.id} user={ result } />;
         } else if(result._type === "Location") {
-          return <LocationIndexItem key={result.location.id} location={ result } />;
+          return <LocationIndexItem callback={that.resetForm} key={result.location.id} location={ result } />;
         }
         else if (result._type === "Tag") {
-          return <TagIndexItem key={result.tag.id} tag={ result } />;
+          return <TagIndexItem callback={that.resetForm} key={result.tag.id} tag={ result } />;
         }
       });
 
       return (
         <div className="search-container">
           <div className="search-bar">
-            <input type="text"
+            <input ref="search" type="text"
               onChange={ this._onInput }
               placeholder="search..."
             />
