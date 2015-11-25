@@ -39,8 +39,8 @@ var CommentsBox = React.createClass ({
 
 
     return <div>
+              <li className="num-likes">Likes: {numLikes}</li>
             <ul className="comment-box">
-              <li>Likes: {numLikes}</li>
               <li>{usernameLink}{caption}</li>
               {comments}
             </ul>

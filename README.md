@@ -27,7 +27,7 @@ in your post, and like posts. Here's an itemized checklist of my progress:
 - [✓] guest login
 - [✓] liking photos
 - [✓] show a count of likes
-- [ ] user/tag search
+- [✓] user/tag/location search
 
 ## Design Docs
 * [View Wireframes][view]
