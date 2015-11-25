@@ -10,10 +10,10 @@ var CommentsBox = React.createClass ({
 
     var createComment;
     if (this.props.callback){
-      createComment = <CreateComment unlikeCallback={this.props.unlikeCallback} likeCallback={this.props.likeCallback} liked={this.props.liked} callback={ApiActions.updateCommentsPost} post_id={this.props.postId}/>;
+      createComment = <CreateComment unlikeCallback={this.props.likeCallbacks[0]} likeCallback={this.props.likeCallbacks[1]} liked={this.props.liked} callback={ApiActions.updateCommentsPost} post_id={this.props.postId}/>;
     }
     else{
-      createComment = <CreateComment unlikeCallback={this.props.unlikeCallback} likeCallback={this.props.likeCallback} liked={this.props.liked} callback={ApiActions.updateCommentsPostsIndex} post_id={this.props.postId}/>;
+      createComment = <CreateComment unlikeCallback={this.props.likeCallbacks[0]} likeCallback={this.props.likeCallbacks[1]} liked={this.props.liked} callback={ApiActions.updateCommentsPostsIndex} post_id={this.props.postId}/>;
     }
     var comments;
     var usernameLink = <a href={"#/users/" + this.props.username}><span>{this.props.username}: </span></a>;
