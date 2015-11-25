@@ -34,6 +34,7 @@
   background: #fff;
   max-height: 250px;
   overflow-y: scroll;
+  z-index: 5;
 }
 
 .search-results:empty {
