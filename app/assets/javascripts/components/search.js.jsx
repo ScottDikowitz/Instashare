@@ -33,8 +33,8 @@
       var results = SearchResultsStore.results().map(function (result) {
         if (result._type === "User") {
           return <UserIndexItem key={result.user.id} user={ result } />;
-        } else {
-          return <PostIndexItem post={ result } />;
+        } else if(result._type === "Location") {
+          return <LocationIndexItem key={result.location.id} location={ result } />;
         }
       });
 
@@ -45,8 +45,6 @@
               onChange={ this._onInput }
               placeholder="search..."
             />
-
-
             <ul className="search-results">
               { results }
             </ul>

@@ -6,4 +6,8 @@ class Tag < ActiveRecord::Base
     through: :taggings,
     source: :post
   )
+
+  include PgSearch
+  multisearchable :against => :tag_name
+
 end
