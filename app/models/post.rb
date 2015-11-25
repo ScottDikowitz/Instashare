@@ -47,4 +47,13 @@ class Post < ActiveRecord::Base
         }
       end
   end
+
+  def self.cutComment(comment)
+    {
+      username: comment.user.username,
+      content: comment.content,
+      id: comment.id,
+      post_id: comment.post_id
+    }
+  end
 end

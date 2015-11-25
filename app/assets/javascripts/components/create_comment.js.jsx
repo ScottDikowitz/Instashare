@@ -11,13 +11,14 @@ var CreateComment = React.createClass ({
 
   handleLike: function(e){
   e.preventDefault();
-  ApiUtil.createLike(this.props.post_id, this.props.callback);
+    // debugger;
+  ApiUtil.createLike(this.props.post_id, this.props.likeCallback);
 
 },
 
   handleUnlike: function(e){
     e.preventDefault();
-    ApiUtil.removeLike(this.props.post_id, this.props.callback);
+    ApiUtil.removeLike(this.props.post_id, this.props.unlikeCallback);
   },
 
   render: function(){

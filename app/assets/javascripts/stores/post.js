@@ -23,6 +23,44 @@
       return _posts;
   };
 
+  PostStore.insertComment = function(comment){
+    // debugger;
+    for (var i = 0; i < _posts.length; i++){
+      if (_posts[i].id == comment.post_id){
+        _posts[i].comments.push(comment);
+      }
+    }
+  };
+
+  PostStore.insertCommentShow = function(comment){
+    _posts.comments.push(comment);
+
+  };
+
+  PostStore.insertLike = function(like) {
+    for (var i = 0; i < _posts.length; i++){
+      if (_posts[i].id == like.post_id){
+        _posts[i].liked = "liked";
+      }
+    }
+  };
+
+  PostStore.insertLikeShow = function(like) {
+    _posts.liked = "liked";
+  };
+
+  PostStore.insertUnlikeShow = function(unlike) {
+    _posts.liked = "unliked";
+  };
+
+  PostStore.removeLike = function(unlike) {
+    for (var i = 0; i < _posts.length; i++){
+      if (_posts[i].id == unlike.post_id){
+        _posts[i].liked = "unliked";
+      }
+    }
+  };
+
   PostStore.dispatcherID = AppDispatcher.register(function(payload){
       if(payload.actionType === PostConstants.POSTS_RECEIVED){
         PostStore.resetPosts(payload.posts);
@@ -30,6 +68,30 @@
       }
       else if(payload.actionType === PostConstants.POST_RECEIVED){
         PostStore.resetPosts(payload.post);
+        PostStore.emit(CHANGE_EVENT);
+      }
+      else if(payload.actionType === "COMMENT_RECEIVED"){
+        PostStore.insertComment(payload.comment);
+        PostStore.emit(CHANGE_EVENT);
+      }
+      else if(payload.actionType === "LIKE_RECEIVED"){
+        PostStore.insertLike(payload.like);
+        PostStore.emit(CHANGE_EVENT);
+      }
+      else if(payload.actionType === "LIKE_SHOW_RECEIVED"){
+        PostStore.insertLikeShow(payload.like);
+        PostStore.emit(CHANGE_EVENT);
+      }
+      else if(payload.actionType === "UNLIKE_SHOW_RECEIVED"){
+        PostStore.insertUnlikeShow(payload.unlike);
+        PostStore.emit(CHANGE_EVENT);
+      }
+      else if(payload.actionType === "COMMENT_SHOW_RECEIVED"){
+        PostStore.insertCommentShow(payload.comment);
+        PostStore.emit(CHANGE_EVENT);
+      }
+      else if(payload.actionType === "UNLIKE_RECEIVED"){
+        PostStore.removeLike(payload.unlike);
         PostStore.emit(CHANGE_EVENT);
       }
     });

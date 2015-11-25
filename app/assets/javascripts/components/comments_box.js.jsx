@@ -2,7 +2,7 @@ var CommentsBox = React.createClass ({
 
   _changed: function(data){
     // this.setProps({comments: data});
-    ApiUtil.fetchPosts();
+    // ApiUtil.fetchPosts();
   },
 
   render: function(){
@@ -10,10 +10,10 @@ var CommentsBox = React.createClass ({
 
     var createComment;
     if (this.props.callback){
-      createComment = <CreateComment liked={this.props.liked} callback={this.props.callback} post_id={this.props.postId}/>;
+      createComment = <CreateComment unlikeCallback={this.props.unlikeCallback} likeCallback={this.props.likeCallback} liked={this.props.liked} callback={ApiActions.updateCommentsPost} post_id={this.props.postId}/>;
     }
     else{
-      createComment = <CreateComment liked={this.props.liked} callback={this._changed} post_id={this.props.postId}/>;
+      createComment = <CreateComment unlikeCallback={this.props.unlikeCallback} likeCallback={this.props.likeCallback} liked={this.props.liked} callback={ApiActions.updateCommentsPostsIndex} post_id={this.props.postId}/>;
     }
     var comments;
     var usernameLink = <a href={"#/users/" + this.props.username}><span>{this.props.username}: </span></a>;

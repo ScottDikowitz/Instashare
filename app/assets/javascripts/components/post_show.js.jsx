@@ -10,7 +10,7 @@ var PostShow = React.createClass ({
   },
 
   callback: function(){
-    ApiUtil.fetchPost(this.props.params.postId);
+    // ApiUtil.fetchPost(this.props.params.postId);
   },
 
   componentWillUnmount: function(){
@@ -34,7 +34,7 @@ var PostShow = React.createClass ({
       userLink = <a href={"/#users/" + this.state.post.user.username}>{this.state.post.user.username}</a>;
       minutesAgo = this.state.post.minutes_ago;
       image = this.state.post.image;
-      commentBox = <CommentsBox liked={this.state.post.liked} caption={this.state.post.caption} username={this.state.post.user.username} postId={this.props.params.postId} comments={this.state.post.comments} callback={this.callback}/>;
+      commentBox = <CommentsBox unlikeCallback={ApiActions.addUnlikeShow} likeCallback={ApiActions.addLikeShow} liked={this.state.post.liked} caption={this.state.post.caption} username={this.state.post.user.username} postId={this.props.params.postId} comments={this.state.post.comments} callback={this.callback}/>;
     }
     return <div className="post">
                 <section className="post-header">

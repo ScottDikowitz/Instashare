@@ -8,7 +8,7 @@ class Api::CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
     if @comment.save
-      render json: @comment
+      render json: Post.cutComment(@comment)
     else
       render json: {}
     end

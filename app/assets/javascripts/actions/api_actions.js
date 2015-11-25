@@ -7,6 +7,34 @@ var ApiActions = window.ApiActions = {
     });
   },
 
+  addLike: function(like){
+    AppDispatcher.dispatch({
+      actionType: "LIKE_RECEIVED",
+      like: like
+    });
+  },
+
+  addLikeShow: function(like){
+    AppDispatcher.dispatch({
+      actionType: "LIKE_SHOW_RECEIVED",
+      like: like
+    });
+  },
+
+  addUnlikeShow: function(unlike){
+    AppDispatcher.dispatch({
+      actionType: "UNLIKE_SHOW_RECEIVED",
+      unlike: unlike
+    });
+  },
+
+  removeLike: function(unlike){
+    AppDispatcher.dispatch({
+      actionType: "UNLIKE_RECEIVED",
+      unlike: unlike
+    });
+  },
+
   receivePost: function(post){
     AppDispatcher.dispatch({
       actionType: PostConstants.POST_RECEIVED,
@@ -20,6 +48,20 @@ var ApiActions = window.ApiActions = {
       location: location
     });
 
+  },
+
+  updateCommentsPostsIndex: function(comment){
+    AppDispatcher.dispatch({
+      actionType: "COMMENT_RECEIVED",
+      comment: comment
+    });
+  },
+
+  updateCommentsPost: function(comment){
+    AppDispatcher.dispatch({
+      actionType: "COMMENT_SHOW_RECEIVED",
+      comment: comment
+    });
   },
 
   receiveSingleUser: function(user){

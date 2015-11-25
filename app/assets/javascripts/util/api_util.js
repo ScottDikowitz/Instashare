@@ -29,7 +29,8 @@ var ApiUtil = window.ApiUtil = {
     dataType: 'json',
     data: {like: {post_id: post_id}},
     success: function(data) {
-      callback && callback();
+      // ApiActions.addLike(data);
+      callback && callback(data);
     }
   });
 
@@ -42,7 +43,8 @@ $.ajax ({
   dataType: 'json',
   data: {like: {post_id: post_id}},
   success: function(data) {
-    callback && callback();
+    // ApiActions.removeLike(data);
+    callback && callback(data);
   }
 });
 
@@ -233,6 +235,7 @@ unfollowUser: function(follow){
       dataType: 'json',
       data: {comment: comment},
       success: function(data) {
+        // ApiActions.updateCommentsPostsIndex(data);
         callback && callback(data);
       }
     });
