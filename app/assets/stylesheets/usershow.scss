@@ -16,9 +16,14 @@
 .user-header > div{
 }
 .account-info button{
-  height: 25px;
-  width: 100px;
-  background: green;
+
+  width: 160px;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  display: block;
+  background: #4090db;
   color: white;
 }
 
@@ -46,4 +51,5 @@
 
 .account-info > li {
   font-size: 26px;
+  margin-bottom: 10px;
 }
