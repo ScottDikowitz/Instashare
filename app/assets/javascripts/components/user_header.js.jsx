@@ -50,15 +50,15 @@ var UserHeader = React.createClass ({
     }
 
     if (CurrentUserStore.currentUser().username === this.props.curUser.username && (typeof this.props.curUser.username !== "undefined")){
-      file = <input className="file-select" type="file" onChange={this.changeFile} />;
+      file = <label>Change pic<input className="file-select" type="file" onChange={this.changeFile} /></label>;
     }
 
 
     return <div className="user-header">
               <div className="user-pic">
                 <img className="user-pic" src={this.props.curUser.profile_picture}/>
-              </div>
               {file}
+              </div>
               <div>
                 <ul className="account-info">
                   <li>{this.props.curUser.username}</li>
