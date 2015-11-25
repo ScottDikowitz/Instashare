@@ -1,6 +1,8 @@
 json.extract! @post, :id, :caption
 json.image asset_path(@post.image.url)
 
+json.numLikes @post.likes.count
+
 if current_user.likes_post?(@post.id)
   json.liked "liked"
 else

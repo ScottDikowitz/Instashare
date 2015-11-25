@@ -29,7 +29,6 @@ var ApiUtil = window.ApiUtil = {
     dataType: 'json',
     data: {like: {post_id: post_id}},
     success: function(data) {
-      // ApiActions.addLike(data);
       callback && callback(data);
     }
   });

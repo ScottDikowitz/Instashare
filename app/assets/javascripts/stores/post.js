@@ -41,22 +41,26 @@
     for (var i = 0; i < _posts.length; i++){
       if (_posts[i].id == like.post_id){
         _posts[i].liked = "liked";
+        _posts[i].numLikes = like.numLikes;
       }
     }
   };
 
   PostStore.insertLikeShow = function(like) {
     _posts.liked = "liked";
+    _posts.numLikes = like.numLikes;
   };
 
   PostStore.insertUnlikeShow = function(unlike) {
     _posts.liked = "unliked";
+    _posts.numLikes = unlike.numLikes;
   };
 
   PostStore.removeLike = function(unlike) {
     for (var i = 0; i < _posts.length; i++){
       if (_posts[i].id == unlike.post_id){
         _posts[i].liked = "unliked";
+        _posts[i].numLikes = unlike.numLikes;
       }
     }
   };

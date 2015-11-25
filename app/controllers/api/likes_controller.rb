@@ -7,7 +7,7 @@ class Api::LikesController < ApplicationController
     if @like.save
 
       # byebug
-      render json: @like.as_json(only: [:id, :user_id, :post_id])
+      render :show
     else
       ### dangerous! ?
 
@@ -17,9 +17,9 @@ class Api::LikesController < ApplicationController
   end
 
   def destroy
-    like = Like.find_by(user_id: current_user.id, post_id: params[:like][:post_id])
-    like.destroy
-    render json: like.as_json(only: [:id, :user_id, :post_id])
+    @like = Like.find_by(user_id: current_user.id, post_id: params[:like][:post_id])
+    @like.destroy
+    render :show
   end
 
   private

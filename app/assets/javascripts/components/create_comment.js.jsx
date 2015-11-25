@@ -11,7 +11,6 @@ var CreateComment = React.createClass ({
 
   handleLike: function(e){
   e.preventDefault();
-    // debugger;
   ApiUtil.createLike(this.props.post_id, this.props.likeCallback);
 
 },
