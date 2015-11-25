@@ -36,6 +36,9 @@
         } else if(result._type === "Location") {
           return <LocationIndexItem key={result.location.id} location={ result } />;
         }
+        else if (result._type === "Tag") {
+          return <TagIndexItem key={result.tag.id} tag={ result } />;
+        }
       });
 
       return (

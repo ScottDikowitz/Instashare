@@ -10,6 +10,9 @@ json.results do
     elsif result.class == Location
       json.location result.as_json(only: [:id, :place])
       json._type "Location"
+    elsif result.class == Tag
+      json.tag result.as_json(only: [:id, :tag_name])
+      json._type "Tag"
     end
   end
 end
