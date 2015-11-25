@@ -24,6 +24,7 @@
    font-family: inherit;
    font-size: inherit;
    color: inherit;
+   text-align: inherit;
  }
 
 
@@ -37,56 +38,11 @@ body {
   font-size: 16px;
   color: #000;
 }
- .post-header {
-   height: 66px;
-   display: block;
-   position: relative;
- }
 
  a{
    color: #125688;
    font-size: 15px;
  }
-
-.post-image-container {
-  border-top: 1px solid #edeeee;
-  border-bottom: 1px solid #edeeee;
-  height: auto;
-  background: #fff;
-  color: white;
-}
-
-.post {
-  width: 600px;
-  margin: 10px auto 25px;
-  background: #fff;
-  border: 1px solid #edeeee;
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.post img {
-  /*height: 100%;*/
-  width: 100%;
-  display: block;
-  margin: auto;
-}
-
-.post-header small{
-
-  right: 10px;
-  color: #a5a7aa;
-  position: absolute;
-
-}
-
-.post-header li{
-  top: 25px;
-  display: block;
-  position: relative;
-}
-
-
 
 h1{
   text-align: center;

@@ -16,3 +16,57 @@
   margin-left: 7px;
 
 }
+
+.post-header {
+  height: 66px;
+  display: block;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 2px;
+}
+
+.post-image-container {
+ border-top: 1px solid #edeeee;
+ border-bottom: 1px solid #edeeee;
+ height: auto;
+ background: #fff;
+ color: white;
+ max-height: 1200px;
+ overflow: hidden;
+
+}
+
+.post-image-container img{
+  // max-height: 200px;
+}
+.post img {
+ /*height: 100%;*/
+ width: 100%;
+ display: block;
+ margin: auto;
+}
+
+.post {
+ width: 600px;
+ margin: 10px auto 25px;
+ background: #fff;
+ border: 1px solid #edeeee;
+ border-radius: 3px;
+ overflow: hidden;
+}
+
+
+.post-header small{
+
+ right: 0px;
+ color: #a5a7aa;
+ position: absolute;
+
+}
+
+.post-header li{
+ top: 25px;
+ display: block;
+ position: relative;
+}

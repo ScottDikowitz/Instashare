@@ -33,7 +33,7 @@ var CreateComment = React.createClass ({
               {button}
               <form onSubmit={this.handleSubmit}>
                 <input type="text" className="create-comment-text" name="content" placeholder="add comment..."/>
-                <input type="submit" value="add"/>
+                <li className="add-comment"><input type="submit" value="add "/></li>
               </form>
             </div>
           </div>;
