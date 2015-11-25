@@ -19,9 +19,14 @@
     _onInput: function (e) {
       e.preventDefault();
       var query = $(e.currentTarget).val();
-      SearchApiUtil.search(
-        query
-      );
+      if (query.length > 2){
+        SearchApiUtil.search(
+          query
+        );
+      }
+      else{
+        SearchResultActions.receiveResults({results: []});
+      }
     },
 
     render: function() {
@@ -34,17 +39,18 @@
       });
 
       return (
-        <div>
-          <li className="search-bar">
-          <input type="text"
-            onChange={ this._onInput }
-            placeholder="search..."
-          />
-        </li>
+        <div className="search-container">
+          <div className="search-bar">
+            <input type="text"
+              onChange={ this._onInput }
+              placeholder="search..."
+            />
 
-          <ul className="search-results">
-            { results }
-          </ul>
+
+            <ul className="search-results">
+              { results }
+            </ul>
+          </div>
         </div>
       );
     },
