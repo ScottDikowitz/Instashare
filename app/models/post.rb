@@ -38,7 +38,7 @@ class Post < ActiveRecord::Base
 
   end
 
-  def getStuff
+  def getComments
       self.comments.map do |comment|
         {
           username: comment.user.username,

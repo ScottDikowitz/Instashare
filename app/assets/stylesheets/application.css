@@ -104,6 +104,7 @@ h1{
   float: left;
   margin: 15px;
   overflow: hidden;
+
 }
 
 .post-grid-square img{
@@ -121,7 +122,7 @@ h1{
 .post-grid{
 background: #edeeee;
 width: 972px;
-margin: auto;
+margin: 0 auto 150px;
 }
 
 .location-link a {
