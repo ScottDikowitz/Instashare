@@ -6,6 +6,8 @@ else
   json.liked "unliked"
 end
 
+json.numLikes post.likes.count
+
 if post.location
   json.location post.location.place
   json.locationId post.location.id
