@@ -6,19 +6,10 @@
     componentDidMount: function () {
       SearchResultsStore.addChangeHandler(this._onChange);
 
-      var queryParams = this.props.location.query;
-      SearchApiUtil.search(queryParams.query || "", queryParams.page || 1);
     },
 
     componentWillUnmount: function () {
       SearchResultsStore.removeChangeHandler(this._onChange);
-    },
-
-    componentWillReceiveProps: function (newProps) {
-      SearchApiUtil.search(
-        newProps.location.query.query,
-        newProps.location.query.page
-      );
     },
 
     _onChange: function () {
@@ -28,10 +19,9 @@
     _onInput: function (e) {
       e.preventDefault();
       var query = $(e.currentTarget).val();
-      this.history.pushState(null, "/search", {
-        query: query,
-        page: 1
-      });
+      SearchApiUtil.search(
+        query
+      );
     },
 
     render: function() {
@@ -43,24 +33,14 @@
         }
       });
 
-      var nextPage = (parseInt(this.props.location.query.page) || 1) + 1;
-      var query = this.props.location.query.query;
       return (
         <div>
+          <li className="search-bar">
           <input type="text"
-            value={ query }
             onChange={ this._onInput }
             placeholder="search..."
           />
-
-          <p>
-            Displaying { SearchResultsStore.results().length }
-            of { SearchResultsStore.totalCount() }
-          </p>
-
-          <a href={ "#/search?query=" + query + "&page=" + nextPage }>
-            Next
-          </a>
+        </li>
 
           <ul className="search-results">
             { results }

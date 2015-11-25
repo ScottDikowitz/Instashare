@@ -24,7 +24,7 @@ var Header = React.createClass ({
     var search;
     var logo;
     if (CurrentUserStore.isLoggedIn()){
-      search = <li className="search-bar"><input type="text" placeholder="Search"/></li>;
+      search = <Search />;
       button = <li className="sign-out-button"><button  onClick={this.signOut}>Sign out</button></li>;
       users = <li><a className="users" href="#/users/">Users</a></li>;
       logo = <a href="#/"><span className="logo">Instashare</span></a>;
