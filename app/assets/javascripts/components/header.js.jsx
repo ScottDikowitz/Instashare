@@ -32,7 +32,7 @@ var Header = React.createClass ({
                 <li>
                   <a href="#/"><span className="logo">Instashare</span></a>
                 </li>
-                <li className="search-bar"><label>Search<input type="text" /></label></li>
+                <li className="search-bar"><input type="text" placeholder="Search"/></li>
                 <div className="nav-links">
                 <li>
                   <ReactRouter.Link to={"/users/" + this.state.currentUser.username}>

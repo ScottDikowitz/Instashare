@@ -7,32 +7,25 @@
   background: white;
 }
 
-.current-user {
-  // right: 0px;
-  // top: 15px;
-  // position: absolute;
-}
-
 .search-bar {
   float: left;
   position: relative;
-  margin-left: 30px;
+  margin-left: 50px;
   display: block;
   color: #125688;
-  bottom: 2px;
+  bottom: 9px;
 }
 
 .search-bar input {
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
   width: 190px;
-  padding: 5px;
-  margin-left: 2px;
+  font-size: 16px;
+  padding: 7px;
+  outline: none;
 }
 
 .sign-out-button {
-  // right: 0px;
-  // top: 40px;
   position: relative;
   bottom: 2px;
   display: block;
@@ -46,12 +39,6 @@
   color: #125688;
   background: transparent;
   border: none;
-}
-
-.users {
-  // right: 80px;
-  // top: 40px;
-  // position: absolute;
 }
 
 .group{
