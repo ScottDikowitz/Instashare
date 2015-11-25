@@ -24,14 +24,13 @@ var CommentsBox = React.createClass ({
 
       })}
       </span>;
+      var numLikes = this.props.numLikes;
 
 
       if (this.props.comments.length !== 0){
         comments = <div>{this.props.comments.map(function(comment){
           return <li key={comment.id}>
-                  <ReactRouter.Link to={"/users/" + comment.username}>
-                    {comment.username}
-                  </ReactRouter.Link>
+                  <a href={"#/users/" + comment.username}>{comment.username}</a>
                   : {comment.content}
                   </li>;
 
@@ -41,6 +40,7 @@ var CommentsBox = React.createClass ({
 
     return <div>
             <ul className="comment-box">
+              <li>Likes: {numLikes}</li>
               <li>{usernameLink}{caption}</li>
               {comments}
             </ul>

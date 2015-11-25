@@ -34,7 +34,7 @@ var PostShow = React.createClass ({
       userLink = <a href={"/#users/" + this.state.post.user.username}>{this.state.post.user.username}</a>;
       minutesAgo = this.state.post.minutes_ago;
       image = this.state.post.image;
-      commentBox = <CommentsBox likeCallbacks={[ApiActions.addUnlikeShow, ApiActions.addLikeShow]} liked={this.state.post.liked} caption={this.state.post.caption} username={this.state.post.user.username} postId={this.props.params.postId} comments={this.state.post.comments} callback={ApiActions.updateCommentsPost}/>;
+      commentBox = <CommentsBox numLikes={this.state.post.numLikes} likeCallbacks={[ApiActions.addUnlikeShow, ApiActions.addLikeShow]} liked={this.state.post.liked} caption={this.state.post.caption} username={this.state.post.user.username} postId={this.props.params.postId} comments={this.state.post.comments} callback={ApiActions.updateCommentsPost}/>;
     }
     return <div className="post">
                 <section className="post-header">
