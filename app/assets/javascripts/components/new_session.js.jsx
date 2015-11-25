@@ -18,8 +18,8 @@
     guestLogin: function(){
       var uname = React.findDOMNode(this.refs.uname);
       uname.value = "guest";
-      var pwrd = React.findDOMNode(this.refs.pwrd);
-      pwrd.value = "hello1";
+      // var pwrd = React.findDOMNode(this.refs.pwrd);
+      // pwrd.value = "";
       this.submit();
 
     },

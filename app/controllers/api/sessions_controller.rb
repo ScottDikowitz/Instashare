@@ -12,6 +12,21 @@ class Api::SessionsController < ApplicationController
   end
 
   def create
+
+    if params[:username] == "guest"
+      @user = User.find_by(username: "guest")
+      if @user
+        sign_in(@user)
+        render "api/user/show"
+        return
+      else
+        @user = User.create(username: "guest", password: "123456")
+        sign_in(@user)
+        render "api/user/show"
+        return
+      end
+    end
+
     @user = User.find_by_credentials(
       params[:username],
       params[:password]
