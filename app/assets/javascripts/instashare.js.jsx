@@ -15,6 +15,7 @@
         <route path="/signup" component={SignUp}/>
         <route path="/posts/:postId" component={PostShow}/>
         <route path="/users/:username" component={UserShow}/>
+        <Route path="/search" component={ Search } />
         <IndexRoute component={Index}/>
       </Route>
   );
