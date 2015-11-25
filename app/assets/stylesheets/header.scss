@@ -13,13 +13,33 @@
   // position: absolute;
 }
 
+.search-bar {
+  float: left;
+  margin-left: 30px;
+  display: block;
+  // width: auto;
+}
+
+.search-bar input {
+  width: 200px;
+}
+
 .sign-out-button {
   // right: 0px;
   // top: 40px;
-  // position: absolute;
-  border: none;
-  background: transparent;
+  position: relative;
+  bottom: 2px;
+  display: block;
+
+
+}
+
+.sign-out-button button {
+  cursor: pointer;
+  font-size: 16px;
   color: #125688;
+  background: transparent;
+  border: none;
 }
 
 .users {
@@ -41,6 +61,7 @@
 }
 
 .logo{
+  margin-top: 4px;
   font-family: cursive;
   font-size: 26px;
   font-weight: 700;

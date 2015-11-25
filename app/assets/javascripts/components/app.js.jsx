@@ -15,7 +15,6 @@
   _ensureLoggedIn: function () {
 
     if (!CurrentUserStore.isLoggedIn()) {
-      debugger;
       this.history.pushState(null, "/signin");
     }
 

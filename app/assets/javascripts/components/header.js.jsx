@@ -22,7 +22,7 @@ var Header = React.createClass ({
     var button;
     var users;
     if (CurrentUserStore.isLoggedIn()){
-      button = <li><button className="sign-out-button" onClick={this.signOut}>Sign out</button></li>;
+      button = <li className="sign-out-button"><button  onClick={this.signOut}>Sign out</button></li>;
       users = <li><a className="users" href="#/users/">Users</a></li>;
     }
     return <div>
@@ -30,14 +30,13 @@ var Header = React.createClass ({
               <div className="header-nav group">
                 <ul>
                 <li>
-              <ReactRouter.Link to={"/"}>
-                <span className="logo">Instashare</span>
-              </ReactRouter.Link>
+                  <a href="#/"><span className="logo">Instashare</span></a>
                 </li>
+                <li className="search-bar"><label>Search<input type="text" /></label></li>
                 <div className="nav-links">
                 <li>
                   <ReactRouter.Link to={"/users/" + this.state.currentUser.username}>
-                    <span className="current-user">{this.state.currentUser.username}</span>
+                    {this.state.currentUser.username}
                   </ReactRouter.Link>
                 </li>
               {button}

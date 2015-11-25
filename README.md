@@ -26,7 +26,7 @@ in your post, and like posts. Here's an itemized checklist of my progress:
 - [✓] create location page
 - [✓] guest login
 - [✓] liking photos
-- [ ] show a count of likes
+- [✓] show a count of likes
 - [ ] user/tag search
 
 ## Design Docs
