@@ -23,7 +23,7 @@ json.minutes_ago elapsed
 
 # json.comments
 
-arr = post.comments.map do |comment|
+arr = post.comments.includes(:user).map do |comment|
     hello = {
      username: comment.user.username,
      content: comment.content,
