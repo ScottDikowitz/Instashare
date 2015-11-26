@@ -7,6 +7,7 @@ class Api::PostsController < ApplicationController
 
       # .includes(:user, :location, comments: :user)
       @posts = Post.where(user_id: (followed_user_ids.push(current_user.id)))
+      .joins(:user)
       .includes(:location, :user, :likes, comments: :user)
       .order(created_at: :desc)
       @user_liked_posts = current_user.liked_posts.to_a
