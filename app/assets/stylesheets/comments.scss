@@ -4,9 +4,9 @@
 
 .add-comment {
   float: right;
-  display: block;
-  bottom: 8px;
-  position: relative;
+  // display: block;
+  // bottom: 8px;
+  // position: relative;
 }
 
 .num-likes {
@@ -16,17 +16,20 @@
 
 .add-comment input {
   background: transparent;
-  position: absolute;
+  // position: absolute;
   padding: 6px 10px;
+  border: 0;
 
 }
-.create-comment input:nth-child(1) {
+.create-comment-text {
   border: 0px;
   float: left;
-  width: 85%;
+  width: 500px;
   font-size: 16px;
+  // border: 1px solid black;
   outline: none;
   display: block;
+  // background: black;
   position: relative;
   top: 4px;
 }
@@ -35,8 +38,8 @@
   padding: 10px 0 10px 10px;
   padding-left: 10px;
   min-height: 10px;
-  max-height: 250px;
-  overflow-y: scroll;
+  // max-height: 250px;
+  // overflow-y: scroll;
 }
 
 .comment-box li {
