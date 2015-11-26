@@ -2,9 +2,19 @@ class Api::PostsController < ApplicationController
 
   def index
     if current_user
-      @posts = (current_user.followed_users_posts.includes(:user, :location, comments: :user) +
-      current_user.posts.includes(:user, :location, comments: :user)).sort_by!{
-        |post| post.created_at}.reverse!
+      followed_user_ids = current_user.follows.map(&:follower_id)
+      # byebug
+
+      # .includes(:user, :location, comments: :user)
+      @posts = Post.where(user_id: (followed_user_ids.push(current_user.id)))
+      .includes(:location, :user, :likes, comments: :user)
+      .order(created_at: :desc)
+      @user_liked_posts = current_user.liked_posts.to_a
+
+
+      # @posts = (current_user.followed_users_posts.includes(:user, :location, comments: :user) +
+      # current_user.posts.includes(:user, :location, comments: :user)).sort_by!{
+      #   |post| post.created_at}.reverse!
     else
       @posts = []
     end

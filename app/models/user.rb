@@ -21,7 +21,11 @@ class User < ActiveRecord::Base
   through: :follows,
   source: :author
   )
-
+  has_many(
+    :liked_posts,
+    through: :likes,
+    source: :post
+    )
   has_many(
     :followed_users_posts,
     through: :followed_users,
@@ -30,9 +34,11 @@ class User < ActiveRecord::Base
 
   has_many :likes, dependent: :destroy
 
-  def likes_post?(post_id)
-    post = Post.find(post_id)
+  def likes_post?(post)
     post.user_likes.where("user_id = ?", self.id).length == 1
+    # true
+    # !post.user_likes.find_by(username: self.username).nil?
+    # byebug
   end
 
   def ensure_session_token

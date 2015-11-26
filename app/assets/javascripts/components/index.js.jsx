@@ -1,6 +1,6 @@
 var Index = React.createClass ({
   getInitialState: function(){
-    return {posts: []};
+    return {posts: [], page: 1};
   },
 
   componentWillMount: function(){
@@ -25,6 +25,10 @@ var Index = React.createClass ({
 
   },
 
+  handleClick: function(){
+    // debugger;
+
+  },
 
   render: function(){
     return <div className="posts-content-area">
@@ -36,6 +40,7 @@ var Index = React.createClass ({
               return <Post key={post.id} post={post}/>;
 
             })}
+            <div onClick={this.handleClick} className="load-more"></div>
           </div>;
   }
 

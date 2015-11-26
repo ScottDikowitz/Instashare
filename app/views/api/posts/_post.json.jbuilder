@@ -1,12 +1,16 @@
 json.extract! post, :id, :caption
 
-if current_user.likes_post?(post.id)
+# @user_liked_posts
+
+if @user_liked_posts.include?(post)
   json.liked "liked"
 else
   json.liked "unliked"
 end
 
-json.numLikes post.likes.count
+json.numLikes post.likes.length
+
+# json.numLikes 0
 
 if post.location
   json.location post.location.place
@@ -23,8 +27,8 @@ json.minutes_ago elapsed
 
 # json.comments
 
-arr = post.comments.includes(:user).map do |comment|
-    hello = {
+arr = post.comments.map do |comment|
+    {
      username: comment.user.username,
      content: comment.content,
      id: comment.id

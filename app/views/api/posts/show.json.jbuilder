@@ -3,7 +3,7 @@ json.image asset_path(@post.image.url)
 
 json.numLikes @post.likes.count
 
-if current_user.likes_post?(@post.id)
+if current_user.likes_post?(@post)
   json.liked "liked"
 else
   json.liked "unliked"

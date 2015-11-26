@@ -7,9 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Post.create({caption: "hello world1", user_id: 1})
-Post.create({caption: "hello world2", user_id: 1})
-Post.create({caption: "hello world3", user_id: 1})
-Post.create({caption: "hello world4", user_id: 1})
-Post.create({caption: "hello world5", user_id: 2})
-Comment.create({user_id: 1, post_id: 1, content: "great post!"})
+
+(0..28).each do |idx|
+  Post.create({caption: "hello world#{idx}", user_id: 1})
+end
