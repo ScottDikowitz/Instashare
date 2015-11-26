@@ -55,3 +55,25 @@
 .file-select {
   display: none;
 }
+
+.post-grid-square{
+  width: 294px;
+  height: 294px;
+  background: #fff;
+  float: left;
+  margin: 15px;
+  overflow: hidden;
+
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+
+}
+
+.post-grid-square img{
+  // height: 100%;
+  width: 100%;
+  display: block;
+  margin-right: 100px;
+}
