@@ -16,11 +16,15 @@ var CommentsBox = React.createClass ({
     var usernameLink = <a href={"#/users/" + this.props.username}><span>{this.props.username}: </span></a>;
 
     var caption = <span>{this.props.caption.split(" ").map(function(word, index){
-        if (word[0] === "#")
+        if (word[0] === "#"){
           return <a key={index} href={"#/tags/" + word.slice(1)}>{word} </a>;
-        else
+          }
+        else if (word[0] === "@"){
+          return <a className="red-user" key={index} href={"#/users/" + word.slice(1)}>{word} </a>;
+        }
+        else{
           return word + " ";
-
+        }
 
       })}
       </span>;
