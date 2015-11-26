@@ -7,6 +7,10 @@ var TagShow = React.createClass ({
     ApiUtil.fetchTag(this.props.params.tagName);
   },
 
+  componentWillReceiveProps: function(newProps){
+    ApiUtil.fetchTag(newProps.params.tagName);
+  },
+
   componentWillUnmount: function(){
     TagStore.removeChangeListener(this._changed);
   },
