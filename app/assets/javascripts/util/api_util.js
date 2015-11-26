@@ -22,6 +22,18 @@ var ApiUtil = window.ApiUtil = {
     });
   },
 
+  loadMorePosts: function(pageNum){
+    $.ajax ({
+      url: 'api/posts',
+      type: 'GET',
+      dataType: 'json',
+      data: {pageNum: pageNum},
+      success: function(posts) {
+        ApiActions.receiveMorePosts(posts);
+      }
+    });
+  },
+
   createLike: function(post_id, callback){
   $.ajax ({
     url: 'api/likes',

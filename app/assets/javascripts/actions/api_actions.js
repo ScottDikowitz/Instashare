@@ -7,6 +7,13 @@ var ApiActions = window.ApiActions = {
     });
   },
 
+  receiveMorePosts: function(posts){
+    AppDispatcher.dispatch({
+      actionType: PostConstants.MORE_POSTS_RECEIVED,
+      posts: posts
+    });
+  },
+
   addLike: function(like){
     AppDispatcher.dispatch({
       actionType: "LIKE_RECEIVED",

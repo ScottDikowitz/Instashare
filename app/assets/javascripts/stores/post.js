@@ -32,6 +32,10 @@
     }
   };
 
+  PostStore.insertPosts = function(posts){
+    _posts.push.apply(_posts, posts);
+  };
+
   PostStore.insertCommentShow = function(comment){
     _posts.comments.push(comment);
 
@@ -68,6 +72,10 @@
   PostStore.dispatcherID = AppDispatcher.register(function(payload){
       if(payload.actionType === PostConstants.POSTS_RECEIVED){
         PostStore.resetPosts(payload.posts);
+        PostStore.emit(CHANGE_EVENT);
+      }
+      else if(payload.actionType === PostConstants.MORE_POSTS_RECEIVED){
+        PostStore.insertPosts(payload.posts);
         PostStore.emit(CHANGE_EVENT);
       }
       else if(payload.actionType === PostConstants.POST_RECEIVED){

@@ -26,8 +26,9 @@ var Index = React.createClass ({
   },
 
   handleClick: function(){
-    // debugger;
-
+    pageNumber = this.state.page + 1;
+    ApiUtil.loadMorePosts(pageNumber);
+    this.setState({page: this.state.page + 1});
   },
 
   render: function(){

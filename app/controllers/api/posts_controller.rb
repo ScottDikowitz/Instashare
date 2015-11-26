@@ -3,13 +3,13 @@ class Api::PostsController < ApplicationController
   def index
     if current_user
       followed_user_ids = current_user.follows.map(&:follower_id)
-      # byebug
 
+      page_number = params[:pageNum] || 1
       # .includes(:user, :location, comments: :user)
       @posts = Post.where(user_id: (followed_user_ids.push(current_user.id)))
       .joins(:user)
       .includes(:location, :user, :likes, comments: :user)
-      .order(created_at: :desc)
+      .order(created_at: :desc).page(page_number)
       @user_liked_posts = current_user.liked_posts.to_a
 
 
