@@ -41,7 +41,9 @@ var Index = React.createClass ({
               return <Post key={post.id} post={post}/>;
 
             })}
-            <div onClick={this.handleClick} className="load-more"></div>
+            <div onClick={this.handleClick} className="load-more">
+              <span>load more</span>
+            </div>
           </div>;
   }
 

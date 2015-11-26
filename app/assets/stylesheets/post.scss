@@ -1,17 +1,20 @@
 .new-post{
 
-  border: 2px solid #125688;
+  border: 2px solid #4090db;
   margin: auto;
-  display: block;
   width: 30px;
+  height: 30px;
   border-radius: 50%;
-  padding: 1px 1px;
-  font-size: 25px;
+  position: relative;
 
+  display: flex;
+  align-items: center;
 }
 
 .new-post span {
-  margin-left: 7px;
+  font-size: 25px;
+  margin: auto;
+  color: #4090db;
 
 }
 
@@ -81,9 +84,28 @@
 }
 
 .load-more {
-  width: 200px;
-  height: 200px;
+  cursor: pointer;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  background: #f55;
+  border: 2px solid #4090db;
   margin: auto;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+}
+
+.load-more span {
+  // position: absolute;
+  color: #4090db;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  margin: auto;
+  display: block;
+
+
 }
