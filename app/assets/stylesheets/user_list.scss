@@ -1,7 +1,8 @@
 .user-list {
   background: #edeeee;
   margin: auto;
-  width: 300px;
+  display: block;
+  width: 80%;
   border: 1px solid lightgrey;
 
   max-height: 1000px;
@@ -18,4 +19,9 @@
   padding: 20px;
   display: block;
   font-size: 20px;
+}
+
+.body {
+  float: right;
+
 }

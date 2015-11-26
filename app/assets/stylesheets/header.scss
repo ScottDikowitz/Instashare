@@ -42,12 +42,15 @@
 }
 
 .search-results li{
-  padding: 15px;
   border-bottom: 1px solid #ccc;
 }
 
-.search-results li:last-child{
+.search-results li > a {
   padding: 15px;
+  display: block;
+}
+
+.search-results li:last-child{
   border-bottom: 0;
 }
 

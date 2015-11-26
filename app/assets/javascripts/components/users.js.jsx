@@ -22,6 +22,7 @@ var Users = React.createClass ({
       {this.state.users.map(function(user){
         return <li key={user.id}>
                 <a href={"#/users/" + user.username}>{user.username}
+                  <span className="body">id: {user.id}</span>
                 </a>
               </li>;
 
