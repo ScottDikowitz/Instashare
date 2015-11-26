@@ -8,7 +8,9 @@
   position: relative;
 
   display: flex;
+  display: -webkit-flex;
   align-items: center;
+  -webkit-align-items: center;
 }
 
 .new-post span {
@@ -93,7 +95,9 @@
   position: relative;
 
   display: flex;
+  display: -webkit-flex;
   align-items: center;
+  -webkit-align-items: center;
 
 }
 
