@@ -59,14 +59,14 @@ var ApiActions = window.ApiActions = {
 
   updateCommentsPostsIndex: function(comment){
     AppDispatcher.dispatch({
-      actionType: "COMMENT_RECEIVED",
+      actionType: "COMMENTS_RECEIVED",
       comment: comment
     });
   },
 
   updateCommentsPost: function(comment){
     AppDispatcher.dispatch({
-      actionType: "COMMENT_SHOW_RECEIVED",
+      actionType: "COMMENTS_SHOW_RECEIVED",
       comment: comment
     });
   },

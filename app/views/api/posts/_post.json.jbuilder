@@ -26,8 +26,11 @@ json.minutes_ago elapsed
 # json.comments post.getComments
 
 # json.comments
+ comments = post.comments
+ per = 15
+ page = ((comments.length - 1) / per) + 1
 
-arr = post.comments.map do |comment|
+arr = comments.page(page).per(per).map do |comment|
     {
      username: comment.user.username,
      content: comment.content,

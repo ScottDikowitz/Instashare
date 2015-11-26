@@ -7,8 +7,15 @@ class Api::CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
+    @post_id = params[:comment][:post_id]
     if @comment.save
-      render json: Post.cutComment(@comment)
+      per = 15
+      @comments = Post.find(params[:comment][:post_id]).comments
+      page_num = ((@comments.length - 1) / per) + 1
+      # byebug
+      @comments = @comments.includes(:user).page(page_num).per(per)
+      # render json: Post.cutComment(@comment)
+      render :show
     else
       render json: {}
     end

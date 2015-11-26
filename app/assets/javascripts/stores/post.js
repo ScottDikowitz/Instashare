@@ -27,7 +27,7 @@
     // debugger;
     for (var i = 0; i < _posts.length; i++){
       if (_posts[i].id == comment.post_id){
-        _posts[i].comments.push(comment);
+        _posts[i].comments = comment.comments;
       }
     }
   };
@@ -37,7 +37,7 @@
   };
 
   PostStore.insertCommentShow = function(comment){
-    _posts.comments.push(comment);
+    _posts.comments = comment.comments;
 
   };
 
@@ -82,7 +82,7 @@
         PostStore.resetPosts(payload.post);
         PostStore.emit(CHANGE_EVENT);
       }
-      else if(payload.actionType === "COMMENT_RECEIVED"){
+      else if(payload.actionType === "COMMENTS_RECEIVED"){
         PostStore.insertComment(payload.comment);
         PostStore.emit(CHANGE_EVENT);
       }
@@ -98,7 +98,7 @@
         PostStore.insertUnlikeShow(payload.unlike);
         PostStore.emit(CHANGE_EVENT);
       }
-      else if(payload.actionType === "COMMENT_SHOW_RECEIVED"){
+      else if(payload.actionType === "COMMENTS_SHOW_RECEIVED"){
         PostStore.insertCommentShow(payload.comment);
         PostStore.emit(CHANGE_EVENT);
       }
