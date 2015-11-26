@@ -9,11 +9,8 @@ class Api::CommentsController < ApplicationController
     @comment.user_id = current_user.id
     @post_id = params[:comment][:post_id]
     if @comment.save
-      per = 15
-      @comments = Post.find(params[:comment][:post_id]).comments
-      page_num = ((@comments.length - 1) / per) + 1
-      # byebug
-      @comments = @comments.includes(:user).page(page_num).per(per)
+
+      @comments = Post.find(params[:comment][:post_id]).comments.includes(:user).last(25)
       # render json: Post.cutComment(@comment)
       render :show
     else

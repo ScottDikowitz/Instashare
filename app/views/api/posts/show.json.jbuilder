@@ -20,7 +20,7 @@ json.minutes_ago elapsed
 
 # json.comments @post.getComments
 
-arr = @post.comments.includes(:user).map do |comment|
+arr = @post.comments.includes(:user).last(25).map do |comment|
     hello = {
      username: comment.user.username,
      content: comment.content,
