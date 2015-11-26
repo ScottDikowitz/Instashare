@@ -8,6 +8,11 @@ var LocationShow = React.createClass ({
 
   },
 
+  componentWillReceiveProps: function(newProps){
+    ApiUtil.fetchLocation(newProps.params.locationId);
+
+  },
+
   _postsChanged: function(){
     this.setState({posts: TagStore.all()});
   },
@@ -26,8 +31,6 @@ var LocationShow = React.createClass ({
     var map;
     var tagPosts;
     var tagHeader;
-
-
     if (this.state){
       if (this.state.posts){
         tagHeader = <UserHeader curUser={this.state.posts}/>;

@@ -4,9 +4,9 @@
     render: function() {
       return (
         <li>
-          <a onClick={this.props.callback} href={ "#/users/" + this.props.user.user.username }>
+          <ReactRouter.Link onClick={this.props.callback} to={"/users/" + this.props.user.user.username }>
             { this.props.user.user.username }
-          </a>
+          </ReactRouter.Link>
         </li>
       );
     }

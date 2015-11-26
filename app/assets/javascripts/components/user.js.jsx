@@ -6,6 +6,12 @@ var UserShow = React.createClass ({
     ApiUtil.fetchUser(this.props.params.username);
   },
 
+  componentWillReceiveProps: function(newProps){
+    if (this.props.params.username !== newProps.params.username){
+      ApiUtil.fetchUser(newProps.params.username);
+    }
+  },
+
   componentWillUnmount: function(){
     UserStore.removeChangeListener(this._changed);
   },

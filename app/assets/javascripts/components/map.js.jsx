@@ -1,6 +1,11 @@
 var Map = React.createClass ({
   // mixins: [ReactRouter.History],
 
+  componentWillReceiveProps: function(newProps){
+
+    this.map.setCenter(newProps.location);
+  },
+
   componentDidMount: function(){
     var map = React.findDOMNode(this.refs.map);
       var mapOptions = {
@@ -10,11 +15,7 @@ var Map = React.createClass ({
       var that = this;
       this.map = new google.maps.Map(map, mapOptions);
 
-      var marker = new google.maps.Marker({
-        position: this.props.location,
-        map: this.map,
-        title: 'Click to zoom'
-      });
+
 
   },
 
