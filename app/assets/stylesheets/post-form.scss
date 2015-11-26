@@ -17,19 +17,32 @@
 }
 
 .post-form .caption {
-  border: 1px solid #edeeee;
-  padding: 5px;
 
 }
 .caption {
-  border: 0px;
+  margin-bottom: 5px;
+  border: 1px solid #edeeee;
+  padding: 5px;
+
   width: 90%;
   font-size: 16px;
   outline: none;
 }
 
-.file-select {
+.file-select-post {
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
 
+}
+
+.file-select {
 }
 
 .create-post-button {

@@ -9,10 +9,6 @@
   // position: relative;
 }
 
-.num-likes {
-  margin-left: 10px;
-  padding: 5px 0 5px;
-}
 
 .add-comment input {
   background: transparent;
@@ -82,4 +78,17 @@
 
 .unliked {
   background: #ccc;
+}
+
+.like-bar {
+  padding-top: 10px;
+}
+
+.user-likes {
+  float: left;
+}
+.num-likes {
+  margin-left: 10px;
+  margin-right: 10px;
+  float: left;
 }

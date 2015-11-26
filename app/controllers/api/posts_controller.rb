@@ -7,8 +7,8 @@ class Api::PostsController < ApplicationController
       page_number = params[:pageNum] || 1
       # .includes(:user, :location, comments: :user)
       @posts = Post.where(user_id: (followed_user_ids.push(current_user.id)))
-      .joins(:user)
       .includes(:location, :user, :likes, comments: :user)
+      .includes(:user_likes)
       .order(created_at: :desc).page(page_number)
       @user_liked_posts = current_user.liked_posts.to_a
 

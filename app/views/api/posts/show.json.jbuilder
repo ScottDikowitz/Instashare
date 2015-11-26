@@ -3,6 +3,8 @@ json.image asset_path(@post.image.url)
 
 json.numLikes @post.likes.count
 
+json.userLikes @post.user_likes.as_json(only: [:username, :id])
+
 if current_user.likes_post?(@post)
   json.liked "liked"
 else

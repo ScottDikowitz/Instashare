@@ -42,10 +42,12 @@
   };
 
   PostStore.insertLike = function(like) {
+
     for (var i = 0; i < _posts.length; i++){
       if (_posts[i].id == like.post_id){
         _posts[i].liked = "liked";
         _posts[i].numLikes = like.numLikes;
+        _posts[i].userLikes = like.userLikes;
       }
     }
   };
@@ -53,10 +55,12 @@
   PostStore.insertLikeShow = function(like) {
     _posts.liked = "liked";
     _posts.numLikes = like.numLikes;
+    _posts.userLikes = like.userLikes;
   };
 
   PostStore.insertUnlikeShow = function(unlike) {
     _posts.liked = "unliked";
+    _posts.userLikes = unlike.userLikes;
     _posts.numLikes = unlike.numLikes;
   };
 
@@ -65,6 +69,7 @@
       if (_posts[i].id == unlike.post_id){
         _posts[i].liked = "unliked";
         _posts[i].numLikes = unlike.numLikes;
+        _posts[i].userLikes = unlike.userLikes;
       }
     }
   };

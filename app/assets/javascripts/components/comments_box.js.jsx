@@ -25,7 +25,7 @@ var CommentsBox = React.createClass ({
       })}
       </span>;
       var numLikes = this.props.numLikes;
-
+      var userLikes = this.props.userLikes;
 
       if (this.props.comments.length !== 0){
         comments = <div>{this.props.comments.map(function(comment){
@@ -37,9 +37,9 @@ var CommentsBox = React.createClass ({
         })}</div>;
       }
 
-
     return <div>
-              <li className="num-likes">Likes: {numLikes}</li>
+              <Likers userLikes={userLikes} numLikes={numLikes}/>
+              <br/>
             <ul className="comment-box">
               <li>{usernameLink}{caption}</li>
               {comments}

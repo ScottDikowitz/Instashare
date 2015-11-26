@@ -8,6 +8,6 @@
 
 
 
-(0..28).each do |idx|
-  Post.create({caption: "hello world#{idx}", user_id: 1})
+(29..71).each do |idx|
+  Post.create({caption: "hello world#{idx}", user_id: 2})
 end
