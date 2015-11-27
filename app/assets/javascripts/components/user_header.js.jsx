@@ -60,6 +60,7 @@ var UserHeader = React.createClass ({
     var img;
     var editBio;
     var input;
+    var tag;
     // if (!(this.props.curUser.tag_name) && !(this.props.curUser.place) && CurrentUserStore.currentUser().username !== this.props.curUser.username)
     if (CurrentUserStore.currentUser().username !== this.props.curUser.username && (typeof this.props.curUser.username !== "undefined")){
       button = <button onClick={this.clickHandler}>{this.state.buttonText}</button>;
@@ -78,7 +79,9 @@ var UserHeader = React.createClass ({
       editBio = <button onClick={this.sendUpdate}>update!</button>;
       input = <input className="fields" onChange={this.handleType} onSubmit={this.handleUpdate} type="text" value={this.state.body} />;
     }
-
+    if (this.props.curUser.tag_name){
+      tag = <li>#{this.props.curUser.tag_name}</li>;
+    }
 
     return <div className="user-header">
             <div className="label-and-user-pic">
@@ -91,8 +94,7 @@ var UserHeader = React.createClass ({
                 <ul className="account-info">
                   <li>{this.props.curUser.username}</li>
                   <li>{this.props.curUser.place}</li>
-                  <li>{this.props.curUser.tag_name}</li>
-                  <li ref="body">{this.props.curUser.body}</li>
+                  {tag}
                   {editBio}
                   {button}
                   {input}
