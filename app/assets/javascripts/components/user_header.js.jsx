@@ -3,6 +3,10 @@ var UserHeader = React.createClass ({
     return {buttonText: this.props.curUser.follow_status, updateBio: false, input: false, body: this.props.curUser.body };
   },
 
+  componentWillReceiveProps: function(newProps){
+    this.setState({body: newProps.curUser.body});
+  },
+
   componentDidMount: function(){
     FollowStore.addChangeListener(this._changed);
     ApiUtil.fetchFollowStatus(this.props.curUser);
