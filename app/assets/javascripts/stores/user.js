@@ -23,6 +23,10 @@
     _user.profile_picture = profile_pic;
   };
 
+  UserStore.updateBio = function(bio){
+    _user.body = bio;
+  };
+
   UserStore.dispatcherID = AppDispatcher.register(function(payload){
       if(payload.actionType === UserConstants.USER_RECEIVED){
         UserStore.resetUser(payload.user);
@@ -36,6 +40,11 @@
         UserStore.resetProfilePic(payload.profile_pic.profile_picture);
         UserStore.emit(CHANGE_EVENT);
       }
+      else if(payload.actionType === "RECEIVE_BIO"){
+        UserStore.updateBio(payload.bio);
+        UserStore.emit(CHANGE_EVENT);
+      }
+
     });
 
 })();

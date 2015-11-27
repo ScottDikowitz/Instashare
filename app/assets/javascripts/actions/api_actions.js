@@ -99,6 +99,14 @@ var ApiActions = window.ApiActions = {
     });
   },
 
+  updateBio: function(bio){
+    AppDispatcher.dispatch({
+      actionType: "RECEIVE_BIO",
+      bio: bio
+    });
+
+  },
+
   receiveUsers: function(users){
     AppDispatcher.dispatch({
       actionType: UserConstants.USERS_RECEIVED,

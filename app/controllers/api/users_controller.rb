@@ -25,8 +25,16 @@ class Api::UsersController < ApplicationController
 
   def update
     @user = current_user
-    if @user.update_attribute(:user_pic, params[:user][:user_pic])
-      render "api/users/profile_pic"
+    if params[:user][:user_pic]
+      if @user.update_attribute(:user_pic, params[:user][:user_pic])
+        render "api/users/profile_pic"
+      end
+    elsif params[:user][:body]
+      @user.update_attribute(:body, params[:user][:body])
+      render json: {body: params[:user][:body]}
+    else
+      render json: {}
+
     end
 
   end

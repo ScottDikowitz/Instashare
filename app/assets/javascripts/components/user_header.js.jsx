@@ -1,6 +1,6 @@
 var UserHeader = React.createClass ({
   getInitialState: function(){
-    return {buttonText: this.props.curUser.follow_status };
+    return {buttonText: this.props.curUser.follow_status, updateBio: false, input: false, body: this.props.curUser.body };
   },
 
   componentDidMount: function(){
@@ -41,10 +41,25 @@ var UserHeader = React.createClass ({
     ApiUtil.updateProfilePic(formData, this.props.curUser.username);
   },
 
+  updateBio: function(){
+    this.setState({input: true});
+  },
+
+  sendUpdate: function(e){
+    ApiUtil.updateBio(this.state.body);
+    this.setState({input: false, body: ""});
+  },
+
+  handleType: function(e){
+    this.setState({body: e.currentTarget.value});
+  },
+
   render: function(){
     var button;
     var file;
     var img;
+    var editBio;
+    var input;
     // if (!(this.props.curUser.tag_name) && !(this.props.curUser.place) && CurrentUserStore.currentUser().username !== this.props.curUser.username)
     if (CurrentUserStore.currentUser().username !== this.props.curUser.username && (typeof this.props.curUser.username !== "undefined")){
       button = <button onClick={this.clickHandler}>{this.state.buttonText}</button>;
@@ -52,10 +67,16 @@ var UserHeader = React.createClass ({
 
     if (CurrentUserStore.currentUser().username === this.props.curUser.username && (typeof this.props.curUser.username !== "undefined")){
       file = <label className="file-select-label">Change pic<input className="file-select" type="file" onChange={this.changeFile} /></label>;
+      editBio = <button onClick={this.updateBio}>edit bio</button>;
+
     }
 
     if (this.props.curUser.profile_picture){
       img = <img className="user-pic" src={this.props.curUser.profile_picture}/>;
+    }
+    if (this.state.input){
+      editBio = <button onClick={this.sendUpdate}>update!</button>;
+      input = <input className="fields" onChange={this.handleType} onSubmit={this.handleUpdate} type="text" value={this.state.body} />;
     }
 
 
@@ -71,8 +92,10 @@ var UserHeader = React.createClass ({
                   <li>{this.props.curUser.username}</li>
                   <li>{this.props.curUser.place}</li>
                   <li>{this.props.curUser.tag_name}</li>
-                  <li>{this.props.curUser.body}</li>
+                  <li ref="body">{this.props.curUser.body}</li>
+                  {editBio}
                   {button}
+                  {input}
                 </ul>
               </div>
            </div>;

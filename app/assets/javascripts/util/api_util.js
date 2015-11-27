@@ -214,6 +214,18 @@ $.ajax ({
 
   },
 
+  updateBio: function(bio){
+    $.ajax ({
+      url: 'api/users/' + 1,
+      type: 'PATCH',
+      dataType: 'json',
+      data: {user: {body: bio}},
+      success: function(bio) {
+        ApiActions.updateBio(bio.body);
+      },
+    });
+  },
+
   updateProfilePic: function(formData, username){
     $.ajax ({
       url: 'api/users/' + username,
