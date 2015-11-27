@@ -95,6 +95,7 @@ var UserHeader = React.createClass ({
                   <li>{this.props.curUser.username}</li>
                   <li>{this.props.curUser.place}</li>
                   {tag}
+                  <li>{this.props.curUser.body}</li>
                   {editBio}
                   {button}
                   {input}
