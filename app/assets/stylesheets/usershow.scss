@@ -5,12 +5,39 @@
 
 .user-header{
   height: 200px;
-  padding: 20px;
+  padding: 40px;
+}
+
+.label-and-user-pic {
+  float: left;
+  margin-left: 20px;
+  width: 120px;
+}
+
+.user-pic-container {
+  width: 100%;
+  height: auto;
+  float: left;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #000;
+
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
 }
 
 .user-pic {
-  width: 100px;
-  float: left;
+  width: 100%;
+}
+.file-select-label {
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+
 }
 
 .user-header > div{
@@ -34,11 +61,7 @@
 }
 
 .user-header > figure{
-  color: white;
-  width: 100px;
-  height: 100px;
-  padding: 50px;
-  float: left;
+
 }
 
 .account-info{
@@ -55,6 +78,7 @@
 .file-select {
   display: none;
 }
+
 
 .post-grid-square{
   width: 294px;
@@ -73,7 +97,7 @@
 
 .post-grid-square img{
   // height: 100%;
-  
+
   width: 100%;
   display: block;
 }

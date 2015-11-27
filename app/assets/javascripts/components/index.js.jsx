@@ -41,7 +41,7 @@ var Index = React.createClass ({
     </div>;
   }
   else {
-    status = <div className="status">Nothing to show. Create a post or follow a user.</div>;
+    status = <div className="status">Nothing to show. Create a post or start following some users.</div>;
   }
 
     return <div className="posts-content-area">
