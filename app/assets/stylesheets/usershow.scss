@@ -16,11 +16,12 @@
 
 .user-pic-container {
   width: 100%;
-  height: auto;
+  height: 120px;
   float: left;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid #000;
+  border: 1px solid #ccc;
+  background: #ccc;
 
   display: flex;
   display: -webkit-flex;
@@ -30,6 +31,7 @@
 
 .user-pic-container:empty {
   border: none;
+  display: none;
 }
 
 .user-pic {
@@ -62,6 +64,7 @@
   color: #4b4f54;
   font-weight: 300;
   font-size: 36px;
+  padding: 10px;
 }
 
 .user-header > figure{
