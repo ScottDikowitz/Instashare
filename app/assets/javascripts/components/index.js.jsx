@@ -31,7 +31,19 @@ var Index = React.createClass ({
     this.setState({page: this.state.page + 1});
   },
 
+
   render: function(){
+    var loadMore;
+    var status;
+  if (this.state.posts.length !== 0){
+    loadMore = <div onClick={this.handleClick} className="load-more">
+      <span>load more</span>
+    </div>;
+  }
+  else {
+    status = <div className="status">Nothing to show. Create a post or follow a user.</div>;
+  }
+
     return <div className="posts-content-area">
               <ReactRouter.Link className="new-post" to={"/posts/new"}>
                 <span >+</span>
@@ -41,9 +53,8 @@ var Index = React.createClass ({
               return <Post key={post.id} post={post}/>;
 
             })}
-            <div onClick={this.handleClick} className="load-more">
-              <span>load more</span>
-            </div>
+            {loadMore}
+            {status}
           </div>;
   }
 
