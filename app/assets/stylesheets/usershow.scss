@@ -28,6 +28,10 @@
   -webkit-align-items: center;
 }
 
+.user-pic-container:empty {
+  border: none;
+}
+
 .user-pic {
   width: 100%;
 }

@@ -8,14 +8,15 @@ class Api::LocationsController < ApplicationController
       post.location_id = @location.id
       post.save
       # render "api/user/show"
-      render json: {}
+      render json: { location: params[:location], locationId: @location.id }
     else
       ### dangerous! ?
 
       post = current_user.posts.last
-      post.location_id = Location.find_by(place: @location.place).id
+      location_id = Location.find_by(place: @location.place).id
+      post.location_id = location_id
       post.save
-      render json: {}
+      render json: { location: params[:location], locationId: location_id }
     end
 
   end

@@ -9,7 +9,6 @@ var Index = React.createClass ({
 
   componentDidMount: function(){
     ApiUtil.fetchPosts();
-
     PostStore.addChangeListener(this._changed);
   },
 
@@ -20,7 +19,6 @@ var Index = React.createClass ({
   },
 
   _changed: function(){
-
     this.setState({posts: PostStore.all()});
 
   },
@@ -43,11 +41,11 @@ var Index = React.createClass ({
   else {
     status = <div className="status">Nothing to show. Create a post or start following some users.</div>;
   }
-
     return <div className="posts-content-area">
-              <ReactRouter.Link className="new-post" to={"/posts/new"}>
+              <ReactRouter.Link className="new-post" to={"feed/post/new"}>
                 <span >+</span>
               </ReactRouter.Link>
+              {this.props.children}
             {this.state.posts.map(function(post){
 
               return <Post key={post.id} post={post}/>;

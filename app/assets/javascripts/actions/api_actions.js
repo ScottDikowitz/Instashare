@@ -7,6 +7,13 @@ var ApiActions = window.ApiActions = {
     });
   },
 
+  insertPost: function(post){
+    AppDispatcher.dispatch({
+      actionType: "INSERT_POST_RECEIVED",
+      post: post
+    });
+  },
+
   receiveMorePosts: function(posts){
     AppDispatcher.dispatch({
       actionType: PostConstants.MORE_POSTS_RECEIVED,

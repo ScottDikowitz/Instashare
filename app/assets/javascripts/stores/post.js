@@ -36,6 +36,10 @@
     _posts.push.apply(_posts, posts);
   };
 
+  PostStore.insertPostReceived = function(post){
+    _posts.unshift(post);
+  };
+
   PostStore.insertCommentShow = function(comment){
     _posts.comments = comment.comments;
 
@@ -81,6 +85,10 @@
       }
       else if(payload.actionType === PostConstants.MORE_POSTS_RECEIVED){
         PostStore.insertPosts(payload.posts);
+        PostStore.emit(CHANGE_EVENT);
+      }
+      else if(payload.actionType === "INSERT_POST_RECEIVED"){
+        PostStore.insertPostReceived(payload.post);
         PostStore.emit(CHANGE_EVENT);
       }
       else if(payload.actionType === PostConstants.POST_RECEIVED){

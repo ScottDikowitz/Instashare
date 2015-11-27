@@ -44,6 +44,7 @@ var UserHeader = React.createClass ({
   render: function(){
     var button;
     var file;
+    var img;
     // if (!(this.props.curUser.tag_name) && !(this.props.curUser.place) && CurrentUserStore.currentUser().username !== this.props.curUser.username)
     if (CurrentUserStore.currentUser().username !== this.props.curUser.username && (typeof this.props.curUser.username !== "undefined")){
       button = <button onClick={this.clickHandler}>{this.state.buttonText}</button>;
@@ -53,11 +54,15 @@ var UserHeader = React.createClass ({
       file = <label className="file-select-label">Change pic<input className="file-select" type="file" onChange={this.changeFile} /></label>;
     }
 
+    if (this.props.curUser.profile_picture){
+      img = <img className="user-pic" src={this.props.curUser.profile_picture}/>;
+    }
+
 
     return <div className="user-header">
             <div className="label-and-user-pic">
               <div className="user-pic-container">
-                <img className="user-pic" src={this.props.curUser.profile_picture}/>
+                {img}
               </div>
               {file}
             </div>

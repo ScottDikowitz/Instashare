@@ -7,16 +7,17 @@
 
   var routes = (
       <Route path="/" component={App}>
-        <route path="/posts/new" component={PostForm}/>
-        <route path="/location/:locationId" component={LocationShow}/>
-        <route path="/signin" component={SessionForm}/>
-        <route path="/users" component={Users}/>
-        <route path="/tags/:tagName" component={TagShow}/>
-        <route path="/signup" component={SignUp}/>
-        <route path="/posts/:postId" component={PostShow}/>
-        <route path="/users/:username" component={UserShow}/>
+        <Route path="feed" component={AppIndex}>
+          <Route path="post/new" component={PostForm}/>
+        </Route>
+        <Route path="/location/:locationId" component={LocationShow}/>
+        <Route path="/signin" component={SessionForm}/>
+        <Route path="/users" component={Users}/>
+        <Route path="/tags/:tagName" component={TagShow}/>
+        <Route path="/signup" component={SignUp}/>
+        <Route path="/posts/:postId" component={PostShow}/>
+        <Route path="/users/:username" component={UserShow}/>
         <Route path="/search" component={ Search } />
-        <IndexRoute component={Index}/>
       </Route>
   );
   React.render(<Router>{routes}</Router>, root);

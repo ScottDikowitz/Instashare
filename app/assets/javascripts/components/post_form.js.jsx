@@ -1,4 +1,5 @@
-var PostForm = React.createClass ({
+(function(root) {
+  root.PostForm = React.createClass ({
 
   getInitialState: function() {
       return {  imageUrl: "" };
@@ -26,7 +27,7 @@ var PostForm = React.createClass ({
     }
 
     ApiUtil.createPost(formData);
-    this.props.history.pushState(null, "/");
+    this.props.history.pushState(null, "/feed");
   },
 
   changeFile: function(e) {
@@ -71,3 +72,4 @@ var PostForm = React.createClass ({
   }
 
 });
+})(this);

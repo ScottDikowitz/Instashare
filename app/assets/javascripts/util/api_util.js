@@ -145,35 +145,43 @@ $.ajax ({
       data: formData,
       success: function(formData) {
 
-        ApiUtil.fetchPosts();
       },
       error: function(formData){
-        ApiUtil.queryLocation(formData.responseText);
+        var responseText = JSON.parse(formData.responseText);
+        if (responseText.location !== ""){
+          ApiUtil.queryLocation(responseText.location, responseText.post);
+        }
+        else{
+          // ApiUtil.fetchPosts();
+          ApiActions.insertPost(responseText.post);
+        }
       }
     });
   },
 
-  queryLocation: function(location){
+  queryLocation: function(location, post){
     $.ajax ({
       url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + location + "&key=AIzaSyAJGTQhnNdiql8vG1pvjQpxLouPkIrZJns",
       type: 'GET',
       dataType: 'json',
       success: function(location) {
-        ApiUtil.createLocation(location.results[0].address_components[0].long_name);
+        ApiUtil.createLocation(location.results[0].address_components[0].long_name, post);
 
       }
     });
 
   },
 
-  createLocation: function(location){
+  createLocation: function(location, post){
     $.ajax ({
       url: 'api/locations',
       type: 'POST',
       dataType: 'json',
       data: {location: location},
       success: function(data) {
-        ApiUtil.fetchPosts();
+        post.location = data.location;
+        post.locationId = data.locationId;
+        ApiActions.insertPost(post);
       }
     });
 

@@ -10,6 +10,13 @@
   componentDidMount: function () {
     CurrentUserStore.addChangeHandler(this._ensureLoggedIn);
     SessionsApiUtil.fetchCurrentUser();
+    if (this.props.location.pathname === "/"){
+      this.history.pushState(null, "/feed");
+    }
+  },
+
+  compnentWillReceiveProps: function(){
+
   },
 
   _ensureLoggedIn: function () {

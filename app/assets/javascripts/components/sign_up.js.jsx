@@ -6,7 +6,7 @@
       e.preventDefault();
       var credentials = $(e.currentTarget).serializeJSON();
       ApiUtil.createUser(credentials, function () {
-        this.history.pushState(null, "/");
+        this.history.pushState(null, "/feed");
       }.bind(this));
     },
 

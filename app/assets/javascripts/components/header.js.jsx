@@ -27,7 +27,7 @@ var Header = React.createClass ({
       search = <Search />;
       button = <li className="sign-out-button"><button  onClick={this.signOut}>Sign out</button></li>;
       users = <li><a className="users" href="#/users/">Users</a></li>;
-      logo = <a href="#/"><span className="logo">Instashare</span></a>;
+      logo = <a href="#/feed"><span className="logo">Instashare</span></a>;
     }
     else{
       logo = <a href="#/signin"><span className="logo">Instashare</span></a>;
