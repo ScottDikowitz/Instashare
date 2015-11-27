@@ -92,6 +92,13 @@ var ApiActions = window.ApiActions = {
     });
   },
 
+  insertProfilePic: function(profile_pic){
+    AppDispatcher.dispatch({
+      actionType: "RECEIVE_PROFILE_PIC",
+      profile_pic: profile_pic
+    });
+  },
+
   receiveUsers: function(users){
     AppDispatcher.dispatch({
       actionType: UserConstants.USERS_RECEIVED,

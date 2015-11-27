@@ -228,7 +228,7 @@ $.ajax ({
       },
       error: function(formData){
         // callback(username);
-
+        ApiActions.insertProfilePic(JSON.parse(formData.responseText));
       }
     });
 
