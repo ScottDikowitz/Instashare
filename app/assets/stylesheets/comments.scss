@@ -26,6 +26,7 @@
   // border: 1px solid black;
   outline: none;
   display: block;
+  margin-left: 11px;
   // background: black;
   position: relative;
   top: 4px;
@@ -60,20 +61,55 @@
   // margin-left: 0px;
 }
 .like-button {
+  background: transparent;
+  border: none;
+  outline: none;
   float: left;
   display: block;
   width: 25px;
   height: 25px;
-  padding: 7px 10px;
-  background: #f00;
-  // border: 0px;
-  margin-right: 5px;
-  border-radius: 5px;
-  outline: none;
+  // padding: 7px 10px;
+  // background: #f00;
+  // // border: 0px;
+  // margin-right: 5px;
+  // border-radius: 5px;
+  // outline: none;
+  position: relative;
+}
+
+[class*="icon-"] {
+  display: inline-block;
+  background-image: url("../assets/sprite.png");
+  // background-size: 25px 250px;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  overflow: hidden;
+  height: 0;
+  height: 44px;
+  width: 44px;
+}
+
+.icon-heart-red {
+  bottom: -12px;
+  right: -10px;
+  position: absolute;
+  background-position: -173px -322px;
+
+
+}
+
+.icon-heart-gray {
+  bottom: -12px;
+  right: -10px;
+  position: absolute;
+background-position: -265px -322px;
+height: 44px;
+width: 44px;
+
 }
 
 .liked {
-  background: #f00;
+  // background: #f00;
 }
 
 .unliked {

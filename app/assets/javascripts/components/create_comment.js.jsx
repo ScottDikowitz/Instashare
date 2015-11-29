@@ -23,10 +23,10 @@ var CreateComment = React.createClass ({
   render: function(){
     var button;
     if (this.props.liked === "liked"){
-      button = <button className="like-button liked" onClick={this.handleUnlike}></button>;
+      button = <button className="like-button group" onClick={this.handleUnlike}><i className="icon-heart-red"></i></button>;
     }
     else{
-      button = <button className="like-button unliked" onClick={this.handleLike}></button>;
+      button = <button className="like-button group" onClick={this.handleLike}><i className="icon-heart-gray"></i></button>;
     }
     return <div>
             <div className="create-comment">
