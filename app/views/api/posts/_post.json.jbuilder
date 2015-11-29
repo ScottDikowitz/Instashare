@@ -20,15 +20,17 @@ end
 json.image asset_path(post.image.url)
 # json.created_at do
 elapsed = ((Time.now - post.created_at.time) / 60).to_i
-elapsed = elapsed >= 60 ? (elapsed / 60).to_s + "h" : elapsed.to_s + "m"
+if elapsed >= 60
+  if (elapsed / 60) >= 24
+    elapsed = ((elapsed / 60) / 24).to_s + "d"
+  else
+    elapsed = (elapsed / 60).to_s + "h"
+  end
+else
+    elapsed = elapsed.to_s + "m"
+end
+
 json.minutes_ago elapsed
-
-# json.comments post.getComments
-
-# json.comments
- # comments = post.comments
- # per = 15
- # page = ((comments.length - 1) / per) + 1
 
 arr = post.comments.last(25).map do |comment|
     {
