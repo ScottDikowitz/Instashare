@@ -319,3 +319,85 @@ Processing by Api::LikesController#create as JSON
   [1m[35mLike Load (0.0ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1  [["post_id", 12]]
   Rendered api/likes/show.json.jbuilder (0.0ms)
 Completed 200 OK in 55ms (Views: 15.6ms | ActiveRecord: 32.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-29 18:22:16 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1224ms (Views: 1222.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.self-661c75725b2807d2a404bf40487c3c5dc38c46be9ba7ef35c3ab6fe6903e3af8.css?body=1" for ::1 at 2015-11-29 18:22:18 -0500
+
+
+Started GET "/api/session" for ::1 at 2015-11-29 18:22:19 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "WdNC7nHa6E7tsZYcz1bEzQ"]]
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."follower_id" WHERE "follows"."user_id" = $1 AND "users"."id" = $2 LIMIT 1  [["user_id", 1], ["id", 1]]
+  Rendered api/users/show.json.jbuilder (4.0ms)
+Completed 200 OK in 22ms (Views: 17.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-29 18:22:19 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "WdNC7nHa6E7tsZYcz1bEzQ"]]
+  [1m[35mFollow Load (0.0ms)[0m  SELECT "follows".* FROM "follows" WHERE "follows"."user_id" = $1  [["user_id", 1]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" INNER JOIN "likes" ON "posts"."id" = "likes"."post_id" WHERE "likes"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."user_id" IN (3, 2, 1)  ORDER BY "posts"."created_at" DESC LIMIT 25 OFFSET 0
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" IN (4, 3, 2, 1)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (1)
+  [1m[36mLike Load (0.0ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."post_id" IN (12, 11, 10, 9, 8, 7, 6, 5)[0m
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" IN (12, 11, 10, 9, 8, 7, 6, 5)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (1)
+  Rendered api/posts/_post.json.jbuilder (15.6ms)
+  Rendered api/posts/_post.json.jbuilder (15.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (15.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (31.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/index.json.jbuilder (125.0ms)
+Completed 200 OK in 156ms (Views: 145.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/session" for ::1 at 2015-11-29 18:22:20 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "WdNC7nHa6E7tsZYcz1bEzQ"]]
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."follower_id" WHERE "follows"."user_id" = $1 AND "users"."id" = $2 LIMIT 1  [["user_id", 1], ["id", 1]]
+  Rendered api/users/show.json.jbuilder (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sprite-cd60d4bc3c3df602d58790f0a54de200eb11092f4bc800096583a7d43edf3e73.png" for ::1 at 2015-11-29 18:22:20 -0500
+
+
+Started DELETE "/api/likes/1" for ::1 at 2015-11-29 18:22:22 -0500
+Processing by Api::LikesController#destroy as JSON
+  Parameters: {"like"=>{"post_id"=>"12"}, "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "WdNC7nHa6E7tsZYcz1bEzQ"]]
+  [1m[35mLike Load (0.0ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."post_id" = $2 LIMIT 1  [["user_id", 1], ["post_id", 12]]
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "likes" WHERE "likes"."id" = $1  [["id", 100]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."post_id" = $1[0m  [["post_id", 12]]
+  [1m[35mLike Load (0.0ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1  [["post_id", 12]]
+  Rendered api/likes/show.json.jbuilder (0.0ms)
+Completed 200 OK in 21ms (Views: 11.5ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/api/likes" for ::1 at 2015-11-29 18:22:23 -0500
+Processing by Api::LikesController#create as JSON
+  Parameters: {"like"=>{"post_id"=>"12"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "WdNC7nHa6E7tsZYcz1bEzQ"]]
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36mLike Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "likes" WHERE ("likes"."user_id" = 1 AND "likes"."post_id" = 12) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "likes" ("post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["post_id", 12], ["user_id", 1], ["created_at", "2015-11-29 23:22:23.556754"], ["updated_at", "2015-11-29 23:22:23.556754"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."post_id" = $1[0m  [["post_id", 12]]
+  [1m[35mLike Load (0.0ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1  [["post_id", 12]]
+  Rendered api/likes/show.json.jbuilder (4.9ms)
+Completed 200 OK in 29ms (Views: 15.9ms | ActiveRecord: 4.0ms)
