@@ -23,7 +23,7 @@
 .create-comment-text {
   border: 0px;
   float: left;
-  width: 485px;
+  width: 465px;
   font-size: 16px;
   // border: 1px solid black;
   outline: none;
@@ -66,8 +66,9 @@
   background: transparent;
   border: none;
   outline: none;
+  display: inline-block;
   float: left;
-  display: block;
+  margin-right: 0px;
   width: 25px;
   height: 25px;
 
@@ -99,9 +100,9 @@
   bottom: -12px;
   right: -10px;
   position: absolute;
-background-position: -265px -322px;
-height: 44px;
-width: 44px;
+  background-position: -265px -322px;
+  height: 44px;
+  width: 44px;
 
 }
 
