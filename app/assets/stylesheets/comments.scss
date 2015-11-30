@@ -3,11 +3,13 @@
 }
 
 .add-comment {
-  float: right;
-  display: flex;
-  display: -webkit-flex;
-  align-items: center;
-  -webkit-align-items: center;
+  float: left;
+  margin-left: 10px;
+
+}
+
+.create-comment form {
+  float: left;
 }
 
 
@@ -16,15 +18,12 @@
   // position: absolute;
   padding: 6px 10px;
   border: 0;
-  // float: right;
-
-
 
 }
 .create-comment-text {
   border: 0px;
   float: left;
-  width: 488px;
+  width: 485px;
   font-size: 16px;
   // border: 1px solid black;
   outline: none;
@@ -39,6 +38,8 @@
   padding: 10px 0 10px 10px;
   padding-left: 10px;
   min-height: 10px;
+  // max-height: 250px;
+  // overflow-y: scroll;
 }
 
 .comment-box li {
@@ -58,7 +59,8 @@
 }
 
 .comment-box li{
-
+  // padding-left: 0px;
+  // margin-left: 0px;
 }
 .like-button {
   background: transparent;
@@ -68,12 +70,14 @@
   display: block;
   width: 25px;
   height: 25px;
+
   position: relative;
 }
 
 [class*="icon-"] {
   display: inline-block;
   background-image: image-url("sprite.png");
+  // background-size: 25px 250px;
   background-repeat: no-repeat;
   vertical-align: bottom;
   overflow: hidden;
@@ -87,6 +91,8 @@
   right: -10px;
   position: absolute;
   background-position: -173px -322px;
+
+
 }
 
 .icon-heart-gray {
@@ -97,6 +103,14 @@ background-position: -265px -322px;
 height: 44px;
 width: 44px;
 
+}
+
+.liked {
+  // background: #f00;
+}
+
+.unliked {
+  background: #ccc;
 }
 
 .like-bar {
