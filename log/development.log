@@ -34026,3 +34026,428 @@ Processing by Api::SearchController#index as JSON
   [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (4)[0m
   Rendered api/search/index.json.jbuilder (8.9ms)
 Completed 200 OK in 23ms (Views: 18.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/search?query=mia" for ::1 at 2015-11-30 13:39:28 -0500
+Processing by Api::SearchController#index as JSON
+  Parameters: {"query"=>"mia"}
+  [1m[35mPgSearch::Document Load (0.0ms)[0m  SELECT  "pg_search_documents".* FROM "pg_search_documents" INNER JOIN (SELECT "pg_search_documents"."id" AS pg_search_id, (ts_rank((to_tsvector('simple', coalesce("pg_search_documents"."content"::text, ''))), (to_tsquery('simple', ''' ' || 'mia' || ' ''' || ':*')), 0)) AS rank FROM "pg_search_documents" WHERE (((to_tsvector('simple', coalesce("pg_search_documents"."content"::text, ''))) @@ (to_tsquery('simple', ''' ' || 'mia' || ' ''' || ':*'))))) AS pg_search_ce9b9dd18c5c0023f2116f ON "pg_search_documents"."id" = pg_search_ce9b9dd18c5c0023f2116f.pg_search_id  ORDER BY pg_search_ce9b9dd18c5c0023f2116f.rank DESC, "pg_search_documents"."id" ASC LIMIT 25 OFFSET 0
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" IN (7)[0m
+  Rendered api/search/index.json.jbuilder (15.6ms)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/locations/7" for ::1 at 2015-11-30 13:40:36 -0500
+Processing by Api::LocationsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[35mLocation Load (0.0ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT 1  [["id", 7]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/location_posts/7" for ::1 at 2015-11-30 13:40:36 -0500
+Processing by Api::LocationPostsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."location_id" = $1  [["location_id", 7]]
+  Rendered api/users/_post.json.jbuilder (9.0ms)
+  Rendered api/location_posts/show.json.jbuilder (17.0ms)
+Completed 200 OK in 36ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/follows/undefined" for ::1 at 2015-11-30 13:40:36 -0500
+Processing by Api::FollowsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "undefined"]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+Completed 200 OK in 8ms (Views: 0.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/session" for ::1 at 2015-11-30 13:40:43 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."follower_id" WHERE "follows"."user_id" = $1 AND "users"."id" = $2 LIMIT 1  [["user_id", 1], ["id", 1]]
+  Rendered api/users/show.json.jbuilder (4.0ms)
+Completed 200 OK in 21ms (Views: 15.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-30 13:40:43 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[35mFollow Load (0.0ms)[0m  SELECT "follows".* FROM "follows" WHERE "follows"."user_id" = $1  [["user_id", 1]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" INNER JOIN "likes" ON "posts"."id" = "likes"."post_id" WHERE "likes"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."user_id" IN (3, 2, 1)  ORDER BY "posts"."created_at" DESC LIMIT 25 OFFSET 0
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" IN (8, 7, 6, 5, 4, 3, 2, 1)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (1)
+  [1m[36mLike Load (0.0ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."post_id" IN (16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5)[0m
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" IN (16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (1)
+  Rendered api/posts/_post.json.jbuilder (15.6ms)
+  Rendered api/posts/_post.json.jbuilder (15.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (15.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/index.json.jbuilder (140.6ms)
+Completed 200 OK in 156ms (Views: 156.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/locations/8" for ::1 at 2015-11-30 13:40:45 -0500
+Processing by Api::LocationsController#show as JSON
+  Parameters: {"id"=>"8"}
+  [1m[36mLocation Load (1.0ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT 1[0m  [["id", 8]]
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/location_posts/8" for ::1 at 2015-11-30 13:40:45 -0500
+Processing by Api::LocationPostsController#show as JSON
+  Parameters: {"id"=>"8"}
+  [1m[35mLocation Load (0.0ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."location_id" = $1[0m  [["location_id", 8]]
+  Rendered api/users/_post.json.jbuilder (7.0ms)
+  Rendered api/location_posts/show.json.jbuilder (14.0ms)
+Completed 200 OK in 30ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/follows/undefined" for ::1 at 2015-11-30 13:40:45 -0500
+Processing by Api::FollowsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "undefined"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+Completed 200 OK in 6ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/session" for ::1 at 2015-11-30 13:40:47 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."follower_id" WHERE "follows"."user_id" = $1 AND "users"."id" = $2 LIMIT 1[0m  [["user_id", 1], ["id", 1]]
+  Rendered api/users/show.json.jbuilder (15.6ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-30 13:40:47 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[36mFollow Load (0.0ms)[0m  [1mSELECT "follows".* FROM "follows" WHERE "follows"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" INNER JOIN "likes" ON "posts"."id" = "likes"."post_id" WHERE "likes"."user_id" = $1  [["user_id", 1]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" IN (3, 2, 1)  ORDER BY "posts"."created_at" DESC LIMIT 25 OFFSET 0[0m
+  [1m[35mLocation Load (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" IN (8, 7, 6, 5, 4, 3, 2, 1)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (1)[0m
+  [1m[35mLike Load (0.0ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."post_id" IN (16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5)
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" IN (16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (1)[0m
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (15.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (15.6ms)
+  Rendered api/posts/_post.json.jbuilder (15.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (15.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (15.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/index.json.jbuilder (140.6ms)
+Completed 200 OK in 156ms (Views: 156.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/locations/7" for ::1 at 2015-11-30 13:40:50 -0500
+Processing by Api::LocationsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[35mLocation Load (0.0ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT 1  [["id", 7]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/location_posts/7" for ::1 at 2015-11-30 13:40:50 -0500
+Processing by Api::LocationPostsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mLocation Load (1.0ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."location_id" = $1  [["location_id", 7]]
+  Rendered api/users/_post.json.jbuilder (7.0ms)
+  Rendered api/location_posts/show.json.jbuilder (13.0ms)
+Completed 200 OK in 30ms (Views: 25.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/follows/undefined" for ::1 at 2015-11-30 13:40:50 -0500
+Processing by Api::FollowsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "undefined"]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+Completed 200 OK in 6ms (Views: 0.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/posts/15" for ::1 at 2015-11-30 13:40:53 -0500
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1  [["post_id", 15]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."post_id" = $1[0m  [["post_id", 15]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."post_id" = $1 AND (user_id = 1)[0m  [["post_id", 15]]
+  [1m[35mLocation Load (0.0ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = $1  ORDER BY "comments"."id" DESC LIMIT 25[0m  [["post_id", 15]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered api/posts/show.json.jbuilder (31.3ms)
+Completed 200 OK in 66ms (Views: 59.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/api/likes" for ::1 at 2015-11-30 13:40:56 -0500
+Processing by Api::LikesController#create as JSON
+  Parameters: {"like"=>{"post_id"=>"15"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mLike Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "likes" WHERE ("likes"."user_id" = 1 AND "likes"."post_id" = 15) LIMIT 1[0m
+  [1m[35mSQL (31.3ms)[0m  INSERT INTO "likes" ("post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["post_id", 15], ["user_id", 1], ["created_at", "2015-11-30 18:40:56.820655"], ["updated_at", "2015-11-30 18:40:56.820655"]]
+  [1m[36m (78.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."post_id" = $1[0m  [["post_id", 15]]
+  [1m[35mLike Load (0.0ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1  [["post_id", 15]]
+  Rendered api/likes/show.json.jbuilder (15.6ms)
+Completed 200 OK in 156ms (Views: 31.2ms | ActiveRecord: 109.4ms)
+
+
+Started DELETE "/api/likes/1" for ::1 at 2015-11-30 13:41:05 -0500
+Processing by Api::LikesController#destroy as JSON
+  Parameters: {"like"=>{"post_id"=>"15"}, "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[35mLike Load (0.0ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."post_id" = $2 LIMIT 1  [["user_id", 1], ["post_id", 15]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "likes" WHERE "likes"."id" = $1  [["id", 112]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."post_id" = $1[0m  [["post_id", 15]]
+  [1m[35mLike Load (0.0ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1  [["post_id", 15]]
+  Rendered api/likes/show.json.jbuilder (15.6ms)
+Completed 200 OK in 31ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/likes" for ::1 at 2015-11-30 13:41:06 -0500
+Processing by Api::LikesController#create as JSON
+  Parameters: {"like"=>{"post_id"=>"15"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mLike Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "likes" WHERE ("likes"."user_id" = 1 AND "likes"."post_id" = 15) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "likes" ("post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["post_id", 15], ["user_id", 1], ["created_at", "2015-11-30 18:41:06.051602"], ["updated_at", "2015-11-30 18:41:06.051602"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."post_id" = $1[0m  [["post_id", 15]]
+  [1m[35mLike Load (0.0ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1  [["post_id", 15]]
+  Rendered api/likes/show.json.jbuilder (15.6ms)
+Completed 200 OK in 27ms (Views: 15.6ms | ActiveRecord: 3.1ms)
+
+
+Started DELETE "/api/likes/1" for ::1 at 2015-11-30 13:41:07 -0500
+Processing by Api::LikesController#destroy as JSON
+  Parameters: {"like"=>{"post_id"=>"15"}, "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[35mLike Load (0.0ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."post_id" = $2 LIMIT 1  [["user_id", 1], ["post_id", 15]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "likes" WHERE "likes"."id" = $1  [["id", 113]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."post_id" = $1[0m  [["post_id", 15]]
+  [1m[35mLike Load (0.0ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1  [["post_id", 15]]
+  Rendered api/likes/show.json.jbuilder (2.0ms)
+Completed 200 OK in 23ms (Views: 13.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/likes" for ::1 at 2015-11-30 13:41:07 -0500
+Processing by Api::LikesController#create as JSON
+  Parameters: {"like"=>{"post_id"=>"15"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mLike Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "likes" WHERE ("likes"."user_id" = 1 AND "likes"."post_id" = 15) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "likes" ("post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["post_id", 15], ["user_id", 1], ["created_at", "2015-11-30 18:41:07.647371"], ["updated_at", "2015-11-30 18:41:07.647371"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."post_id" = $1[0m  [["post_id", 15]]
+  [1m[35mLike Load (0.0ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1  [["post_id", 15]]
+  Rendered api/likes/show.json.jbuilder (0.0ms)
+Completed 200 OK in 22ms (Views: 15.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/users/Scott?username=Scott" for ::1 at 2015-11-30 13:41:08 -0500
+Processing by Api::UsersController#show as JSON
+  Parameters: {"username"=>"Scott", "id"=>"Scott"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Scott"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."follower_id" WHERE "follows"."user_id" = $1 AND "users"."id" = $2 LIMIT 1[0m  [["user_id", 1], ["id", 1]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1  [["user_id", 1]]
+  Rendered api/users/_post.json.jbuilder (0.0ms)
+  Rendered api/users/_post.json.jbuilder (15.6ms)
+  Rendered api/users/_post.json.jbuilder (0.0ms)
+  Rendered api/users/_post.json.jbuilder (0.0ms)
+  Rendered api/users/_post.json.jbuilder (0.0ms)
+  Rendered api/users/_post.json.jbuilder (0.0ms)
+  Rendered api/users/_post.json.jbuilder (0.0ms)
+  Rendered api/users/_post.json.jbuilder (0.0ms)
+  Rendered api/users/_post.json.jbuilder (0.0ms)
+  Rendered api/users/_post.json.jbuilder (0.0ms)
+  Rendered api/users/_post.json.jbuilder (0.0ms)
+  Rendered api/users/_post.json.jbuilder (0.0ms)
+  Rendered api/users/show.json.jbuilder (78.1ms)
+Completed 200 OK in 94ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/follows/Scott" for ::1 at 2015-11-30 13:41:09 -0500
+Processing by Api::FollowsController#show as JSON
+  Parameters: {"id"=>"Scott"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Scott"]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."follower_id" WHERE "follows"."user_id" = $1 AND "users"."id" = $2 LIMIT 1[0m  [["user_id", 1], ["id", 1]]
+Completed 200 OK in 12ms (Views: 0.0ms | ActiveRecord: 3.0ms)
+
+
+Started PATCH "/api/users/1" for ::1 at 2015-11-30 13:41:14 -0500
+Processing by Api::UsersController#update as JSON
+  Parameters: {"user"=>{"body"=>"ha ha"}, "id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPgSearch::Document Load (0.0ms)[0m  SELECT  "pg_search_documents".* FROM "pg_search_documents" WHERE "pg_search_documents"."searchable_id" = $1 AND "pg_search_documents"."searchable_type" = $2 LIMIT 1  [["searchable_id", 1], ["searchable_type", "User"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  COMMIT
+Completed 200 OK in 17ms (Views: 0.0ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/api/users/1" for ::1 at 2015-11-30 13:41:16 -0500
+Processing by Api::UsersController#update as JSON
+  Parameters: {"user"=>{"body"=>"ha ha"}, "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPgSearch::Document Load (0.0ms)[0m  [1mSELECT  "pg_search_documents".* FROM "pg_search_documents" WHERE "pg_search_documents"."searchable_id" = $1 AND "pg_search_documents"."searchable_type" = $2 LIMIT 1[0m  [["searchable_id", 1], ["searchable_type", "User"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 13ms (Views: 0.0ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/api/users/1" for ::1 at 2015-11-30 13:41:27 -0500
+Processing by Api::UsersController#update as JSON
+  Parameters: {"user"=>{"body"=>"ha ha"}, "id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPgSearch::Document Load (1.0ms)[0m  SELECT  "pg_search_documents".* FROM "pg_search_documents" WHERE "pg_search_documents"."searchable_id" = $1 AND "pg_search_documents"."searchable_type" = $2 LIMIT 1  [["searchable_id", 1], ["searchable_type", "User"]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  COMMIT
+Completed 200 OK in 14ms (Views: 0.0ms | ActiveRecord: 4.0ms)
+
+
+Started PATCH "/api/users/1" for ::1 at 2015-11-30 13:41:28 -0500
+Processing by Api::UsersController#update as JSON
+  Parameters: {"user"=>{"body"=>"ha ha"}, "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPgSearch::Document Load (0.0ms)[0m  [1mSELECT  "pg_search_documents".* FROM "pg_search_documents" WHERE "pg_search_documents"."searchable_id" = $1 AND "pg_search_documents"."searchable_type" = $2 LIMIT 1[0m  [["searchable_id", 1], ["searchable_type", "User"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 15ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/api/users/1" for ::1 at 2015-11-30 13:41:33 -0500
+Processing by Api::UsersController#update as JSON
+  Parameters: {"user"=>{"body"=>"ha ha"}, "id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPgSearch::Document Load (1.0ms)[0m  SELECT  "pg_search_documents".* FROM "pg_search_documents" WHERE "pg_search_documents"."searchable_id" = $1 AND "pg_search_documents"."searchable_type" = $2 LIMIT 1  [["searchable_id", 1], ["searchable_type", "User"]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  COMMIT
+Completed 200 OK in 14ms (Views: 0.0ms | ActiveRecord: 3.0ms)
+
+
+Started PATCH "/api/users/1" for ::1 at 2015-11-30 13:41:34 -0500
+Processing by Api::UsersController#update as JSON
+  Parameters: {"user"=>{"body"=>"ha ha"}, "id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPgSearch::Document Load (0.0ms)[0m  [1mSELECT  "pg_search_documents".* FROM "pg_search_documents" WHERE "pg_search_documents"."searchable_id" = $1 AND "pg_search_documents"."searchable_type" = $2 LIMIT 1[0m  [["searchable_id", 1], ["searchable_type", "User"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 12ms (Views: 0.0ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/api/users/1" for ::1 at 2015-11-30 13:41:35 -0500
+Processing by Api::UsersController#update as JSON
+  Parameters: {"user"=>{"body"=>"ha ha"}, "id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPgSearch::Document Load (0.0ms)[0m  SELECT  "pg_search_documents".* FROM "pg_search_documents" WHERE "pg_search_documents"."searchable_id" = $1 AND "pg_search_documents"."searchable_type" = $2 LIMIT 1  [["searchable_id", 1], ["searchable_type", "User"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  COMMIT
+Completed 200 OK in 5ms (Views: 0.0ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/api/users/1" for ::1 at 2015-11-30 13:41:37 -0500
+Processing by Api::UsersController#update as JSON
+  Parameters: {"user"=>{"body"=>"ha ha"}, "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPgSearch::Document Load (1.0ms)[0m  [1mSELECT  "pg_search_documents".* FROM "pg_search_documents" WHERE "pg_search_documents"."searchable_id" = $1 AND "pg_search_documents"."searchable_type" = $2 LIMIT 1[0m  [["searchable_id", 1], ["searchable_type", "User"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 14ms (Views: 0.0ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2015-11-30 13:41:52 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "k6opgXVsg0-q05_WcLQFoQ"]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "9KgpxUw8mKMktD7ATJQXFQ"], ["updated_at", "2015-11-30 18:41:52.839042"], ["id", 1]]
+  [1m[36mPgSearch::Document Load (0.0ms)[0m  [1mSELECT  "pg_search_documents".* FROM "pg_search_documents" WHERE "pg_search_documents"."searchable_id" = $1 AND "pg_search_documents"."searchable_type" = $2 LIMIT 1[0m  [["searchable_id", 1], ["searchable_type", "User"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 18ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2015-11-30 13:41:58 -0500
+
+
+Started GET "/auth/facebook/callback?code=AQDFJKOkQFpgc1JQm0GHCkfNnIWSyhkrr8TWlB7kqdZUopfuVglXMS4tmEiXWG8QZxPKAnwkAZJhAjjid8oHgj2XFLVrKLDfM7VAKdi-4GzL2gIgLzrjRn609itm8Svc-we28DbUoodyQfDvSoYKHDjThVXR3b8ZAwWQC9ckaPjWyl2PB6ibTJzs9g1ukchaDGbJ76m7O-86qvQuNI6WinsRFsO1lUG1vDpAtMwleaubJHlzPvpzhQQXa3HvUFtxh9KUUE9IHW4f4BJigh2rqXcV1-QMnKEZAYfWW0wz0aXsBEwHnsOts_c4b4iKTDI_5zdwqVaeaslcweFsiRLLShF1vtb9ap64KKPyp7T66SHl9A&state=4ef4ce6be17f7fb4b166a79c0dba0887842f1ef38e0208b8" for ::1 at 2015-11-30 13:41:59 -0500
+Processing by OmniauthController#facebook as HTML
+  Parameters: {"code"=>"AQDFJKOkQFpgc1JQm0GHCkfNnIWSyhkrr8TWlB7kqdZUopfuVglXMS4tmEiXWG8QZxPKAnwkAZJhAjjid8oHgj2XFLVrKLDfM7VAKdi-4GzL2gIgLzrjRn609itm8Svc-we28DbUoodyQfDvSoYKHDjThVXR3b8ZAwWQC9ckaPjWyl2PB6ibTJzs9g1ukchaDGbJ76m7O-86qvQuNI6WinsRFsO1lUG1vDpAtMwleaubJHlzPvpzhQQXa3HvUFtxh9KUUE9IHW4f4BJigh2rqXcV1-QMnKEZAYfWW0wz0aXsBEwHnsOts_c4b4iKTDI_5zdwqVaeaslcweFsiRLLShF1vtb9ap64KKPyp7T66SHl9A", "state"=>"4ef4ce6be17f7fb4b166a79c0dba0887842f1ef38e0208b8"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "1145780765451148"]]
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "5OXTqc2N7D5sbJb0ov2BGg"], ["updated_at", "2015-11-30 18:42:27.469383"], ["id", 4]]
+  [1m[36mPgSearch::Document Load (1.0ms)[0m  [1mSELECT  "pg_search_documents".* FROM "pg_search_documents" WHERE "pg_search_documents"."searchable_id" = $1 AND "pg_search_documents"."searchable_type" = $2 LIMIT 1[0m  [["searchable_id", 4], ["searchable_type", "User"]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/#/feed
+Completed 302 Found in 27228ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/" for ::1 at 2015-11-30 13:42:28 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1045ms (Views: 1043.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/session" for ::1 at 2015-11-30 13:42:30 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "5OXTqc2N7D5sbJb0ov2BGg"]]
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."follower_id" WHERE "follows"."user_id" = $1 AND "users"."id" = $2 LIMIT 1[0m  [["user_id", 4], ["id", 4]]
+  Rendered api/users/show.json.jbuilder (33.0ms)
+Completed 200 OK in 106ms (Views: 51.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-30 13:42:30 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "5OXTqc2N7D5sbJb0ov2BGg"]]
+  [1m[36mFollow Load (1.0ms)[0m  [1mSELECT "follows".* FROM "follows" WHERE "follows"."user_id" = $1[0m  [["user_id", 4]]
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" INNER JOIN "likes" ON "posts"."id" = "likes"."post_id" WHERE "likes"."user_id" = $1  [["user_id", 4]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = 4  ORDER BY "posts"."created_at" DESC LIMIT 25 OFFSET 0[0m
+  Rendered api/posts/index.json.jbuilder (3.0ms)
+Completed 200 OK in 63ms (Views: 15.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/api/session" for ::1 at 2015-11-30 13:42:30 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "5OXTqc2N7D5sbJb0ov2BGg"]]
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."follower_id" WHERE "follows"."user_id" = $1 AND "users"."id" = $2 LIMIT 1[0m  [["user_id", 4], ["id", 4]]
+  Rendered api/users/show.json.jbuilder (15.6ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
