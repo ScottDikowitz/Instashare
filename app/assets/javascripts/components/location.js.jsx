@@ -36,9 +36,10 @@ var LocationShow = React.createClass ({
         tagHeader = <UserHeader curUser={this.state.posts}/>;
         tagPosts = <PostGrid posts={this.state.posts.posts}/>;
       }
-      map = <Map location={this.state.location.geometry.location}/>;
+      map = <div className="map-shield"><Map location={this.state.location.geometry.location}/></div>;
     }
-    return <div>{map}
+    return <div>
+            {map}
             {tagHeader}
             {tagPosts}
           </div>;

@@ -2,4 +2,15 @@
   background: black;
   height: 300px;
   display: block;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.map-shield {
+
+  z-index: 2;
+  display: block;
+  background: transparent;
+  height: 300px;
 }
