@@ -78,7 +78,6 @@ $.ajax ({
       type: 'GET',
       dataType: 'json',
       success: function(data) {
-        // ApiUtil.getMapLocation(location.place);
         ApiActions.receiveTagPosts(data);
       }
     });
@@ -93,7 +92,6 @@ $.ajax ({
       type: 'GET',
       dataType: 'json',
       success: function(location) {
-        // that.setState({location: location.results[0]});
         ApiActions.receiveLocation(location.results[0]);
       }
     });
