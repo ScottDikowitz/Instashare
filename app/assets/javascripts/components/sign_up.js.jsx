@@ -13,38 +13,40 @@
     render: function() {
 
       return (
-        <form className="sign-in" onSubmit={ this.submit }>
+        <div className="content-area">
+          <form className="sign-in" onSubmit={ this.submit }>
 
-          <h1>Sign Up</h1>
+            <h1>Sign Up</h1>
 
-        <ul>
-          <li>
-          <label>
-            Username
-            <input className="fields" type="text" name="username" />
-          </label>
-          </li>
-          <li>
-          <label>
-            Password
-            <input className="fields" type="password" name="password" />
-          </label>
-          </li>
-          <li>
-          <label>
-            Bio
-            <textarea className="fields" name="body"></textarea>
-          </label>
-          </li>
-          <li>
-            <button className="submit-button">Join!</button>
-          </li>
-          <li>
-            <a href="/#signin">signin</a>
-          </li>
+          <ul>
+            <li>
+            <label>
+              Username
+              <input className="fields" type="text" name="username" />
+            </label>
+            </li>
+            <li>
+            <label>
+              Password
+              <input className="fields" type="password" name="password" />
+            </label>
+            </li>
+            <li>
+            <label>
+              Bio
+              <textarea className="fields" name="body"></textarea>
+            </label>
+            </li>
+            <li>
+              <button className="submit-button">Join!</button>
+            </li>
+            <li>
+              <a href="/#signin">signin</a>
+            </li>
 
-          </ul>
-        </form>
+            </ul>
+          </form>
+        </div>
       );
     },
 

@@ -4,14 +4,21 @@
 
 .sign-in{
   background: #fff;
-  margin: 200px auto;
+  margin: auto;
   padding: 40px;
   width: 400px;
   border: 1px solid #edeeee;
   border-radius: 5px;
   font-weight: bold;
   color: #055;
+}
 
+.content-area {
+  height: 89vh;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
 }
 
 .sign-in > ul{

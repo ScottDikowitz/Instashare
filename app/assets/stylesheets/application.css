@@ -48,9 +48,6 @@ h1{
   text-align: center;
 }
 
-
-
-
 .group:after{
   clear: both;
   display: block;
