@@ -16904,3 +16904,530 @@ Processing by Api::SessionsController#show as JSON
   [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."follower_id" WHERE "follows"."user_id" = $1 AND "users"."id" = $2 LIMIT 1[0m  [["user_id", 1], ["id", 1]]
   Rendered api/users/show.json.jbuilder (20.6ms)
 Completed 200 OK in 324ms (Views: 32.6ms | ActiveRecord: 59.9ms)
+
+
+Started GET "/" for ::1 at 2015-11-29 20:53:27 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1964ms (Views: 1964.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.self-31b14371c07a7fdef1bbd9a8835ab621f20e54433c4054333c24d6567164d9ed.css?body=1" for ::1 at 2015-11-29 20:53:30 -0500
+
+
+Started GET "/assets/index.self-0517476d96d0bbc84c2416fbeca3191e8dbb3f2285e0bd89214af8371aafbcd8.css?body=1" for ::1 at 2015-11-29 20:53:30 -0500
+
+
+Started GET "/assets/map.self-1bf9d1e317dc9ab63343444b5520b95a63de4968aea3e448659faf7122de6f34.css?body=1" for ::1 at 2015-11-29 20:53:30 -0500
+
+
+Started GET "/assets/post-form.self-261d09fd259f0eaf7cbc45ced3afc486ff02d045e7173390b5cbf6894b612482.css?body=1" for ::1 at 2015-11-29 20:53:30 -0500
+
+
+Started GET "/assets/header.self-eff2aa6464da4f5cb933b8ecce930429d2a0303bfca1784770077a4746246417.css?body=1" for ::1 at 2015-11-29 20:53:30 -0500
+
+
+Started GET "/assets/post.self-4e47830c0d12bff36b642cee9249cbf52deb1a8455e39924813a882bfcbdaa1a.css?body=1" for ::1 at 2015-11-29 20:53:30 -0500
+
+
+Started GET "/assets/sessions.self-b6d276010ab229b914c2c90948c83dc28474d7a617547d9747cd825c638dcac9.css?body=1" for ::1 at 2015-11-29 20:53:30 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-29 20:53:30 -0500
+
+
+Started GET "/assets/user_list.self-605eb3ccb1a3069ea5459f92f94580285147ea31072204d8dd828ac6e66d9a6a.css?body=1" for ::1 at 2015-11-29 20:53:30 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-29 20:53:31 -0500
+
+
+Started GET "/assets/usershow.self-9a1b904ffefdeeb52c65eb1304fa338753e64e739ae38d422be41ca58f233825.css?body=1" for ::1 at 2015-11-29 20:53:31 -0500
+
+
+Started GET "/assets/application.self-8a183606a20b5a86879254b1dd852fa4f2795403a9aafdd5bbf7b7b85adeaf6a.css?body=1" for ::1 at 2015-11-29 20:53:31 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-29 20:53:31 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-29 20:53:31 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-29 20:53:31 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-29 20:53:31 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/jquery.serializejson.self-12f805b23f56b4a3a071e6807df1b00d31375bb19063bcaae105004b5bc2b722.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/app.self-f87c25c2aa380675c02c57f02ebdee4f22bf0d435c71431e4ca0c7ebf796fee8.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/app_index.self-af7cc115b8d8d53aabe4fe109cd53e36bf1593dc17e41ed57e051f64e42d348a.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/comments_box.self-ab6f54e349bcff1773fc7587f33de8fc6d835c75d9b036295f272b99b27abdf9.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/create_comment.self-be053ccb430b1f0d5fb1867a8ee3e4d7a571c051677cedc4add803c176239527.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/header.self-edc2b662789bb16772e5448dfd6f65566ca2d0246ba310df736f10b01b9fa059.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/index.self-2044dc45d5e9b589290e87417e0f977effc7d2b516cabd1316f73a17c3dad379.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/likers.self-0666dd177934e1e31f58623a03d832be71bc313e866f34422f51036180bbeda9.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/location.self-3b46d4344800e8fd3b64c3fe2a4aca1fffc1d0424863a63a745eaf1c8d74a5f0.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/location_index_item.self-9eade62e227f056dfffbc4a0a2aba0b4af71be764b9d575e0b09286604582684.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/map.self-d90d554cdd8708da3225e969ba46f4a6ad3767b68365f31f5b6348e815c5fbec.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/new_session.self-f2e44cf5c61ea22489653015769e30646c4c90d54d6d1ab80a4f67f9a0e57df5.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/post.self-186e585ecab8092e80ad3ab451078ea0f3a3eaa37a366f521e8945b481264d3a.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/post_form.self-04e66f79b444560b0599e6006beff5ed32eb9073864c926b58ae05d43cf5c791.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/post_grid.self-f9898b33f36cf58fa2242424f15c929b235fe535d585ad1daa8b51b83185bd18.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/post_grid_square.self-c50fceae4e3c09033085b9048f01d44f5a6427955a0de3f400d7f4d1e15e5486.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/post_show.self-3f9463c19a537be9a1df5f57a25c9a3d3a2c5e57d94105b94edf23e8dc84b9f8.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/search.self-10b21d5c8417a7db91bf34930c97394d69b07297351d4db688faf61456060731.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/sign_up.self-b15a1fc94ac1411d22dcb9144f0cd65ce3f15380390068b5f9a32b8e2a500a3d.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/tag_index_item.self-47cf924a81f34ad394fa4a266f59303fd17259326d220f81deef93eb61355bd4.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/tag_show.self-c9a657f9646a5f266fa24ecaecaf63ec6753b1e53107ab004d8daf46020b1571.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/user.self-b7a16b98c9b66b4bce442238bb6aa7813c50075b2fea9f104097ad6ae886b1ca.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/user_header.self-47262369aa45fc75d9904efc6db35618925e00e409ff692edad9c0970942a7bb.js?body=1" for ::1 at 2015-11-29 20:53:32 -0500
+
+
+Started GET "/assets/components/user_index_item.self-343b6cab931e59d68f76b91b2ba26a80df6c43ba2980dcb86184537c19b2b6b6.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/components/users.self-3802221d266ef7ea9781891fe05679f1804bf77a24fbfdda64ad2bfd5e89fdfa.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/actions/api_actions.self-1d21bbce092b8c998a3905f69aa1462fc2a74d06b61d530a83a184769fa7cee6.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/actions/current_user_actions.self-dd449e4e385c83244c396cb0d8ff16fe84aa363bd32e469623d10bc38be1b4e9.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/actions/search_result_actions.self-18ba58d863cbee44281de8fb77a66c7835aa7803b825de5fe90afe063cda5eef.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/constants/current_user_constants.self-bbb8df338a128ad4cbf02cc07682159c750ed16cd60a8cda0268b3d45625855b.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/constants/location_constants.self-ae14d69528e9e434560539cf03457b13c0c39b9238b5f926b56353078081129c.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/constants/post_constants.self-e209d402a68ee975ec3fcfedd4093d9d19f45243138d83c65640305ea3bdfe07.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/constants/search_results_constants.self-bc46447aa1e872c86f5e9bd8ae8d545918f833d1f668bb1427e03424eaaee2e6.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/constants/tag_constants.self-100873e13a3f85de5de5de1c7d10263f17f9fb345c246b574d802f6b2542f824.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/constants/user_constants.self-ad5f0a3a4718ef35ef51fbafb5e36b4a1ffd5bdecaea6c45dc33e87581ebc957.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/instashare.self-49cf950306f270b45dbbe20faa76eb60a343ba01ca3b5dfc7193ea6372aa178e.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/stores/current_user.self-9cc4131db4c7a099f8b0d92220b2b4b62a22a4537158577acbbe7c3958396012.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/stores/follow.self-9b5a46e7a37893b1f674192132126ff71fa3d199d34ab5e0dc73f4b2ab6bd886.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/stores/location.self-0f6ede05416ddba55223562c09e256cff003ffa8b42ec6f1ebb2cbd23648cbc7.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/stores/post.self-41b431e61b81ebfe55433eb985c82cbd2e861fb6263efb43c16ed1458a0720f3.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/stores/search_results.self-c926caacb7e3c661071109eb477da45a875e0f50c23e9e13d7956b88e7713dd0.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/stores/tag.self-fdb0fbfb8d7baf70b5c2422ea18437865a6c66f371566574336b9ad9dba19af1.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/stores/user.self-94bdfe7cb48965657732ac3f1a83c9c6d9494e51c0b64028c77030a272895c62.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/stores/users.self-4d22095415770a89a153e4bba6fe742c7829774cebf7a47f741ca894c89b5661.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/util/api_util.self-c21d55619d6c9b4c209fc25ee4de6f7de4674233cd26a6277d14968459236621.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/util/search_api_util.self-1f4d7892caea43d0205b1154a1b4363e53b94b88e84809f2da389a549a78790f.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/util/sessions_api_util.self-14a5a15b63de2450482440568b5f9c42c5c2889cd0ac65ecbf70565d1631ffaf.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-29 20:53:33 -0500
+
+
+Started GET "/api/session" for ::1 at 2015-11-29 20:53:34 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "brwZocX5AA6AL0dtAugDUg"]]
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."follower_id" WHERE "follows"."user_id" = $1 AND "users"."id" = $2 LIMIT 1[0m  [["user_id", 1], ["id", 1]]
+  Rendered api/users/show.json.jbuilder (4.0ms)
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2015-11-29 20:53:34 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "brwZocX5AA6AL0dtAugDUg"]]
+  [1m[36mFollow Load (0.0ms)[0m  [1mSELECT "follows".* FROM "follows" WHERE "follows"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" INNER JOIN "likes" ON "posts"."id" = "likes"."post_id" WHERE "likes"."user_id" = $1  [["user_id", 1]]
+  [1m[36mPost Load (4.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" IN (3, 2, 1)  ORDER BY "posts"."created_at" DESC LIMIT 25 OFFSET 0[0m
+  [1m[35mLocation Load (4.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" IN (4, 3, 2, 1)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (1)[0m
+  [1m[35mLike Load (0.0ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."post_id" IN (12, 11, 10, 9, 8, 7, 6, 5)
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" IN (12, 11, 10, 9, 8, 7, 6, 5)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (1)[0m
+  Rendered api/posts/_post.json.jbuilder (12.0ms)
+  Rendered api/posts/_post.json.jbuilder (4.0ms)
+  Rendered api/posts/_post.json.jbuilder (4.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/index.json.jbuilder (163.3ms)
+Completed 200 OK in 307ms (Views: 171.3ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/api/session" for ::1 at 2015-11-29 20:53:34 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "brwZocX5AA6AL0dtAugDUg"]]
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."follower_id" WHERE "follows"."user_id" = $1 AND "users"."id" = $2 LIMIT 1[0m  [["user_id", 1], ["id", 1]]
+  Rendered api/users/show.json.jbuilder (8.0ms)
+Completed 200 OK in 100ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/comments" for ::1 at 2015-11-29 20:53:47 -0500
+Processing by Api::CommentsController#create as JSON
+  Parameters: {"comment"=>{"content"=>"", "post_id"=>"12"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "brwZocX5AA6AL0dtAugDUg"]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+Completed 200 OK in 141ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-29 20:53:57 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1987ms (Views: 1970.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/post.self-4e47830c0d12bff36b642cee9249cbf52deb1a8455e39924813a882bfcbdaa1a.css?body=1" for ::1 at 2015-11-29 20:54:00 -0500
+
+
+Started GET "/assets/map.self-1bf9d1e317dc9ab63343444b5520b95a63de4968aea3e448659faf7122de6f34.css?body=1" for ::1 at 2015-11-29 20:54:00 -0500
+
+
+Started GET "/assets/header.self-eff2aa6464da4f5cb933b8ecce930429d2a0303bfca1784770077a4746246417.css?body=1" for ::1 at 2015-11-29 20:54:00 -0500
+
+
+Started GET "/assets/index.self-0517476d96d0bbc84c2416fbeca3191e8dbb3f2285e0bd89214af8371aafbcd8.css?body=1" for ::1 at 2015-11-29 20:54:00 -0500
+
+
+Started GET "/assets/post-form.self-261d09fd259f0eaf7cbc45ced3afc486ff02d045e7173390b5cbf6894b612482.css?body=1" for ::1 at 2015-11-29 20:54:00 -0500
+
+
+Started GET "/assets/comments.self-3e16e90fc287a6d4e8d9a04af9f49d8cc13b391af8a551a7196d4a79163750bd.css?body=1" for ::1 at 2015-11-29 20:54:00 -0500
+
+
+Started GET "/assets/sessions.self-b6d276010ab229b914c2c90948c83dc28474d7a617547d9747cd825c638dcac9.css?body=1" for ::1 at 2015-11-29 20:54:00 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-29 20:54:00 -0500
+
+
+Started GET "/assets/user_list.self-605eb3ccb1a3069ea5459f92f94580285147ea31072204d8dd828ac6e66d9a6a.css?body=1" for ::1 at 2015-11-29 20:54:00 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-29 20:54:00 -0500
+
+
+Started GET "/assets/usershow.self-9a1b904ffefdeeb52c65eb1304fa338753e64e739ae38d422be41ca58f233825.css?body=1" for ::1 at 2015-11-29 20:54:00 -0500
+
+
+Started GET "/assets/application.self-8a183606a20b5a86879254b1dd852fa4f2795403a9aafdd5bbf7b7b85adeaf6a.css?body=1" for ::1 at 2015-11-29 20:54:00 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-29 20:54:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-29 20:54:00 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-29 20:54:01 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-29 20:54:01 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-29 20:54:01 -0500
+
+
+Started GET "/assets/ReactRouter.self-1d05456d25767c86c491a59857e280a8e352d8c36859c52c6cc5da0863e45de8.js?body=1" for ::1 at 2015-11-29 20:54:02 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-29 20:54:02 -0500
+
+
+Started GET "/assets/jquery.serializejson.self-12f805b23f56b4a3a071e6807df1b00d31375bb19063bcaae105004b5bc2b722.js?body=1" for ::1 at 2015-11-29 20:54:02 -0500
+
+
+Started GET "/assets/components/app.self-f87c25c2aa380675c02c57f02ebdee4f22bf0d435c71431e4ca0c7ebf796fee8.js?body=1" for ::1 at 2015-11-29 20:54:02 -0500
+
+
+Started GET "/assets/components/app_index.self-af7cc115b8d8d53aabe4fe109cd53e36bf1593dc17e41ed57e051f64e42d348a.js?body=1" for ::1 at 2015-11-29 20:54:02 -0500
+
+
+Started GET "/assets/components/comments_box.self-ab6f54e349bcff1773fc7587f33de8fc6d835c75d9b036295f272b99b27abdf9.js?body=1" for ::1 at 2015-11-29 20:54:02 -0500
+
+
+Started GET "/assets/components/create_comment.self-be053ccb430b1f0d5fb1867a8ee3e4d7a571c051677cedc4add803c176239527.js?body=1" for ::1 at 2015-11-29 20:54:02 -0500
+
+
+Started GET "/assets/components/header.self-edc2b662789bb16772e5448dfd6f65566ca2d0246ba310df736f10b01b9fa059.js?body=1" for ::1 at 2015-11-29 20:54:02 -0500
+
+
+Started GET "/assets/components/index.self-2044dc45d5e9b589290e87417e0f977effc7d2b516cabd1316f73a17c3dad379.js?body=1" for ::1 at 2015-11-29 20:54:02 -0500
+
+
+Started GET "/assets/components/likers.self-0666dd177934e1e31f58623a03d832be71bc313e866f34422f51036180bbeda9.js?body=1" for ::1 at 2015-11-29 20:54:02 -0500
+
+
+Started GET "/assets/components/location_index_item.self-9eade62e227f056dfffbc4a0a2aba0b4af71be764b9d575e0b09286604582684.js?body=1" for ::1 at 2015-11-29 20:54:02 -0500
+
+
+Started GET "/assets/components/location.self-3b46d4344800e8fd3b64c3fe2a4aca1fffc1d0424863a63a745eaf1c8d74a5f0.js?body=1" for ::1 at 2015-11-29 20:54:02 -0500
+
+
+Started GET "/assets/components/map.self-d90d554cdd8708da3225e969ba46f4a6ad3767b68365f31f5b6348e815c5fbec.js?body=1" for ::1 at 2015-11-29 20:54:02 -0500
+
+
+Started GET "/assets/components/new_session.self-f2e44cf5c61ea22489653015769e30646c4c90d54d6d1ab80a4f67f9a0e57df5.js?body=1" for ::1 at 2015-11-29 20:54:02 -0500
+
+
+Started GET "/assets/components/post.self-186e585ecab8092e80ad3ab451078ea0f3a3eaa37a366f521e8945b481264d3a.js?body=1" for ::1 at 2015-11-29 20:54:02 -0500
+
+
+Started GET "/assets/components/post_form.self-04e66f79b444560b0599e6006beff5ed32eb9073864c926b58ae05d43cf5c791.js?body=1" for ::1 at 2015-11-29 20:54:02 -0500
+
+
+Started GET "/assets/components/post_grid.self-f9898b33f36cf58fa2242424f15c929b235fe535d585ad1daa8b51b83185bd18.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/components/post_grid_square.self-c50fceae4e3c09033085b9048f01d44f5a6427955a0de3f400d7f4d1e15e5486.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/components/post_show.self-3f9463c19a537be9a1df5f57a25c9a3d3a2c5e57d94105b94edf23e8dc84b9f8.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/components/sign_up.self-b15a1fc94ac1411d22dcb9144f0cd65ce3f15380390068b5f9a32b8e2a500a3d.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/components/search.self-10b21d5c8417a7db91bf34930c97394d69b07297351d4db688faf61456060731.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/components/tag_index_item.self-47cf924a81f34ad394fa4a266f59303fd17259326d220f81deef93eb61355bd4.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/components/user.self-b7a16b98c9b66b4bce442238bb6aa7813c50075b2fea9f104097ad6ae886b1ca.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/components/tag_show.self-c9a657f9646a5f266fa24ecaecaf63ec6753b1e53107ab004d8daf46020b1571.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/components/user_header.self-47262369aa45fc75d9904efc6db35618925e00e409ff692edad9c0970942a7bb.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/components/user_index_item.self-343b6cab931e59d68f76b91b2ba26a80df6c43ba2980dcb86184537c19b2b6b6.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/components/users.self-3802221d266ef7ea9781891fe05679f1804bf77a24fbfdda64ad2bfd5e89fdfa.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/actions/api_actions.self-1d21bbce092b8c998a3905f69aa1462fc2a74d06b61d530a83a184769fa7cee6.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/actions/current_user_actions.self-dd449e4e385c83244c396cb0d8ff16fe84aa363bd32e469623d10bc38be1b4e9.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/actions/search_result_actions.self-18ba58d863cbee44281de8fb77a66c7835aa7803b825de5fe90afe063cda5eef.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/constants/current_user_constants.self-bbb8df338a128ad4cbf02cc07682159c750ed16cd60a8cda0268b3d45625855b.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/constants/location_constants.self-ae14d69528e9e434560539cf03457b13c0c39b9238b5f926b56353078081129c.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/constants/post_constants.self-e209d402a68ee975ec3fcfedd4093d9d19f45243138d83c65640305ea3bdfe07.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/constants/search_results_constants.self-bc46447aa1e872c86f5e9bd8ae8d545918f833d1f668bb1427e03424eaaee2e6.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/constants/tag_constants.self-100873e13a3f85de5de5de1c7d10263f17f9fb345c246b574d802f6b2542f824.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/constants/user_constants.self-ad5f0a3a4718ef35ef51fbafb5e36b4a1ffd5bdecaea6c45dc33e87581ebc957.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/instashare.self-49cf950306f270b45dbbe20faa76eb60a343ba01ca3b5dfc7193ea6372aa178e.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/stores/current_user.self-9cc4131db4c7a099f8b0d92220b2b4b62a22a4537158577acbbe7c3958396012.js?body=1" for ::1 at 2015-11-29 20:54:03 -0500
+
+
+Started GET "/assets/stores/follow.self-9b5a46e7a37893b1f674192132126ff71fa3d199d34ab5e0dc73f4b2ab6bd886.js?body=1" for ::1 at 2015-11-29 20:54:04 -0500
+
+
+Started GET "/assets/stores/location.self-0f6ede05416ddba55223562c09e256cff003ffa8b42ec6f1ebb2cbd23648cbc7.js?body=1" for ::1 at 2015-11-29 20:54:04 -0500
+
+
+Started GET "/assets/stores/post.self-41b431e61b81ebfe55433eb985c82cbd2e861fb6263efb43c16ed1458a0720f3.js?body=1" for ::1 at 2015-11-29 20:54:04 -0500
+
+
+Started GET "/assets/stores/search_results.self-c926caacb7e3c661071109eb477da45a875e0f50c23e9e13d7956b88e7713dd0.js?body=1" for ::1 at 2015-11-29 20:54:04 -0500
+
+
+Started GET "/assets/stores/tag.self-fdb0fbfb8d7baf70b5c2422ea18437865a6c66f371566574336b9ad9dba19af1.js?body=1" for ::1 at 2015-11-29 20:54:04 -0500
+
+
+Started GET "/assets/stores/user.self-94bdfe7cb48965657732ac3f1a83c9c6d9494e51c0b64028c77030a272895c62.js?body=1" for ::1 at 2015-11-29 20:54:04 -0500
+
+
+Started GET "/assets/stores/users.self-4d22095415770a89a153e4bba6fe742c7829774cebf7a47f741ca894c89b5661.js?body=1" for ::1 at 2015-11-29 20:54:04 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-29 20:54:04 -0500
+
+
+Started GET "/assets/util/api_util.self-c21d55619d6c9b4c209fc25ee4de6f7de4674233cd26a6277d14968459236621.js?body=1" for ::1 at 2015-11-29 20:54:04 -0500
+
+
+Started GET "/assets/util/search_api_util.self-1f4d7892caea43d0205b1154a1b4363e53b94b88e84809f2da389a549a78790f.js?body=1" for ::1 at 2015-11-29 20:54:04 -0500
+
+
+Started GET "/assets/util/sessions_api_util.self-14a5a15b63de2450482440568b5f9c42c5c2889cd0ac65ecbf70565d1631ffaf.js?body=1" for ::1 at 2015-11-29 20:54:04 -0500
+
+
+Started GET "/assets/application.self-16c207b3ca1b52afcfc7f4b662487caf1bbe084a6656bb15f693ab9de2d11be7.js?body=1" for ::1 at 2015-11-29 20:54:04 -0500
+
+
+Started GET "/api/posts" for ::1 at 2015-11-29 20:54:04 -0500
+Processing by Api::PostsController#index as JSON
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "brwZocX5AA6AL0dtAugDUg"]]
+  [1m[35mFollow Load (0.0ms)[0m  SELECT "follows".* FROM "follows" WHERE "follows"."user_id" = $1  [["user_id", 1]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" INNER JOIN "likes" ON "posts"."id" = "likes"."post_id" WHERE "likes"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mPost Load (8.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."user_id" IN (3, 2, 1)  ORDER BY "posts"."created_at" DESC LIMIT 25 OFFSET 0
+  [1m[36mLocation Load (4.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" IN (4, 3, 2, 1)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (1)
+  [1m[36mLike Load (0.0ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."post_id" IN (12, 11, 10, 9, 8, 7, 6, 5)[0m
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" IN (12, 11, 10, 9, 8, 7, 6, 5)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (1)
+  Rendered api/posts/_post.json.jbuilder (15.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (113.3ms)
+  Rendered api/posts/_post.json.jbuilder (8.0ms)
+  Rendered api/posts/_post.json.jbuilder (4.0ms)
+  Rendered api/posts/_post.json.jbuilder (4.0ms)
+  Rendered api/posts/_post.json.jbuilder (51.9ms)
+  Rendered api/posts/index.json.jbuilder (744.4ms)
+Completed 200 OK in 1208ms (Views: 780.4ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/api/session" for ::1 at 2015-11-29 20:54:06 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "brwZocX5AA6AL0dtAugDUg"]]
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."follower_id" WHERE "follows"."user_id" = $1 AND "users"."id" = $2 LIMIT 1  [["user_id", 1], ["id", 1]]
+  Rendered api/users/show.json.jbuilder (4.0ms)
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/session" for ::1 at 2015-11-29 20:54:06 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "brwZocX5AA6AL0dtAugDUg"]]
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "follows" ON "users"."id" = "follows"."follower_id" WHERE "follows"."user_id" = $1 AND "users"."id" = $2 LIMIT 1  [["user_id", 1], ["id", 1]]
+  Rendered api/users/show.json.jbuilder (4.0ms)
+Completed 200 OK in 24ms (Views: 16.0ms | ActiveRecord: 0.0ms)
