@@ -34,6 +34,22 @@ class User < ActiveRecord::Base
 
   has_many :likes, dependent: :destroy
 
+  def self.find_or_create_by_auth_hash(auth_hash)
+   provider = auth_hash[:provider]
+   uid = auth_hash[:uid]
+
+   user = User.find_by(provider: provider, uid: uid)
+   return user if user
+
+   User.create(
+     username: auth_hash[:info][:name],
+     provider: provider,
+     uid: uid,
+     password: SecureRandom.urlsafe_base64
+   )
+ end
+
+
   def likes_post?(post)
     post.user_likes.where("user_id = ?", self.id).length == 1
     # true

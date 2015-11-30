@@ -56,6 +56,7 @@
           </ul>
           </form>
         <button onClick={this.guestLogin}>Guest Account signin</button>
+        <a href="/auth/facebook">LOG IN WITH FACEBOOK</a>
         </div>
       );
     },

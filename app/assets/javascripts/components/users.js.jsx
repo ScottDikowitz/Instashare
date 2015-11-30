@@ -9,6 +9,10 @@ var Users = React.createClass ({
     ApiUtil.fetchUserList();
   },
 
+  componentWillUnmount: function(){
+    UsersStore.removeChangeListener(this._changed);
+  },
+
   _changed: function(){
     this.setState({users: UsersStore.all()});
 

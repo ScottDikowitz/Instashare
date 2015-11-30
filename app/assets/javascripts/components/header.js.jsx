@@ -41,13 +41,14 @@ var Header = React.createClass ({
                 </li>
                 {search}
                 <div className="nav-links">
-                <li>
-                  <ReactRouter.Link to={"/users/" + this.state.currentUser.username}>
-                    {this.state.currentUser.username}
-                  </ReactRouter.Link>
-                </li>
+
               {button}
               {users}
+              <li>
+                <ReactRouter.Link className="user-name-nav" to={"/users/" + this.state.currentUser.username}>
+                  {this.state.currentUser.username}
+                </ReactRouter.Link>
+              </li>
               </div>
                 </ul>
               </div>

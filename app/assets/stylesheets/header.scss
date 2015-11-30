@@ -101,3 +101,11 @@
 .nav-links > li {
   float: left;
 }
+
+.nav-links > li:last-child {
+  width: 50px;
+  white-space: nowrap;
+}
+
+.user-name-nav {
+}
