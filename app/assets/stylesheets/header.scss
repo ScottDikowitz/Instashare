@@ -62,11 +62,12 @@
   position: relative;
   bottom: 2px;
   display: block;
-
-
+  height: 40px;
+  bottom: 11px;
 }
 
 .sign-out-button button {
+  height: 40px;
   cursor: pointer;
   font-size: 16px;
   color: #125688;

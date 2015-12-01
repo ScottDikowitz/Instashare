@@ -47,12 +47,20 @@
 }
 
 .submit-button:hover {
-  background: #000066;
+  background: #0000cc;
 }
 
-.submit-button.fbook {
+.fbook {
   padding: 10px 20px;
-
+  width: 90%;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  display: block;
+  background: #00cc00;
+}
+.fbook:hover {
+  background: #006600;
 }
 
 .submit-button {
@@ -63,7 +71,7 @@
   display: block;
   padding: 10px 40px;
   font-size: 16px;
-  border-radius: 15px;
+  border-radius: 5px;
   width: 100%;
   // margin-top: 15px;
   margin-bottom: 15px;
