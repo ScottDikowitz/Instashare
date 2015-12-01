@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.status{
+  // margin: auto;
+}
+
 .sign-in{
   background: #fff;
   margin: auto;
@@ -18,7 +22,7 @@
   display: flex;
   display: -webkit-flex;
   align-items: center;
-  -webkit-align-items: center;
+  -webkit-align-items: baseline;
 }
 
 .sign-in > ul{

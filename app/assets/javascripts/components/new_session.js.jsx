@@ -2,17 +2,26 @@
   root.SessionForm = React.createClass({
     mixins: [ReactRouter.History],
 
+    getInitialState: function(){
+      return ({status: ""});
+    },
+
     submit: function (e) {
       if (typeof e !== "undefined"){
         e.preventDefault();
       }
       // debugger;
       var form = React.findDOMNode(this.refs.sform);
+      var valid = function () {
+        this.history.pushState(null, "/feed");
+      }.bind(this);
+      var that = this;
+      var invalid = function(error){
+        that.setState({status: JSON.parse(error.responseText).errors});
+      };
 
       var credentials = $(form).serializeJSON();
-      SessionsApiUtil.login(credentials, function () {
-        this.history.pushState(null, "/feed");
-      }.bind(this));
+      SessionsApiUtil.login(credentials, valid, invalid);
     },
 
     guestLogin: function(){
@@ -28,7 +37,9 @@
 
       return (
           <div className="content-area">
+
           <div className="sign-in">
+            <p className="status">{this.state.status}</p>
             <form ref="sform" onSubmit={ this.submit }>
 
               <h1>Sign In</h1>
