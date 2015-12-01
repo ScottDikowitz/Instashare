@@ -90,6 +90,14 @@
 
 }
 
+.caption:hover {
+  background: #eee;
+}
+
+.fields:hover {
+  background: #eee;
+}
+
 .load-more span {
   // position: absolute;
   color: #4090db;
@@ -100,5 +108,8 @@
   margin: auto;
   display: block;
 
+}
 
+.load-more:hover {
+  background: #eee;
 }

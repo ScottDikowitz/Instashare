@@ -25,6 +25,10 @@
   outline: none;
 }
 
+.search-bar input:hover {
+  background: #eee;
+}
+
 .search-results {
   display: block;
   border: 1px solid #ccc;
@@ -92,6 +96,14 @@
 
 .nav-links {
   float: right;
+}
+
+.nav-links a:hover {
+  background: #eee;
+}
+
+.nav-links button:hover {
+  background: #eee;
 }
 
 .header a {
