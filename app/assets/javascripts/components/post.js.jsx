@@ -7,7 +7,7 @@ var Post = React.createClass ({
                   <ReactRouter.Link to={"/users/" + this.props.post.user.username}>
                     <span>{this.props.post.user.username}</span>
                   </ReactRouter.Link>
-                  <small>{this.props.post.minutes_ago}</small>
+                  <a href={"/#posts/" + this.props.post.id}><small>{this.props.post.minutes_ago}</small></a>
                   </li>
                   <li className="location-link"><a href={"/#location/" + this.props.post.locationId}>{this.props.post.location}</a></li>
                 </section>
