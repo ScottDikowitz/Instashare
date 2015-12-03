@@ -27,7 +27,8 @@
     }
 
     ApiUtil.createPost(formData);
-    this.props.history.pushState(null, "/feed");
+    // this.props.history.pushState(null, "/feed");
+    this.props.close();
   },
 
   changeFile: function(e) {
