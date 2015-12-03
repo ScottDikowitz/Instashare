@@ -49,7 +49,7 @@
 
   render: function(){
 
-    return <div >
+    return <div className="modal modal-screen">
             <h1>Create Post</h1>
             <ul className="post-form group">
               <li className="add-photo group">

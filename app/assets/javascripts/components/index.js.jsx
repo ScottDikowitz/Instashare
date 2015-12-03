@@ -1,6 +1,6 @@
 var Index = React.createClass ({
   getInitialState: function(){
-    return {posts: [], page: 1};
+    return {posts: [], page: 1, showModal: false};
   },
 
   componentWillMount: function(){
@@ -29,10 +29,15 @@ var Index = React.createClass ({
     this.setState({page: this.state.page + 1});
   },
 
+  handleModal: function(){
+    this.setState({showModal: !this.state.showModal});
+  },
 
   render: function(){
     var loadMore;
     var status;
+    var postForm;
+    var mScreen;
   if (this.state.posts.length !== 0){
     loadMore = <div onClick={this.handleClick} className="load-more">
       <span>load more</span>
@@ -41,11 +46,17 @@ var Index = React.createClass ({
   else {
     status = <div className="status">Nothing to show. Create a post or start following some users.</div>;
   }
+
+  if (this.state.showModal){
+    postForm = <PostForm close={this.handleModal}/>;
+    mScreen = <div onClick={this.handleModal} className="screen"></div>;
+  }
     return <div className="posts-content-area">
-              <ReactRouter.Link className="new-post" to={"feed/post/new"}>
-                <span >+</span>
-              </ReactRouter.Link>
-              {this.props.children}
+
+            <div className="new-post" onClick={this.handleModal} href="#feed"><span >+</span></div>
+            {mScreen}
+            {postForm}
+
             {this.state.posts.map(function(post){
 
               return <Post key={post.id} post={post}/>;
