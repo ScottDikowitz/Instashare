@@ -15,12 +15,12 @@ in your post, and like posts.
 ### Bonus Features (TBD)
 - [ ] Load previous comments button
 - [ ] Hover over pics shows likes/comments numbers
+- [ ] Redesign users page
+- [ ] Create useful explore page
 - [ ] Prettify transitions
-- [ ] Tagging people in photos
-- [ ] Tagging people in comments
 - [ ] Direct messaging
 - [ ] Edit password
 - [✓] Load more (infinite scrolling)
-- [ ] Followers, following lists for users.
+- [ ] Followers, following lists for users
 - [ ] Photo Filters
-- [ ] Autocomplete location search
+- [✓] Autocomplete location search
