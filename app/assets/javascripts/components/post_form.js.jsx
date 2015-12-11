@@ -15,7 +15,6 @@
 
   _changed: function(){
     this.setState({locations: LocationStore.getLocations()});
-    debugger;
   },
 
   handleSubmit: function(e){
@@ -65,8 +64,16 @@
       }
     },
 
-  render: function(){
+    handleClickLocation: function(e){
 
+      var location = React.findDOMNode(this.refs.locationBox);
+      location.value = e.currentTarget.innerHTML;
+      this.setState({locations: []});
+
+    },
+
+  render: function(){
+    var that = this;
     return <div className="modal">
             <div className="post-form-wrapper">
             <h1>Create Post</h1>
@@ -79,10 +86,10 @@
                   <label className="file-select-post">Upload Photo...<input className="file-select" type="file" onChange={this.changeFile} /></label>
                 <input className="caption" placeholder="caption: create tags with #" type="text" name="caption"/>
 
-                <input onChange={this.handleLocations} className="caption" placeholder="enter a city, state or country" type="text" name="location"/>
-                <div>{this.state.locations.map(function(location, idx){
-                    return <li className="locations" key={idx}>{location}</li>;
-                  })}</div>
+                <input ref="locationBox" onChange={this.handleLocations} className="caption" placeholder="enter a city, state or country" type="text" name="location"/>
+                <ul className="search-results">{this.state.locations.map(function(location, idx){
+                    return <li onClick={that.handleClickLocation} className="locations" key={idx}>{location}</li>;
+                  })}</ul>
                 <input className="create-post-button" type="submit" value="Post"/>
 
 
