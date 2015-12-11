@@ -2,8 +2,21 @@
   root.PostForm = React.createClass ({
 
   getInitialState: function() {
-      return {  imageUrl: "" };
+      return {  imageUrl: "", locations: [] };
     },
+
+  componentDidMount: function(){
+    LocationStore.addChangeListener(this._changed);
+  },
+
+  componentWillUnmount: function(){
+    LocationStore.removeChangeListener(this._changed);
+  },
+
+  _changed: function(){
+    this.setState({locations: LocationStore.getLocations()});
+    debugger;
+  },
 
   handleSubmit: function(e){
     e.preventDefault();
@@ -29,6 +42,10 @@
     ApiUtil.createPost(formData);
     // this.props.history.pushState(null, "/feed");
     this.props.close();
+  },
+
+  handleLocations: function(e){
+    ApiUtil.fetchLocationsList(e.currentTarget.value);
   },
 
   changeFile: function(e) {
@@ -62,8 +79,10 @@
                   <label className="file-select-post">Upload Photo...<input className="file-select" type="file" onChange={this.changeFile} /></label>
                 <input className="caption" placeholder="caption: create tags with #" type="text" name="caption"/>
 
-                <input className="caption" placeholder="enter a city, state or country" type="text" name="location"/>
-
+                <input onChange={this.handleLocations} className="caption" placeholder="enter a city, state or country" type="text" name="location"/>
+                <div>{this.state.locations.map(function(location, idx){
+                    return <li className="locations" key={idx}>{location}</li>;
+                  })}</div>
                 <input className="create-post-button" type="submit" value="Post"/>
 
 

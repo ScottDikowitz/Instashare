@@ -64,6 +64,15 @@ var ApiActions = window.ApiActions = {
 
   },
 
+  receiveLocations: function(locations){
+    AppDispatcher.dispatch({
+      actionType: LocationConstants.LOCATIONS_RECEIVED,
+      locations: locations
+
+    });
+
+  },
+
   updateCommentsPostsIndex: function(comment){
     AppDispatcher.dispatch({
       actionType: "COMMENTS_RECEIVED",

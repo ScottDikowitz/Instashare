@@ -72,6 +72,23 @@ $.ajax ({
     });
   },
 
+  fetchLocationsList: function(query){
+    $.ajax ({
+      url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + query + "&key=AIzaSyAJGTQhnNdiql8vG1pvjQpxLouPkIrZJns",
+      type: 'GET',
+      dataType: 'json',
+      success: function(locations) {
+
+        var addresses = locations.results.map(function(location){
+          return location.formatted_address;
+        });
+        ApiActions.receiveLocations(addresses.slice(0,4));
+        // ApiUtil.createLocation(location.results[0].address_components[0].long_name, post);
+
+      }
+    });
+  },
+
   fetchLocationPosts: function(locationId){
     $.ajax ({
       url: 'api/location_posts/' + locationId,
