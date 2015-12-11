@@ -13,6 +13,8 @@ recent posts in your feed, add tags in your caption, include a location
 in your post, and like posts.
 
 ### Bonus Features (TBD)
+- [ ] Load previous comments button
+- [ ] Hover over pics shows likes/comments numbers
 - [ ] Prettify transitions
 - [ ] Tagging people in photos
 - [ ] Tagging people in comments
