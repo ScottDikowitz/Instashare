@@ -82,11 +82,11 @@
                 <img src={this.state.imageUrl} />
               </li>
               <div className="post-form-right">
-                <form  onSubmit={this.handleSubmit} action="#" method="POST">
+                <form autoComplete="off" onSubmit={this.handleSubmit} action="#" method="POST">
                   <label className="file-select-post">Upload Photo...<input className="file-select" type="file" onChange={this.changeFile} /></label>
                 <input className="caption" placeholder="caption: create tags with #" type="text" name="caption"/>
 
-                <input ref="locationBox" onChange={this.handleLocations} className="caption" placeholder="enter a city, state or country" type="text" name="location"/>
+                <input ref="locationBox" react onChange={this.handleLocations} className="caption" placeholder="enter a city, state or country" type="text" name="location"/>
                 <ul className="search-results">{this.state.locations.map(function(location, idx){
                     return <li onClick={that.handleClickLocation} className="locations" key={idx}>{location}</li>;
                   })}</ul>
