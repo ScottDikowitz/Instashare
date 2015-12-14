@@ -43,7 +43,9 @@ var Users = React.createClass ({
           <ul className="user-list">
           {this.state.users.map(function(user){
             return <li key={user.id}>
-                    <a href={"#/users/" + user.username}>{user.username}
+                    <a href={"#/users/" + user.username} className="group">
+                      <img className="user-thumb" src={user.pic}/>
+                      <span className="uname">{user.username}</span>
                       <span className="body">id: {user.id}</span>
                     </a>
                   </li>;

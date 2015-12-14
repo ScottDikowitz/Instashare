@@ -223,7 +223,7 @@ $.ajax ({
       dataType: 'json',
       data: {page: page},
       success: function(users) {
-        ApiActions.receiveUsers(users);
+        ApiActions.receiveUsers(users.users);
       }
     });
   },
@@ -235,7 +235,7 @@ $.ajax ({
       dataType: 'json',
       data: {page: page},
       success: function(users) {
-        ApiActions.receiveUsers(users);
+        ApiActions.receiveUsers(users.users);
       }
     });
   },
