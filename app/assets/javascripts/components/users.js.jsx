@@ -22,28 +22,37 @@ var Users = React.createClass ({
 
   },
 
-  handlePage: function(){
+  handleNext: function(){
     // debugger;
-        ApiUtil.fetchUsersPage(this.state.page + 1);
-    this.setState({page: this.state.page + 1});
+      ApiUtil.fetchUsersPage(this.state.page + 1);
+      this.setState({page: this.state.page + 1});
 
+  },
+
+  handlePrev: function(){
+
+    ApiUtil.fetchUsersPage(this.state.page - 1);
+    this.setState({page: this.state.page - 1});
   },
 
   render: function(){
 
     return <div>
-        <h1>Users</h1>
-      <ul className="user-list">
-      {this.state.users.map(function(user){
-        return <li key={user.id}>
-                <a href={"#/users/" + user.username}>{user.username}
-                  <span className="body">id: {user.id}</span>
-                </a>
-              </li>;
+        <div className="users-content">
+            <h1>Users</h1>
+          <ul className="user-list">
+          {this.state.users.map(function(user){
+            return <li key={user.id}>
+                    <a href={"#/users/" + user.username}>{user.username}
+                      <span className="body">id: {user.id}</span>
+                    </a>
+                  </li>;
 
-      })}
-      </ul>
-      <a href="#/users"  onClick={this.handlePage}>Next</a>
+          })}
+          </ul>
+          <a href="#/users" onClick={this.handlePrev}>Prev</a>|
+          <a href="#/users" onClick={this.handleNext}>Next</a>
+      </div>
     </div>;
   }
 });

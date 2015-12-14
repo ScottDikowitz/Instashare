@@ -2,11 +2,16 @@
   background: #edeeee;
   margin: auto;
   display: block;
-  width: 80%;
+  // width: 80%;
   border: 1px solid lightgrey;
 
   max-height: 1000px;
-  overflow-y: scroll;
+  // overflow-y: scroll;
+  margin-bottom: 20px;
+}
+
+.users-content {
+  padding: 100px;
 }
 
 .user-list li:first-child a{
