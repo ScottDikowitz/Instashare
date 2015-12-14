@@ -46,7 +46,7 @@ var Users = React.createClass ({
                     <a href={"#/users/" + user.username} className="group">
                       <img className="user-thumb" src={user.pic}/>
                       <span className="uname">{user.username}</span>
-                      <span className="body">id: {user.id}</span>
+                      <span className="body">{user.body}</span>
                     </a>
                   </li>;
 
