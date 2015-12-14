@@ -23,4 +23,6 @@ in your post, and like posts.
 - [✓] Load more (infinite scrolling)
 - [ ] Followers, following lists for users
 - [ ] Photo Filters
+- [ ] Paginate user's list
+- [ ] Edit location option on posts
 - [✓] Autocomplete location search

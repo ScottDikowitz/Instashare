@@ -1,12 +1,16 @@
 var Users = React.createClass ({
 
   getInitialState: function(){
-    return {users: []};
+    return {users: [], page: 1};
+  },
+
+  componentWillReceiveProps: function(newProps){
+
   },
 
   componentDidMount: function(){
     UsersStore.addChangeListener(this._changed);
-    ApiUtil.fetchUserList();
+    ApiUtil.fetchUserList(this.state.page);
   },
 
   componentWillUnmount: function(){
@@ -15,6 +19,13 @@ var Users = React.createClass ({
 
   _changed: function(){
     this.setState({users: UsersStore.all()});
+
+  },
+
+  handlePage: function(){
+    // debugger;
+        ApiUtil.fetchUsersPage(this.state.page + 1);
+    this.setState({page: this.state.page + 1});
 
   },
 
@@ -32,6 +43,7 @@ var Users = React.createClass ({
 
       })}
       </ul>
+      <a href="#/users"  onClick={this.handlePage}>Next</a>
     </div>;
   }
 });

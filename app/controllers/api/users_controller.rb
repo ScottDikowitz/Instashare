@@ -12,12 +12,11 @@ class Api::UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
+    @users = User.page(params["page"]).per(10)
     render json: @users.as_json(only: [:id, :username])
   end
 
   def show
-
     @user = User.find_by(username: params[:id])
     @posts = @user.posts
     render :show

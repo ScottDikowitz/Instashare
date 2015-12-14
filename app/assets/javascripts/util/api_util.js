@@ -215,18 +215,29 @@ $.ajax ({
 
   },
 
-  fetchUserList: function(){
+  fetchUserList: function(page){
 
     $.ajax ({
       url: 'api/users/',
       type: 'GET',
       dataType: 'json',
+      data: {page: page},
       success: function(users) {
         ApiActions.receiveUsers(users);
       }
     });
+  },
 
-
+  fetchUsersPage: function(page){
+    $.ajax ({
+      url: 'api/users/',
+      type: 'GET',
+      dataType: 'json',
+      data: {page: page},
+      success: function(users) {
+        ApiActions.receiveUsers(users);
+      }
+    });
   },
 
   updateBio: function(bio){
