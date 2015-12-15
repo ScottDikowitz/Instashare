@@ -18,8 +18,12 @@ var Users = React.createClass ({
   },
 
   _changed: function(){
-    this.setState({users: UsersStore.all()});
-
+    if (UsersStore.all().length !== 0){
+      this.setState({users: UsersStore.all()});
+    }
+    else {
+      this.setState({page: this.state.page - 1});
+    }
   },
 
   handleNext: function(){
@@ -30,9 +34,10 @@ var Users = React.createClass ({
   },
 
   handlePrev: function(){
-
-    ApiUtil.fetchUsersPage(this.state.page - 1);
-    this.setState({page: this.state.page - 1});
+    if (this.state.page !== 1){
+      ApiUtil.fetchUsersPage(this.state.page - 1);
+      this.setState({page: this.state.page - 1});
+    }
   },
 
   render: function(){
