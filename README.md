@@ -15,7 +15,7 @@ in your post, and like posts.
 ### Bonus Features (TBD)
 - [ ] Load previous comments button
 - [ ] Hover over pics shows likes/comments numbers
-- [ ] Redesign users page
+- [✓] Redesign users page
 - [ ] Create useful explore page
 - [ ] Prettify transitions
 - [ ] Direct messaging
