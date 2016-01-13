@@ -1,7 +1,7 @@
 var Post = React.createClass ({
 handleDelete: function(){
   // debugger;
-  ApiUtil.deletePost(this.props.post.id);
+  ApiUtil.deletePost(this.props.post.id, ApiAction.deletePost);
 },
 
   render: function(){

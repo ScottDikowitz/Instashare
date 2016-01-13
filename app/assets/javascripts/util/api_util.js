@@ -22,13 +22,13 @@ var ApiUtil = window.ApiUtil = {
     });
   },
 
-  deletePost: function(postId){
+  deletePost: function(postId, callback){
     $.ajax ({
       url: 'api/posts/' + postId,
       type: 'DELETE',
       dataType: 'json',
       success: function(post) {
-        ApiActions.deletePost(postId);
+        callback(postId);
       }
     });
   },

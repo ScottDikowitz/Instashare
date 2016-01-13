@@ -1,5 +1,7 @@
 var PostShow = React.createClass ({
 
+  mixins: [ReactRouter.History],
+
   componentDidMount: function(){
     PostStore.addChangeListener(this._changed);
     ApiUtil.fetchPost(this.props.params.postId);
@@ -17,6 +19,14 @@ var PostShow = React.createClass ({
     PostStore.removeChangeListener(this._changed);
   },
 
+  handleDelete: function(){
+    // debugger;
+    var that = this;
+    ApiUtil.deletePost(this.props.params.postId, function pushState(el){
+      that.history.pushState(null, "/feed");
+    });
+  },
+
   render: function(){
 
     // debugger;
@@ -28,6 +38,12 @@ var PostShow = React.createClass ({
     var caption;
     var theLocation;
     var liked;
+    var user = CurrentUserStore.currentUser();
+    var del;
+    if (user) {
+      if (user.id === 1)
+        del = <div onClick={this.handleDelete} className="delete-post">X</div>;
+    }
     if (this.state){
       theLocation =<li><a className="location-link" href={"/#location/" + this.state.post.locationId}>{this.state.post.location}</a></li>;
 
@@ -39,6 +55,7 @@ var PostShow = React.createClass ({
     return <div className="post">
                 <section className="post-header">
                   <li>
+                    {del}
                     {userLink}
 
                   <small>{minutesAgo}</small>
