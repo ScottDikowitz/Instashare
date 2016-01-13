@@ -1,15 +1,16 @@
 var Post = React.createClass ({
 handleDelete: function(){
   // debugger;
-  ApiUtil.deletePost(this.props.post.id, ApiAction.deletePost);
+  ApiUtil.deletePost(this.props.post.id, ApiActions.deletePost);
 },
 
   render: function(){
     var user = CurrentUserStore.currentUser();
     var del;
     if (user) {
-      if (user.id === 1)
+      if (user.id === 1){
         del = <div onClick={this.handleDelete} className="delete-post">X</div>;
+        }
     }
 
     return <div className="post">

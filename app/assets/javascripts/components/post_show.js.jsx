@@ -41,8 +41,9 @@ var PostShow = React.createClass ({
     var user = CurrentUserStore.currentUser();
     var del;
     if (user) {
-      if (user.id === 1)
+      if (user.id === 1){
         del = <div onClick={this.handleDelete} className="delete-post">X</div>;
+        }
     }
     if (this.state){
       theLocation =<li><a className="location-link" href={"/#location/" + this.state.post.locationId}>{this.state.post.location}</a></li>;
