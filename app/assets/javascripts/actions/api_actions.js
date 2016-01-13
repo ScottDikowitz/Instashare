@@ -14,6 +14,13 @@ var ApiActions = window.ApiActions = {
     });
   },
 
+  deletePost: function(postId){
+    AppDispatcher.dispatch({
+      actionType: "DELETE_POST",
+      postId: postId
+    });
+  },
+
   receiveMorePosts: function(posts){
     AppDispatcher.dispatch({
       actionType: PostConstants.MORE_POSTS_RECEIVED,

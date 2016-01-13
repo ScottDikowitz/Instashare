@@ -43,6 +43,14 @@ class Api::PostsController < ApplicationController
     render "api/posts/show"
   end
 
+  def destroy
+    if current_user.id == 1
+      @post = Post.find(params[:id])
+      @post.destroy
+    end
+    render json: {}
+  end
+
   private
   def post_params
     self.params.require(:post).permit(:caption, :user_id, :image)

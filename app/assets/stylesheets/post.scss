@@ -14,6 +14,12 @@
   -webkit-align-items: center;
 }
 
+.delete-post {
+  cursor: pointer;
+  display: inline;
+  color: #4090db;
+}
+
 .new-post span {
   font-size: 25px;
   margin: auto;

@@ -32,6 +32,14 @@
     }
   };
 
+  PostStore.deletePost = function(postId){
+    for (var i = 0; i < _posts.length; i++){
+      if (_posts[i].id == postId){
+        _posts.splice(i, 1);
+      }
+    }
+  };
+
   PostStore.insertPosts = function(posts){
     _posts.push.apply(_posts, posts);
   };
@@ -97,6 +105,10 @@
       }
       else if(payload.actionType === "COMMENTS_RECEIVED"){
         PostStore.insertComment(payload.comment);
+        PostStore.emit(CHANGE_EVENT);
+      }
+      else if(payload.actionType === "DELETE_POST"){
+        PostStore.deletePost(payload.postId);
         PostStore.emit(CHANGE_EVENT);
       }
       else if(payload.actionType === "LIKE_RECEIVED"){

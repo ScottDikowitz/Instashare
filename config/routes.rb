@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "/auth/facebook/callback", to: "omniauth#facebook"
 
   namespace :api, defaults: { format: :json } do
-    resources :posts, only: [:index, :create, :show]
+    resources :posts, only: [:index, :create, :show, :destroy]
     resources :users, only: [:index, :create, :show, :create, :update]
     resources :comments, only: [:index, :create, :show]
     resources :follows, only: [:index, :create, :show, :destroy]

@@ -22,6 +22,17 @@ var ApiUtil = window.ApiUtil = {
     });
   },
 
+  deletePost: function(postId){
+    $.ajax ({
+      url: 'api/posts/' + postId,
+      type: 'DELETE',
+      dataType: 'json',
+      success: function(post) {
+        ApiActions.deletePost(postId);
+      }
+    });
+  },
+
   loadMorePosts: function(pageNum){
     $.ajax ({
       url: 'api/posts',
