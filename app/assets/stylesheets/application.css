@@ -39,6 +39,41 @@ body {
   color: #000;
 }
 
+@media screen and (max-width: 800px) {
+
+   .header {
+     height: 100px;
+   }
+
+   .search-bar {
+     margin: auto;
+     text-align: center;
+     width: 300px;
+   }
+   .nav-links {
+     float:left;
+   }
+
+   .nav-links > li a {
+     font-size: 25px;
+   }
+
+   .nav-links > li button {
+     font-size: 25px;
+   }
+
+   .search-bar > input {
+     width: 300px;
+   }
+
+   .header-nav {
+     width: 100%;
+   }
+   .post {
+     width: 100%;
+   }
+}
+
  a{
    color: #125688;
    font-size: 15px;
