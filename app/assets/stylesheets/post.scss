@@ -12,6 +12,20 @@
   display: -webkit-flex;
   align-items: center;
   -webkit-align-items: center;
+
+
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+
+}
+
+.new-post:hover {
+  -ms-transform: rotate(360deg); /* IE 9 */
+  -webkit-transform: rotate(360deg); /* Safari */
+  transform: rotate(360deg); /* Standard syntax */
+
 }
 
 .delete-post {

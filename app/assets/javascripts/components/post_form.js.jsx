@@ -96,6 +96,7 @@
               </form>
             </div>
             </ul>
+            <div className="post-form-footer"></div>
           </div>
           </div>;
   }
