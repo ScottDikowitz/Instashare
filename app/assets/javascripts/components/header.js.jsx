@@ -18,6 +18,10 @@ var Header = React.createClass ({
     SessionsApiUtil.signOut();
    },
 
+   toggleOptions: function(){
+     $(".user-options").toggleClass("active");
+   },
+
   render: function(){
     var button;
     var users;
@@ -41,14 +45,14 @@ var Header = React.createClass ({
                 </li>
                 {search}
                 <div className="nav-links">
-
-              {button}
               {users}
-              <li>
-                <ReactRouter.Link className="user-name-nav" to={"/users/" + this.state.currentUser.username}>
-                  {this.state.currentUser.username}
-                </ReactRouter.Link>
+              <li onClick={this.toggleOptions} className="user-name-nav">{this.state.currentUser.username}
+                <ul className="user-options">
+                  <li><a href={"#/users/" + this.state.currentUser.username}>My Profile</a></li>
+                  {button}
+                </ul>
               </li>
+
               </div>
                 </ul>
               </div>

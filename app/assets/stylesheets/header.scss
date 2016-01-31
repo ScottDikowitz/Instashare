@@ -16,6 +16,17 @@
   bottom: 9px;
 }
 
+.user-options.active {
+  display: block;
+}
+
+
+.user-options {
+  display: none;
+  background: #eee;
+  width: 100px;
+}
+
 .search-bar input {
   border: 2px solid #ccc;
   border-radius: 15px;
@@ -45,6 +56,10 @@
   border: none;
 }
 
+.user-options > li:hover {
+  background: white;
+}
+
 .search-results li{
   border-bottom: 1px solid #ccc;
 }
@@ -59,20 +74,23 @@
 }
 
 .sign-out-button {
-  position: relative;
-  bottom: 2px;
-  display: block;
-  height: 40px;
-  bottom: 11px;
+  // position: relative;
+  // bottom: 2px;
+  // display: block;
+  // height: 40px;
+  // bottom: 11px;
+  margin: 0px;
+  padding: 0;
 }
 
 .sign-out-button button {
-  height: 40px;
+  // height: 40px;
   cursor: pointer;
   font-size: 16px;
   color: #125688;
   background: transparent;
   border: none;
+  padding: 0px;
 }
 
 .group{
@@ -99,12 +117,12 @@
   float: right;
 }
 
-.nav-links a:hover {
+.nav-links > li > a:hover {
   background: #eee;
 }
 
 .nav-links button:hover {
-  background: #eee;
+  // background: #eee;
 }
 
 .header a {
@@ -121,4 +139,22 @@
 }
 
 .user-name-nav {
+  color: #125688;
+  cursor: pointer;
+}
+
+.user-options > li {
+  padding: 15px;
+}
+
+.user-options a {
+  padding: 0px;
+}
+
+.user-name-nav > span {
+  padding: 10px;
+}
+
+.user-name-nav > span:hover {
+  background: #eee;
 }
