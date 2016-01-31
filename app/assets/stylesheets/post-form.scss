@@ -33,6 +33,24 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
+.modal-enter {
+    opacity: 0;
+}
+
+.modal-enter-active {
+  opacity: 1;
+  transition: opacity .8s ease-in;
+}
+
+.modal-leave {
+  opacity: 1;
+}
+
+.modal-leave.modal-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
 .modal {
   position: fixed;
   left: 50%;

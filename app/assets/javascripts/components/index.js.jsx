@@ -1,3 +1,4 @@
+ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 var Index = React.createClass ({
   getInitialState: function(){
     return {posts: [], page: 1, showModal: false};
@@ -54,7 +55,11 @@ var Index = React.createClass ({
     return <div className="posts-content-area">
 
             <div className="new-post" onClick={this.handleModal} href="#feed"><span >+</span></div>
-            {mScreen}
+            <ReactCSSTransitionGroup transitionName="modal">
+              {mScreen}
+            </ReactCSSTransitionGroup>
+          {postForm}
+
             {postForm}
 
             {this.state.posts.map(function(post){
