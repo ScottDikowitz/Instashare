@@ -19,7 +19,14 @@ var Header = React.createClass ({
    },
 
    toggleOptions: function(){
-     $(".user-options").toggleClass("active");
+     var options = $(".user-options");
+
+         options.toggleClass("disp");
+         setTimeout(function(){options.toggleClass("active");}, 0);
+
+
+
+
    },
 
   render: function(){

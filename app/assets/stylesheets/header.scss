@@ -16,15 +16,26 @@
   bottom: 9px;
 }
 
-.user-options.active {
+.user-options.disp {
   display: block;
+}
+
+.user-options.active {
+  opacity: .9;
 }
 
 
 .user-options {
   display: none;
+
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+ -moz-transition: opacity .25s ease-in-out;
+ -webkit-transition: opacity .25s ease-in-out;
+
   background: #eee;
   width: 100px;
+  position: absolute;
 }
 
 .search-bar input {
@@ -74,17 +85,11 @@
 }
 
 .sign-out-button {
-  // position: relative;
-  // bottom: 2px;
-  // display: block;
-  // height: 40px;
-  // bottom: 11px;
   margin: 0px;
   padding: 0;
 }
 
 .sign-out-button button {
-  // height: 40px;
   cursor: pointer;
   font-size: 16px;
   color: #125688;
