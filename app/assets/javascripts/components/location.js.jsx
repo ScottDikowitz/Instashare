@@ -10,7 +10,6 @@ var LocationShow = React.createClass ({
 
   componentWillReceiveProps: function(newProps){
     ApiUtil.fetchLocation(newProps.params.locationId);
-
   },
 
   _postsChanged: function(){
