@@ -70,6 +70,19 @@
   height: 25px;
 
   position: relative;
+
+  transition: all .2s;
+  -o-transition: all .2s;
+  -moz-transition: all .2s;
+  -webkit-transition: all .2s;
+}
+
+.like-button:hover {
+  margin-top: -4px;
+  transition: all .2s;
+  -o-transition: all .2s;
+  -moz-transition: all .2s;
+  -webkit-transition: all .2s;
 }
 
 [class*="icon-"] {
@@ -82,6 +95,7 @@
   height: 0;
   height: 44px;
   width: 44px;
+
 }
 
 .icon-heart-red {
