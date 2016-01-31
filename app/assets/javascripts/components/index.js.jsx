@@ -11,12 +11,17 @@ var Index = React.createClass ({
   componentDidMount: function(){
     ApiUtil.fetchPosts();
     PostStore.addChangeListener(this._changed);
+    AnimationStore.addChangeHandler(this._animationChanged);
   },
 
   componentWillUnmount: function(){
 
     PostStore.removeChangeListener(this._changed);
+    AnimationStore.removeChangeHandler(this._animationChanged);
+  },
 
+  _animationChanged: function(){
+    this.setState({showModal: AnimationStore.modalShow()});
   },
 
   _changed: function(){
@@ -31,7 +36,12 @@ var Index = React.createClass ({
   },
 
   handleModal: function(){
-    this.setState({showModal: !this.state.showModal});
+    if (!this.state.showModal){
+      ApiActions.openModal();
+    }
+    else {
+      ApiActions.closeModal();
+    }
   },
 
   render: function(){

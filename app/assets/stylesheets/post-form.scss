@@ -23,6 +23,32 @@
   border-radius: 15px;
 }
 
+.close-modal {
+  font-size: 13px;
+  height: 30px;
+  line-height: 20px;
+  color: #fff;
+  border-color: #9da6af;
+  background: #9da6af;
+  border: 0px;
+
+  padding: 4px 7px 5px;
+  font-weight: 700;
+  border-width: 1px;
+  border-style: solid;
+  text-decoration: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: "Helvetica";
+
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
 .screen {
   position: fixed;
   top: 0px;

@@ -72,6 +72,10 @@
 
     },
 
+    handleClose: function(){
+      ApiActions.closeModal();
+    },
+
   render: function(){
     var that = this;
     return <div className="modal">
@@ -96,7 +100,7 @@
               </form>
             </div>
             </ul>
-            <div className="post-form-footer"></div>
+            <div className="post-form-footer"><button className="close-modal" onClick={this.handleClose}>Close</button></div>
           </div>
           </div>;
   }

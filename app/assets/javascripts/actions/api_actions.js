@@ -21,6 +21,18 @@ var ApiActions = window.ApiActions = {
     });
   },
 
+  closeModal: function(){
+    AppDispatcher.dispatch({
+      actionType: "CLOSE_MODAL"
+    });
+  },
+
+  openModal: function(){
+    AppDispatcher.dispatch({
+      actionType: "OPEN_MODAL"
+    });
+  },
+
   receiveMorePosts: function(posts){
     AppDispatcher.dispatch({
       actionType: PostConstants.MORE_POSTS_RECEIVED,
