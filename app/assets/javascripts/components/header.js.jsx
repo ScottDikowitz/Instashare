@@ -53,7 +53,7 @@ var Header = React.createClass ({
                 {search}
                 <div className="nav-links">
               {users}
-              <li onClick={this.toggleOptions} className="user-name-nav">{this.state.currentUser.username}
+              <li onClick={this.toggleOptions} className="user-name-nav"><span className="user-drop">{this.state.currentUser.username}</span>
                 <ul className="user-options">
                   <li><a href={"#/users/" + this.state.currentUser.username}>My Profile</a></li>
                   {button}
