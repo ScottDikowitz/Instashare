@@ -7,7 +7,17 @@
   background: #fff;
   position: relative;
   font-size: 30px;
-  border: 1px solid #edeeee;
+  background: #f2f2f2;
+
+
+  border-top: 2px dashed #d4d4d4;
+  border-top-width: 2px;
+  border-top-style: dashed;
+  border-top-color: rgb(212, 212, 212);
+  border-bottom: 2px dashed #d4d4d4;
+  border-bottom-width: 2px;
+  border-bottom-style: dashed;
+  border-bottom-color: rgb(212, 212, 212);
 }
 
 .locations {
