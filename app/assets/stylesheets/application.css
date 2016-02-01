@@ -39,10 +39,21 @@ body {
   color: #000;
 }
 
-@media screen and (max-width: 800px) {
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
 
    .header {
      height: 100px;
+   }
+
+   .logo {
+     margin-left: 190px;
+   }
+
+   .user-options {
+     width: 180px;
    }
 
    .search-bar {
@@ -51,7 +62,12 @@ body {
      width: 300px;
    }
    .nav-links {
+     margin-left: 10px;
      float:left;
+   }
+
+   .nav-links > li {
+     font-size: 25px;
    }
 
    .nav-links > li a {
