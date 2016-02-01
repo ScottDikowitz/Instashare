@@ -37,6 +37,8 @@
   background: #eee;
   width: 100px;
   position: absolute;
+  margin-top: 8px;
+  border-radius: 15px;
 }
 
 .icon-search {
@@ -63,6 +65,7 @@
 .search-bar input:hover {
   background: #eee;
 }
+
 
 .search-results {
   display: block;
@@ -120,6 +123,7 @@
 .header-nav{
   margin: auto;
   width: 600px;
+  font-size: 15px;
   position: relative;
 }
 

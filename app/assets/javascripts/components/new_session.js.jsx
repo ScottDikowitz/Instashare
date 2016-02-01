@@ -26,7 +26,7 @@
 
     guestLogin: function(){
       var uname = React.findDOMNode(this.refs.uname);
-      uname.value = "guest";
+      uname.value = "Guest";
       // var pwrd = React.findDOMNode(this.refs.pwrd);
       // pwrd.value = "";
       this.submit();
@@ -63,13 +63,13 @@
               <li>
               </li>
               <li>
-                <a className="fbook" href="/auth/facebook">LOG IN WITH FACEBOOK</a><br/>
-                <a href="/#signup">signup</a>
+                <a className="fbook" href="/auth/facebook">Sign in with Facebook</a><br/>
 
               </li>
             </ul>
             </form>
-          <button onClick={this.guestLogin}>Guest Account signin</button>
+          <button className="submit-button" onClick={this.guestLogin}>Guest Account signin</button>
+          Don't have an account? <a href="/#signup">signup</a>
           </div>
         </div>
       );
