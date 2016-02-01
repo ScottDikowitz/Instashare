@@ -18,14 +18,14 @@ var Header = React.createClass ({
     SessionsApiUtil.signOut();
    },
 
-   toggleOptions: function(){
-     var options = $(".user-options");
+   toggleOptions: function(e){
+     debugger;
+     if (e.target.className === "user-drop"){
+       var options = $(".user-options");
 
-         options.toggleClass("disp");
-         setTimeout(function(){options.toggleClass("active");}, 0);
-
-
-
+       options.toggleClass("disp");
+       setTimeout(function(){options.toggleClass("active");}, 0);
+    }
 
    },
 
