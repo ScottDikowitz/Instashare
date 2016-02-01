@@ -1,9 +1,9 @@
 .user-list {
-  background: #edeeee;
+  background: #FAFAFA;
   margin: auto;
   display: block;
   // width: 80%;
-  border: 1px solid lightgrey;
+  border: 1px solid #edeeee;
 
   max-height: 1000px;
   // overflow-y: scroll;
@@ -31,15 +31,15 @@
 }
 
 .user-list li:first-child a{
-  border-top: 1px solid black;
+  border-top: 1px solid #edeeee;
 }
 
 .user-list a:hover{
-  background: #ccc;
+  background: #edeeee;
 }
 
 .user-list a {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #edeeee;
   background: #fff;
   padding: 20px;
   display: block;
