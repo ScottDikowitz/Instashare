@@ -34,6 +34,10 @@ class User < ActiveRecord::Base
 
   has_many :likes, dependent: :destroy
 
+  def followers
+    Follow.where(follower_id: self.id).count
+  end
+
   def self.find_or_create_by_auth_hash(auth_hash)
    provider = auth_hash[:provider]
    uid = auth_hash[:uid]
