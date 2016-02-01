@@ -50,7 +50,7 @@ var Users = React.createClass ({
             return <li key={user.id}>
                     <a href={"#/users/" + user.username} className="group">
                       <img className="user-thumb" src={user.pic}/>
-                      <span className="uname">{user.username}</span>
+                      <div className="name-box"><span className="uname">{user.username}</span></div>
                       <span className="body">{user.body}</span>
                     </a>
                   </li>;
