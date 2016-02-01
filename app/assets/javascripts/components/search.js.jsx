@@ -50,7 +50,7 @@
 
       return (
         <div className="search-container">
-          <div className="search-bar">
+          <div className="search-bar"><div className="icon-search"></div>
             <input ref="search" type="text"
               onChange={ this._onInput }
               placeholder="search..."

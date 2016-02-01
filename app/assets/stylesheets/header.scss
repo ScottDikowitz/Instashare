@@ -39,13 +39,25 @@
   position: absolute;
 }
 
+.icon-search {
+    background-position: -516px -360px;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    bottom: 12px;
+    left: 7px;
+
+}
+
 .search-bar input {
-  border: 2px solid #ccc;
+  border: 1px solid #edeeee;
   border-radius: 15px;
   width: 190px;
   font-size: 16px;
   padding: 7px;
+    padding-left: 20px;
   outline: none;
+  background: #FAFAFA;
 }
 
 .search-bar input:hover {
