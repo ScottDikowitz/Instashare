@@ -9,9 +9,9 @@ var Likers = React.createClass ({
   },
 
   render: function(){
-
+    var like = this.props.numLikes === 1 ? " Like" : " Likes";
     return <div className="like-bar">
-            <li onClick={this.handleClick} className="num-likes">Likes: {this.props.numLikes}
+            <li onClick={this.handleClick} className="num-likes">{this.props.numLikes + like}
             </li>
 
             <ul>
