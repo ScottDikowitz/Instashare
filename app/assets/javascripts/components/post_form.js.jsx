@@ -87,7 +87,7 @@
               </li>
               <div className="post-form-right">
                 <form autoComplete="off" onSubmit={this.handleSubmit} action="#" method="POST">
-                  <label className="file-select-post">Upload Photo...<input className="file-select" type="file" onChange={this.changeFile} /></label>
+                  <label className="icon-file-select-post"><input className="file-select" type="file" onChange={this.changeFile} /></label>
                 <input className="caption" placeholder="caption: create tags with #" type="text" name="caption"/>
 
                 <input ref="locationBox" react onChange={this.handleLocations} className="caption" placeholder="enter a city, state or country" type="text" name="location"/>

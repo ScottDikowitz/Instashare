@@ -87,11 +87,10 @@
 
 [class*="icon-"] {
   display: inline-block;
-  background-image: image-url("sprite.png");
-  // background-size: 25px 250px;
+  background-image: asset-data-url("sprite.png");
   background-repeat: no-repeat;
   vertical-align: bottom;
-  overflow: hidden;
+  // overflow: hidden;
   height: 0;
   height: 44px;
   width: 44px;
@@ -103,8 +102,6 @@
   right: -10px;
   position: absolute;
   background-position: -173px -322px;
-
-
 }
 
 .icon-heart-gray {
