@@ -16,6 +16,14 @@
   overflow: hidden;
 }
 
+.spinner {
+  background-image: image-url("spinner.gif");
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+}
+
 .uname {
   float: left;
   margin-left: 5px;

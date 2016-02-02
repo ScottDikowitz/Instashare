@@ -1,7 +1,7 @@
 var Users = React.createClass ({
 
   getInitialState: function(){
-    return {users: [], page: 1};
+    return {users: [], page: 1, loading: true};
   },
 
   componentWillReceiveProps: function(newProps){
@@ -18,6 +18,7 @@ var Users = React.createClass ({
   },
 
   _changed: function(){
+    this.setState({loading: false});
     if (UsersStore.all().length !== 0){
       this.setState({users: UsersStore.all()});
     }
@@ -41,11 +42,15 @@ var Users = React.createClass ({
   },
 
   render: function(){
-
+    var loading;
+    if (this.state.loading){
+      loading = <div className="spinner"></div>;
+    }
     return <div>
         <div className="users-content">
             <h1>Users</h1>
           <ul className="user-list">
+            {loading}
           {this.state.users.map(function(user){
             return <li key={user.id}>
                     <a href={"#/users/" + user.username} className="group">

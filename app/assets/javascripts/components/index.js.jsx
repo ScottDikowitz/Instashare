@@ -1,7 +1,7 @@
 ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 var Index = React.createClass ({
   getInitialState: function(){
-    return {posts: [], page: 1, showModal: false};
+    return {posts: [], page: 1, showModal: false, loading: true};
   },
 
   componentWillMount: function(){
@@ -25,6 +25,7 @@ var Index = React.createClass ({
   },
 
   _changed: function(){
+    this.setState({loading: false});
     this.setState({posts: PostStore.all()});
 
   },
@@ -49,6 +50,10 @@ var Index = React.createClass ({
     var status;
     var postForm;
     var mScreen;
+    var loading;
+    if (this.state.loading){
+      loading = <div className="spinner"></div>;
+    }
   if (this.state.posts.length !== 0){
     loadMore = <div onClick={this.handleClick} className="load-more">
       <span>load more</span>
@@ -70,8 +75,7 @@ var Index = React.createClass ({
             </ReactCSSTransitionGroup>
           {postForm}
 
-            {postForm}
-
+            {loading}
             {this.state.posts.map(function(post){
 
               return <Post key={post.id} post={post}/>;
