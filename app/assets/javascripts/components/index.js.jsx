@@ -60,7 +60,9 @@ var Index = React.createClass ({
     </div>;
   }
   else {
-    status = <div className="status">Nothing to show. Create a post or start following some users.</div>;
+    if (!this.state.loading){
+      status = <div className="status">Nothing to show. Create a post or start following some users.</div>;
+      }
   }
 
   if (this.state.showModal){
