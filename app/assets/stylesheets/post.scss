@@ -1,23 +1,22 @@
 .new-post{
-
+  font-size: 25px;
+  color: #4090db;
   border: 2px solid #4090db;
   margin: auto;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  position: relative;
+  // padding: 1px 1px;
   cursor: pointer;
+  text-align: center;
 
-  display: flex;
-  display: -webkit-flex;
-  align-items: center;
-  -webkit-align-items: center;
 
 
   -moz-transition: all 1s ease;
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
+
 
 }
 
@@ -34,15 +33,7 @@
   color: #4090db;
 }
 
-.new-post span {
-  font-size: 25px;
-  margin: auto;
-  color: #4090db;
-  left: 8px;
-  bottom:2px;
-  position: absolute;
 
-}
 
 .post-header {
   height: 66px;
