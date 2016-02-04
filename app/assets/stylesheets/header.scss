@@ -9,13 +9,22 @@
 }
 
 .search-bar {
-  float: left;
-  position: relative;
-  margin-left: 50px;
-  display: block;
-  bottom: -8px;
+  // float: left;
+  position: absolute;
+  // margin-left: 50px;
+  width: 220px;
+
+
+
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+
+  display: inline-block;
   color: #125688;
-  // bottom: 9px;
+  // bottom: 15px;
+  bottom: 0px;
 }
 
 .user-options.disp {
@@ -134,7 +143,7 @@
   position: relative;
 }
 
-span.logo{
+a.logo{
   // margin-top: 4px;
   font-size: 26px;
   font-weight: 0;

@@ -121,15 +121,13 @@ and (orientation : portrait) {
    .search-bar {
      height: 50px;
      width: 100%;
-     text-align: center;
       /*margin-left: 80px;*/
      width: 300px;
-     margin-left: auto;
+     /*margin-left: auto;
      margin-right: auto;
      left: 0;
-     right: 0;
-     bottom: 15px;
-     position: absolute;
+     right: 0;*/
+     bottom: 18px;
    }
 
    .search-bar input {
@@ -145,9 +143,11 @@ and (orientation : portrait) {
      width: 100%;
    }
 
-   .logo {
+   a.logo {
      font-size: 40px;
      margin-right: 10px;
+     bottom: 6px;
+     position: relative;
    }
 
    .user-options {
