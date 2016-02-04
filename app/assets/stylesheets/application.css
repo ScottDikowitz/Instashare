@@ -40,9 +40,32 @@ body {
 }
 
 @media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
 and (orientation : portrait) {
+
+  .post a{
+    font-size: 35px;
+  }
+
+  .post span{
+    font-size: 35px;
+  }
+
+  .create-comment form {
+    height: 50px;
+    font-size: 35px;
+  }
+
+  .create-comment {
+    height: 60px;
+  }
+
+  .create-comment-text {
+    font-size: 35px;
+  }
+
+  .post li {
+    font-size: 25px;
+  }
 
     .users {
       margin-left: 10px;

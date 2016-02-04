@@ -13,7 +13,7 @@ var CommentsBox = React.createClass ({
     createComment = <CreateComment unlikeCallback={this.props.likeCallbacks[0]} likeCallback={this.props.likeCallbacks[1]} liked={this.props.liked} callback={this.props.callback} post_id={this.props.postId}/>;
 
     var comments;
-    var usernameLink = <a href={"#/users/" + this.props.username}><span>{this.props.username}: </span></a>;
+    var usernameLink = <a href={"#/users/" + this.props.username}><span>{this.props.username} </span></a>;
 
     var caption = <span>{this.props.caption.split(" ").map(function(word, index){
         if (word[0] === "#"){
@@ -34,8 +34,7 @@ var CommentsBox = React.createClass ({
       if (this.props.comments.length !== 0){
         comments = <div>{this.props.comments.map(function(comment){
           return <li key={comment.id}>
-                  <a href={"#/users/" + comment.username}>{comment.username}</a>
-                  : {comment.content}
+                  <a href={"#/users/" + comment.username}>{comment.username}</a> {comment.content}
                   </li>;
 
         })}</div>;

@@ -18,6 +18,7 @@
 
 .create-comment form {
   float: left;
+  // height: 50px;
 }
 
 
@@ -38,6 +39,7 @@
   margin-left: 11px;
   position: relative;
   top: 4px;
+  height: 100%;
 }
 
 .comment-box {
@@ -68,6 +70,7 @@
   margin-right: 0px;
   width: 25px;
   height: 25px;
+  cursor: pointer;
 
   position: relative;
 
