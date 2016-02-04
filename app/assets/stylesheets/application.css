@@ -49,10 +49,27 @@ and (orientation : portrait) {
     }
    .header {
      height: 100px;
+     padding: 10px;
+   }
+
+   ul.group.nav-ul .search-bar {
+     margin-left: 50px;
+   }
+
+   .header-nav {
+     top: 20px;
+   }
+
+   .header-nav {
+     max-width: 800px;
+   }
+
+   div.nav-links {
+     float: right;
    }
 
    .logo {
-     margin-left: 190px;
+
    }
 
    .user-options {
