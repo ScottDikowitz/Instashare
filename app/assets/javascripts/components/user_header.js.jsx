@@ -80,8 +80,8 @@ var UserHeader = React.createClass ({
 
     if (this.props.curUser.profile_picture){
       img = <img className="user-pic" src={this.props.curUser.profile_picture}/>;
-      body = <li>{this.props.curUser.body}</li>;
-      stats = <li className="stats">{this.props.curUser.numPosts + " posts " + this.props.curUser.numFollowers + " followers "  +  this.props.curUser.numFollowing + " following"}</li>;
+      body = <li className="body-info">{this.props.curUser.body}</li>;
+      stats = <li className="stats"><span className="num-stats">{this.props.curUser.numPosts}</span> posts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="num-stats">{this.props.curUser.numFollowers}</span> followers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="num-stats">{this.props.curUser.numFollowing}</span> following</li>;
     }
     if (this.state.input){
       body = "";

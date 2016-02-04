@@ -8,16 +8,27 @@
   padding: 40px;
 }
 
+.num-stats {
+  color: #34373b;
+  font-weight: 600;
+  font-size: 20px;
+}
+
 .label-and-user-pic {
   float: left;
   margin-left: 20px;
   width: 120px;
 }
 
-.account-info .stats {
-  font-size: 16px;
-  line-height: 200%;
+.account-info .body-info {
+  font-size: 18px;
   font-weight: 600;
+}
+
+.account-info .stats {
+  font-size: 18px;
+  line-height: 200%;
+  // font-weight: 600;
 }
 
 .user-pic-container {
