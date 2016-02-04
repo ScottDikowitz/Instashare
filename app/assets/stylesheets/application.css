@@ -47,6 +47,27 @@ and (orientation : portrait) {
     margin-bottom: 3px;
   }
 
+  .icon-heart-red {
+    background-position: -460px -15px;
+    height: 60px;
+    width: 60px;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .icon-heart-gray {
+    background-position: -356px -207px;
+    height: 60px;
+    width: 60px;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .like-button {
+    width: 60px;
+    height: 60px;
+  }
+
   .post a, .post span, .create-comment form, .create-comment-text {
     font-size: 35px;
   }
