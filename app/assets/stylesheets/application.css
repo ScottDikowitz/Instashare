@@ -58,9 +58,9 @@ and (orientation : portrait) {
      background-position: -169px -12px;
    }
 
-   ul.group.nav-ul .search-bar {
+   /*ul.group.nav-ul .search-bar {
      margin-left: 50px;
-   }
+   }*/
 
    .header-nav {
      top: 20px;
@@ -70,26 +70,48 @@ and (orientation : portrait) {
      max-width: 800px;
    }
 
-   div.nav-links {
-     float: right;
+   div.nav-links > li {
+     float: left;
+   }
+
+   .search-bar {
+     height: 50px;
+     width: 100%;
+   }
+
+   .search-bar input {
+     height: 100%;
+     width: 280px;
+   }
+
+   .post-form {
+     width: 100%;
+   }
+
+   .modal {
+     width: 100%;
+   }
+
+   .search-bar {
+     margin-left: 80px;
+     /*margin-left: auto;
+     margin-right: auto;*/
+     text-align: center;
+     width: 300px;
    }
 
    .logo {
-
+     font-size: 40px;
+     margin-right: 10px;
    }
 
    .user-options {
      width: 180px;
    }
 
-   .search-bar {
-     margin: auto;
-     text-align: center;
-     width: 300px;
-   }
    .nav-links {
      margin-left: 10px;
-     float:left;
+     float: right;
    }
 
    .nav-links > li {
@@ -102,10 +124,6 @@ and (orientation : portrait) {
 
    .nav-links > li button {
      font-size: 25px;
-   }
-
-   .search-bar > input {
-     width: 300px;
    }
 
    .header-nav {
