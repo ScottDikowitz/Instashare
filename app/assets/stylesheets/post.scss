@@ -33,6 +33,15 @@
   color: #4090db;
 }
 
+.post-header > :first-child {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.post-header > :first-child > a:hover {
+  color: #0d3c5f;
+}
+
 .post-header {
   height: 66px;
   display: block;

@@ -20,6 +20,7 @@
    text-decoration: none;
    margin: 0px;
    padding: 0px;
+   font-weight: inherit;
    list-style: none;
    font-family: inherit;
    font-size: inherit;
@@ -46,7 +47,7 @@ and (orientation : portrait) {
     margin-bottom: 3px;
   }
 
-  .post a{
+  .post a, .post span, .create-comment form, .create-comment-text {
     font-size: 35px;
   }
 
@@ -54,25 +55,12 @@ and (orientation : portrait) {
     height: 112px;
   }
 
-  .post span{
-    font-size: 35px;
-  }
-
-  .user-caption {
-
-  }
-
   .create-comment form {
     height: 50px;
-    font-size: 35px;
   }
 
   .create-comment {
     height: 60px;
-  }
-
-  .create-comment-text {
-    font-size: 35px;
   }
 
   .post li {
