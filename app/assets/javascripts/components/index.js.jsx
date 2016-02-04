@@ -71,7 +71,7 @@ var Index = React.createClass ({
   }
     return <div className="posts-content-area">
 
-            <div className="new-post" onClick={this.handleModal} href="#feed">+</div>
+            <div className="icon-new-post" onClick={this.handleModal} href="#feed"></div>
             <ReactCSSTransitionGroup transitionName="modal">
               {mScreen}
             </ReactCSSTransitionGroup>
