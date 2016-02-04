@@ -120,19 +120,21 @@ and (orientation : portrait) {
 
    .search-bar {
      height: 50px;
-     width: 100%;
-      /*margin-left: 80px;*/
-     width: 300px;
-     /*margin-left: auto;
-     margin-right: auto;
-     left: 0;
-     right: 0;*/
+     width: 35%;
+
      bottom: 18px;
+   }
+
+   @media only screen
+   and (max-width: 550px){
+     .search-bar {
+       width: 20%;
+     }
    }
 
    .search-bar input {
      height: 100%;
-     width: 280px;
+     width: 100%;
    }
 
    .post-form {
