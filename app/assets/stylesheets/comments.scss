@@ -10,6 +10,10 @@
 
 }
 
+.comments a{
+  font-weight: 600;
+}
+
 .add-comment {
   float: left;
   margin-left: 10px;
@@ -128,6 +132,11 @@
 .like-bar {
   padding-top: 10px;
   padding-left: 10px;
+}
+
+.like-bar > span {
+  color: #4b4f54;
+  font-weight: 500;
 }
 
 .user-likes {

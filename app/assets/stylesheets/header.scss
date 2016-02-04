@@ -5,6 +5,7 @@
   padding-top: 10px;
   // padding: 20px;
   background: white;
+  font-weight: 600;
 }
 
 .search-bar {
@@ -133,10 +134,11 @@
   position: relative;
 }
 
-.logo{
+span.logo{
   // margin-top: 4px;
   font-size: 26px;
-  // font-weight: 700;
+  font-weight: 0;
+  font-weight: 300;
   // float: left;
   font-family: 'Pacifico', cursive;
 }
