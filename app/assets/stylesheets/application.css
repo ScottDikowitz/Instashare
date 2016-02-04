@@ -42,12 +42,24 @@ body {
 @media only screen
 and (orientation : portrait) {
 
+  div.like-bar {
+    margin-bottom: 3px;
+  }
+
   .post a{
     font-size: 35px;
   }
 
+  .post-header {
+    height: 100px;
+  }
+
   .post span{
     font-size: 35px;
+  }
+
+  .user-caption {
+
   }
 
   .create-comment form {

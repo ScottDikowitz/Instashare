@@ -4,23 +4,13 @@ var Likers = React.createClass ({
 
   },
 
-  handleClick: function(){
-
-  },
-
   render: function(){
     var like = this.props.numLikes === 1 ? " Like" : " Likes";
-    return <div className="like-bar">
-            <li onClick={this.handleClick} className="num-likes">{this.props.numLikes + like}
-            </li>
+    return<div className="like-bar">
+            {this.props.numLikes + like} {this.props.userLikes.map(function(user){
+              return <a key={user.id} href={"/#users/" + user.username}>{user.username}&nbsp; </a>;
 
-            <ul>
-              {this.props.userLikes.map(function(user){
-                return <li className="user-likes" key={user.id}>
-                  <a href={"/#users/" + user.username}>{user.username}</a>&nbsp;</li>;
-
-              })}
-            </ul>
+            })}
           </div>;
   }
 
