@@ -47,6 +47,10 @@ and (orientation : portrait) {
     margin-bottom: 3px;
   }
 
+  .post-head-pic {
+    bottom: -3px;
+  }
+
   .icon-heart-red {
     background-position: -460px -15px;
     height: 60px;

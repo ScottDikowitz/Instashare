@@ -15,8 +15,9 @@ handleDelete: function(){
 
     return <div className="post">
                 <section className="post-header">
+                  {del}
                   <li>
-                    {del}
+                    <a href={"#/users/" + this.props.post.user.username} className="post-head-pic"><img src={this.props.post.profile_picture}/></a>
                   <ReactRouter.Link to={"/users/" + this.props.post.user.username}>
                     <span>{this.props.post.user.username}</span>
                   </ReactRouter.Link>

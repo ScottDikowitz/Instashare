@@ -2,6 +2,8 @@ json.extract! post, :id, :caption
 
 # @user_liked_posts
 
+json.profile_picture asset_path(post.user.user_pic.url(:thumb))
+
 if @user_liked_posts.include?(post)
   json.liked "liked"
 else

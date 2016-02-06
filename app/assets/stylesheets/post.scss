@@ -27,10 +27,29 @@
 
 }
 
+.post-head-pic {
+  width: 30px;
+  display: inline-block;
+  float: left;
+  position: relative;
+  bottom: 5px;
+  margin-right: 10px;
+  border-radius: 90px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.post-head-pic > img {
+
+}
+
 .delete-post {
   cursor: pointer;
   display: inline;
   color: #4090db;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .post-header > :first-child {
