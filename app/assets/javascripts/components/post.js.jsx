@@ -7,9 +7,17 @@ handleDelete: function(){
   render: function(){
     var user = CurrentUserStore.currentUser();
     var del;
+    var nudge;
     if (user) {
       if (user.id === 1){
         del = <div onClick={this.handleDelete} className="delete-post">X</div>;
+        }
+        if (this.props.post.location){
+          nudge = " nudge";
+        }
+        else
+        {
+          nudge = "";
         }
     }
 
@@ -17,7 +25,7 @@ handleDelete: function(){
                 <section className="post-header">
                   {del}
                   <li>
-                    <a href={"#/users/" + this.props.post.user.username} className="post-head-pic"><img src={this.props.post.profile_picture}/></a>
+                    <a href={"#/users/" + this.props.post.user.username} className={"post-head-pic" + nudge}><img src={this.props.post.profile_picture}/></a>
                   <ReactRouter.Link to={"/users/" + this.props.post.user.username}>
                     <span>{this.props.post.user.username}</span>
                   </ReactRouter.Link>

@@ -28,19 +28,24 @@
 }
 
 .post-head-pic {
-  width: 30px;
   display: inline-block;
   float: left;
   position: relative;
   bottom: 5px;
   margin-right: 10px;
   border-radius: 90px;
+  width: 30px;
+  height: 30px;
   overflow: hidden;
   cursor: pointer;
 }
 
-.post-head-pic > img {
+.nudge {
+  bottom: -2px;
+}
 
+.post-head-pic > img {
+  height: 100%;
 }
 
 .delete-post {
