@@ -33,6 +33,7 @@ var Header = React.createClass ({
     var users;
     var search;
     var logo;
+    var hide;
     if (CurrentUserStore.isLoggedIn()){
       search = <Search />;
       button = <li className="sign-out-button"><button  onClick={this.signOut}>Sign out</button></li>;
@@ -41,8 +42,9 @@ var Header = React.createClass ({
     }
     else{
       logo = <a href="#/signin"><span className="logo">Instashare</span></a>;
+      hide = " hidden";
     }
-    return <div>
+    return <div className={hide}>
             <div className="header group">
               <div className="header-nav group">
                 <ul className="group nav-ul">
