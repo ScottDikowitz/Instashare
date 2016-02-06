@@ -62,7 +62,7 @@
               </li>
             </ul>
             </form>
-            <div className="bottom-text"><div className="inline-div" onClick={this.guestLogin}>Log in as guest</div> or <a href="/auth/facebook">log in with Facebook. </a>
+            <div className="bottom-text"><div className="guest-login" onClick={this.guestLogin}>Log in as guest</div> or <a href="/auth/facebook">log in with Facebook. </a>
              Don't have an account? <a href="/#signup">Click here to sign up</a>.</div>
           </div>
         </div>
