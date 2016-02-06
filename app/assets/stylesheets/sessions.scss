@@ -9,12 +9,17 @@
 .sign-in{
   background: #fff;
   margin: auto;
-  padding: 40px;
-  width: 400px;
+  // padding: 40px;
+  width: 350px;
   border: 1px solid #edeeee;
   border-radius: 5px;
   font-weight: bold;
-  color: #055;
+  color: #125688;
+  padding-bottom: 10px;
+}
+
+.sign-in .logo {
+  font-size: 40px;
 }
 
 .content-area {
@@ -25,21 +30,29 @@
   -webkit-align-items: baseline;
 }
 
-.sign-in > ul{
-  width: 280px;
-  margin: 30px auto;
-}
 
-.sign-in > ul > li{
+
+.session-fields {
+  background-color: #fdfdfd;
+  border: 1px solid #edeeee;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 9px 8px 7px;
+  -webkit-appearance: none;
+  width: 268px;
   margin-bottom: 10px;
 }
 
 .sign-in textarea {
-  height: 60px;
+  height: 40px;
 }
 
-.sign-in input {
-  margin-bottom: 15px;
+.inline-div {
+  display: inline;
+}
+
+.lower-margin {
+  margin-bottom: 5px;
 }
 
 .sign-in label {
@@ -47,35 +60,79 @@
 }
 
 .submit-button:hover {
-  background: #0000cc;
-}
-
-.fbook {
-  padding: 10px 20px;
-  width: 90%;
-  border-radius: 5px;
-  text-align: center;
-  color: white;
-  display: block;
-  background: #00cc00;
-}
-.fbook:hover {
-  background: #006600;
+  background-color: #2d6599;
+  border-color: #2d6599;
 }
 
 .submit-button {
-  background: #4090db;
-  color: #fff;
-  font-weight: bold;
-  margin: auto;
-  display: block;
-  padding: 10px 40px;
-  font-size: 16px;
-  border-radius: 5px;
-  width: 100%;
-  // margin-top: 15px;
-  margin-bottom: 15px;
+
+  color: white;
+  line-height: 29px;
   cursor: pointer;
+  background: #4090db;
+  width: 286px;
+  border-radius: 3px;
+  border-style: solid;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+}
+
+.or-line{
+  text-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 5px 40px 8px;
+  display: -webkit-flex;
+}
+
+div.bottom-text {
+  width: 250px;
+  margin: auto;
+  font-size: 12px;
+  color: #000;
+  text-align: center;
+  font-weight: normal;
+}
+
+div.bottom-text > a {
+  font-size: 12px;
+}
+
+.or {
+  color: #a5a7aa;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15px;
+    margin: 0 8px;
+    text-transform: uppercase;
+}
+
+.line {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  background-color: #edeeee;
+  height: 1px;
+  position: relative;
+  margin: 7px 0;
 }
 
 .fields {

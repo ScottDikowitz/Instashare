@@ -42,34 +42,28 @@
             <p className="status">{this.state.status}</p>
             <form ref="sform" onSubmit={ this.submit }>
 
-              <h1>Sign In</h1>
+              <span className="logo centering">Instashare</span>
 
             <ul>
               <li>
-              <label>
-                Username
-                <input className="fields" type="text" name="username" ref="uname" />
-              </label>
+                <input className="session-fields centering" placeholder="username" type="text" name="username" ref="uname" />
               </li>
               <li>
-              <label>
-                Password
-                <input className="fields" type="password" name="password" ref="pwrd" />
-              </label>
+                <input className="session-fields centering" placeholder="password" type="password" name="password" ref="pwrd" />
               </li>
               <li>
-              <button className="submit-button">Sign In!</button>
+                <button className="submit-button centering">Log In</button>
               </li>
+              <div className="or-line">
+                <div className="line"></div><div className="or">or</div><div className="line"></div>
+              </div>
               <li>
-              </li>
-              <li>
-                <a className="fbook" href="/auth/facebook">Sign in with Facebook</a><br/>
 
               </li>
             </ul>
             </form>
-          <button className="submit-button" onClick={this.guestLogin}>Guest Account signin</button>
-          Don't have an account? <a href="/#signup">signup</a>
+            <div className="bottom-text"><div className="inline-div" onClick={this.guestLogin}>Log in as guest</div> or <a href="/auth/facebook">log in with Facebook. </a>
+             Don't have an account? <a href="/#signup">Click here to sign up</a>.</div>
           </div>
         </div>
       );

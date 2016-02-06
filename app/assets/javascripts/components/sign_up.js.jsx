@@ -16,33 +16,24 @@
         <div className="content-area">
           <form className="sign-in" onSubmit={ this.submit }>
 
-            <h1>Sign Up</h1>
+            <span className="logo centering">Instashare</span>
 
           <ul>
             <li>
-            <label>
-              Username
-              <input className="fields" type="text" name="username" />
-            </label>
+              <input className="session-fields centering" placeholder="username" type="text" name="username" />
             </li>
             <li>
-            <label>
-              Password
-              <input className="fields" type="password" name="password" />
-            </label>
+              <input className="session-fields centering" placeholder="password" type="password" name="password" />
             </li>
             <li>
-            <label>
-              Bio
-              <textarea className="fields" name="body"></textarea>
-            </label>
+              <textarea className="session-fields centering" placeholder="Describe yourself here..." name="body"></textarea>
             </li>
             <li>
-              <button className="submit-button">Join!</button>
+              <button className="submit-button centering lower-margin">Join!</button>
             </li>
-            <li>
-              <a href="/#signin">signin</a>
-            </li>
+            <div className="bottom-text">
+              Already have an account? <a href="/#signin">Click here to log in.</a>
+          </div>
 
             </ul>
           </form>

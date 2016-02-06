@@ -143,13 +143,20 @@
   position: relative;
 }
 
-a.logo{
+.logo{
   // margin-top: 4px;
   font-size: 26px;
   font-weight: 0;
   font-weight: 300;
   // float: left;
   font-family: 'Pacifico', cursive;
+}
+
+
+.centering {
+  margin: auto;
+  text-align: center;
+  display: block;
 }
 
 .nav-ul > li {
