@@ -19,8 +19,17 @@ class Api::CommentsController < ApplicationController
 
   end
 
-  def show
-
+  def destroy
+    @comment = Comment.find(params[:id])
+    @post_id = @comment.post_id
+    if current_user.id == @comment.user_id
+      @comment.destroy
+      @comments = Post.find(@post_id).comments.includes(:user).last(25)
+      # render json: Post.cutComment(@comment)
+      render :show
+    else
+      render json: {}
+    end
   end
 
   private

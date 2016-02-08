@@ -38,7 +38,7 @@ handleDelete: function(){
                 <section className="comments">
 
 
-                <CommentsBox userLikes={this.props.post.userLikes} numLikes={this.props.post.numLikes} likeCallbacks={[ApiActions.removeLike, ApiActions.addLike]} liked={this.props.post.liked} caption={this.props.post.caption} username={this.props.post.user.username} postId={this.props.post.id} comments={this.props.post.comments} callback={ApiActions.updateCommentsPostsIndex}/>
+                <CommentsBox commDel={ApiActions.updateCommentsPostsIndex} userLikes={this.props.post.userLikes} numLikes={this.props.post.numLikes} likeCallbacks={[ApiActions.removeLike, ApiActions.addLike]} liked={this.props.post.liked} caption={this.props.post.caption} username={this.props.post.user.username} postId={this.props.post.id} comments={this.props.post.comments} callback={ApiActions.updateCommentsPostsIndex}/>
                 </section>
 
           </div>;

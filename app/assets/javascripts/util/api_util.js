@@ -33,6 +33,17 @@ var ApiUtil = window.ApiUtil = {
     });
   },
 
+  deleteComment: function(commentId, callback){
+    $.ajax ({
+      url: 'api/comments/' + commentId,
+      type: 'DELETE',
+      dataType: 'json',
+      success: function(data) {
+        callback && callback(data);
+      }
+    });
+  },
+
   loadMorePosts: function(pageNum){
     $.ajax ({
       url: 'api/posts',

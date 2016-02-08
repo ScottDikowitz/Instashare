@@ -75,6 +75,10 @@ and (orientation : portrait) {
     font-size: 26px;
   }
 
+  .del-comment {
+    font-size: 30px;
+  }
+
   div.bottom-text > a {
     font-size: 26px;
   }

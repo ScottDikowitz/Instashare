@@ -5,6 +5,12 @@ var CommentsBox = React.createClass ({
     // ApiUtil.fetchPosts();
   },
 
+  deleteComment: function(e){
+
+    // this.
+    ApiUtil.deleteComment(e.currentTarget.dataset.commId, this.props.callback);
+  },
+
   render: function(){
     // debugger;
 
@@ -30,12 +36,12 @@ var CommentsBox = React.createClass ({
       </span>;
       var numLikes = this.props.numLikes;
       var userLikes = this.props.userLikes;
-
+      var that = this;
       if (this.props.comments.length !== 0){
         comments = <div>{this.props.comments.map(function(comment){
-          return <li key={comment.id}>
+          return <li className="comm-line" key={comment.id} >
                   <a href={"#/users/" + comment.username}>{comment.username}</a> {comment.content}
-                  </li>;
+                  <div onClick={that.deleteComment} data-comm-id={comment.id} className="del-comment">x</div></li>;
 
         })}</div>;
       }
