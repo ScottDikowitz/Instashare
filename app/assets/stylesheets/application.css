@@ -60,6 +60,39 @@ and (orientation : portrait) {
     right: 0px;
   }
 
+  .sign-in {
+    width: 100%;
+    background: #FAFAFA;
+    border: none;
+  }
+
+  .or-line {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  div.bottom-text {
+    font-size: 26px;
+  }
+
+  div.bottom-text > a {
+    font-size: 26px;
+  }
+
+
+  textarea.session-fields {
+    height: 200px;
+  }
+
+  .content-area {
+    height: auto;
+    margin-top: 20px;
+    display: auto;
+    /*display: -webkit-flex;*/
+    align-items: none;
+    -webkit-align-items: none;
+  }
+
   .icon-heart-gray {
     background-position: -356px -207px;
     height: 60px;
@@ -148,6 +181,37 @@ and (orientation : portrait) {
 
    .modal {
      width: 100%;
+   }
+
+   span.logo.centering {
+     font-size: 100px;
+   }
+
+   .session-fields {
+     /*padding: padding: 9px 8px 7px;*/
+     height: 85px;
+     padding: 20px;
+     font-size: 35px;
+     margin-bottom: 20px;
+     border: 2px solid #edeeee;
+   }
+
+   .submit-button {
+     height: 85px;
+     font-size: 35px;
+   }
+
+   .or {
+     font-size: 30px;
+   }
+
+   .line {
+     height: 3px;
+   }
+
+   .or-line {
+     margin-left: 110px;
+     margin-right: 110px;
    }
 
    a.logo {
