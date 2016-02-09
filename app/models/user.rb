@@ -21,6 +21,11 @@ class User < ActiveRecord::Base
   through: :follows,
   source: :author
   )
+
+  has_many( :user_comments,
+  through: :posts,
+  source: :comments
+    )
   has_many(
     :liked_posts,
     through: :likes,

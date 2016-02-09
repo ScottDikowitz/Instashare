@@ -11,6 +11,18 @@ var ApiUtil = window.ApiUtil = {
     });
   },
 
+  getNotifications: function(){
+    $.ajax ({
+      url: 'api/notifications',
+      type: 'GET',
+      dataType: 'json',
+      success: function(data) {
+        // ApiActions.receiveAll(data);
+      }
+    });
+
+  },
+
   fetchPost: function(postId){
     $.ajax ({
       url: 'api/posts/' + postId,

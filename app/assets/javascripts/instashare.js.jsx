@@ -18,6 +18,7 @@
         <Route path="/posts/:postId" component={PostShow}/>
         <Route path="/users/:username" component={UserShow}/>
         <Route path="/search" component={ Search } />
+        <Route path="/notifications" component={ Notifications } />
       </Route>
   );
   React.render(<Router>{routes}</Router>, root);
