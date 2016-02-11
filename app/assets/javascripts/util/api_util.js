@@ -101,7 +101,7 @@ $.ajax ({
       type: 'GET',
       dataType: 'json',
       success: function(location) {
-        ApiUtil.getMapLocation(location.place);
+        ApiActions.receiveLocation(location);
       }
     });
   },
@@ -130,20 +130,6 @@ $.ajax ({
       dataType: 'json',
       success: function(data) {
         ApiActions.receiveTagPosts(data);
-      }
-    });
-  },
-
-
-
-  getMapLocation: function(location){
-
-    $.ajax ({
-      url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + location + "&key=AIzaSyAJGTQhnNdiql8vG1pvjQpxLouPkIrZJns",
-      type: 'GET',
-      dataType: 'json',
-      success: function(location) {
-        ApiActions.receiveLocation(location.results[0]);
       }
     });
   },
