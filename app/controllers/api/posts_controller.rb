@@ -36,16 +36,20 @@ require 'uri'
         url = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{URI.escape(location_name)}&key=#{ENV['GEOCODE_API_KEY']}",
         :headers => { 'ContentType' => 'application/json' } )
         response = JSON.parse(url.body)
+        loc_response = response["results"][0]["address_components"][0]["long_name"] rescue nil
+        unless loc_response.nil?
+          location_name = loc_response
 
-        @location = Location.new({place: location_name})
-        if @location.save
-          @post.location_id = @location.id
-          @post.save
-        else
+          @location = Location.new({place: location_name})
+          if @location.save
+            @post.location_id = @location.id
+            @post.save
+          else
 
-          @location = Location.find_by(place: location_name)
-          @post.location_id = @location.id
-          @post.save
+            @location = Location.find_by(place: location_name)
+            @post.location_id = @location.id
+            @post.save
+          end
         end
       end
 
