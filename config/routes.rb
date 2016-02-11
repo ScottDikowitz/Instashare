@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :show, :destroy]
     resources :search, only: :index
     resources :notifications, only: [:index]
+          get "location/:id/posts", to: "locations#posts"
 
   end
   root to: 'static_pages#root'

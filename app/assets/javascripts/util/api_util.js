@@ -125,7 +125,7 @@ $.ajax ({
 
   fetchLocationPosts: function(locationId){
     $.ajax ({
-      url: 'api/location_posts/' + locationId,
+      url: 'api/location/' + locationId + "/posts",
       type: 'GET',
       dataType: 'json',
       success: function(data) {
@@ -190,20 +190,10 @@ $.ajax ({
       type: 'POST',
       processData: false,
       contentType: false,
-      dataType: formData,
+      dataType: 'json',
       data: formData,
-      success: function(formData) {
-
-      },
-      error: function(formData){
-        var responseText = JSON.parse(formData.responseText);
-        if (responseText.location !== ""){
-          ApiUtil.queryLocation(responseText.location, responseText.post);
-        }
-        else{
-          // ApiUtil.fetchPosts();
-          ApiActions.insertPost(responseText.post);
-        }
+      success: function(data) {
+        ApiActions.insertPost(data.post);
       }
     });
   },

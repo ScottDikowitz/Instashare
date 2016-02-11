@@ -38,6 +38,8 @@ gem 'figaro'
 gem 'pg_search'
 gem 'kaminari'
 
+gem 'httparty'
+
 gem 'omniauth-facebook'
 # Use Unicorn as the app server
 # gem 'unicorn'
