@@ -120,12 +120,14 @@ and (orientation : portrait) {
     width: 100%;
     display: inline-block;
     text-align: center;
-    max-height: 150px;
+    max-height: 210px;
     overflow: hidden;
   }
 
   .add-photo > img {
-    width: 300px;
+    max-width: 500px;
+    width: auto;
+    height: 210px;
     margin: auto;
   }
 
