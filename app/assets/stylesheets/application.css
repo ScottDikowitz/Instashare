@@ -120,7 +120,7 @@ and (orientation : portrait) {
     width: 100%;
     display: inline-block;
     text-align: center;
-    max-height: 300px;
+    max-height: 150px;
     overflow: hidden;
   }
 
