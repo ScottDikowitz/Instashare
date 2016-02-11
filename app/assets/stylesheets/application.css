@@ -52,6 +52,89 @@ and (orientation : portrait) {
     height: 60px;
   }
 
+  .post-form {
+    height: 500px;
+  }
+
+  input.caption.tagg {
+    margin-top: 10px;
+  }
+
+  .caption {
+    height: 100px;
+    font-size: 30px;
+    width: 100%;
+  }
+
+  .create-p {
+    width: 35%;
+    margin: 0;
+    right: 0px;
+    left: auto;
+  }
+
+  .close-modal {
+    width: 35%;
+    height: 50px;
+    font-size: 30px;
+  }
+
+  label.icon-file-select-post {
+
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: white;
+    line-height: 29px;
+    cursor: pointer;
+    background: #4090db;
+    width: 100%;
+    border-radius: 3px;
+    border-style: solid;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 50px;
+    font-weight: 600;
+    outline: none;
+    box-sizing: Border-box;
+    position: relative;
+    height: 60px;
+  }
+
+  .collapse-mobile {
+    display: none;
+  }
+
+  .post-form-right {
+    width: 80%;
+    margin: auto;
+    right: auto;
+    left: auto;
+    position: relative;
+  }
+
+  .add-photo.group.collapse-mobile:not(:empty) {
+    /*margin-right: auto;
+    left: 0;
+    right: 0;*/
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    max-height: 300px;
+    overflow: hidden;
+  }
+
+  .add-photo > img {
+    width: 300px;
+    margin: auto;
+  }
+
+  label.icon-file-select-post::after {
+    content: "Choose an image";
+    white-space: nowrap;
+
+  }
+
   .icon-heart-red {
     background-position: -460px -15px;
     height: 60px;

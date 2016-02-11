@@ -78,29 +78,36 @@
 
   render: function(){
     var that = this;
+    var imgUrl;
+    if (this.state.imageUrl){
+      imgUrl = <img src={this.state.imageUrl} />;
+    }
+
+
     return <div className="modal">
             <div className="post-form-wrapper">
             <h1>Create Post</h1>
             <ul className="post-form group">
-              <li className="add-photo group">
-                <img src={this.state.imageUrl} />
+              <li className="add-photo group collapse-mobile">
+                {imgUrl}
               </li>
               <div className="post-form-right">
                 <form autoComplete="off" onSubmit={this.handleSubmit} action="#" method="POST">
                   <label className="icon-file-select-post"><input className="file-select" type="file" onChange={this.changeFile} /></label>
-                <input className="caption" placeholder="caption: create tags with #" type="text" name="caption"/>
+                <input className="caption tagg" placeholder="caption: create tags with #" type="text" name="caption"/>
 
                 <input ref="locationBox" react onChange={this.handleLocations} className="caption" placeholder="enter a city, state or country" type="text" name="location"/>
                 <ul className="search-results">{this.state.locations.map(function(location, idx){
                     return <li onClick={that.handleClickLocation} className="locations" key={idx}>{location}</li>;
                   })}</ul>
-                <input className="create-post-button" type="submit" value="Post"/>
+                <input className="close-modal create-p" type="submit" value="Post"/>
 
 
               </form>
+              <button className="close-modal" onClick={this.handleClose}>Close</button>
             </div>
             </ul>
-            <div className="post-form-footer"><button className="close-modal" onClick={this.handleClose}>Close</button></div>
+            <div className="post-form-footer"></div>
           </div>
           </div>;
   }
