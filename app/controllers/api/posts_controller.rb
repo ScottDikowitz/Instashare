@@ -1,4 +1,5 @@
 class Api::PostsController < ApplicationController
+require 'uri'
 
   def index
     if current_user
@@ -31,9 +32,8 @@ class Api::PostsController < ApplicationController
     if @post.save
       @post.parse_tags
       @user_liked_posts = current_user.liked_posts.to_a
-
       if location_name.length >= 3
-        url = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{location_name}&key=#{ENV['GEOCODE_API_KEY']}",
+        url = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{URI.escape(location_name)}&key=#{ENV['GEOCODE_API_KEY']}",
         :headers => { 'ContentType' => 'application/json' } )
         response = JSON.parse(url.body)
 
