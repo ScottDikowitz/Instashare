@@ -6,10 +6,8 @@ class Api::LikesController < ApplicationController
 
     if @like.save
 
-      # byebug
       render :show
     else
-      ### dangerous! ?
 
       render json: {}
     end

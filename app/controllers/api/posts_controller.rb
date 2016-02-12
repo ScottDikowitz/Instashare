@@ -13,10 +13,6 @@ require 'uri'
       .order(created_at: :desc).page(page_number)
       @user_liked_posts = current_user.liked_posts.to_a
 
-
-      # @posts = (current_user.followed_users_posts.includes(:user, :location, comments: :user) +
-      # current_user.posts.includes(:user, :location, comments: :user)).sort_by!{
-      #   |post| post.created_at}.reverse!
     else
       @posts = []
     end

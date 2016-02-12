@@ -3,7 +3,7 @@ class Api::TagsController < ApplicationController
   def create
     @tag = Tag.new(tag_params)
     if @tag.save
-      # render "api/user/show"
+
       render json: {}
     else
       render json: {}
@@ -11,23 +11,10 @@ class Api::TagsController < ApplicationController
 
   end
 
-  def index
-    # @users = User.all
-    # render json: @users.as_json(only: [:id, :username])
-  end
-
   def show
     @tag = Tag.find_by(tag_name: params[:id])
     @posts = @tag.posts
     render :show
-  end
-
-  def update
-    # @user = current_user
-    # if @user.update_attribute(:user_pic, params[:user][:user_pic])
-    #   render json: @user
-    # end
-
   end
 
   private

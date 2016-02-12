@@ -13,7 +13,6 @@ class Api::UsersController < ApplicationController
 
   def index
     @users = User.page(params["page"]).per(10).order(:username)
-    # render json: @users.as_json(only: [:id, :username])
     render :index
   end
 

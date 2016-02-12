@@ -5,7 +5,6 @@ class Api::LocationsController < ApplicationController
   end
 
   def show
-    # render json: Location.find(params[:id]).as_json(only: [:id, :place])
     @location = Location.find(params[:id])
     url = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{URI.escape(@location.place)}&key=#{ENV['GEOCODE_API_KEY']}",
     :headers => { 'ContentType' => 'application/json' } )

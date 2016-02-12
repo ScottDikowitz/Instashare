@@ -50,8 +50,24 @@
   position: absolute;
   // margin-top: 15px;
   // bottom: -15px;
-  top: 25px;
+  top: 35px;
+  right: 5px;
   border-radius: 15px;
+}
+
+.user-options::before {
+  width: 0;
+  height: 0;
+  content: "";
+  position: absolute;
+  // margin-left: 87px;
+  // top: 52px;
+  right: 12px;
+  top: -7px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #eee;
+  z-index: 4;
 }
 
 .icon-search {
