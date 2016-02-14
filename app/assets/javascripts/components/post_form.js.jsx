@@ -21,6 +21,7 @@
     e.preventDefault();
 
     var file = e.currentTarget[0].files[0];
+    file = file || this.state.file;
     var caption = e.currentTarget[1].value;
     var location = e.currentTarget[2].value;
     if (caption === ""){
@@ -53,8 +54,10 @@
       var file = e.currentTarget.files[0];
 
       reader.onloadend = function() {
-        that.setState({ imageUrl: reader.result });
+        that.setState({ imageUrl: reader.result, file: file });
         // debugger;
+        file;
+        debugger;
       };
 
       if (file) {
@@ -85,9 +88,10 @@
       var reader = new FileReader();
       var that = this;
       var file = e.dataTransfer.files[0];
+      var upl = React.findDOMNode(this.refs.photoUl);
 
       reader.onloadend = function() {
-        that.setState({ imageUrl: reader.result });
+        that.setState({ imageUrl: reader.result, file: file });
         // debugger;
       };
 
@@ -120,7 +124,7 @@
               <label htmlFor="photo" onDragOver={this.preventDefault} onDrop={this.drop} className="drag-drop collapse-mobile"></label>
               <div className="post-form-right">
                 <form autoComplete="off" onSubmit={this.handleSubmit} action="#" method="POST">
-                  <label className="icon-file-select-post"><input id="photo" className="file-select" type="file" onChange={this.changeFile} /></label>
+                  <label className="icon-file-select-post"><input ref="photoUl" id="photo" className="file-select" type="file" onChange={this.changeFile} /></label>
                 <input className="caption tagg" placeholder="caption: create tags with #" type="text" name="caption"/>
 
                 <input ref="locationBox" react onChange={this.handleLocations} className="caption" placeholder="enter a city, state or country" type="text" name="location"/>
