@@ -76,6 +76,32 @@
       ApiActions.closeModal();
     },
 
+    drop: function (e) {
+      e.preventDefault();
+
+
+
+
+      var reader = new FileReader();
+      var that = this;
+      var file = e.dataTransfer.files[0];
+
+      reader.onloadend = function() {
+        that.setState({ imageUrl: reader.result });
+        // debugger;
+      };
+
+      if (file) {
+        reader.readAsDataURL(file);
+      } else {
+        this.setState({ imageUrl: "" });
+      }
+    },
+
+    preventDefault: function (event) {
+      event.preventDefault();
+    },
+
   render: function(){
     var that = this;
     var imgUrl;
@@ -83,17 +109,18 @@
       imgUrl = <img src={this.state.imageUrl} />;
     }
 
-
     return <div className="modal">
             <div className="post-form-wrapper">
-            <h1>Create Post</h1>
+            <h1>Upload photo</h1>
             <ul className="post-form group">
-              <li className="add-photo group collapse-mobile">
+              <li className="add-photo collapse-mobile">
                 {imgUrl}
               </li>
+              <p className="collapse-mobile">drag an image</p>
+              <label htmlFor="photo" onDragOver={this.preventDefault} onDrop={this.drop} className="drag-drop collapse-mobile"></label>
               <div className="post-form-right">
                 <form autoComplete="off" onSubmit={this.handleSubmit} action="#" method="POST">
-                  <label className="icon-file-select-post"><input className="file-select" type="file" onChange={this.changeFile} /></label>
+                  <label className="icon-file-select-post"><input id="photo" className="file-select" type="file" onChange={this.changeFile} /></label>
                 <input className="caption tagg" placeholder="caption: create tags with #" type="text" name="caption"/>
 
                 <input ref="locationBox" react onChange={this.handleLocations} className="caption" placeholder="enter a city, state or country" type="text" name="location"/>

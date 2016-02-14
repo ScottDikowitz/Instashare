@@ -66,6 +66,10 @@ and (orientation : portrait) {
     width: 100%;
   }
 
+  .caption:placeholder-shown {
+    font-size: 5vw;
+  }
+
   .create-p {
     width: 35%;
     margin: 0;
@@ -101,6 +105,17 @@ and (orientation : portrait) {
     height: 60px;
   }
 
+
+  label.icon-file-select-post::after {
+    content: "Choose an image";
+    white-space: nowrap;
+    /*font-size: .5em;*/
+    font-size: 5vw;
+  }
+  .post-form-wrapper > h1 {
+    font-size: 7vw;
+  }
+
   .collapse-mobile {
     display: none;
   }
@@ -113,7 +128,7 @@ and (orientation : portrait) {
     position: relative;
   }
 
-  .add-photo.group.collapse-mobile:not(:empty) {
+  .add-photo.collapse-mobile:not(:empty) {
     /*margin-right: auto;
     left: 0;
     right: 0;*/
@@ -131,11 +146,6 @@ and (orientation : portrait) {
     margin: auto;
   }
 
-  label.icon-file-select-post::after {
-    content: "Choose an image";
-    white-space: nowrap;
-
-  }
 
   .icon-heart-red {
     background-position: -460px -15px;

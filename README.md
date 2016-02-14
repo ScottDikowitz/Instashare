@@ -12,7 +12,7 @@ on the backend, utilizing React/flux architecture on the frontend.
 Instashare mimics key Instagram functionality, namely the ability
 to share photos and create captions. Additionally, you can comment
 on and like posts, create tags, tag locations (using geolocation api),
- and subscribe to users to have their posts show up in your feed.
+ and subscribe to users to have their                                                posts show up in your feed.
 
 ### Bonus Features (TBD)
 - [ ] Load previous comments button
