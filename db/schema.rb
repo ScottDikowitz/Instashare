@@ -117,23 +117,4 @@ ActiveRecord::Schema.define(version: 20160208235319) do
   add_index "users", ["session_token"], name: "index_users_on_session_token", unique: true, using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
-  create_table "wines", force: :cascade do |t|
-    t.string   "name"
-    t.string   "url"
-    t.decimal  "min_price"
-    t.decimal  "max_price"
-    t.decimal  "retail_price"
-    t.string   "kind"
-    t.integer  "api_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  add_index "wines", ["api_id"], name: "index_wines_on_api_id", using: :btree
-  add_index "wines", ["kind"], name: "index_wines_on_kind", using: :btree
-  add_index "wines", ["max_price"], name: "index_wines_on_max_price", using: :btree
-  add_index "wines", ["min_price"], name: "index_wines_on_min_price", using: :btree
-  add_index "wines", ["name"], name: "index_wines_on_name", using: :btree
-  add_index "wines", ["retail_price"], name: "index_wines_on_retail_price", using: :btree
-
 end
