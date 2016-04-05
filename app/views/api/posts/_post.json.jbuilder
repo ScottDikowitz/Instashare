@@ -2,7 +2,7 @@ json.extract! post, :id, :caption
 
 # @user_liked_posts
 
-json.profile_picture asset_path(post.user.user_pic.url(:thumb))
+json.profile_picture asset_url(post.user.user_pic.url(:thumb))
 
 if @user_liked_posts.include?(post)
   json.liked "liked"
@@ -18,8 +18,7 @@ if post.location
   json.location post.location.place
   json.locationId post.location.id
 end
-
-json.image asset_path(post.image.url)
+json.image asset_url(post.image.url)
 # json.created_at do
 elapsed = ((Time.now - post.created_at.time) / 60).to_i
 if elapsed >= 60

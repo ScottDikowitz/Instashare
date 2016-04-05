@@ -10,6 +10,6 @@ if @posts
     json.numFollowing @user.followed_users.length
     json.numFollowers @user.followers
     json.follow_status follow_status
-    json.profile_picture asset_path(@user.user_pic.url(:thumb))
+    json.profile_picture asset_url(@user.user_pic.url(:thumb))
     json.posts @posts.reverse, partial: 'api/users/post', as: :post
 end

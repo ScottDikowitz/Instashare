@@ -1,1 +1,1 @@
-json.profile_picture asset_path(@user.user_pic.url(:thumb))
+json.profile_picture asset_url(@user.user_pic.url(:thumb))

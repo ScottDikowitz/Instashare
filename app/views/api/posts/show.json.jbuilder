@@ -1,5 +1,5 @@
 json.extract! @post, :id, :caption
-json.image asset_path(@post.image.url)
+json.image asset_url(@post.image.url)
 
 json.numLikes @post.likes.count
 
