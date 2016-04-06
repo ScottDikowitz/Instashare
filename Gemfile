@@ -34,6 +34,7 @@ gem 'flux-rails-assets', '~> 2.1.0'
 gem "paperclip", "~> 4.3"
 gem 'aws-sdk', '~> 1.6'
 gem 'figaro'
+gem 'paperclip-meta'
 
 gem 'pg_search'
 gem 'kaminari'

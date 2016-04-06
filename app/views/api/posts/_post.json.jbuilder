@@ -12,6 +12,12 @@ end
 
 json.numLikes post.likes.length
 json.userLikes post.user_likes.as_json(only: [:username, :id])
+
+dimensions = {
+    'width' => post.image.width,
+    'height' => post.image.height
+}
+json.dimensions dimensions
 # json.numLikes 0
 
 if post.location
