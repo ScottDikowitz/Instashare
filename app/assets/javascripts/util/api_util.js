@@ -151,7 +151,6 @@ $.ajax ({
       url: 'api/users/' + username,
       type: 'GET',
       dataType: 'json',
-      data: {username: username},
       success: function(data) {
         ApiActions.receiveUserPosts(data);
       }
