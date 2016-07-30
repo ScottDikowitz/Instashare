@@ -1,3 +1,4 @@
+ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 (function(root) {
   root.PostForm = React.createClass ({
 
@@ -55,9 +56,6 @@
 
       reader.onloadend = function() {
         that.setState({ imageUrl: reader.result, file: file });
-        // debugger;
-        file;
-        debugger;
       };
 
       if (file) {
@@ -92,7 +90,6 @@
 
       reader.onloadend = function() {
         that.setState({ imageUrl: reader.result, file: file });
-        // debugger;
       };
 
       if (file) {
@@ -113,7 +110,12 @@
       imgUrl = <img src={this.state.imageUrl} />;
     }
 
+    mScreen = <div onClick={this.props.close} className="screen"></div>;
+
     return <div className="modal">
+            <ReactCSSTransitionGroup transitionName="modal">
+              {mScreen}
+            </ReactCSSTransitionGroup>
             <div className="post-form-wrapper">
             <h1>Upload photo</h1>
             <ul className="post-form group">

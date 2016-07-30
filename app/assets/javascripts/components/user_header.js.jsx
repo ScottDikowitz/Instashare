@@ -27,7 +27,6 @@ var UserHeader = React.createClass ({
       ApiUtil.followUser(follow);
     }
     else if(this.state.buttonText === "unfollow") {
-      // debugger;
       ApiUtil.unfollowUser(follow);
     }
   },

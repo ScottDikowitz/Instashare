@@ -20,7 +20,6 @@ var PostShow = React.createClass ({
   },
 
   handleDelete: function(){
-    // debugger;
     var that = this;
     ApiUtil.deletePost(this.props.params.postId, function pushState(el){
       that.history.pushState(null, "/feed");
@@ -29,7 +28,6 @@ var PostShow = React.createClass ({
 
   render: function(){
 
-    // debugger;
     var userLink;
     var minutesAgo;
     var image;

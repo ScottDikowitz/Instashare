@@ -16,7 +16,6 @@ var CommentsBox = React.createClass ({
   },
 
   render: function(){
-    // debugger;
 
     var createComment;
 

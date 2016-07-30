@@ -6,3 +6,4 @@
 /config/application.yml
 /config/database.yml
 database.yml
+log/development.log

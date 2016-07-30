@@ -1,7 +1,6 @@
 var UserShow = React.createClass ({
   componentDidMount: function(){
     UserStore.addChangeListener(this._changed);
-    // debugger;
 
     ApiUtil.fetchUser(this.props.params.username);
   },

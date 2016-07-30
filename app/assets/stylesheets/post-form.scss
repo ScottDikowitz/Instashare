@@ -62,8 +62,8 @@
   padding-top: 10px;
   border-radius: 15px;
   background: #FAFAFA;
-  width: 100%;
-  height: 100%;
+  width: 600px;
+  z-index: 16;
 }
 
 .post-form-wrapper > h1 {
@@ -105,15 +105,37 @@
 }
 
 .modal {
-  position: fixed;
-  left: 50%;
+  // position: fixed;
+  // left: 50%;
   z-index: 16;
-  width: 600px;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
+  // width: 600px;
+  // -webkit-transform: translateX(-50%);
+  // -moz-transform: translateX(-50%);
+  // -ms-transform: translateX(-50%);
+  // -o-transform: translateX(-50%);
+  // transform: translateX(-50%);
+
+
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  -webkit-transform: inherit;
+  -ms-transform: inherit;
+  transform: inherit;
 }
 
 .post-form form {

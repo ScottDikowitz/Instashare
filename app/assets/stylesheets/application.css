@@ -53,7 +53,7 @@ and (orientation : portrait) {
   }
 
   .post-form {
-    height: 500px;
+
   }
 
   input.caption.tagg {
@@ -67,7 +67,7 @@ and (orientation : portrait) {
   }
 
   .caption:placeholder-shown {
-    font-size: 5vw;
+
   }
 
   .create-p {
@@ -114,6 +114,11 @@ and (orientation : portrait) {
   }
   .post-form-wrapper > h1 {
     font-size: 7vw;
+  }
+
+  .post-form-wrapper {
+      width: 80%;
+      min-height: 45%;
   }
 
   .collapse-mobile {
@@ -279,8 +284,29 @@ and (orientation : portrait) {
    }
 
    .modal {
-     width: 100%;
+       position: fixed;
+       display: -webkit-box;
+       display: -webkit-flex;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-align: center;
+       -webkit-align-items: center;
+       -ms-flex-align: center;
+       align-items: center;
+       -webkit-box-pack: center;
+       -webkit-justify-content: center;
+       -ms-flex-pack: center;
+       justify-content: center;
+       top: 0px;
+       left: 0px;
+       bottom: 0px;
+       width: 100%;
+       -webkit-transform: inherit;
+       -ms-transform: inherit;
+       transform: inherit;
    }
+
+
 
    span.logo.centering {
      font-size: 100px;

@@ -2,7 +2,6 @@ var TagShow = React.createClass ({
 
   componentDidMount: function(){
     TagStore.addChangeListener(this._changed);
-    // debugger;
 
     ApiUtil.fetchTag(this.props.params.tagName);
   },

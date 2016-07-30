@@ -28,7 +28,6 @@ var Users = React.createClass ({
   },
 
   handleNext: function(){
-    // debugger;
       ApiUtil.fetchUsersPage(this.state.page + 1);
       this.setState({page: this.state.page + 1});
 

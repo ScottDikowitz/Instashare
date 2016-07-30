@@ -10,7 +10,6 @@
       if (typeof e !== "undefined"){
         e.preventDefault();
       }
-      // debugger;
       var form = React.findDOMNode(this.refs.sform);
       var valid = function () {
         this.history.pushState(null, "/feed");

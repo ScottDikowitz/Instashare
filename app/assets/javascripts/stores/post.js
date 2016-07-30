@@ -24,7 +24,6 @@
   };
 
   PostStore.insertComment = function(comment){
-    // debugger;
     for (var i = 0; i < _posts.length; i++){
       if (_posts[i].id == comment.post_id){
         _posts[i].comments = comment.comments;
