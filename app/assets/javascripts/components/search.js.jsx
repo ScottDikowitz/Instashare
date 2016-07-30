@@ -49,11 +49,14 @@
       });
 
       return (
-          <div className="search-bar"><div className="icon-search"></div>
-            <input ref="search" type="text"
-              onChange={ this._onInput }
-              placeholder="search..."
-            />
+          <div className="search-bar">
+            <div className="search-wrapper">
+                <div className="icon-search"/>
+                <input ref="search" type="text"
+                  onChange={ this._onInput }
+                  placeholder="search..."
+                />
+            </div>
             <ul className="search-results">
               { results }
             </ul>

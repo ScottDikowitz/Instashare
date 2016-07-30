@@ -47,7 +47,7 @@ var Header = React.createClass ({
     return <div className={hide}>
             <div className="header group">
               <div className="header-nav group">
-                <ul className="group nav-ul">
+                <ul className="nav-ul">
                   <li className="block">
                     {logo}
                   </li>

@@ -2,7 +2,10 @@
 .create-comment {
   margin-left: 10px;
   margin-right: 20px;
-  display: block;
+  display: flex;
+  display: -webkit-flex;
+  flex: 1;
+  -webkit-flex: 1;
   height: 30px;
   border-top: 1px solid #edeeee;
   padding-top: 10px;
@@ -34,8 +37,10 @@
 }
 
 .create-comment form {
-  float: left;
-  // height: 50px;
+    display: flex;
+    display: -webkit-flex;
+    flex: 1;
+    -webkit-flex: 1;
 }
 
 
@@ -48,14 +53,14 @@
 }
 .create-comment-text {
   border: 0px;
-  float: left;
-  width: 470px;
   font-size: 16px;
   outline: none;
-  display: block;
+  display: flex;
+  display: -webkit-flex;
+  flex: 1;
+  -webkit-flex: 1;
   margin-left: 11px;
   position: relative;
-  top: 4px;
   height: 100%;
 }
 
@@ -82,8 +87,9 @@
   background: transparent;
   border: none;
   outline: none;
-  display: inline-block;
-  float: left;
+  display: flex;
+  display: -webkit-flex;
+  flex-shrink: 0;
   margin-right: 0px;
   width: 25px;
   height: 25px;

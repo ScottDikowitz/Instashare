@@ -2,7 +2,7 @@
   border-bottom: 1px solid #edeeee;
   margin-bottom: 0px;
   height: 60px;
-  padding-top: 10px;
+  padding-top: 15px;
   // padding: 20px;
   background: white;
   font-weight: 600;
@@ -10,21 +10,16 @@
 
 .search-bar {
   // float: left;
-  position: absolute;
+  position: relative;
   // margin-left: 50px;
+  display: flex;
+  display: -webkit-flex;
+  flex: 1;
+  -webkit-flex: 1;
+  justify-content: center;
+  -webkit-justify-content: center;
   width: 220px;
-
-
-
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-
-  display: inline-block;
   color: #125688;
-  // bottom: 15px;
-  bottom: 0px;
 }
 
 .user-options.disp {
@@ -50,7 +45,7 @@
   position: absolute;
   // margin-top: 15px;
   // bottom: -15px;
-  top: 35px;
+  top: 100%;
   right: 5px;
   border-radius: 15px;
 }
@@ -74,24 +69,23 @@
     background-position: -516px -360px;
     height: 10px;
     width: 10px;
-    position: absolute;
-    bottom: 12px;
-    left: 7px;
+    align-self: center;
+    -webkit-align-self: center;
 
 }
 
 .search-bar input {
-  border: 1px solid #edeeee;
-  border-radius: 15px;
+  border: none;
+  background: inherit;
+  border-radius: inherit;
   width: 190px;
   font-size: 16px;
   padding: 7px;
-    padding-left: 20px;
   outline: none;
-  background: #FAFAFA;
+  position: relative;
 }
 
-.search-bar input:hover {
+.search-wrapper:hover {
   background: #eee;
 }
 
@@ -106,6 +100,8 @@
   border-radius: 5px;
   position: absolute;
   width: 100%;
+  top: 100%;
+  left: 0px;
   background: #fff;
   max-height: 250px;
   // overflow-y: scroll;
@@ -175,14 +171,31 @@
   display: block;
 }
 
-.nav-ul > li {
-  float: left;
+.nav-ul {
+  display: flex;
+  display: -webkit-flex;
+  flex: 1;
+  -webkit-flex: 1;
+  align-items: stretch;
+  -webkit-align-items: stretch;
+}
+
+.search-wrapper {
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    border: 1px solid #edeeee;
+    background: #FAFAFA;
 }
 
 .nav-links {
-  float: right;
   position: relative;
-  bottom: -19px;
+  display: flex;
+  display: -webkit-flex;
+  align-self: stretch;
+  -webkit-align-self: stretch;
+  align-items: center;
+  -webkit-align-items: center;
 }
 
 .nav-links > li > a:hover {
