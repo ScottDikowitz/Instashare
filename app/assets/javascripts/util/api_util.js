@@ -17,7 +17,8 @@ var ApiUtil = window.ApiUtil = {
       type: 'GET',
       dataType: 'json',
       success: function(data) {
-        // ApiActions.receiveAll(data);
+          console.log(data);
+        ApiActions.receiveNotifications(data);
       }
     });
 

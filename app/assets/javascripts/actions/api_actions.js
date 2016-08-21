@@ -113,6 +113,13 @@ var ApiActions = window.ApiActions = {
     });
   },
 
+  receiveNotifications: function(notifications){
+    AppDispatcher.dispatch({
+      actionType: "NOTIFICATIONS_RECEIVED",
+      notifications: notifications
+    });
+  },
+
   receiveUser: function(user){
     AppDispatcher.dispatch({
       actionType: UserConstants.USER_RECEIVED,

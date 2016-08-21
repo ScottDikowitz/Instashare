@@ -1,10 +1,12 @@
 (function (root) {
-  var _notificatons = [];
+  var _notifications = {};
   var CHANGE_EVENT = "change";
 
   root.NotificationStore = $.extend({}, EventEmitter.prototype, {
 
-
+    getNotifications: function () {
+        return _notifications;
+    },
 
     addChangeHandler: function (callback) {
       this.on(CHANGE_EVENT, callback);

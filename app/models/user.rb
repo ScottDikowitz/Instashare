@@ -37,6 +37,12 @@ class User < ActiveRecord::Base
     source: :posts
   )
 
+  has_many(
+    :foreign_likes,
+    through: :posts,
+    source: :likes
+  )
+
   has_many :likes, dependent: :destroy
 
   def followers
