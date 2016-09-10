@@ -1,3 +1,6 @@
+const React = require('react');
+const ReactDOM = require('react-dom');
+
 (function() {
   $(document).ready(function(){
     var root = document.getElementById('content');

@@ -1,5 +1,6 @@
 module.exports = {
-  entry: 'frontend/index.jsx',
+  context: __dirname,
+  entry: './frontend/instashare.js.jsx',
   output: {
     path: 'app/assets/javascripts',
     filename: "bundle.js",
