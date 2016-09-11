@@ -1,7 +1,8 @@
+import React from 'react';
+
 var Likers = React.createClass ({
   getInitialState: function(){
     return ({users: []});
-
   },
 
   render: function(){
@@ -9,10 +10,9 @@ var Likers = React.createClass ({
     return<div className="like-bar">
             {this.props.numLikes + like} {this.props.userLikes.map(function(user){
               return <a key={user.id} href={"/#users/" + user.username}>{user.username}&nbsp; </a>;
-
             })}
           </div>;
   }
-
-
 });
+
+export default Likers;

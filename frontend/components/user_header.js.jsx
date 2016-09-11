@@ -1,3 +1,8 @@
+import React from 'react';
+import ApiUtil from './../util/api_util';
+import CurrentUserStore from './../stores/current_user';
+import FollowStore from './../stores/follow';
+
 var UserHeader = React.createClass ({
   getInitialState: function(){
     return {buttonText: this.props.curUser.follow_status, updateBio: false, input: false, body: this.props.curUser.body };
@@ -108,10 +113,11 @@ var UserHeader = React.createClass ({
                   {editBio}
                   {button}
                   {stats}
-
                 </ul>
               </div>
            </div>;
   }
 
 });
+
+export default UserHeader;

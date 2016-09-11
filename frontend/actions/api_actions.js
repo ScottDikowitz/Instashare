@@ -1,82 +1,85 @@
-var ApiActions = window.ApiActions = {
+import dispatcher from './../dispatcher/dispatcher';
+import PostConstants from './../constants/post_constants';
+
+var ApiActions = {
 
   receiveAll: function(posts){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: PostConstants.POSTS_RECEIVED,
       posts: posts
     });
   },
 
   insertPost: function(post){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: "INSERT_POST_RECEIVED",
       post: post
     });
   },
 
   deletePost: function(postId){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: "DELETE_POST",
       postId: postId
     });
   },
 
   closeModal: function(){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: "CLOSE_MODAL"
     });
   },
 
   openModal: function(){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: "OPEN_MODAL"
     });
   },
 
   receiveMorePosts: function(posts){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: PostConstants.MORE_POSTS_RECEIVED,
       posts: posts
     });
   },
 
   addLike: function(like){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: "LIKE_RECEIVED",
       like: like
     });
   },
 
   addLikeShow: function(like){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: "LIKE_SHOW_RECEIVED",
       like: like
     });
   },
 
   addUnlikeShow: function(unlike){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: "UNLIKE_SHOW_RECEIVED",
       unlike: unlike
     });
   },
 
   removeLike: function(unlike){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: "UNLIKE_RECEIVED",
       unlike: unlike
     });
   },
 
   receivePost: function(post){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: PostConstants.POST_RECEIVED,
       post: post
     });
   },
 
   receiveLocation: function(location){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: LocationConstants.LOCATION_RECEIVED,
       location: location
     });
@@ -84,7 +87,7 @@ var ApiActions = window.ApiActions = {
   },
 
   receiveLocations: function(locations){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: LocationConstants.LOCATIONS_RECEIVED,
       locations: locations
 
@@ -93,49 +96,49 @@ var ApiActions = window.ApiActions = {
   },
 
   updateCommentsPostsIndex: function(comment){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: "COMMENTS_RECEIVED",
       comment: comment
     });
   },
 
   updateCommentsPost: function(comment){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: "COMMENTS_SHOW_RECEIVED",
       comment: comment
     });
   },
 
   receiveSingleUser: function(user){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: UserConstants.USER_RECEIVED,
       user: user
     });
   },
 
   receiveNotifications: function(notifications){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: "NOTIFICATIONS_RECEIVED",
       notifications: notifications
     });
   },
 
   receiveUser: function(user){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: UserConstants.USER_RECEIVED,
       user: user
     });
   },
 
   insertProfilePic: function(profile_pic){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: "RECEIVE_PROFILE_PIC",
       profile_pic: profile_pic
     });
   },
 
   updateBio: function(bio){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: "RECEIVE_BIO",
       bio: bio
     });
@@ -143,31 +146,32 @@ var ApiActions = window.ApiActions = {
   },
 
   receiveUsers: function(users){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: UserConstants.USERS_RECEIVED,
       users: users
     });
   },
 
   receiveUserPosts: function(user){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: UserConstants.USER_POSTS_RECEIVED,
       user: user
     });
   },
 
   receiveTagPosts: function(tag){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: TagConstants.TAG_POSTS_RECEIVED,
       tag: tag
     });
   },
 
   receiveFollow: function(follow){
-    AppDispatcher.dispatch({
+    dispatcher.dispatch({
       actionType: UserConstants.RECEIVE_FOLLOW,
       follow: follow.follow
     });
   }
-
 };
+
+export default ApiActions;

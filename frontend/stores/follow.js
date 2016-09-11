@@ -1,8 +1,9 @@
-(function(){
-
+  import {EventEmitter} from 'events';
+  import UserConstants from './../constants/user_constants';
+  import dispatcher from './../dispatcher/dispatcher';
   var _follow = "";
   var CHANGE_EVENT = 'CHANGE';
-  var FollowStore = window.FollowStore = $.extend( {},  EventEmitter.prototype);
+  var FollowStore = $.extend( {},  EventEmitter.prototype);
   FollowStore.getFollow = function(){
     return _follow;
   };
@@ -19,11 +20,11 @@
       _follow = follow;
   };
 
-  FollowStore.dispatcherID = AppDispatcher.register(function(payload){
+  FollowStore.dispatcherID = dispatcher.register(function(payload){
       if(payload.actionType === UserConstants.RECEIVE_FOLLOW){
         FollowStore.resetFollow(payload.follow);
         FollowStore.emit(CHANGE_EVENT);
       }
     });
 
-})();
+export default FollowStore;

@@ -1,3 +1,8 @@
+import React from 'react';
+import CreateComment from './create_comment.js';
+import CurrentUserStore from './../stores/current_user';
+import Likers from './likers.js';
+
 var CommentsBox = React.createClass ({
 
   _changed: function(data){
@@ -24,7 +29,7 @@ var CommentsBox = React.createClass ({
     var comments;
     var usernameLink = <a href={"#/users/" + this.props.username}>{this.props.username} </a>;
 
-    var caption = <span class="user-caption">{this.props.caption.split(" ").map(function(word, index){
+    var caption = <span className="user-caption">{this.props.caption.split(" ").map(function(word, index){
         if (word[0] === "#"){
           return <a key={index} href={"#/tags/" + word.slice(1)}>{word} </a>;
           }
@@ -58,7 +63,7 @@ var CommentsBox = React.createClass ({
             </ul>
               {createComment}
             </div>;
-
   }
-
 });
+
+export default CommentsBox;

@@ -1,6 +1,7 @@
   import {EventEmitter} from 'events';
   import CurrentUserConstants from './../constants/current_user_constants';
   import dispatcher from './../dispatcher/dispatcher';
+
   var CHANGE_EVENT = "change";
   var _currentUser = {};
 

@@ -1,10 +1,11 @@
-(function (root) {
+  import {EventEmitter} from 'events';
+  import dispatcher from './../dispatcher/dispatcher';
+  import SearchResultConstants from './../constants/search_results_constants';
+
   var _search_results = {results: []};
   var CHANGE_EVENT = "change";
 
-  root.SearchResultsStore = $.extend({}, EventEmitter.prototype, {
-
-
+  var SearchResultsStore = $.extend({}, EventEmitter.prototype, {
 
     addChangeHandler: function (callback) {
       this.on(CHANGE_EVENT, callback);
@@ -22,9 +23,8 @@
       return _search_results.total_count || 0;
     },
 
-    dispatcherId: AppDispatcher.register(function (payload) {
+    dispatcherId: dispatcher.register(function (payload) {
       switch (payload.actionType) {
-
         case SearchResultConstants.RECEIVE_RESULTS:
           _search_results = payload.results;
           SearchResultsStore.emit(CHANGE_EVENT);
@@ -34,4 +34,5 @@
     }),
 
   });
-})(this);
+
+export default SearchResultsStore;

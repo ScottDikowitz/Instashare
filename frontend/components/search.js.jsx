@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactRouter from 'react-router';
-
+import SearchResultsStore from './../stores/search_results';
 var Search = React.createClass({
 
     // mixins: [ReactRouter.History],

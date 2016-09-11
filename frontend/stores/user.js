@@ -1,8 +1,9 @@
-(function(){
-
+  import {EventEmitter} from 'events';
+  import UserConstants from './../constants/user_constants';
+  import dispatcher from './../dispatcher/dispatcher';
   var _user = {};
   var CHANGE_EVENT = 'CHANGE';
-  var UserStore = window.UserStore = $.extend( {},  EventEmitter.prototype);
+  var UserStore = $.extend( {},  EventEmitter.prototype);
   UserStore.all = function(){
     return _user;
   };
@@ -27,12 +28,13 @@
     _user.body = bio;
   };
 
-  UserStore.dispatcherID = AppDispatcher.register(function(payload){
+  UserStore.dispatcherID = dispatcher.register(function(payload){
       if(payload.actionType === UserConstants.USER_RECEIVED){
         UserStore.resetUser(payload.user);
         UserStore.emit(CHANGE_EVENT);
       }
       else if(payload.actionType === UserConstants.USER_POSTS_RECEIVED){
+          debugger;
         UserStore.resetUser(payload.user);
         UserStore.emit(CHANGE_EVENT);
       }
@@ -47,4 +49,4 @@
 
     });
 
-})();
+export default UserStore;

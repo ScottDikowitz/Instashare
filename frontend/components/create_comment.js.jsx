@@ -1,3 +1,5 @@
+import React from 'react';
+
 var CreateComment = React.createClass ({
 
   handleSubmit: function(e){
@@ -37,3 +39,5 @@ var CreateComment = React.createClass ({
           </div>;
   }
 });
+
+export default CreateComment;

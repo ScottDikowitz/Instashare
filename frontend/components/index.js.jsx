@@ -1,4 +1,11 @@
 import React from 'react';
+import ApiActions from './../actions/api_actions';
+import ApiUtil from './../util/api_util';
+import SessionsApiUtil from '../util/sessions_api_util';
+import PostStore from './../stores/post';
+import PostForm from './post_form.js';
+import Post from './post.js';
+import AnimationStore from './../stores/animation';
 
 var Index = React.createClass ({
   getInitialState: function(){
@@ -32,7 +39,7 @@ var Index = React.createClass ({
   },
 
   handleClick: function(){
-    pageNumber = this.state.page + 1;
+    var pageNumber = this.state.page + 1;
     ApiUtil.loadMorePosts(pageNumber);
     this.setState({page: this.state.page + 1});
   },
@@ -71,19 +78,16 @@ var Index = React.createClass ({
   //   mScreen = <div onClick={this.handleModal} className="screen"></div>;
   }
     return <div className="posts-content-area">
-
             <div className="icon-new-post" onClick={this.handleModal} href="#feed"></div>
           {postForm}
-
             {loading}
             {this.state.posts.map(function(post){
-
               return <Post key={post.id} post={post}/>;
-
             })}
             {loadMore}
             {status}
           </div>;
   }
-
 });
+
+export default Index;

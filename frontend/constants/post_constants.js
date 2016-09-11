@@ -1,6 +1,8 @@
-var PostConstants = window.PostConstants = {
+var PostConstants = {
   POSTS_RECEIVED: "POSTS_RECEIVED",
   APPEND_POSTS: "APPEND_POSTS",
   POST_RECEIVED: "POST_RECEIVED",
   MORE_POSTS_RECEIVED: "MORE_POSTS_RECEIVED"
 };
+
+export default PostConstants;

@@ -1,9 +1,10 @@
-(function(){
-
+  import {EventEmitter} from 'events';
+  import LocationConstants from './../constants/location_constants';
+  import dispatcher from './../dispatcher/dispatcher';
   var _location = {};
   var _locations = [];
   var CHANGE_EVENT = 'CHANGE';
-  var LocationStore = window.LocationStore = $.extend( {},  EventEmitter.prototype);
+  var LocationStore = $.extend( {},  EventEmitter.prototype);
   LocationStore.getLocation = function(){
     return _location;
   };
@@ -28,7 +29,7 @@
     _locations = locations;
   };
 
-  LocationStore.dispatcherID = AppDispatcher.register(function(payload){
+  LocationStore.dispatcherID = dispatcher.register(function(payload){
       if(payload.actionType === LocationConstants.LOCATION_RECEIVED){
         LocationStore.resetLocation(payload.location);
         LocationStore.emit(CHANGE_EVENT);
@@ -40,4 +41,4 @@
       }
     });
 
-})();
+export default LocationStore;

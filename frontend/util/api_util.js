@@ -1,4 +1,6 @@
-var ApiUtil = window.ApiUtil = {
+import ApiActions from './../actions/api_actions';
+
+var ApiUtil = {
 
   fetchPosts: function(){
     $.ajax ({
@@ -339,3 +341,5 @@ unfollowUser: function(follow){
   }
 
 };
+
+export default ApiUtil;

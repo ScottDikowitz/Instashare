@@ -1,7 +1,7 @@
 import CurrentUserStore from './../stores/current_user';
 import Header from './header.js';
 import React from 'react';
-import ReactRouter from 'react-router';
+const ReactRouter = require('react-router');
 import SessionsApiUtil from '../util/sessions_api_util';
 
 var App = React.createClass({
@@ -10,13 +10,13 @@ var App = React.createClass({
    return { currentUser: null };
   },
 
-  // mixins: [ReactRouter.History],
+  mixins: [ReactRouter.History],
 
   componentDidMount: function () {
     CurrentUserStore.addChangeHandler(this._ensureLoggedIn);
     SessionsApiUtil.fetchCurrentUser();
     if (this.props.location.pathname === "/"){
-    //   this.history.pushState(null, "/feed");
+      this.history.pushState(null, "/feed");
     }
   },
 
@@ -27,7 +27,7 @@ var App = React.createClass({
   _ensureLoggedIn: function () {
 
     if (!CurrentUserStore.isLoggedIn()) {
-    //   this.history.pushState(null, "/signin");
+      this.history.pushState(null, "/signin");
     }
 
     this.setState({currentUser: CurrentUserStore.currentUser()});

@@ -1,3 +1,9 @@
+import React from 'react';
+const ReactRouter = require('react-router');
+import ApiActions from './../actions/api_actions';
+import CurrentUserStore from './../stores/current_user';
+import CommentsBox from './comments_box.js';
+
 var Post = React.createClass ({
 handleDelete: function(){
   ApiUtil.deletePost(this.props.post.id, ApiActions.deletePost);
@@ -35,12 +41,11 @@ handleDelete: function(){
                 <section className="post-image-container">
                   <img src={this.props.post.image}/></section>
                 <section className="comments">
-
-
                 <CommentsBox commDel={ApiActions.updateCommentsPostsIndex} userLikes={this.props.post.userLikes} numLikes={this.props.post.numLikes} likeCallbacks={[ApiActions.removeLike, ApiActions.addLike]} liked={this.props.post.liked} caption={this.props.post.caption} username={this.props.post.user.username} postId={this.props.post.id} comments={this.props.post.comments} callback={ApiActions.updateCommentsPostsIndex}/>
                 </section>
 
           </div>;
   }
-
 });
+
+export default Post;

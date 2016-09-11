@@ -1,6 +1,6 @@
+import React from 'react';
+
 var PostGrid = React.createClass ({
-
-
   render: function(){
 
     return <div className="post-grid group">
@@ -10,8 +10,7 @@ var PostGrid = React.createClass ({
 
           })}
           </div>;
-
   }
-
-
 });
+
+export default PostGrid;

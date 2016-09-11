@@ -1,7 +1,9 @@
-(function (root) {
+  import {EventEmitter} from 'events';
+  import dispatcher from './../dispatcher/dispatcher';
+
   var CHANGE_EVENT = "change";
   var modal = false;
-  root.AnimationStore = $.extend({}, EventEmitter.prototype, {
+  var AnimationStore = $.extend({}, EventEmitter.prototype, {
 
     modalShow: function(){
       return modal;
@@ -23,7 +25,7 @@
       modal = true;
     },
 
-    dispatcherId: AppDispatcher.register(function (payload) {
+    dispatcherId: dispatcher.register(function (payload) {
       switch (payload.actionType) {
 
         case "CLOSE_MODAL":
@@ -39,4 +41,5 @@
     }),
 
   });
-})(this);
+
+export default AnimationStore;

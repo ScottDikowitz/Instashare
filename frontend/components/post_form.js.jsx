@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
+import ApiActions from './../actions/api_actions';
+
+import LocationStore from './../stores/location';
+
 var PostForm =  React.createClass ({
 
   getInitialState: function() {
@@ -111,7 +115,7 @@ var PostForm =  React.createClass ({
       imgUrl = <img src={this.state.imageUrl} />;
     }
 
-    mScreen = <div onClick={this.props.close} className="screen"></div>;
+    var mScreen = <div onClick={this.props.close} className="screen"></div>;
 
     return <div className="modal">
             <ReactCSSTransitionGroup transitionName="modal">

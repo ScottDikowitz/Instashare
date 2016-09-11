@@ -1,5 +1,7 @@
 import React from 'react';
+
 import CurrentUserStore from './../stores/current_user';
+import Search from './search.js';
 
 var Header = React.createClass ({
 

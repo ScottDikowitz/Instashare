@@ -1,8 +1,9 @@
 import React from 'react';
-import ReactRouter from 'react-router';
+import SessionsApiUtil from './../util/sessions_api_util';
+const ReactRouter = require('react-router');
 
 var SessionForm = React.createClass({
-    // mixins: [ReactRouter.History],
+    mixins: [ReactRouter.History],
 
     getInitialState: function(){
       return ({status: ""});
@@ -12,7 +13,7 @@ var SessionForm = React.createClass({
       if (typeof e !== "undefined"){
         e.preventDefault();
       }
-      var form = React.findDOMNode(this.refs.sform);
+      var form = this.refs.sform;
       var valid = function () {
         this.history.pushState(null, "/feed");
       }.bind(this);
@@ -21,12 +22,12 @@ var SessionForm = React.createClass({
         that.setState({status: JSON.parse(error.responseText).errors});
       };
 
-      var credentials = $(form).serializeJSON();
+      var credentials = $(form).serialize();
       SessionsApiUtil.login(credentials, valid, invalid);
     },
 
     guestLogin: function(){
-      var uname = React.findDOMNode(this.refs.uname);
+      var uname = this.refs.uname;
       uname.value = "Guest";
       // var pwrd = React.findDOMNode(this.refs.pwrd);
       // pwrd.value = "";

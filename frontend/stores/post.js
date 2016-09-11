@@ -1,8 +1,9 @@
-(function(){
-
+  import {EventEmitter} from 'events';
+  import dispatcher from './../dispatcher/dispatcher';
+  import PostConstants from './../constants/post_constants';
   var _posts = [];
   var CHANGE_EVENT = 'CHANGE';
-  var PostStore = window.PostStore = $.extend( {},  EventEmitter.prototype);
+  var PostStore = $.extend( {},  EventEmitter.prototype);
   PostStore.all = function(){
     return _posts.slice(0);
   };
@@ -85,7 +86,7 @@
     }
   };
 
-  PostStore.dispatcherID = AppDispatcher.register(function(payload){
+  PostStore.dispatcherID = dispatcher.register(function(payload){
       if(payload.actionType === PostConstants.POSTS_RECEIVED){
         PostStore.resetPosts(payload.posts);
         PostStore.emit(CHANGE_EVENT);
@@ -132,4 +133,4 @@
       }
     });
 
-})();
+export default PostStore;
