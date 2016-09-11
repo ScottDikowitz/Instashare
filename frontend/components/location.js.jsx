@@ -4,6 +4,8 @@ import LocationStore from './../stores/location';
 import TagStore from './../stores/tag';
 import ApiUtil from './../util/api_util';
 import Map from './map.js';
+import PostGrid from './post_grid.js';
+import UserHeader from './user_header.js';
 
 var LocationShow = React.createClass ({
   componentDidMount: function(){

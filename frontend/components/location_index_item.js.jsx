@@ -1,5 +1,6 @@
-(function(root) {
-  root.LocationIndexItem = React.createClass({
+import React from 'react';
+
+var LocationIndexItem = React.createClass({
     render: function() {
       return (
         <li>
@@ -10,4 +11,5 @@
       );
     }
   });
-})(this);
+
+export default LocationIndexItem;

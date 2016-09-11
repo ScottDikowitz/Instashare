@@ -3,6 +3,8 @@ import ReactRouter from 'react-router';
 import SearchResultsStore from './../stores/search_results';
 import SearchResultActions from './../actions/search_result_actions';
 import SearchApiUtil from './../util/search_api_util';
+import LocationIndexItem from './location_index_item.js';
+import TagIndexItem from './tag_index_item.js';
 import UserIndexItem from './user_index_item.js';
 var Search = React.createClass({
 

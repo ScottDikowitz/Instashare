@@ -5,9 +5,6 @@ import PostGrid from './post_grid.js';
 import UserHeader from './user_header.js';
 
 var UserShow = React.createClass ({
-  getInitialState: function() {
-      return {posts: {posts: []}};
-  },
   componentDidMount: function(){
     UserStore.addChangeListener(this._changed);
 

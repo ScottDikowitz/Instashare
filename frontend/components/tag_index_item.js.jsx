@@ -1,5 +1,6 @@
-(function(root) {
-  root.TagIndexItem = React.createClass({
+import React from 'react';
+
+var TagIndexItem = React.createClass({
     render: function() {
       return (
         <li>
@@ -10,4 +11,5 @@
       );
     }
   });
-})(this);
+
+export default TagIndexItem;
