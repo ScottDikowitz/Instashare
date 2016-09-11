@@ -2,6 +2,7 @@ import React from 'react';
 import CreateComment from './create_comment.js';
 import CurrentUserStore from './../stores/current_user';
 import Likers from './likers.js';
+import ApiUtil from './../util/api_util';
 
 var CommentsBox = React.createClass ({
 

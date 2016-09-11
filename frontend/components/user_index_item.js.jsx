@@ -1,6 +1,7 @@
-(function(root) {
-  root.UserIndexItem = React.createClass({
+import React from 'react';
+const ReactRouter = require('react-router');
 
+var UserIndexItem = React.createClass({
     render: function() {
       return (
         <li>
@@ -11,4 +12,5 @@
       );
     }
   });
-})(this);
+
+export default UserIndexItem;

@@ -1,4 +1,5 @@
 import ApiActions from './../actions/api_actions';
+import CurrentUserActions from './../actions/current_user_actions';
 
 var ApiUtil = {
 

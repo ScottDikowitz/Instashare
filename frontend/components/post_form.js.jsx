@@ -2,6 +2,7 @@ import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import ApiActions from './../actions/api_actions';
+import ApiUtil from './../util/api_util';
 
 import LocationStore from './../stores/location';
 
@@ -72,7 +73,7 @@ var PostForm =  React.createClass ({
 
     handleClickLocation: function(e){
 
-      var location = React.findDOMNode(this.refs.locationBox);
+      var location = this.refs.locationBox;
       location.value = e.currentTarget.innerHTML;
       this.setState({locations: []});
 
@@ -91,7 +92,7 @@ var PostForm =  React.createClass ({
       var reader = new FileReader();
       var that = this;
       var file = e.dataTransfer.files[0];
-      var upl = React.findDOMNode(this.refs.photoUl);
+      var upl = this.refs.photoUl;
 
       reader.onloadend = function() {
         that.setState({ imageUrl: reader.result, file: file });

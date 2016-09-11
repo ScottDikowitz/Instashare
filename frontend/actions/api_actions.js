@@ -1,9 +1,10 @@
 import dispatcher from './../dispatcher/dispatcher';
+import LocationConstants from './../constants/location_constants';
 import PostConstants from './../constants/post_constants';
+import TagConstants from './../constants/tag_constants';
 import UserConstants from './../constants/user_constants';
 
 var ApiActions = {
-
   receiveAll: function(posts){
     dispatcher.dispatch({
       actionType: PostConstants.POSTS_RECEIVED,

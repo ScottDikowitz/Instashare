@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactRouter from 'react-router';
 import SearchResultsStore from './../stores/search_results';
+import SearchResultActions from './../actions/search_result_actions';
+import SearchApiUtil from './../util/search_api_util';
+import UserIndexItem from './user_index_item.js';
 var Search = React.createClass({
 
     // mixins: [ReactRouter.History],
@@ -32,7 +35,7 @@ var Search = React.createClass({
     },
 
     resetForm: function(){
-      var search = React.findDOMNode(this.refs.search);
+      var search = this.refs.search;
       search.value= "";
       SearchResultActions.receiveResults({results: []});
     },

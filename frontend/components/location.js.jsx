@@ -1,5 +1,10 @@
 import React from 'react';
 
+import LocationStore from './../stores/location';
+import TagStore from './../stores/tag';
+import ApiUtil from './../util/api_util';
+import Map from './map.js';
+
 var LocationShow = React.createClass ({
   componentDidMount: function(){
     LocationStore.addChangeListener(this._changed);
@@ -35,7 +40,9 @@ var LocationShow = React.createClass ({
         tagHeader = <UserHeader curUser={this.state.posts}/>;
         tagPosts = <PostGrid posts={this.state.posts.posts}/>;
       }
-      map = <div className="map-shield"><Map geometry={this.state.location.geometry} location={this.state.location.geometry.location}/></div>;
+      if (this.state.location){
+          map = <div className="map-shield"><Map geometry={this.state.location.geometry} location={this.state.location.geometry.location}/></div>;
+      }
     }
     return <div>
             {map}

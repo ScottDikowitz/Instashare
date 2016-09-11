@@ -1,3 +1,5 @@
+import React from 'react';
+
 var Map = React.createClass ({
   // mixins: [ReactRouter.History],
   getInitialState: function(){
@@ -21,7 +23,7 @@ var Map = React.createClass ({
   },
 
   componentDidMount: function(){
-    var map = React.findDOMNode(this.refs.map);
+    var map = this.refs.map;
       var mapOptions = {
         center: this.props.location,
         zoom: 11
@@ -47,3 +49,5 @@ var Map = React.createClass ({
     return <div className="map" ref="map"></div>;
   }
 });
+
+export default Map;

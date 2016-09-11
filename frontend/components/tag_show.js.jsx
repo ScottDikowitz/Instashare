@@ -1,5 +1,10 @@
 import React from 'react';
 
+import TagStore from './../stores/tag';
+import ApiUtil from './../util/api_util';
+import PostGrid from './post_grid.js';
+import UserHeader from './user_header.js';
+
 var TagShow = React.createClass ({
 
   componentDidMount: function(){
@@ -23,7 +28,7 @@ var TagShow = React.createClass ({
   render: function(){
     var tagPosts;
     var tagHeader;
-    if (this.state){
+    if (this.state && this.state.tags){
         tagHeader = <UserHeader curUser={this.state.tags}/>;
         tagPosts = <PostGrid posts={this.state.tags.posts}/>;
     }

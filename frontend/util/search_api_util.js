@@ -1,5 +1,6 @@
-var SearchApiUtil = {
+import SearchResultActions from './../actions/search_result_actions';
 
+var SearchApiUtil = {
   search: function (query) {
     $.ajax({
       url: '/api/search',
@@ -11,5 +12,6 @@ var SearchApiUtil = {
       }
     });
   },
-
 };
+
+export default SearchApiUtil;

@@ -1,8 +1,9 @@
-(function(){
-
+  import {EventEmitter} from 'events';
+  import TagConstants from './../constants/tag_constants';
+  import dispatcher from './../dispatcher/dispatcher';
   var _tag = {};
   var CHANGE_EVENT = 'CHANGE';
-  var TagStore = window.TagStore = $.extend( {},  EventEmitter.prototype);
+  var TagStore = $.extend( {},  EventEmitter.prototype);
   TagStore.all = function(){
     return _tag;
   };
@@ -19,7 +20,7 @@
       _tag = tag;
   };
 
-  TagStore.dispatcherID = AppDispatcher.register(function(payload){
+  TagStore.dispatcherID = dispatcher.register(function(payload){
       if(payload.actionType === TagConstants.TAG_RECEIVED){
         TagStore.resetTag(payload.tag);
         TagStore.emit(CHANGE_EVENT);
@@ -30,4 +31,4 @@
       }
     });
 
-})();
+export default TagStore;

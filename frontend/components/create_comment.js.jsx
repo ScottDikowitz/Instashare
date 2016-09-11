@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ApiUtil from './../util/api_util';
+
 var CreateComment = React.createClass ({
 
   handleSubmit: function(e){
