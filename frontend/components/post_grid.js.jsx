@@ -1,5 +1,7 @@
 import React from 'react';
 
+import PostGridSquare from './post_grid_square.js';
+
 var PostGrid = React.createClass ({
   render: function(){
 

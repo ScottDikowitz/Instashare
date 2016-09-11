@@ -1,5 +1,10 @@
 import React from 'react';
 import ReactRouter from 'react-router';
+import CurrentUserStore from './../stores/current_user';
+import PostStore from './../stores/post';
+import ApiUtil from './../util/api_util';
+import CommentsBox from './comments_box.js';
+import ApiActions from './../actions/api_actions';
 
 var PostShow = React.createClass ({
 
