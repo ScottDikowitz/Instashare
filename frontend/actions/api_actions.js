@@ -1,5 +1,6 @@
 import dispatcher from './../dispatcher/dispatcher';
 import PostConstants from './../constants/post_constants';
+import UserConstants from './../constants/user_constants';
 
 var ApiActions = {
 

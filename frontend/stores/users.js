@@ -1,8 +1,9 @@
-(function(){
-
+  import {EventEmitter} from 'events';
+  import dispatcher from './../dispatcher/dispatcher';
+  import UserConstants from './../constants/user_constants';
   var _users = [];
   var CHANGE_EVENT = 'CHANGE';
-  var UsersStore = window.UsersStore = $.extend( {},  EventEmitter.prototype);
+  var UsersStore = $.extend( {},  EventEmitter.prototype);
   UsersStore.all = function(){
     return _users.slice(0);
   };
@@ -19,11 +20,11 @@
       _users = users;
   };
 
-  UsersStore.dispatcherID = AppDispatcher.register(function(payload){
+  UsersStore.dispatcherID = dispatcher.register(function(payload){
       if(payload.actionType === UserConstants.USERS_RECEIVED){
         UsersStore.resetPosts(payload.users);
         UsersStore.emit(CHANGE_EVENT);
       }
-    });
+ });
 
-})();
+export default UsersStore;

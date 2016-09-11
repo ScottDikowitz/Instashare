@@ -2,6 +2,7 @@ import React from 'react';
 
 import CurrentUserStore from './../stores/current_user';
 import Search from './search.js';
+import SessionsApiUtil from './../util/sessions_api_util';
 
 var Header = React.createClass ({
 
