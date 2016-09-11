@@ -1,13 +1,15 @@
 import React from 'react';
 const ReactRouter = require('react-router');
 import ApiUtil from './../util/api_util';
+import $ from 'jquery';
+import 'jquery-serializejson';
 
 var SignUp = React.createClass({
     mixins: [ReactRouter.History],
 
     submit: function (e) {
       e.preventDefault();
-      var credentials = $(e.currentTarget).serialize();
+      var credentials = $(e.currentTarget).serializeJSON();
       ApiUtil.createUser(credentials, function () {
         this.history.pushState(null, "/feed");
       }.bind(this));
