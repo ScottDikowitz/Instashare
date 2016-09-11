@@ -1,6 +1,8 @@
-(function(root) {
-  root.SessionForm = React.createClass({
-    mixins: [ReactRouter.History],
+import React from 'react';
+import ReactRouter from 'react-router';
+
+var SessionForm = React.createClass({
+    // mixins: [ReactRouter.History],
 
     getInitialState: function(){
       return ({status: ""});
@@ -69,4 +71,5 @@
     },
 
   });
-})(this);
+
+export default SessionForm;

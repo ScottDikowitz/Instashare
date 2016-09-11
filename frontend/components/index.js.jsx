@@ -1,3 +1,5 @@
+import React from 'react';
+
 var Index = React.createClass ({
   getInitialState: function(){
     return {posts: [], page: 1, showModal: false, loading: true};

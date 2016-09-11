@@ -1,3 +1,6 @@
+import React from 'react';
+import CurrentUserStore from './../stores/current_user';
+
 var Header = React.createClass ({
 
   getInitialState: function () {
@@ -69,3 +72,5 @@ var Header = React.createClass ({
           </div>;
   }
 });
+
+export default Header;

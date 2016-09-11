@@ -1,6 +1,7 @@
-ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
-(function(root) {
-  root.PostForm = React.createClass ({
+import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+var PostForm =  React.createClass ({
 
   getInitialState: function() {
       return {  imageUrl: "", locations: [] };
@@ -146,4 +147,5 @@ ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
   }
 
 });
-})(this);
+
+export default PostForm;

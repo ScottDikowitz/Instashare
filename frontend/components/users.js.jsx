@@ -1,3 +1,5 @@
+import React from 'react';
+
 var Users = React.createClass ({
 
   getInitialState: function(){
@@ -67,3 +69,5 @@ var Users = React.createClass ({
     </div>;
   }
 });
+
+export default Users;

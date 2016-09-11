@@ -1,3 +1,5 @@
+import React from 'react';
+
 var UserShow = React.createClass ({
   componentDidMount: function(){
     UserStore.addChangeListener(this._changed);
@@ -33,5 +35,6 @@ var UserShow = React.createClass ({
             </div>
           </div>;
   }
-
 });
+
+export default UserShow;

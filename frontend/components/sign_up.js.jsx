@@ -1,6 +1,8 @@
-(function(root) {
-  root.SignUp = React.createClass({
-    mixins: [ReactRouter.History],
+import React from 'react';
+import ReactRouter from 'react-router';
+
+var SignUp = React.createClass({
+    // mixins: [ReactRouter.History],
 
     submit: function (e) {
       e.preventDefault();
@@ -42,4 +44,5 @@
     },
 
   });
-})(this);
+
+export default SignUp;

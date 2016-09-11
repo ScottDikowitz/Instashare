@@ -1,3 +1,5 @@
+import React from 'react';
+
 var Notifications = React.createClass({
   getInitialState: function(){
     return ({notifications: {comments: [], likes: [], newFollowers: []}});
@@ -35,5 +37,6 @@ var Notifications = React.createClass({
 
           </div>;
   }
-
 });
+
+export default Notifications;

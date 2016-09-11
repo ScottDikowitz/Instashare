@@ -1,17 +1,22 @@
-(function(root) {
-  root.App = React.createClass({
+import CurrentUserStore from './../stores/current_user';
+import Header from './header.js';
+import React from 'react';
+import ReactRouter from 'react-router';
+import SessionsApiUtil from '../util/sessions_api_util';
+
+var App = React.createClass({
 
   getInitialState: function () {
    return { currentUser: null };
   },
 
-  mixins: [ReactRouter.History],
+  // mixins: [ReactRouter.History],
 
   componentDidMount: function () {
     CurrentUserStore.addChangeHandler(this._ensureLoggedIn);
     SessionsApiUtil.fetchCurrentUser();
     if (this.props.location.pathname === "/"){
-      this.history.pushState(null, "/feed");
+    //   this.history.pushState(null, "/feed");
     }
   },
 
@@ -22,7 +27,7 @@
   _ensureLoggedIn: function () {
 
     if (!CurrentUserStore.isLoggedIn()) {
-      this.history.pushState(null, "/signin");
+    //   this.history.pushState(null, "/signin");
     }
 
     this.setState({currentUser: CurrentUserStore.currentUser()});
@@ -37,4 +42,5 @@
     );
   }
 });
-})(this);
+
+export default App;

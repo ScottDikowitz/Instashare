@@ -27,8 +27,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bcrypt'
 
-gem 'react-rails', '~> 1.3.0'
-
 gem 'flux-rails-assets', '~> 2.1.0'
 
 gem "paperclip", "~> 4.3"

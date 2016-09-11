@@ -1,9 +1,10 @@
-(function (root) {
+  import {EventEmitter} from 'events';
+  import CurrentUserConstants from './../constants/current_user_constants';
+  import dispatcher from './../dispatcher/dispatcher';
   var CHANGE_EVENT = "change";
-
   var _currentUser = {};
 
-  root.CurrentUserStore = $.extend({}, EventEmitter.prototype, {
+  var CurrentUserStore = $.extend({}, EventEmitter.prototype, {
 
     addChangeHandler: function (callback) {
       this.on(CHANGE_EVENT, callback);
@@ -21,7 +22,7 @@
       return (typeof _currentUser.id !== "undefined");
     },
 
-    dispatcherId: AppDispatcher.register(function (payload) {
+    dispatcherId: dispatcher.register(function (payload) {
       switch (payload.actionType) {
 
         case CurrentUserConstants.RECEIVE_CURRENT_USER:
@@ -32,4 +33,5 @@
       }
     }),
   });
-})(this);
+
+export default CurrentUserStore;

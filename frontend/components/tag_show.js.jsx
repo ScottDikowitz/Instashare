@@ -1,3 +1,5 @@
+import React from 'react';
+
 var TagShow = React.createClass ({
 
   componentDidMount: function(){
@@ -32,5 +34,6 @@ var TagShow = React.createClass ({
             </div>
           </div>;
   }
-
 });
+
+export default TagShow;

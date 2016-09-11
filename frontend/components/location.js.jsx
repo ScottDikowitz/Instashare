@@ -1,6 +1,6 @@
+import React from 'react';
+
 var LocationShow = React.createClass ({
-
-
   componentDidMount: function(){
     LocationStore.addChangeListener(this._changed);
     TagStore.addChangeListener(this._postsChanged);
@@ -44,3 +44,6 @@ var LocationShow = React.createClass ({
           </div>;
   }
 });
+
+
+export default LocationShow;

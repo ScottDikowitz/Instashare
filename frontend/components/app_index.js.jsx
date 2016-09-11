@@ -1,3 +1,6 @@
+import React from 'react';
+import Index from './Index.js';
+
 var AppIndex = React.createClass ({
 
   render: function(){
@@ -9,3 +12,5 @@ var AppIndex = React.createClass ({
           </div>;
   }
 });
+
+export default AppIndex;

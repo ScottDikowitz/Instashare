@@ -1,6 +1,9 @@
+import React from 'react';
+import ReactRouter from 'react-router';
+
 var PostShow = React.createClass ({
 
-  mixins: [ReactRouter.History],
+  // mixins: [ReactRouter.History],
 
   componentDidMount: function(){
     PostStore.addChangeListener(this._changed);
@@ -71,5 +74,6 @@ var PostShow = React.createClass ({
 
           </div>;
   }
-
 });
+
+export default PostShow;

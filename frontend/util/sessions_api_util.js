@@ -1,3 +1,5 @@
+import CurrentUserActions from './../actions/current_user_actions';
+
 var SessionsApiUtil = {
   login: function (credentials, success, fail) {
     $.ajax({
@@ -36,6 +38,6 @@ var SessionsApiUtil = {
       }
     });
   }
-
-
 };
+
+export default SessionsApiUtil;

@@ -1,7 +1,9 @@
-(function(root) {
-  root.Search = React.createClass({
+import React from 'react';
+import ReactRouter from 'react-router';
 
-    mixins: [ReactRouter.History],
+var Search = React.createClass({
+
+    // mixins: [ReactRouter.History],
 
     componentDidMount: function () {
       SearchResultsStore.addChangeHandler(this._onChange);
@@ -65,4 +67,5 @@
     },
 
   });
-})(this);
+
+export default Search;
