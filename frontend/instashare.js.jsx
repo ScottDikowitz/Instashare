@@ -1,5 +1,6 @@
 import App from './components/app.js';
 import AppIndex from './components/app_index.js';
+import './clicklistener';
 import LocationShow from './components/location.js';
 import Notifications from './components/notifications.js';
 import PostForm from './components/post_form.js';
