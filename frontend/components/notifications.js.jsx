@@ -1,5 +1,8 @@
 import React from 'react';
 
+import ApiUtil from './../util/api_util';
+import NotificationStore from './../stores/notification';
+
 var Notifications = React.createClass({
   getInitialState: function(){
     return ({notifications: {comments: [], likes: [], newFollowers: []}});

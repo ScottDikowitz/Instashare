@@ -1,8 +1,9 @@
-(function (root) {
+  import {EventEmitter} from 'events';
+  import dispatcher from './../dispatcher/dispatcher';
   var _notifications = {};
   var CHANGE_EVENT = "change";
 
-  root.NotificationStore = $.extend({}, EventEmitter.prototype, {
+  var NotificationStore = $.extend({}, EventEmitter.prototype, {
 
     getNotifications: function () {
         return _notifications;
@@ -16,16 +17,15 @@
       this.removeListener(CHANGE_EVENT, callback);
     },
 
-    dispatcherId: AppDispatcher.register(function (payload) {
+    dispatcherId: dispatcher.register(function (payload) {
       switch (payload.actionType) {
-
         case "NOTIFICATIONS_RECEIVED":
           _notifications = payload.notifications;
           NotificationStore.emit(CHANGE_EVENT);
           break;
-
       }
     }),
 
   });
-})(this);
+
+export default NotificationStore;
