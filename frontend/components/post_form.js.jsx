@@ -142,8 +142,6 @@ var PostForm =  React.createClass ({
                       })}</ul>
                 </div>
                 <input className="close-modal create-p" type="submit" value="Post"/>
-
-
               </form>
               <button className="close-modal" onClick={this.handleClose}>Close</button>
             </div>

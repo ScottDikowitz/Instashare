@@ -121,8 +121,6 @@ $.ajax ({
           return location.formatted_address;
         });
         ApiActions.receiveLocations(addresses.slice(0,4));
-        // ApiUtil.createLocation(location.results[0].address_components[0].long_name, post);
-
       }
     });
   },
@@ -305,7 +303,6 @@ unfollowUser: function(follow){
       dataType: 'json',
       data: {comment: comment},
       success: function(data) {
-        // ApiActions.updateCommentsPostsIndex(data);
         callback && callback(data);
       }
     });
@@ -338,9 +335,7 @@ unfollowUser: function(follow){
         ApiActions.receiveFollow(data);
       }
     });
-
   }
-
 };
 
 export default ApiUtil;

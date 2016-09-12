@@ -1,6 +1,7 @@
 import CurrentUserStore from './../stores/current_user';
 import Header from './header.js';
 import React from 'react';
+import Joyride from 'react-joyride';
 import SessionsApiUtil from '../util/sessions_api_util';
 
 var App = React.createClass({
@@ -37,6 +38,13 @@ var App = React.createClass({
     return (
         <div>
           <Header/>
+          <Joyride ref="joyride"
+                    callback={(e)=>{}}
+                    steps={this.state.steps}
+                    type="continuous"
+                    showStepsProgress={true}
+                    showSkipButton={true}
+                    showStepsProgress={true} />
           {this.props.children}
         </div>
     );

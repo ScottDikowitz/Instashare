@@ -1,7 +1,5 @@
 import React from 'react';
 import ApiUtil from './../util/api_util';
-import $ from 'jquery';
-import 'jquery-serializejson';
 
 var SignUp = React.createClass({
     contextTypes: {
