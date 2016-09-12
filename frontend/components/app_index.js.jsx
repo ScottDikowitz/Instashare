@@ -1,5 +1,5 @@
 import React from 'react';
-import Index from './Index.js';
+import Index from './index.js';
 
 var AppIndex = React.createClass ({
 
