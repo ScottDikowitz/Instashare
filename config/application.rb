@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module SampleProjectProposalMaster
   class Application < Rails::Application
+    config.react.addons = true 
     config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
