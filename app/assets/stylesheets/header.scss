@@ -45,7 +45,7 @@
   position: absolute;
   // margin-top: 15px;
   // bottom: -15px;
-  top: 100%;
+  top: calc(100% + 15px);
   right: 5px;
   border-radius: 15px;
 }
@@ -55,8 +55,6 @@
   height: 0;
   content: "";
   position: absolute;
-  // margin-left: 87px;
-  // top: 52px;
   right: 12px;
   top: -7px;
   border-left: 8px solid transparent;
@@ -100,7 +98,7 @@
   border-radius: 5px;
   position: absolute;
   width: 100%;
-  top: 100%;
+  top: calc(100% + 10px);
   left: 0px;
   background: #fff;
   max-height: 250px;

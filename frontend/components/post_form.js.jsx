@@ -133,11 +133,14 @@ var PostForm =  React.createClass ({
                 <form autoComplete="off" onSubmit={this.handleSubmit} action="#" method="POST">
                   <label className="icon-file-select-post"><input ref="photoUl" id="photo" className="file-select" type="file" onChange={this.changeFile} /></label>
                 <input className="caption tagg" placeholder="caption: create tags with #" type="text" name="caption"/>
-
+                <div style={{
+                        position:'relative'
+                    }}>
                 <input ref="locationBox" react onChange={this.handleLocations} className="caption" placeholder="enter a city, state or country" type="text" name="location"/>
-                <ul className="search-results">{this.state.locations.map(function(location, idx){
-                    return <li onClick={that.handleClickLocation} className="locations" key={idx}>{location}</li>;
-                  })}</ul>
+                    <ul className="search-results">{this.state.locations.map(function(location, idx){
+                        return <li onClick={that.handleClickLocation} className="locations" key={idx}>{location}</li>;
+                      })}</ul>
+                </div>
                 <input className="close-modal create-p" type="submit" value="Post"/>
 
 
