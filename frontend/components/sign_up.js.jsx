@@ -1,12 +1,11 @@
 import React from 'react';
-const ReactRouter = require('react-router');
 import ApiUtil from './../util/api_util';
 import $ from 'jquery';
 import 'jquery-serializejson';
 
 var SignUp = React.createClass({
     contextTypes: {
-            router: React.PropTypes.object.isRequired
+        router: React.PropTypes.object.isRequired
     },
 
     submit: function (e) {
