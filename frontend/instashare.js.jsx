@@ -1,18 +1,19 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Route, Router, hashHistory, IndexRoute} from 'react-router';
+
 import App from './components/app.js';
 import AppIndex from './components/app_index.js';
 import LocationShow from './components/location.js';
 import Notifications from './components/Notifications.js';
 import PostForm from './components/post_form.js';
-import React from 'react';
-import ReactDOM from 'react-dom';
+import PostShow from './components/post_show.js';
 import Search from './components/search.js';
 import SessionForm from './components/new_session.js';
 import SignUp from './components/sign_up.js';
-import PostShow from './components/post_show.js';
 import UserShow from './components/user.js';
 import TagShow from './components/tag_show.js';
 import Users from './components/users.js';
-import {Route, Router, hashHistory, IndexRoute} from 'react-router';
 
 (function() {
   $(document).ready(function(){
