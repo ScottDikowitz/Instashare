@@ -47,7 +47,6 @@ var PostForm =  React.createClass ({
     }
 
     ApiUtil.createPost(formData);
-    // this.props.history.pushState(null, "/feed");
     this.props.close();
   },
 

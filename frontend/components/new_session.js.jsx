@@ -1,12 +1,13 @@
 import React from 'react';
 import SessionsApiUtil from './../util/sessions_api_util';
-const ReactRouter = require('react-router');
 
 var SessionForm = React.createClass({
-    mixins: [ReactRouter.History],
+    contextTypes: {
+            router: React.PropTypes.object.isRequired
+    },
 
     getInitialState: function(){
-      return ({status: ""});
+      return {status: ""};
     },
 
     submit: function (e) {
@@ -15,7 +16,7 @@ var SessionForm = React.createClass({
       }
       var form = this.refs.sform;
       var valid = function () {
-        this.history.pushState(null, "/feed");
+        this.context.router.push("/feed");
       }.bind(this);
       var that = this;
       var invalid = function(error){

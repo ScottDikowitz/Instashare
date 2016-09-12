@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactRouter from 'react-router';
 import CurrentUserStore from './../stores/current_user';
 import PostStore from './../stores/post';
 import ApiUtil from './../util/api_util';
@@ -7,8 +6,9 @@ import CommentsBox from './comments_box.js';
 import ApiActions from './../actions/api_actions';
 
 var PostShow = React.createClass ({
-
-  // mixins: [ReactRouter.History],
+    contextTypes: {
+            router: React.PropTypes.object.isRequired
+    },
 
   componentDidMount: function(){
     PostStore.addChangeListener(this._changed);
@@ -29,8 +29,8 @@ var PostShow = React.createClass ({
 
   handleDelete: function(){
     var that = this;
-    ApiUtil.deletePost(this.props.params.postId, function pushState(el){
-      that.history.pushState(null, "/feed");
+    ApiUtil.deletePost(this.props.params.postId, function(el){
+      that.context.router.push("/feed");
     });
   },
 
@@ -64,9 +64,7 @@ var PostShow = React.createClass ({
                   <li>
                     {del}
                     {userLink}
-
                   <small>{minutesAgo}</small>
-
                   </li>
                   {theLocation}
                 </section>

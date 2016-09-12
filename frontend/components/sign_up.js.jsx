@@ -5,13 +5,15 @@ import $ from 'jquery';
 import 'jquery-serializejson';
 
 var SignUp = React.createClass({
-    mixins: [ReactRouter.History],
+    contextTypes: {
+            router: React.PropTypes.object.isRequired
+    },
 
     submit: function (e) {
       e.preventDefault();
       var credentials = $(e.currentTarget).serializeJSON();
       ApiUtil.createUser(credentials, function () {
-        this.history.pushState(null, "/feed");
+        this.context.router.push("/feed");
       }.bind(this));
     },
 

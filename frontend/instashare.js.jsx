@@ -12,7 +12,7 @@ import PostShow from './components/post_show.js';
 import UserShow from './components/user.js';
 import TagShow from './components/tag_show.js';
 import Users from './components/users.js';
-import {Route, Router, IndexRoute} from 'react-router';
+import {Route, Router, hashHistory, IndexRoute} from 'react-router';
 
 (function() {
   $(document).ready(function(){
@@ -34,7 +34,7 @@ import {Route, Router, IndexRoute} from 'react-router';
         <Route path="/notifications" component={ Notifications } />
       </Route>
   );
-  ReactDOM.render(<Router>{routes}</Router>, root);
+  ReactDOM.render(<Router history={hashHistory}>{routes}</Router>, root);
 
   });
 })();

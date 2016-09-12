@@ -1,7 +1,6 @@
 import React from 'react';
 
 var Map = React.createClass ({
-  // mixins: [ReactRouter.History],
   getInitialState: function(){
     return {marker: []};
   },
