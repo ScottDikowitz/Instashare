@@ -83,7 +83,7 @@ var UserHeader = React.createClass ({
     }
 
     if (this.props.curUser.profile_picture){
-      img = <img className="user-pic" src={this.props.curUser.profile_picture}/>;
+      img = <div className="user-pic" style={{backgroundImage: `url(${this.props.curUser.profile_picture})`}}/>;
       body = <li onClick={this.updateBio} className="body-info">{this.props.curUser.body}</li>;
       stats = <li className="stats"><span className="num-stats">{this.props.curUser.numPosts}</span> posts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="num-stats">{this.props.curUser.numFollowers}</span> followers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="num-stats">{this.props.curUser.numFollowing}</span> following</li>;
     }
