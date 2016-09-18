@@ -14,6 +14,11 @@
  *= require_self
  */
 
+ @font-face {
+   font-family: RayLight;
+   src: url(font-path("RayLight.otf")) format('opentype');
+ }
+
  body, header, li, span, a, figure, div, ul {
    background: transparent;
    font: inherit;
@@ -35,7 +40,7 @@
 
 body {
   background: #FAFAFA;
-  font-family: sans-serif;
+  font-family: RayLight;
   font-size: 16px;
   color: #000;
 }

@@ -43,7 +43,6 @@ var Header = React.createClass ({
     if (CurrentUserStore.isLoggedIn()){
       search = <Search />;
       button = <li className="sign-out-button"><button  onClick={this.signOut}>Sign out</button></li>;
-      users = <li><a className="users" href="#/users/">Users</a></li>;
       logo = <a className="logo" href="#/feed">Instashare</a>;
     }
     else{
@@ -60,13 +59,8 @@ var Header = React.createClass ({
                     {search}
                     <div className="nav-links">
                   {users}
-                  <li onClick={this.toggleOptions} className="user-name-nav"><span className="user-drop">{this.state.currentUser.username}</span>
-                    <ul className="user-options">
-                      <li><a href={"#/users/" + this.state.currentUser.username}>My Profile</a></li>
-                      {button}
-                    </ul>
-                  </li>
-
+                  <a href='#/users/' className='icon-explore'/>
+                  <a href={'#/users/' + this.state.currentUser.username} className='icon-user'/>
               </div>
                 </ul>
               </div>

@@ -56,7 +56,7 @@ var Search = React.createClass({
                 <div className="icon-search"/>
                 <input ref="search" type="text"
                   onChange={ this._onInput }
-                  placeholder="search..."
+                  placeholder="search"
                 />
             </div>
             <ul className="search-results">

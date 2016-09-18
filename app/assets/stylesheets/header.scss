@@ -18,8 +18,22 @@
   -webkit-flex: 1;
   justify-content: center;
   -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
   width: 220px;
   color: #125688;
+}
+
+.icon-user {
+    display: inline-block;
+    background-position: 4px -150px;
+    background-size: 306px auto;
+}
+
+.icon-explore {
+    display: inline-block;
+    background-position: -36px -152px;
+    background-size: 306px auto;
 }
 
 .user-options.disp {
@@ -78,14 +92,14 @@
   background: inherit;
   border-radius: inherit;
   width: 190px;
-  font-size: 16px;
-  padding: 7px;
+  font-size: 14px;
+  padding: 3px 10px 3px 7px;
   outline: none;
   position: relative;
 }
 
 .search-wrapper:hover {
-  background: #eee;
+  // background: #eee;
 }
 
 
@@ -180,11 +194,13 @@
 }
 
 .search-wrapper {
-    border-radius: 15px;
+    box-sizing: border-box;
+    border: solid 1px #dbdbdb;
+    border-radius: 3px;
     position: relative;
     display: flex;
     border: 1px solid #edeeee;
-    background: #FAFAFA;
+    width: 215px;
 }
 
 .nav-links {

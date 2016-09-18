@@ -118,7 +118,10 @@ var PostForm =  React.createClass ({
     var mScreen = <div onClick={this.props.close} className="screen"></div>;
 
     return <div className="modal">
-            <ReactCSSTransitionGroup transitionName="modal">
+            <ReactCSSTransitionGroup
+                transitionName="modal"
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={300}>
               {mScreen}
             </ReactCSSTransitionGroup>
             <div className="post-form-wrapper">

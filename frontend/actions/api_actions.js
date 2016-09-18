@@ -5,6 +5,14 @@ import TagConstants from './../constants/tag_constants';
 import UserConstants from './../constants/user_constants';
 
 var ApiActions = {
+
+  setAddStep: function(addStep) {
+      dispatcher.dispatch({
+        actionType: 'ADD_STEP',
+        addStep: addStep
+      });
+  },
+
   receiveAll: function(posts){
     dispatcher.dispatch({
       actionType: PostConstants.POSTS_RECEIVED,

@@ -5,7 +5,7 @@ class Api::SearchController < ApplicationController
 
     @search_results = PgSearch
       .multisearch(params[:query])
-      .includes(:searchable).page(1)
+      .includes(:searchable).page(1).limit(5)
 
 
   end
