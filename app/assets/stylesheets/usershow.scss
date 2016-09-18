@@ -32,8 +32,8 @@
 }
 
 .user-pic-container {
-  width: 100%;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   float: left;
   border-radius: 50%;
   overflow: hidden;
@@ -65,25 +65,47 @@
 
 .user-header > div{
 }
-.account-info button{
 
-  // width: 100px;
-  font-weight: bold;
-  font-size: 12px;
-  border-radius: 6px;
-  border: 0;
-  // padding: 10px 10px;
-  text-transform: uppercase;
-  display: block;
-  background: #4090db;
-  color: white;
-  cursor: pointer;
+.update-bio {
+    line-height: 29px;
+    padding: 0 11px;
+    font-size: 16px;
+    border-radius: 3px;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #3897f0;
+    color: #3897f0;
+}
+
+.follows {
+    line-height: 29px;
+    padding: 0 11px;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-left: 25px;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+}
+
+.following-button {
+    border: 0;
+    background-color: #70c050;
+    color: white;
+}
+
+.follow-button {
+    background-color: #fff;
+    border: 1px solid #3897f0;
+    color: #3897f0;
 }
 
 .account-info {
   color: #4b4f54;
   font-weight: 300;
-  font-size: 36px;
+  font-size: 34px;
   padding: 10px;
 }
 
@@ -98,7 +120,8 @@
 }
 
 .account-info > li {
-  font-size: 26px;
+  font-size: 32px;
+  line-height: 40px;
   margin-bottom: 10px;
 }
 

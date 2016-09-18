@@ -73,24 +73,24 @@ var UserHeader = React.createClass ({
     var stats;
     // if (!(this.props.curUser.tag_name) && !(this.props.curUser.place) && CurrentUserStore.currentUser().username !== this.props.curUser.username)
     if (CurrentUserStore.currentUser().username !== this.props.curUser.username && (typeof this.props.curUser.username !== "undefined")){
-      button = <button onClick={this.clickHandler}>{this.state.buttonText}</button>;
+      button = <button className={this.state.buttonText === 'unfollow' ? 'follows following-button' : 'follows follow-button'}
+          onClick={this.clickHandler}>{this.state.buttonText === 'unfollow' ? 'Following' : 'Follow'}</button>;
     }
 
     if (CurrentUserStore.currentUser().username === this.props.curUser.username && (typeof this.props.curUser.username !== "undefined")){
       file = <label className="file-select-label">Change pic<input className="file-select" type="file" onChange={this.changeFile} /></label>;
-      editBio = <button onClick={this.updateBio}>edit bio</button>;
 
     }
 
     if (this.props.curUser.profile_picture){
       img = <img className="user-pic" src={this.props.curUser.profile_picture}/>;
-      body = <li className="body-info">{this.props.curUser.body}</li>;
+      body = <li onClick={this.updateBio} className="body-info">{this.props.curUser.body}</li>;
       stats = <li className="stats"><span className="num-stats">{this.props.curUser.numPosts}</span> posts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="num-stats">{this.props.curUser.numFollowers}</span> followers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="num-stats">{this.props.curUser.numFollowing}</span> following</li>;
     }
     if (this.state.input){
       body = "";
-      editBio = <button onClick={this.sendUpdate}>update!</button>;
-      input = <input className="fields" onChange={this.handleType} onSubmit={this.handleUpdate} type="text" value={this.state.body} />;
+      editBio = <button className='update-bio' onClick={this.sendUpdate}>update!</button>;
+      input = <textArea className="fields" onChange={this.handleType} onSubmit={this.handleUpdate}>{this.state.body}</textArea>;
     }
     if (this.props.curUser.tag_name){
       tag = <li>#{this.props.curUser.tag_name}</li>;
@@ -105,13 +105,18 @@ var UserHeader = React.createClass ({
             </div>
               <div>
                 <ul className="account-info">
-                  <li>{this.props.curUser.username}</li>
+                  <div style={{
+                          display: 'flex'
+                        , alignItems: 'center'
+                      }}>
+                  <span>{this.props.curUser.username}</span>
+                  {button}
+                  </div>
                   <li>{this.props.curUser.place}</li>
                   {tag}
                   {body}
                   {input}
                   {editBio}
-                  {button}
                   {stats}
                 </ul>
               </div>
