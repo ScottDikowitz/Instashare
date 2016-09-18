@@ -1,7 +1,7 @@
 const feed = [{
     title: 'New post button',
     text: 'click here to <strong>create new post</strong>.',
-    selector: '.icon-new-post',
+    selector: '.new-post',
     position: 'bottom-right',
     type: 'hover'
   }, {
