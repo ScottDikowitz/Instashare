@@ -94,7 +94,7 @@ var Index = React.createClass ({
     postForm = <PostForm close={this.handleModal}/>;
   }
     return <div className="posts-content-area">
-            {!this.state.loading && <div className="new-post" onClick={this.handleModal}>+</div>}
+            {!this.state.loading && <div style={{textAlign: 'center'}}><div className="new-post" onClick={this.handleModal}>+</div></div>}
           {postForm}
             {loading}
             {this.state.posts.map(function(post){

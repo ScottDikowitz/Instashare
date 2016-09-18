@@ -62,7 +62,6 @@ var App = React.createClass({
         <div>
             <Joyride ref="joyride"
                       callback={(e)=>{if (e.type === 'finished') createCookie('index-walkthrough', 'true');}}
-                      debug={true}
                       steps={this.state.steps}
                       type="continuous"
                       showStepsProgress={true}
