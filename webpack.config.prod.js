@@ -26,6 +26,10 @@ module.exports = {
   module: {
     loaders: [
       {
+        loader: 'style!css',
+        test: /\.css$/
+      },
+      {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel',
