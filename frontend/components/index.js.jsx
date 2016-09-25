@@ -1,19 +1,20 @@
 import React from 'react';
 import ApiActions from './../actions/api_actions';
 import ApiUtil from './../util/api_util';
-import {readCookie} from './../util/cookie';
-import JoyrideStore from './../stores/joyride';
+import {createCookie, readCookie} from './../util/cookie';
+import WalkthroughStore from './../stores/walkthrough';
 import SessionsApiUtil from '../util/sessions_api_util';
 import Steps from './../steps';
 import PostStore from './../stores/post';
 import PostForm from './post_form.js';
 import Post from './post.js';
+import Joyride from 'react-joyride';
 import AnimationStore from './../stores/animation';
 import 'react-joyride/lib/styles/react-joyride-compiled.css';
 
 var Index = React.createClass ({
   getInitialState: function(){
-    return {posts: [], page: 1, showModal: false, loading: true, addStep: false};
+    return {posts: [], page: 1, showModal: false, loading: true, steps: []};
   },
 
   componentWillMount: function(){
@@ -23,24 +24,13 @@ var Index = React.createClass ({
   componentDidMount: function(){
     ApiUtil.fetchPosts();
     PostStore.addChangeListener(this._changed);
-    JoyrideStore.addChangeListener(this._changed);
+    WalkthroughStore.addChangeListener(this._changed);
     AnimationStore.addChangeHandler(this._animationChanged);
   },
 
-  componentDidUpdate: function(prevProps, prevState) {
-
-      if (!prevState.addStep && this.state.addStep){
-          var that = this;
-          if (!readCookie('index-walkthrough')){
-             setTimeout(function(){that.state.addStep(Steps.feed);}, 2000);
-         }
-      }
-  },
-
   componentWillUnmount: function(){
-
     PostStore.removeChangeListener(this._changed);
-    JoyrideStore.removeChangeListener(this._changed);
+    WalkthroughStore.removeChangeListener(this._changed);
     AnimationStore.removeChangeHandler(this._animationChanged);
   },
 
@@ -51,8 +41,7 @@ var Index = React.createClass ({
   _changed: function(){
     this.setState({loading: false});
     this.setState({posts: PostStore.all()});
-    this.setState({addStep: JoyrideStore.getFunc()});
-
+    this.setState({steps: WalkthroughStore.getSteps()});
   },
 
   handleClick: function(){
@@ -94,6 +83,17 @@ var Index = React.createClass ({
     postForm = <PostForm close={this.handleModal}/>;
   }
     return <div className="posts-content-area">
+        <Joyride ref={$el => {
+                if ($el && !readCookie('index-walkthrough')) {
+                    $el.start();
+                }
+            }}
+            callback={(e)=>{if (e.type === 'finished') createCookie('index-walkthrough', 'true');}}
+            steps={this.state.steps}
+            type="continuous"
+            showStepsProgress={true}
+            showSkipButton={true}
+            showStepsProgress={true} />
             {!this.state.loading && <div style={{textAlign: 'center'}}><div className="new-post" onClick={this.handleModal}>+</div></div>}
           {postForm}
             {loading}

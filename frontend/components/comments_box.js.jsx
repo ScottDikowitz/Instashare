@@ -51,7 +51,7 @@ var CommentsBox = React.createClass ({
         comments = <div>{this.props.comments.map(function(comment){
           return <li className="comm-line" key={comment.id} >
                   <a href={"#/users/" + comment.username}>{comment.username}</a> {comment.content}
-                  <div onClick={that.deleteComment} data-comm-id={comment.id} className={that.checkUser(comment.username)}>x</div></li>;
+                  <div onClick={that.deleteComment} data-comm-id={comment.id} className={that.checkUser(comment.username)}>&times;</div></li>;
 
         })}</div>;
       }
