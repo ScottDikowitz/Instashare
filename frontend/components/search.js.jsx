@@ -65,12 +65,12 @@ var Search = React.createClass({
                 </div> :
                 <input autoFocus ref="search" type="text"
                   onChange={ this._onInput }
-                  onBlur={ ()=>this.setState({search: false}) }
+                  onBlur={ ()=>setTimeout(()=>this.setState({search: false}), 100) }
                 />}
+                {this.state.search && <ul className="search-results">
+                  { results }
+              </ul>}
             </div>
-            <ul className="search-results">
-              { results }
-            </ul>
           </div>
       );
     },
