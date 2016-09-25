@@ -49,24 +49,34 @@ var Users = React.createClass ({
     if (this.state.loading){
       loading = <div className="spinner"></div>;
     }
+
+    var button = <button className={this.state.buttonText === 'unfollow' ? 'follows following-button' : 'follows follow-button'}
+        onClick={()=>{}}
+        style={{
+            position: 'absolute',
+            right: 0
+        }}>{this.state.buttonText === 'unfollow' ? 'Following' : 'Follow'}</button>;
     return <div>
         <div className="users-content">
-            <h1>Users</h1>
-          <ul className="user-list">
-            {loading}
-          {this.state.users.map(function(user){
-            return <li key={user.id}>
-                    <a href={"#/users/" + user.username} className="group">
-                      <div className="user-thumb" style={{backgroundImage: `url(${user.pic})`}}/>
-                      <div className="name-box"><span className="uname">{user.username}</span></div>
-                      <span className="body">{user.body}</span>
-                    </a>
-                  </li>;
-
-          })}
-          </ul>
-          <a href="#/users" onClick={this.handlePrev}>Prev</a>|
-          <a href="#/users" onClick={this.handleNext}>Next</a>
+            <div className='discover-box' style={{margin: '0 auto'}}>
+                <div className='discover'>DISCOVER PEOPLE</div>
+                <ul className="user-list">
+                    {loading}
+                    {this.state.users.map(user => {
+                        return <li key={user.id}  style={{position: 'relative', padding: 10, backgroundColor: '#fff'}}>
+                            <div style={{position: 'relative'}}>
+                                <div style={{display: 'inline-block', verticalAlign: 'middle'}}>
+                                    <a href={"#/users/" + user.username} className="user-thumb" style={{backgroundImage: `url(${user.pic})`}}/>
+                                    <a href={"#/users/" + user.username} className="name-box"><span className="uname">{user.username}</span></a>
+                                </div>
+                                {button}
+                            </div>
+                        </li>;
+                  })}
+                </ul>
+                <a href="#/users" onClick={this.handlePrev}>Prev</a>|
+                <a href="#/users" onClick={this.handleNext}>Next</a>
+          </div>
       </div>
     </div>;
   }

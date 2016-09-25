@@ -1,18 +1,25 @@
 .user-list {
   background: #FAFAFA;
-  margin: auto;
   display: block;
-  // width: 80%;
-  border: 1px solid #edeeee;
-
+  border: 1px solid #efefef;
   max-height: 1000px;
-  // overflow-y: scroll;
   margin-bottom: 20px;
+}
+
+.discover {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #efefef;
+    border-bottom: 0;
+}
+
+.discover-box {
+    max-width: 602px;
+    margin: 0 auto;
 }
 
 .name-box {
   width: 160px;
-  float: left;
   overflow: hidden;
 }
 
@@ -25,17 +32,17 @@
 }
 
 .uname {
-  float: left;
   margin-left: 5px;
 }
 
 .user-thumb {
-  height: 50px;
-  width: 50px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  float: left;
+  border-radius: 50%;
 }
 
 .background-img {
@@ -50,23 +57,25 @@
 }
 
 .user-list li:first-child a{
-  border-top: 1px solid #edeeee;
+  border-top: 0;
+}
+
+.user-list li:last-child a{
+  border-bottom: 0;
 }
 
 .user-list a:hover{
-  background: #edeeee;
+  // background: #edeeee;
 }
 
 .user-list a {
-  border-bottom: 1px solid #edeeee;
-  background: #fff;
-  padding: 20px;
-  display: block;
-  font-size: 20px;
+  // border-bottom: 1px solid #efefef;
+  // padding: 20px;
+  // display: block;
+  // font-size: 20px;
 }
 
 .body {
-  float: left;
   margin-left: 20px;
   color: #000;
 
