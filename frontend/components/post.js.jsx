@@ -1,13 +1,14 @@
 import React from 'react';
 const ReactRouter = require('react-router');
 import ApiActions from './../actions/api_actions';
+import ApiUtil from './../util/api_util';
 import CurrentUserStore from './../stores/current_user';
 import CommentsBox from './comments_box.js';
 
 var Post = React.createClass ({
-handleDelete: function(){
-  ApiUtil.deletePost(this.props.post.id, ApiActions.deletePost);
-},
+  handleDelete: function(){
+    ApiUtil.deletePost(this.props.post.id, ApiActions.deletePost);
+  },
 
   render: function(){
     var user = CurrentUserStore.currentUser();
@@ -15,15 +16,13 @@ handleDelete: function(){
     var nudge;
     if (user) {
       if (user.id === 1){
-        del = <div onClick={this.handleDelete} className="delete-post">X</div>;
+        del = <div onClick={this.handleDelete} className="delete-post">&times;</div>;
         }
-        if (this.props.post.location){
-          nudge = " nudge";
-        }
-        else
-        {
-          nudge = "";
-        }
+      if (this.props.post.location){
+        nudge = " nudge";
+      } else {
+        nudge = "";
+      }
     }
 
     return <div className="post">

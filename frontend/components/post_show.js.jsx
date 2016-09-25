@@ -28,9 +28,8 @@ var PostShow = React.createClass ({
   },
 
   handleDelete: function(){
-    var that = this;
-    ApiUtil.deletePost(this.props.params.postId, function(el){
-      that.context.router.push("/feed");
+    ApiUtil.deletePost(this.props.params.postId, (el) => {
+      this.context.router.push("/feed");
     });
   },
 
@@ -46,7 +45,7 @@ var PostShow = React.createClass ({
     var del;
     if (user) {
       if (user.id === 1){
-        del = <div onClick={this.handleDelete} className="delete-post">X</div>;
+        del = <div onClick={this.handleDelete} className="delete-post">&times;</div>;
         }
     }
     if (this.state){
