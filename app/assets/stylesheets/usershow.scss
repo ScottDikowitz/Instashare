@@ -17,7 +17,6 @@
 .label-and-user-pic {
   float: left;
   margin-left: 20px;
-  width: 120px;
 }
 
 .account-info .body-info {
@@ -61,10 +60,9 @@
 .file-select-label {
   cursor: pointer;
   display: block;
-  font-weight: bold;
   padding: 10px;
   text-align: center;
-
+  color: #999;
 }
 
 .user-header > div{

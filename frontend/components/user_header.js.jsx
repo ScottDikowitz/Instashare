@@ -50,7 +50,9 @@ var UserHeader = React.createClass ({
   },
 
   updateBio: function(){
-    this.setState({input: true});
+      if (CurrentUserStore.currentUser().username === this.props.curUser.username) {
+        this.setState({input: true});
+      }
   },
 
   sendUpdate: function(e){
