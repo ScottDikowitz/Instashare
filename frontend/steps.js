@@ -2,7 +2,7 @@ const feed = [{
     title: 'New post button',
     text: 'click here to <strong>create new post</strong>.',
     selector: '.new-post',
-    position: 'bottom-right',
+    position: 'bottom',
     type: 'hover'
   }, {
     title: 'Nav',
@@ -14,7 +14,7 @@ const feed = [{
     title: 'Search',
     text: 'Search for <strong>tags</strong>, <strong>users</strong>, and <strong>locations</strong>.',
     selector: '.search-wrapper',
-    position: 'bottom-right',
+    position: 'bottom',
     type: 'hover'
   }];
 
