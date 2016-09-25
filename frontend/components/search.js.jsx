@@ -39,20 +39,22 @@ var Search = React.createClass({
       var search = this.refs.search;
       search.value= "";
       SearchResultActions.receiveResults({results: []});
+      this.setState({search: false});
     },
 
     render: function() {
-      var that = this;
-      var results = SearchResultsStore.results().map(function (result) {
+
+      var results = SearchResultsStore.results().map(result => {
         if (result._type === "User") {
-          return <UserIndexItem callback={that.resetForm} key={result.user.id} user={ result } />;
+          return <UserIndexItem callback={this.resetForm} key={result.user.id} user={ result } />;
         } else if(result._type === "Location") {
-          return <LocationIndexItem callback={that.resetForm} key={result.location.id} location={ result } />;
+          return <LocationIndexItem callback={this.resetForm} key={result.location.id} location={ result } />;
         }
         else if (result._type === "Tag") {
-          return <TagIndexItem callback={that.resetForm} key={result.tag.id} tag={ result } />;
+          return <TagIndexItem callback={this.resetForm} key={result.tag.id} tag={ result } />;
         }
       });
+      const showResults = !!SearchResultsStore.results().length && this.state.search;
 
       return (
           <div className="search-bar">
@@ -65,8 +67,9 @@ var Search = React.createClass({
                 </div> :
                 <input autoFocus ref="search" type="text"
                   onChange={ this._onInput }
-
                 />}
+                {showResults && <div className='arrow-mask'></div>}
+                {showResults && <div className='arrow-up'></div>}
                 {this.state.search && <ul className="search-results">
                   { results }
               </ul>}

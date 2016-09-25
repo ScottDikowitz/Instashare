@@ -5,12 +5,16 @@ var UserIndexItem = React.createClass({
     render: function() {
         const {user} = this.props.user;
       return (
-        <li>
-            <div className='background-img' style={{backgroundImage: `url(${user.profile_picture})`, width: 40, height: 40, display: 'inline-block', verticalAlign: 'middle'}}/>
-          <ReactRouter.Link onClick={this.props.callback} to={"/users/" + user.username } style={{display: 'inline-block', verticalAlign: 'middle'}}>
-            { user.username }
-          </ReactRouter.Link>
-        </li>
+        <a href={`#/users/${user.username}`} onClick={this.props.callback} style={{display: 'block'}}>
+            <div className='background-img' style={{
+                    backgroundImage: `url(${user.profile_picture})`
+                  , display: 'inline-block'
+                  , marginRight: 5
+                  , verticalAlign: 'middle'
+                  , borderRadius: '50%'
+                  , width: 35, height: 35}}/>
+            <span>{user.username}</span>
+        </a>
       );
     }
   });
