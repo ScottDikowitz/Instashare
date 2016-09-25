@@ -40,10 +40,8 @@ var PostShow = React.createClass ({
     var minutesAgo;
     var image;
     var commentBox;
-    var captionUser;
-    var caption;
     var theLocation;
-    var liked;
+    var profilePic;
     var user = CurrentUserStore.currentUser();
     var del;
     if (user) {
@@ -52,8 +50,8 @@ var PostShow = React.createClass ({
         }
     }
     if (this.state){
-      theLocation =<li><a className="location-link" href={"/#location/" + this.state.post.locationId}>{this.state.post.location}</a></li>;
-
+      theLocation = <a className="location-link" href={"/#location/" + this.state.post.locationId}>{this.state.post.location}</a>;
+      profilePic = <a href={"#/users/" + this.state.post.user.username} className={"post-head-pic"}><img src={this.state.post.profile_picture}/></a>;
       userLink = <a href={"/#users/" + this.state.post.user.username}>{this.state.post.user.username}</a>;
       minutesAgo = this.state.post.minutes_ago;
       image = this.state.post.image;
@@ -61,12 +59,17 @@ var PostShow = React.createClass ({
     }
     return <div className="post">
                 <section className="post-header">
-                  <li>
                     {del}
-                    {userLink}
-                  <small>{minutesAgo}</small>
-                  </li>
-                  {theLocation}
+                    <div style={{display: 'table-cell', width: '50%', height: 68, verticalAlign: 'middle'}}>
+                    {profilePic}
+                        <div style={{display: 'inline-block', verticalAlign: 'middle'}}>
+                            {userLink}
+                            {theLocation}
+                        </div>
+                    </div>
+                    <div style={{display: 'table-cell', width: '50%', textAlign: 'right', verticalAlign: 'middle'}}>
+                      <small>{minutesAgo}</small>
+                    </div>
                 </section>
                 <section className="post-image-container">
                   <img src={image}/>

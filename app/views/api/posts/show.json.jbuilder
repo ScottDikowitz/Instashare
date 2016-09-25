@@ -1,6 +1,8 @@
 json.extract! @post, :id, :caption
 json.image asset_url(@post.image.url)
 
+json.profile_picture asset_url(@post.user.user_pic.url(:thumb))
+
 json.numLikes @post.likes.count
 
 json.userLikes @post.user_likes.as_json(only: [:username, :id])

@@ -29,14 +29,18 @@ handleDelete: function(){
     return <div className="post">
                 <section className="post-header">
                   {del}
-                  <li>
-                    <a href={"#/users/" + this.props.post.user.username} className={"post-head-pic" + nudge}><img src={this.props.post.profile_picture}/></a>
-                  <ReactRouter.Link to={"/users/" + this.props.post.user.username}>
-                    <span>{this.props.post.user.username}</span>
-                  </ReactRouter.Link>
+                  <div style={{display: 'table-cell', width: '50%', verticalAlign: 'middle'}}>
+                      <a href={"#/users/" + this.props.post.user.username} className={"post-head-pic"}><img src={this.props.post.profile_picture}/></a>
+                      <div style={{display: 'inline-block', verticalAlign: 'middle'}}>
+                          <ReactRouter.Link to={"/users/" + this.props.post.user.username}>
+                              <span>{this.props.post.user.username}</span>
+                          </ReactRouter.Link>
+                      <a className='location-link' href={"/#location/" + this.props.post.locationId}>{this.props.post.location}</a>
+                      </div>
+                </div>
+                <div style={{display: 'table-cell', width: '50%', textAlign: 'right', verticalAlign: 'middle'}}>
                   <a href={"/#posts/" + this.props.post.id}><small>{this.props.post.minutes_ago}</small></a>
-                  </li>
-                  <li className="location-link"><a href={"/#location/" + this.props.post.locationId}>{this.props.post.location}</a></li>
+              </div>
                 </section>
                 <section className="post-image-container">
                   <img src={this.props.post.image}/></section>

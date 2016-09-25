@@ -246,7 +246,7 @@ and (orientation : portrait) {
      height: 100px;
      padding: 10px;
    }
-   
+
    .header-nav {
      top: 20px;
    }
@@ -402,6 +402,7 @@ h1{
   content: "";
 }
 
-.location-link a {
+.location-link {
   color: #4090db;
+  display: block;
 }

@@ -9,8 +9,6 @@
 
 .post-head-pic {
   display: inline-block;
-  float: left;
-  position: relative;
   bottom: 5px;
   margin-right: 10px;
   border-radius: 90px;
@@ -18,6 +16,7 @@
   height: 30px;
   overflow: hidden;
   cursor: pointer;
+  vertical-align: middle;
 }
 
 .nudge {
@@ -47,12 +46,12 @@
 }
 
 .post-header {
+  box-sizing: border-box;;
+  display: table;
   height: 66px;
-  display: block;
-  position: relative;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 2px;
+  width: 100%;
 }
 
 .post-image-container {
@@ -87,11 +86,7 @@
 
 
 .post-header small{
-
- right: 0px;
  color: #a5a7aa;
- position: absolute;
-
 }
 
 .post-header li{
