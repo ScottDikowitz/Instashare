@@ -59,14 +59,14 @@ var PostShow = React.createClass ({
     return <div className="post">
                 <section className="post-header">
                     {del}
-                    <div style={{display: 'table-cell', width: '50%', height: 68, verticalAlign: 'middle'}}>
+                    <div style={{display: 'table-cell', verticalAlign: 'middle'}}>
                     {profilePic}
                         <div style={{display: 'inline-block', verticalAlign: 'middle'}}>
                             {userLink}
                             {theLocation}
                         </div>
                     </div>
-                    <div style={{display: 'table-cell', width: '50%', textAlign: 'right', verticalAlign: 'middle'}}>
+                    <div style={{display: 'table-cell', textAlign: 'right', verticalAlign: 'middle'}}>
                       <small>{minutesAgo}</small>
                     </div>
                 </section>

@@ -28,7 +28,7 @@ var Post = React.createClass ({
     return <div className="post">
                 <section className="post-header">
                   {del}
-                  <div style={{display: 'table-cell', width: '50%', verticalAlign: 'middle'}}>
+                  <div style={{display: 'table-cell', verticalAlign: 'middle'}}>
                       <a href={"#/users/" + this.props.post.user.username} className={"post-head-pic"}><img src={this.props.post.profile_picture}/></a>
                       <div style={{display: 'inline-block', verticalAlign: 'middle'}}>
                           <ReactRouter.Link to={"/users/" + this.props.post.user.username}>
@@ -37,7 +37,7 @@ var Post = React.createClass ({
                       <a className='location-link' href={"/#location/" + this.props.post.locationId}>{this.props.post.location}</a>
                       </div>
                 </div>
-                <div style={{display: 'table-cell', width: '50%', textAlign: 'right', verticalAlign: 'middle'}}>
+                <div style={{display: 'table-cell', textAlign: 'right', verticalAlign: 'middle'}}>
                   <a href={"/#posts/" + this.props.post.id}><small>{this.props.post.minutes_ago}</small></a>
               </div>
                 </section>
