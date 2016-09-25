@@ -213,14 +213,18 @@ $.ajax ({
 
   },
 
-  followUser: function(follow){
+  followUser: function(follow, cb){
     $.ajax ({
       url: 'api/follows',
       type: 'POST',
       dataType: 'json',
       data: {follow: follow},
       success: function(data) {
-        ApiActions.receiveFollow(data);
+          if (typeof cb === 'undefined'){
+            ApiActions.receiveFollow(data);
+          } else {
+              cb({userId: follow.follower_id, following: true});
+          }
       }
     });
 
@@ -283,14 +287,18 @@ $.ajax ({
 
   },
 
-unfollowUser: function(follow){
+unfollowUser: function(follow, cb){
   $.ajax ({
     url: 'api/follows/' + follow.follower_id,
     type: 'DELETE',
     dataType: 'json',
     data: {follow: follow},
     success: function(data) {
-      ApiActions.receiveFollow(data);
+      if (typeof cb === 'undefined'){
+        ApiActions.receiveFollow(data);
+      } else {
+          cb({userId: follow.follower_id, following: false});
+      }
     }
   });
 

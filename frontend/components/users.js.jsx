@@ -1,6 +1,8 @@
 import React from 'react';
 import ApiUtil from './../util/api_util';
 import UsersStore from './../stores/users';
+import UserListItem from './UserListItem';
+import ApiActions from './../actions/api_actions';
 
 var Users = React.createClass ({
 
@@ -31,6 +33,16 @@ var Users = React.createClass ({
     }
   },
 
+  followUser: function(user) {
+      var follow = {follower_id: user};
+      ApiUtil.followUser(follow, ApiActions.updateFollowStatus);
+  },
+
+  unfollowUser: function(user) {
+      var follow = {follower_id: user};
+      ApiUtil.unfollowUser(follow, ApiActions.updateFollowStatus);
+  },
+
   handleNext: function(){
       ApiUtil.fetchUsersPage(this.state.page + 1);
       this.setState({page: this.state.page + 1});
@@ -50,12 +62,6 @@ var Users = React.createClass ({
       loading = <div className="spinner"></div>;
     }
 
-    var button = <button className={this.state.buttonText === 'unfollow' ? 'follows following-button' : 'follows follow-button'}
-        onClick={()=>{}}
-        style={{
-            position: 'absolute',
-            right: 0
-        }}>{this.state.buttonText === 'unfollow' ? 'Following' : 'Follow'}</button>;
     return <div>
         <div className="users-content">
             <div className='discover-box' style={{margin: '0 auto'}}>
@@ -63,15 +69,10 @@ var Users = React.createClass ({
                 <ul className="user-list">
                     {loading}
                     {this.state.users.map(user => {
-                        return <li key={user.id}  style={{position: 'relative', padding: 10, backgroundColor: '#fff'}}>
-                            <div style={{position: 'relative'}}>
-                                <div style={{display: 'inline-block', verticalAlign: 'middle'}}>
-                                    <a href={"#/users/" + user.username} className="user-thumb" style={{backgroundImage: `url(${user.pic})`}}/>
-                                    <a href={"#/users/" + user.username} className="name-box"><span className="uname">{user.username}</span></a>
-                                </div>
-                                {button}
-                            </div>
-                        </li>;
+                        return <UserListItem key={`user-${user.id}`}
+                            user={user}
+                            followUser={this.followUser}
+                            unfollowUser={this.unfollowUser}/>;
                   })}
                 </ul>
                 <a href="#/users" onClick={this.handlePrev}>Prev</a>|

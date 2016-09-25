@@ -13,6 +13,13 @@ var ApiActions = {
       });
   },
 
+  updateFollowStatus: (obj) => {
+      dispatcher.dispatch({
+        actionType: 'FOLLOW_STATUS_RECEIVED',
+        status: obj
+      });
+  },
+
   receiveAll: function(posts){
     dispatcher.dispatch({
       actionType: PostConstants.POSTS_RECEIVED,
