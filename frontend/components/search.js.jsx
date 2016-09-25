@@ -57,6 +57,7 @@ var Search = React.createClass({
       return (
           <div className="search-bar">
             <div className="search-wrapper">
+                {this.state.search && <div className="icon-search-active"/>}
                 {!this.state.search ? <div onClick={ ()=>this.setState({search: true}) }
                     style={{cursor: 'text', zIndex: 1, height: '100%', width: '100%', textAlign: 'center', lineHeight: '28px', backgroundColor: '#FAFAFA'}}>
                     <div className="icon-search"/>
