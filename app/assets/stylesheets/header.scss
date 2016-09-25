@@ -120,12 +120,13 @@
 
 .search-results {
   display: block;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,0.13);
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.13);
   position: absolute;
-  width: 100%;
+  width: calc(100% + 30px);
   top: calc(100% + 10px);
-  left: 0px;
+  left: -15px;
   background: #fff;
   max-height: 250px;
   // overflow-y: scroll;

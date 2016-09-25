@@ -3,10 +3,12 @@ const ReactRouter = require('react-router');
 
 var UserIndexItem = React.createClass({
     render: function() {
+        const {user} = this.props.user;
       return (
         <li>
-          <ReactRouter.Link onClick={this.props.callback} to={"/users/" + this.props.user.user.username }>
-            { this.props.user.user.username }
+            <div className='background-img' style={{backgroundImage: `url(${user.profile_picture})`, width: 40, height: 40, display: 'inline-block', verticalAlign: 'middle'}}/>
+          <ReactRouter.Link onClick={this.props.callback} to={"/users/" + user.username } style={{display: 'inline-block', verticalAlign: 'middle'}}>
+            { user.username }
           </ReactRouter.Link>
         </li>
       );

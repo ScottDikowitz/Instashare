@@ -5,7 +5,8 @@ json.results do
   json.array! @search_results.map(&:searchable) do |result|
     if result.class == User
       # json.partial! "api/users/user", user: result
-      json.user result.as_json(only: [:id, :username, :body])
+      user_data = {id: result.id, username: result.username, body: result.body, profile_picture: asset_url(result.user_pic.url(:thumb))}
+      json.user user_data
       json._type "User"
     elsif result.class == Location
       json.location result.as_json(only: [:id, :place])
