@@ -2,12 +2,19 @@ import React from 'react';
 
 var TagIndexItem = React.createClass({
     render: function() {
+
+        // <a className='location-item'
+        //     onClick={this.props.callback}
+        //     href={ "#/location/" + this.props.location.location.id }>
+        //    <span>{this.props.location.location.place}</span>
+        // </a>
       return (
-        <li>
-          <a onClick={this.props.callback} href={ "#/tags/" + this.props.tag.tag.tag_name }>
-            { this.props.tag.tag.tag_name }
+          <a className='location-item'
+              onClick={this.props.callback}
+              href={ "#/tags/" + this.props.tag.tag.tag_name }>
+              <span style={{fontSize: '1.5em', color: '#999'}}>&nbsp;#&nbsp;&nbsp;</span>
+            <span>{this.props.tag.tag.tag_name}</span>
           </a>
-        </li>
       );
     }
   });

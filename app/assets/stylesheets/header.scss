@@ -162,10 +162,19 @@
   box-shadow: 0 0 5px rgba(0,0,0,0.13);
 }
 
-.search-results a{
+.search-results > a.location-item {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.search-results > a{
   border-bottom: 1px solid #dbdbdb;
   padding: 5px;
   display: block;
+  height: 46px;
+  box-sizing: border-box;
 }
 
 .search-results li:last-child{
