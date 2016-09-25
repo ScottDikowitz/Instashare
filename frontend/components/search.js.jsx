@@ -6,6 +6,10 @@ import LocationIndexItem from './location_index_item.js';
 import TagIndexItem from './tag_index_item.js';
 import UserIndexItem from './user_index_item.js';
 var Search = React.createClass({
+    getInitialState: function () {
+        return {search: false};
+    },
+
     componentDidMount: function () {
       SearchResultsStore.addChangeHandler(this._onChange);
     },
@@ -53,11 +57,15 @@ var Search = React.createClass({
       return (
           <div className="search-bar">
             <div className="search-wrapper">
-                <div className="icon-search"/>
-                <input ref="search" type="text"
+                {!this.state.search ? <div onClick={ ()=>this.setState({search: true}) }
+                    style={{cursor: 'text', zIndex: 1, height: '100%', width: '100%', textAlign: 'center', lineHeight: '28px', backgroundColor: '#FAFAFA'}}>
+                    <div className="icon-search"/>
+                    <div style={{color: '#999', display: 'inline-block'}}>Search</div>
+                </div> :
+                <input autoFocus ref="search" type="text"
                   onChange={ this._onInput }
-                  placeholder="search"
-                />
+                  onBlur={ ()=>this.setState({search: false}) }
+                />}
             </div>
             <ul className="search-results">
               { results }
