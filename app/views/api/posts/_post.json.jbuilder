@@ -24,7 +24,8 @@ if post.location
   json.location post.location.place
   json.locationId post.location.id
 end
-json.image asset_url(post.image.url)
+json.image asset_url(post.image.url(:large))
+
 # json.created_at do
 elapsed = ((Time.now - post.created_at.time) / 60).to_i
 if elapsed >= 60
