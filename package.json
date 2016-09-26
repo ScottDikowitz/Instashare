@@ -36,6 +36,7 @@
     "event-emitter": "^0.3.4",
     "events": "^1.1.1",
     "flux": "^2.1.1",
+    "lodash": "^4.16.2",
     "path": "^0.12.7",
     "react": "^15.3.1",
     "react-addons-css-transition-group": "^15.3.1",
