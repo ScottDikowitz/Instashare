@@ -132,6 +132,8 @@
 
 .post-grid {
   width: 972px;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto 150px;
 }
 
@@ -166,8 +168,6 @@
 // }
 
 .post-grid-square img{
-  // height: 100%;
-
   width: 100%;
   display: block;
 }
@@ -195,8 +195,8 @@
 }
 
 .grid-img {
-    width: 100%;
     height: 100%;
+    flex-basis: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
