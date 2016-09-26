@@ -1,5 +1,5 @@
 json.extract! @post, :id, :caption
-json.image asset_url(@post.image.url)
+json.image asset_url(@post.image.url(:large))
 
 json.profile_picture asset_url(@post.user.user_pic.url(:thumb))
 
