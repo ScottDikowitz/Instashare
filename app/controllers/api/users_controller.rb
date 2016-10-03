@@ -12,7 +12,7 @@ class Api::UsersController < ApplicationController
   end
 
   def index
-    @users = User.page(params["page"]).per(10).order(:username)
+    @users = User.page(params["page"]).includes(:posts).per(10).order(:username)
     render :index
   end
 

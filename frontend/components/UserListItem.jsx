@@ -18,7 +18,8 @@ class UserListItem extends React.Component {
                 style={{
                     position: 'relative',
                     padding: 10,
-                    backgroundColor: '#fff'}}>
+                    backgroundColor: '#fff',
+                    borderBottom: '1px solid #efefef'}}>
                 <div style={{position: 'relative'}}>
                     <div style={{display: 'inline-block',
                             verticalAlign: 'middle'}}>
@@ -32,6 +33,16 @@ class UserListItem extends React.Component {
                             {user.following ? 'Following' : 'Follow'}
                     </button>
                 </div>
+                {!!user.posts.length && <div className='user-list-images'>
+                    {user.posts.map(post => (
+                        <div style={{
+                                display: 'inline-block',
+                                width: '33%'}}
+                                key={post.id}>
+                            <a href={`#/posts/${post.id}`}><img src={post.url} style={{width: '100%'}}/></a>
+                       </div>
+                   ))}
+               </div>}
             </li>
         );
     }

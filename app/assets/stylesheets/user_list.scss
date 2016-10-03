@@ -3,7 +3,14 @@
   display: block;
   border: 1px solid #efefef;
   max-height: 1000px;
-  margin-bottom: 20px;
+}
+
+.user-list-images {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 .discover {

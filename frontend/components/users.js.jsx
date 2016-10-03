@@ -75,8 +75,10 @@ var Users = React.createClass ({
                             unfollowUser={this.unfollowUser}/>;
                   })}
                 </ul>
-                <a href="#/users" onClick={this.handlePrev}>Prev</a>|
-                <a href="#/users" onClick={this.handleNext}>Next</a>
+                <div style={{marginBottom: 40}}>
+                    <a href="#/users" onClick={this.handlePrev}>Prev</a>|
+                    <a href="#/users" onClick={this.handleNext}>Next</a>
+                </div>
           </div>
       </div>
     </div>;
