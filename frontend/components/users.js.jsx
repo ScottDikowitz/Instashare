@@ -4,85 +4,74 @@ import UsersStore from './../stores/users';
 import UserListItem from './UserListItem';
 import ApiActions from './../actions/api_actions';
 
-var Users = React.createClass ({
+class Users extends React.Component {
 
-  getInitialState: function(){
-    return {users: [], page: 1, loading: true};
-  },
+    constructor (props) {
+        super(props);
 
-  componentWillReceiveProps: function(newProps){
+        this.state = {
+            users: [],
+            page: 1,
+            loading: true
+        };
 
-  },
-
-  componentDidMount: function(){
-    UsersStore.addChangeListener(this._changed);
-    ApiUtil.fetchUserList(this.state.page);
-  },
-
-  componentWillUnmount: function(){
-    UsersStore.removeChangeListener(this._changed);
-  },
-
-  _changed: function(){
-    this.setState({loading: false});
-    if (UsersStore.all().length !== 0){
-      this.setState({users: UsersStore.all()});
+        this._changed = this._changed.bind(this);
     }
-    else {
-      this.setState({page: this.state.page - 1});
+
+    componentDidMount () {
+        UsersStore.addChangeListener(this._changed);
+        ApiUtil.fetchUserList(this.state.page);
     }
-  },
 
-  followUser: function(user) {
-      var follow = {follower_id: user};
-      ApiUtil.followUser(follow, ApiActions.updateFollowStatus);
-  },
-
-  unfollowUser: function(user) {
-      var follow = {follower_id: user};
-      ApiUtil.unfollowUser(follow, ApiActions.updateFollowStatus);
-  },
-
-  handleNext: function(){
-      ApiUtil.fetchUsersPage(this.state.page + 1);
-      this.setState({page: this.state.page + 1});
-
-  },
-
-  handlePrev: function(){
-    if (this.state.page !== 1){
-      ApiUtil.fetchUsersPage(this.state.page - 1);
-      this.setState({page: this.state.page - 1});
+    componentWillUnmount () {
+        UsersStore.removeChangeListener(this._changed);
     }
-  },
 
-  render: function(){
+    _changed (){
+        this.setState({loading: false});
+        if (UsersStore.all().length !== 0){
+            this.setState({users: UsersStore.all()});
+        }
+        else {
+            this.setState({page: this.state.page - 1});
+        }
+    }
+
+    followUser (user) {
+        var follow = {follower_id: user};
+        ApiUtil.followUser(follow, ApiActions.updateFollowStatus);
+    }
+
+    unfollowUser (user) {
+        var follow = {follower_id: user};
+        ApiUtil.unfollowUser(follow, ApiActions.updateFollowStatus);
+    }
+
+  render (){
     var loading;
     if (this.state.loading){
-      loading = <div className="spinner"></div>;
+        loading = <div className="spinner"></div>;
     }
 
-    return <div>
-        <div className="users-content">
-            <div className='discover-box' style={{margin: '0 auto'}}>
-                <div className='discover'>DISCOVER PEOPLE</div>
-                <ul className="user-list">
-                    {loading}
-                    {this.state.users.map(user => {
-                        return <UserListItem key={`user-${user.id}`}
-                            user={user}
-                            followUser={this.followUser}
-                            unfollowUser={this.unfollowUser}/>;
-                  })}
-                </ul>
-                <div style={{marginBottom: 40}}>
-                    <a href="#/users" onClick={this.handlePrev}>Prev</a>|
-                    <a href="#/users" onClick={this.handleNext}>Next</a>
+    return (
+        <div style={{marginBottom: 40}}>
+            <div className="users-content">
+                <div className='discover-box' style={{margin: '0 auto'}}>
+                    <div className='discover'>DISCOVER PEOPLE</div>
+                    <ul className="user-list">
+                        {loading}
+                        {this.state.users.map(user => {
+                            return <UserListItem key={`user-${user.id}`}
+                                user={user}
+                                followUser={this.followUser}
+                                unfollowUser={this.unfollowUser}/>;
+                      })}
+                    </ul>
                 </div>
-          </div>
-      </div>
-    </div>;
+            </div>
+        </div>
+    );
   }
-});
+}
 
 export default Users;
