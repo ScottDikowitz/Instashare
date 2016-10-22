@@ -48,18 +48,13 @@ class Users extends React.Component {
     }
 
   render (){
-    var loading;
-    if (this.state.loading){
-        loading = <div className="spinner"></div>;
-    }
-
     return (
         <div style={{marginBottom: 40}}>
             <div className="users-content">
                 <div className='discover-box' style={{margin: '0 auto'}}>
                     <div className='discover'>DISCOVER PEOPLE</div>
                     <ul className="user-list">
-                        {loading}
+                        {this.state.loading && <div className="spinner"></div>}
                         {this.state.users.map(user => {
                             return <UserListItem key={`user-${user.id}`}
                                 user={user}
